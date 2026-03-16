@@ -7,6 +7,13 @@ site_url: https://deukpack.app/
 extra:
   generator: false
 
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
 nav:
   - 홈: index.md
   - 제품:
@@ -16,6 +23,13 @@ nav:
     - Excel 애드인: products/excel-addin.md
     - 파이프라인·Unity: products/pipeline-unity.md
     - 확장 제품군: products/extension.md
+    - 제품 관계도: architecture.md
+  - 레퍼런스 가이드:
+    - 개요: reference/index.md
+    - API·타입 참조: reference/api.md
+  - 튜토리얼:
+    - 개요: tutorial/index.md
+    - 빠른 시작: tutorial/quickstart.md
   - 포지셔닝: positioning.md
   - 라이선스·비용: license.md
 

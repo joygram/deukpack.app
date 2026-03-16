@@ -1,6 +1,6 @@
 # 득팩 프로토콜
 
-**한 줄**: **Binary/Compact/JSON** 직렬화와 **메타·테이블·네이티브 메시지 핸들링**을 갖춘, Protobuf·gRPC·Thrift·OpenAPI와 함께 쓸 수 있는 프로토콜 라이브러리입니다.
+**한 줄**: **Binary/Compact/JSON** 직렬화와 **메타·테이블·네이티브 메시지 핸들링**(msgId·ProtocolRegistry)을 갖춘 프로토콜 라이브러리입니다. Protobuf·Thrift·OpenAPI 등 기존 환경과 함께 쓸 수 있습니다.
 
 ---
 
@@ -19,7 +19,7 @@
 | **네이티브 메시지 핸들링** | 숫자 msgId·ProtocolRegistry로 패킷만 보고 O(1) 디스패치·핸들러 매핑. |
 | **스키마 차별** | GetSchema()로 필드·주석·기본값·어노테이션 런타임 복구. Excel 헤더·검증·타입 문자열 연동. |
 
-Protobuf(.proto)·gRPC 환경과 Thrift·OpenAPI를 그대로 가져와 한 스택에서 쓸 수 있으며, 한 빌드에서 .proto·.thrift·.deuk를 섞어 쓸 수 있어 레거시를 유지한 채 점진적 통합이 가능합니다.
+코어·엔진이 생성한 타입으로 직렬화·메시지 처리를 하며, .proto·.thrift·.deuk를 한 빌드에서 섞어 쓸 수 있어 Protobuf·Thrift·OpenAPI 등 레거시를 유지한 채 점진적 통합이 가능합니다.
 
 ---
 

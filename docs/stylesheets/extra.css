@@ -30,10 +30,9 @@
   margin-top: 0.4rem;
 }
 .dp-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
-  gap: 2rem;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   padding: 0.6rem 0 1.2rem;
 }
 .dp-hero-copy h1 {
@@ -83,18 +82,22 @@
   margin: 0;
 }
 .dp-hero-visual {
-  min-height: 280px;
+  width: 100%;
+  margin-bottom: 0.25rem;
 }
 .dp-hero-visual img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
-  min-height: 240px;
+  min-height: 280px;
+  max-height: min(56vw, 420px);
+  object-fit: contain;
+  object-position: center top;
   border: 1px solid rgba(107, 131, 188, 0.22);
   border-radius: 1.25rem;
   box-shadow: 0 28px 60px rgba(0, 0, 0, 0.24);
   background: linear-gradient(180deg, rgba(10, 18, 40, 0.95), rgba(19, 27, 57, 0.95));
-  object-fit: contain;
 }
 .dp-value-grid {
   display: grid;
@@ -121,11 +124,14 @@
   line-height: 1.7;
 }
 @media screen and (max-width: 960px) {
-  .dp-hero,
   .dp-value-grid {
     grid-template-columns: 1fr;
   }
   .dp-hero-copy h1 {
     font-size: 2rem;
+  }
+  .dp-hero-visual img {
+    min-height: 220px;
+    max-height: min(70vw, 320px);
   }
 }

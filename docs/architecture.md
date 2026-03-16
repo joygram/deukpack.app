@@ -1,0 +1,92 @@
+# 제품 관계도
+
+득팩 제품군 간 **데이터·스키마 흐름**과 **관계**를 한눈에 볼 수 있는 관계망입니다.
+
+---
+
+## 전체 관계도
+
+``` mermaid
+flowchart TB
+  subgraph 입력["정의·데이터 소스"]
+    IDL["Thrift / Protobuf / .deuk"]
+    OAS["OpenAPI / JSON Schema"]
+    CSV["CSV / JSON"]
+    DB["DB·메타"]
+    XL["Excel"]
+  end
+
+  subgraph 코어["득팩 코어·엔진"]
+    AST["AST·파싱"]
+    GEN["코드 생성"]
+    SCH["스키마·메타"]
+    AST --> GEN
+    AST --> SCH
+  end
+
+  subgraph 산출["생성·산출물"]
+    CODE["C# / C++ / TS / JS"]
+    SQL["SQLite DDL"]
+    JSON["스키마 JSON"]
+    GEN --> CODE
+    GEN --> SQL
+    SCH --> JSON
+  end
+
+  subgraph 런타임["런타임·툴"]
+    PROTO["득팩 프로토콜<br/>Binary·Compact·JSON"]
+    EXCEL["Excel 애드인<br/>헤더·검증·비교"]
+    PIPE["파이프라인·Unity<br/>검증·로드"]
+    EXT["확장 제품군<br/>EF·DB·Sheets·Unreal"]
+  end
+
+  IDL --> 코어
+  OAS --> 코어
+  CSV --> 코어
+  DB --> 코어
+  XL --> EXCEL
+  SCH --> EXCEL
+  CODE --> PROTO
+  CODE --> PIPE
+  JSON --> PIPE
+  JSON --> EXCEL
+  산출 --> EXT
+  PROTO --> PIPE
+```
+
+- **정의·데이터 소스**: 득팩 IDL(.deuk)·Thrift·Protobuf·OpenAPI·CSV·JSON·DB·스프레드시트 등이 **코어·엔진**으로 들어갑니다.
+- **코어·엔진**: 파싱·AST를 바탕으로 **코드 생성**과 **스키마·메타**를 만듭니다.
+- **생성·산출물**: C#/C++/TS/JS 코드, SQLite, 스키마 JSON이 나와 **프로토콜·파이프라인·Excel 애드인·확장 제품**에서 사용됩니다.
+- **런타임·툴**: 프로토콜(직렬화·메시지), Excel 애드인(헤더·검증), 파이프라인·Unity(검증·로드), 확장 제품군이 코어 산출물을 공유합니다.
+
+---
+
+## 제품별 의존 관계
+
+``` mermaid
+flowchart LR
+  C["코어·엔진"]
+  P["프로토콜"]
+  E["Excel 애드인"]
+  U["파이프라인·Unity"]
+  X["확장 제품군"]
+
+  C -->|"코드·스키마"| P
+  C -->|"스키마 JSON"| E
+  C -->|"코드·스키마·테이블"| U
+  C -->|"AST·산출물"| X
+  P -->|"직렬화 타입"| U
+  E -->|"메타·헤더"| U
+```
+
+- **코어·엔진**이 모든 제품의 기반(코드·스키마·AST)을 제공합니다.
+- **프로토콜**은 코어가 생성한 타입으로 직렬화·메시지 처리를 하고, **파이프라인·Unity**에서 사용됩니다.
+- **Excel 애드인**은 코어 스키마로 헤더·검증을 하고, 메타는 **파이프라인·Unity**로 이어질 수 있습니다.
+- **확장 제품군**은 코어(및 선택적으로 프로토콜·Excel) 위에 EF·DB·Sheets·Unreal 등으로 확장합니다.
+
+---
+
+## 다음 단계
+
+- [제품군 개요](products/) — 제품별 역할·포함 범위
+- [포지셔닝](positioning/) — 타깃·포지션
