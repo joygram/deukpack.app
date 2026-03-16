@@ -20,4 +20,4 @@
 
 ## 문의
 
-라이선스·비용·도입 문의는 공식 채널을 이용해 주세요.
+라이선스·비용·도입 문의는 **contact@deukpack.app** 또는 [GitHub Issues](https://github.com/joygram/DeukPack/issues)를 이용해 주세요.
