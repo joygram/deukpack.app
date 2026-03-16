@@ -19,29 +19,8 @@ hide:
     </p>
   </div>
   <div class="dp-hero-visual">
-    <img src="assets/deukpack-brand-concept-01.png" alt="DeukPack 대표 브랜드 시안 - 데이터 팩을 메고 달리는 강아지 컨셉" />
+    <img src="/assets/deukpack-brand-concept-01.png" alt="DeukPack 대표 브랜드 시안 - 데이터 팩을 메고 달리는 강아지 컨셉" loading="eager" decoding="async" />
   </div>
-</div>
-
----
-
-## 로고 시안
-
-첫 시안을 메인 방향으로 두고, 같은 톤의 로고 시안을 함께 정리했습니다.
-
-<div class="dp-logo-grid">
-  <figure class="dp-logo-card dp-logo-card--featured">
-    <img src="assets/deukpack-logo-concept-01.png" alt="DeukPack 로고 시안 1 - 강아지 얼굴과 큐브 엠블럼" />
-    <figcaption><strong>시안 1</strong> - 가장 안정적인 메인 로고. 헤더 심볼과 같은 톤.</figcaption>
-  </figure>
-  <figure class="dp-logo-card">
-    <img src="assets/deukpack-logo-concept-02.png" alt="DeukPack 로고 시안 2 - 달리는 강아지 마스코트형" />
-    <figcaption><strong>시안 2</strong> - 마스코트성이 강한 프로모션용 비주얼.</figcaption>
-  </figure>
-  <figure class="dp-logo-card">
-    <img src="assets/deukpack-logo-concept-03.png" alt="DeukPack 로고 시안 3 - 강아지 귀가 있는 패키지 심볼" />
-    <figcaption><strong>시안 3</strong> - 심볼 중심의 단순한 앱 아이콘 방향.</figcaption>
-  </figure>
 </div>
 
 ---

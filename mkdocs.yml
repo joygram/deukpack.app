@@ -53,6 +53,8 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
+extra_javascript:
+  - javascripts/dp-banner.js
 
 plugins:
   - search
