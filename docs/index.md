@@ -4,9 +4,12 @@ hide:
 ---
 
 <div class="dp-hero">
+  <div class="dp-hero-visual">
+    <img src="/assets/deukpack-brand-concept-01.png" alt="DeukPack 대표 브랜드 시안 - 데이터 팩을 메고 달리는 강아지 컨셉" loading="eager" decoding="async" />
+  </div>
   <div class="dp-hero-copy">
     <p class="dp-eyebrow">DeukPack Brand Concept</p>
-    <h1>득을 묶어 전달하는<br>개발자용 제품 팩</h1>
+    <h1>이득을 묶어 전달하는<br>개발자용 제품 팩</h1>
     <p class="dp-lead"><strong>득팩(DeukPack)</strong> 은 Thrift·Protobuf·Excel 메타를 하나의 파이프라인으로 다루는 제품군입니다.<br>코드 생성, 프로토콜, 테이블, 툴링을 하나로 묶어 팀의 생산성을 높입니다.</p>
     <div class="dp-pills">
       <span class="dp-pill">IDL + Schema</span>
@@ -14,12 +17,9 @@ hide:
       <span class="dp-pill">Excel + Meta Pipeline</span>
     </div>
     <p class="dp-actions">
-      <a href="products/index.md" class="md-button md-button--primary">제품군 개요 →</a>
-      <a href="positioning.md" class="md-button">포지셔닝</a>
+      <a href="products/" class="md-button md-button--primary">제품군 개요 →</a>
+      <a href="positioning/" class="md-button">포지셔닝</a>
     </p>
-  </div>
-  <div class="dp-hero-visual">
-    <img src="/assets/deukpack-brand-concept-01.png" alt="DeukPack 대표 브랜드 시안 - 데이터 팩을 메고 달리는 강아지 컨셉" loading="eager" decoding="async" />
   </div>
 </div>
 
@@ -35,7 +35,7 @@ hide:
 | **득팩 파이프라인·Unity** | IDL/Excel → 코드·스키마·테이블 → Unity 검증·로드 통합. |
 | **확장 제품군** | EF, DB 마이그레이터, Google Sheets, Unreal/Elixir 등 부가 제품. |
 
-→ 자세한 내용은 [제품군 개요](products/index.md)와 각 제품 페이지를 참고하세요.
+→ 자세한 내용은 [제품군 개요](products/)와 각 제품 페이지를 참고하세요.
 
 ---
 
@@ -66,6 +66,8 @@ hide:
 
 ## 다음 단계
 
-- [제품군 개요](products/index.md) — 제품별 역할·포함 범위
-- [포지셔닝](positioning.md) — 타깃·포지션
-- [라이선스·비용](license.md) — 이용 조건·비용 안내
+- [제품군 개요](products/) — 제품별 역할·포함 범위
+- [레퍼런스 가이드](reference/) — API·타입 참조
+- [튜토리얼](tutorial/) — 빠른 시작·단계별 가이드
+- [포지셔닝](positioning/) — 타깃·포지션
+- [라이선스·비용](license/) — 이용 조건·비용 안내
