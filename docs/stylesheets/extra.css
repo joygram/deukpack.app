@@ -1,39 +1,29 @@
 /* DeukPack — 다크 테마 보조 스타일 */
 :root {
-  --dp-banner-height: 140px;
+  --dp-header-image: url("/assets/deukpack-brand-concept-01.png");
 }
-/* 사이트 전체 상단 배너 (전 페이지 노출) */
-.dp-site-banner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 101;
-  height: var(--dp-banner-height);
-  background: #0B1228;
-  border-bottom: 1px solid rgba(126, 220, 255, 0.15);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+.md-header,
+.md-tabs {
+  background-color: #0b1228;
+  background-image:
+    linear-gradient(90deg, rgba(11, 18, 40, 0.9), rgba(11, 18, 40, 0.5)),
+    var(--dp-header-image);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 34%;
 }
-.dp-site-banner__link {
-  display: block;
-  width: 100%;
-  height: 100%;
-  line-height: 0;
-}
-.dp-site-banner__img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
-}
-/* 헤더를 배너 아래로 */
 .md-header {
-  top: var(--dp-banner-height) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.24);
 }
-/* 본문 상단 여백 = 배너 + 헤더 */
-.md-main {
-  padding-top: calc(var(--md-header-height, 3.6rem) + var(--dp-banner-height)) !important;
+.md-tabs {
+  border-top: 1px solid rgba(126, 220, 255, 0.14);
+}
+.md-header__title,
+.md-tabs__link,
+.md-header__button,
+.md-search__form {
+  position: relative;
+  z-index: 1;
 }
 [data-md-color-scheme="slate"] .md-typeset h1:first-child {
   padding-bottom: 0.4rem;
@@ -46,8 +36,11 @@
 }
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
-  height: 2rem;
   width: 2rem;
+  height: 2rem;
+  border-radius: 0.55rem;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 .md-main__inner {
   margin-top: 1.2rem;
@@ -150,5 +143,9 @@
   }
   .dp-hero-copy h1 {
     font-size: 2rem;
+  }
+  .md-header,
+  .md-tabs {
+    background-position: center center;
   }
 }
