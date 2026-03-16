@@ -4,6 +4,9 @@ site_name: DeukPack 제품 소개
 site_description: 득팩(DeukPack) 제품군 소개 — 코어·엔진, 프로토콜, Excel 애드인, 파이프라인·Unity, 확장 제품
 site_url: https://deukpack.app/
 
+extra:
+  generator: false
+
 nav:
   - 홈: index.md
   - 제품:
@@ -20,12 +23,35 @@ theme:
   name: material
   language: ko
   palette:
+    # 기본: 다크 테마 (세련된 톤)
+    - scheme: slate
+      primary: cyan
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: 라이트 모드로 전환
     - scheme: default
       primary: indigo
-      accent: indigo
-    - scheme: slate
-      primary: indigo
-      accent: indigo
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: 다크 모드로 전환
+      media: "(prefers-color-scheme: light)"
+  font:
+    text: Noto Sans KR
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.expand
+    - navigation.sections
+    - navigation.top
+    - content.tabs.link
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+
+extra_css:
+  - stylesheets/extra.css
 
 plugins:
   - search

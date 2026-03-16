@@ -1,0 +1,10 @@
+/* DeukPack — 다크 테마 보조 스타일 */
+[data-md-color-scheme="slate"] .md-typeset h1:first-child {
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--md-default-fg-color--lighter);
+  margin-bottom: 0.6rem;
+}
+.md-typeset .md-button {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}

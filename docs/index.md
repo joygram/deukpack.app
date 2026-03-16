@@ -1,7 +1,17 @@
-# DeukPack 제품 소개
+---
+hide:
+  - toc
+---
 
-**득팩(DeukPack)** 은 IDL·코드 생성·직렬화·메타 테이블을 한 스택으로 다루는 제품군입니다.  
-**무엇을 할 수 있는지**, **어떤 이점을 얻을 수 있는지**를 중심으로 소개합니다.
+# DeukPack
+
+## IDL·코드생성·직렬화·메타를 한 스택으로
+
+**득팩(DeukPack)** 은 Thrift·Protobuf·Excel 메타를 하나의 파이프라인으로 다루는 제품군입니다.  
+무엇을 할 수 있는지, 어떤 이점을 얻을 수 있는지를 중심으로 소개합니다.
+
+[제품군 개요 →](products/index.md){ .md-button .md-button--primary }
+[포지셔닝](positioning.md){ .md-button }
 
 ---
 

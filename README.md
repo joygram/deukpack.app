@@ -28,6 +28,19 @@ mkdocs serve
 - **사이트**: **https://deukpack.app**
 - 로컬 빌드: `mkdocs build` → `site/` 에 정적 사이트 생성.
 
+### 커스텀 도메인·HTTPS
+
+GitHub Pages는 **커스텀 도메인(deukpack.app)에 대해 HTTPS 인증서를 자동 발급·갱신**합니다.
+
+1. **리포지토리** → **Settings** → **Pages**
+2. **Custom domain**에 `deukpack.app` 입력 후 Save
+3. 도메인 등록처에서 DNS 설정:
+   - **A 레코드**: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - 또는 **CNAME**: `deukpack.app` → `<user-or-org>.github.io`
+4. DNS 전파 후 Pages 설정에서 **Enforce HTTPS** 체크
+
+인증서는 GitHub가 관리하므로 별도 발급·갱신 작업은 필요 없습니다.
+
 ---
 
 ## 구조
