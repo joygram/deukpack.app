@@ -1,0 +1,21 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dp-cyan" x1="46" y1="36" x2="192" y2="212" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6AF6FF"/>
+      <stop offset="1" stop-color="#1EB7FF"/>
+    </linearGradient>
+    <linearGradient id="dp-amber" x1="104" y1="76" x2="160" y2="170" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD76D"/>
+      <stop offset="1" stop-color="#FFAE3D"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="#0C1430"/>
+  <path d="M80 56L104 36L116 80C102 76 90 68 80 56Z" fill="url(#dp-cyan)"/>
+  <path d="M176 56L152 36L140 80C154 76 166 68 176 56Z" fill="url(#dp-cyan)"/>
+  <path d="M64 94L128 58L192 94V162L128 198L64 162V94Z" fill="#132047" stroke="url(#dp-cyan)" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M128 58V198" stroke="url(#dp-cyan)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M64 94L128 130L192 94" stroke="url(#dp-cyan)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M93 103H163V153H93V103Z" fill="url(#dp-amber)" opacity="0.95"/>
+  <path d="M127 104V153" stroke="#0C1430" stroke-width="8" stroke-linecap="round"/>
+  <path d="M92 127H163" stroke="#0C1430" stroke-width="8" stroke-linecap="round"/>
+</svg>

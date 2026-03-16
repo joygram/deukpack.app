@@ -22,6 +22,7 @@ nav:
 theme:
   name: material
   language: ko
+  logo: assets/deukpack-mark.svg
   palette:
     # 기본: 다크 테마 (세련된 톤)
     - scheme: slate
