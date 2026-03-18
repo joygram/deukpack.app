@@ -18,6 +18,7 @@ nav:
   - 홈: index.md
   - 제품:
     - 제품군 개요: products/index.md
+    - AI·에이전트 파이프라인: ai-pipeline-integration.md
     - 코어·엔진: products/core-engine.md
     - 프로토콜: products/protocol.md
     - Excel 애드인: products/excel-addin.md

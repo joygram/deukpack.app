@@ -123,6 +123,13 @@
   font-size: 0.92rem;
   line-height: 1.7;
 }
+.dp-card--highlight {
+  border-color: rgba(98, 124, 182, 0.35);
+  background: linear-gradient(180deg, rgba(98, 124, 182, 0.08), rgba(98, 124, 182, 0.03));
+}
+.dp-card--highlight h3 {
+  color: var(--md-primary-fg-color, #7cb8ff);
+}
 @media screen and (max-width: 960px) {
   .dp-value-grid {
     grid-template-columns: 1fr;
