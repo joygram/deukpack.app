@@ -1,7 +1,7 @@
 # deukpack.app — 제품 소개, 문서, API 레퍼런스 등 공식 사이트
 
 site_name: DeukPack 제품 소개
-site_description: 득팩(DeukPack) 제품군 소개 — 코어·엔진, 프로토콜, Excel 애드인, 파이프라인·Unity, 확장 제품
+site_description: 득팩(DeukPack) — 무료·바로 적용 가능한 코어 라이브러리. 브랜드 컨셉. 코어·엔진, 프로토콜, 파이프라인·Unity, 확장. Excel 프로토콜·애드인은 별도 배포.
 site_url: https://deukpack.app/
 
 extra:
@@ -31,6 +31,7 @@ nav:
   - 튜토리얼:
     - 개요: tutorial/index.md
     - 빠른 시작: tutorial/quickstart.md
+  - 스타터 키트: starter-kits.md
   - 포지셔닝: positioning.md
   - 라이선스·비용: license.md
 

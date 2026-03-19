@@ -1,6 +1,6 @@
 # 득팩 프로토콜
 
-**한 줄**: **Binary/Compact/JSON** 직렬화와 **메타·테이블·네이티브 메시지 핸들링**(msgId·ProtocolRegistry)을 갖춘 프로토콜 라이브러리입니다. **서버 연동·실시간 게임 연동**에서 동일 타입·스키마로 패킷·메타를 주고받을 수 있으며, Protobuf·Thrift·OpenAPI 등 기존 환경과 함께 쓸 수 있습니다.
+**한 줄**: **Protobuf 호환( Binary/Compact )** 과 JSON 직렬화, **msgId·ProtocolRegistry** 를 갖춘 프로토콜 라이브러리입니다. 서버·실시간 게임에서 동일 타입·스키마로 패킷·메타를 주고받으며, OpenAPI·레거시 스택과 함께 쓸 수 있습니다.
 
 ---
 
@@ -19,7 +19,7 @@
 | **네이티브 메시지 핸들링** | 숫자 msgId·ProtocolRegistry로 패킷만 보고 O(1) 디스패치·핸들러 매핑. |
 | **스키마 차별** | GetSchema()로 필드·주석·기본값·어노테이션 런타임 복구. Excel 헤더·검증·타입 문자열 연동. |
 
-코어·엔진이 생성한 타입으로 직렬화·메시지 처리를 하며, .proto·.thrift·.deuk를 한 빌드에서 섞어 쓸 수 있어 Protobuf·Thrift·OpenAPI 등 레거시를 유지한 채 점진적 통합이 가능합니다.
+코어·엔진이 생성한 타입으로 직렬화·메시지 처리를 하며, .deuk·.proto·.thrift 를 한 빌드에서 섞어 쓸 수 있어 **Protobuf(표준)** 우선, 레거시는 점진적 통합이 가능합니다.
 
 ---
 
@@ -27,8 +27,8 @@
 
 | 구분 | 내용 |
 |------|------|
-| **프로토콜** | Binary, Compact, JSON (Thrift 와이어 호환). Little Endian 옵션. |
-| **스키마 메타** | GetSchema(), ThriftFieldSchema, 프로토콜 타입 문자열. Excel 헤더·검증 도구 연동. |
+| **프로토콜** | **Protobuf 호환** Binary, Compact, JSON. Little Endian 옵션. |
+| **스키마 메타** | GetSchema(), 필드 스키마, 프로토콜 타입 문자열. Excel 헤더·검증 도구 연동. |
 | **데이터베이스** | SQLite (DpSqliteProtocol): DDL·C# 접근 코드 생성. |
 
 제로카피 프로토콜은 **선택 옵션**이며, 사용자가 명시적으로 선택할 때만 사용합니다. 버퍼 수명·불변성 등 주의사항은 별도 스펙 문서를 참고하세요.

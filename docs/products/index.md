@@ -8,7 +8,7 @@
 
 | 제품 | 핵심 역할 | 포함 범위 | 소개 페이지 |
 |------|-----------|-----------|-------------|
-| **득팩 코어·엔진** | IDL 파싱, AST, 코드 생성, 스키마·메타의 중심 엔진 | .deuk/.thrift/.proto, OpenAPI/JSON Schema/CSV/JSON/DB 임포트, C#/C++/TS/JS 코드 생성, SQLite 생성 | [코어·엔진](core-engine.md) |
+| **득팩 코어·엔진** | IDL 파싱, AST, 코드 생성, 스키마·메타의 중심 엔진. **Apache-2.0**, **바로 사용 가능** | .deuk/.proto/.thrift, OpenAPI/JSON Schema/CSV/JSON/DB 임포트, C#/C++/TS/JS 코드 생성, SQLite 생성 | [코어·엔진](core-engine.md) |
 | **득팩 프로토콜** | 직렬화 런타임과 메시지 처리 규약 | Binary/Compact/JSON, msgId, ProtocolRegistry, 제로카피 옵션, 패킷 바디 직렬화 | [프로토콜](protocol.md) |
 | **득팩 Excel 애드인** | Excel에서 스키마 기반 메타 작업 | 헤더 생성, 검증, 스키마 비교, Apply, 시트 기반 메타 편집 | [Excel 애드인](excel-addin.md) |
 | **득팩 파이프라인·Unity** | 산출물을 프로젝트/Unity·서버에 연결 | IDL/Excel → 코드·스키마·테이블 → Unity·서버 검증·로드. 서버 연동·실시간 게임 연동 | [파이프라인·Unity](pipeline-unity.md) |
@@ -18,6 +18,7 @@
 
 ## 제품 선택 가이드
 
+- **지금 바로 코어를 쓰고 싶다** → [코어·엔진](core-engine.md) 상단의 **코어 라이브러리 바로 사용하기**(npm·GitHub 링크, 설치·CLI)
 - **정의·스키마를 한 툴체인으로 통합하고, 기존 IDL·OpenAPI·CSV·DB를 연동하고 싶다** → [코어·엔진](core-engine.md)
 - **패킷·메타 직렬화·서버 연동·실시간 게임 연동이 필요하다** → [프로토콜](protocol.md)
 - **기획·밸런스 메타를 스키마대로 스프레드시트에서 관리하고 싶다** → [Excel 애드인](excel-addin.md)
