@@ -33,6 +33,7 @@ nav:
     - API·타입 참조: reference/api.md
   - 튜토리얼:
     - 개요: tutorial/index.md
+    - 설치 (Windows·Linux): tutorial/install-os.md
     - 빠른 시작: tutorial/quickstart.md
     - IDL 가이드: tutorial/idl-guide.md
     - 프로토콜·직렬화: tutorial/protocol-serialization.md
@@ -108,6 +109,7 @@ plugins:
             개요: Overview
             API·타입 참조: API reference
             튜토리얼: Tutorial
+            설치 (Windows·Linux): Install (Windows · Linux)
             빠른 시작: Quick start
             IDL 가이드: IDL guide
             프로토콜·직렬화: Protocol & serialization

@@ -1,6 +1,6 @@
 # 빠른 시작
 
-득팩 코어를 설치하고, IDL 하나로 **C# 코드를 생성**까지 해보는 최소 단계입니다. 5분 안에 따라 할 수 있습니다.
+득팩 코어를 설치하고, IDL 하나로 **C#, C++, TS(JavaScript) 코드를 생성**까지 해보는 최소 단계입니다. 5분 안에 따라 할 수 있습니다.
 
 **English**: Use the language switcher (top right).
 
@@ -47,17 +47,17 @@ struct HelloResponse {
 **출력 폴더**를 지정하고, 생성할 언어를 옵션으로 넘깁니다.
 
 ```bash
-# C# + C++ 생성 (입력 IDL, 출력 디렉터리, 옵션)
-npx deukpack ./schema.deuk ./gen --csharp --cpp
+# C# + C++ + TS(JS) 생성 (입력 IDL, 출력 디렉터리, 옵션)
+npx deukpack ./schema.deuk ./gen --csharp --cpp --js
 
 # include 경로가 있으면 -I 로 지정
-npx deukpack ./schema.deuk ./gen -I ./idl --csharp --cpp
+npx deukpack ./schema.deuk ./gen -I ./idl --csharp --cpp --js
 
 # 프로토콜 포맷 지정 (binary / compact / json)
 npx deukpack ./schema.deuk ./gen --csharp --protocol binary
 ```
 
-생성 결과는 `./gen`(또는 지정한 경로) 아래에 언어별로 나뉘어 들어갑니다 (예: `gen/csharp/`, `gen/cpp/`).
+생성 결과는 `./gen`(또는 지정한 경로) 아래에 언어별로 나뉘어 들어갑니다 (예: `gen/csharp/`, `gen/cpp/`, `gen/javascript/`).
 
 ---
 
@@ -65,6 +65,7 @@ npx deukpack ./schema.deuk ./gen --csharp --protocol binary
 
 - **C#**: `*.cs` 파일과 스키마·프로토콜 관련 타입이 생성됩니다. `GetSchema()`, `ProtocolRegistry` 등은 [API·타입 참조](../reference/api.md)를 참고하세요.
 - **C++**: 헤더·소스가 생성됩니다. 빌드 시 해당 경로를 include에 추가하면 됩니다.
+- **TypeScript/JavaScript**: `--js` 옵션으로 생성됩니다. BFF·Node·도구에서 타입·파서로 사용할 수 있습니다.
 
 ---
 

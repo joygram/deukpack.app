@@ -1,6 +1,6 @@
 # Quick start
 
-Install DeukPack, define one IDL, and **generate C# code** in a few steps (about 5 minutes).
+Install DeukPack, define one IDL, and **generate C#, C++, and TS code** in a few steps (about 5 minutes).
 
 **한국어**: Use the language switcher (top right).
 

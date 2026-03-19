@@ -4,20 +4,16 @@
 
 ---
 
-## 코어 라이브러리 바로 사용하기
+## 득팩 코어 바로 사용하기
 
-득팩 **코어 라이브러리**는 **무료로 사용할 수 있고**, **바로 적용할 수 있습니다.** **Apache-2.0** 라이선스로, 별도 계약·가입 없이 **상업/비상업·수정·재배포**가 가능하며, npm·GitHub에서 **바로 설치해 사용**할 수 있습니다. CLI·코드 생성·C# 런타임까지 한 번에 쓸 수 있습니다.
+득팩 **코어**는 **무료·Apache-2.0**으로 **바로** 설치해 쓸 수 있습니다. CLI·코드 생성·C# 런타임까지 npm 하나로 사용할 수 있습니다.
 
-| 링크 | 용도 |
-|------|------|
-| [**npm — deukpack**](https://www.npmjs.com/package/deukpack) | 패키지 설치·버전 확인. `npm install deukpack` / `npx deukpack` 사용. |
-| [**GitHub — joygram/DeukPack**](https://github.com/joygram/DeukPack) | OSS 소스·이슈·기여. 클론 후 로컬 빌드·연동 시 참고. |
+### 설치·실행 (한 줄)
 
-**GitHub 페이지**
-
-득팩 코어의 **공식 OSS 저장소**는 [**github.com/joygram/DeukPack**](https://github.com/joygram/DeukPack) 입니다. 여기에서 **소스 코드**, **README·문서**, **이슈·기여**, **릴리스**를 확인할 수 있습니다. 클론·로컬 빌드·기여 방법은 저장소의 README, CONTRIBUTING, RELEASING을 참고하세요. 상용·비상용 프로젝트에 바로 적용 가능한 **무료·Apache-2.0** 코어입니다.
-
-**바로 시작하기**
+| 채널 | 링크 | 용도 |
+|------|------|------|
+| **npm** | [deukpack](https://www.npmjs.com/package/deukpack) | `npm install deukpack` / `npx deukpack` — 배포본만 사용 시 |
+| **GitHub** | [joygram/DeukPack](https://github.com/joygram/DeukPack) | 소스·이슈·기여·릴리스. 클론·로컬 빌드 시 |
 
 ```bash
 # 프로젝트에 추가
@@ -27,8 +23,35 @@ npm install deukpack
 npx deukpack ./idl/root.deuk ./gen --csharp --cpp --js -I ./idl
 ```
 
-- **C#·Unity**에서 생성 코드와 함께 쓰려면: npm 패키지의 `dist/csharp` 런타임을 참조하거나, [스타터 키트](../starter-kits.md)에서 샘플을 확인하세요.
-- **단계별 가이드**: [튜토리얼 · 빠른 시작](../tutorial/quickstart.md)에서 IDL 작성부터 코드 생성까지 따라 할 수 있습니다.
+### 이 사이트에서 더 보기
+
+| 문서 | 내용 |
+|------|------|
+| [설치 (Windows·Linux)](../tutorial/install-os.md) | Node 설치, 배포본(npm)·.tgz 설치 |
+| [빠른 시작](../tutorial/quickstart.md) | IDL 하나로 C#, C++, TS 생성까지 단계별 |
+| [IDL 가이드](../tutorial/idl-guide.md) | .deuk·.thrift 문법·네임스페이스 |
+| [C# 가이드](../tutorial/csharp-guide.md) | C# 생성물·프로토콜·참조 |
+| [C++ 가이드](../tutorial/cpp-guide.md) | C++ 빌드·include·실행 |
+| [파이프라인 만들기](../tutorial/pipeline-guide.md) | 여러 잡·설정 JSON |
+| [스타터 키트](../starter-kits.md) | Unity·C++·Console·EF·TS 등 샘플 |
+| [문서 안내](../documentation-index.md) | 한글·영문 문서 위치 |
+
+### GitHub 저장소 세부 문서
+
+| 문서 | 내용 |
+|------|------|
+| [배포본 vs 소스본](https://github.com/joygram/DeukPack/blob/main/docs/DISTRIBUTION_VS_SOURCE.ko.md) | npm 사용 vs 클론·빌드 선택 |
+| [npm 패키지 사용](https://github.com/joygram/DeukPack/blob/main/docs/NPM_PACKAGE.md) | 설치·CLI·파이프라인 요약 |
+| [빠른 시작 (언어별)](https://github.com/joygram/DeukPack/blob/main/docs/QUICKSTART.ko.md) | C#·C++·TS·JS 예제 실행 |
+| [README (한글)](https://github.com/joygram/DeukPack/blob/main/README.ko.md) | 저장소 진입·요약 |
+| [릴리스용 문서 목록](https://github.com/joygram/DeukPack/blob/main/docs/RELEASE_DOCS_INDEX.md) | 배포·사용자용 문서 인덱스 |
+
+---
+
+## 코어 라이브러리 요약
+
+- **공식 OSS**: [github.com/joygram/DeukPack](https://github.com/joygram/DeukPack) — 소스, README, 이슈, 기여, 릴리스. 클론·로컬 빌드·기여는 저장소의 README·RELEASING을 참고하세요.
+- **C#·Unity**: npm 패키지의 `dist/csharp` 런타임 참조 또는 [스타터 키트](../starter-kits.md) 샘플.
 
 ---
 

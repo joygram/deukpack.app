@@ -20,7 +20,7 @@ hide:
       <span class="dp-pill">AI·에이전트 파이프라인 연동</span>
     </div>
     <p class="dp-actions">
-      <a href="products/core-engine/#코어-라이브러리-바로-사용하기" class="md-button md-button--primary">코어 라이브러리 사용하기</a>
+      <a href="products/core-engine/#득팩-코어-바로-사용하기" class="md-button md-button--primary">득팩 코어 바로 사용하기</a>
       <a href="products/" class="md-button">제품군 개요</a>
       <a href="starter-kits/" class="md-button">스타터 키트</a>
       <a href="positioning/" class="md-button">포지셔닝</a>
@@ -46,7 +46,9 @@ hide:
 
 ## 이 페이지 소개
 
-이 사이트(**deukpack.app**)는 득팩 **브랜드 컨셉**과 제품을 소개하는 페이지입니다. **무료·오픈소스 코어 라이브러리**를 npm·[**GitHub(joygram/DeukPack)**](https://github.com/joygram/DeukPack)에서 바로 적용할 수 있고, 제품군·스타터 키트·문서로 실무 적용·도입 검토에 활용하실 수 있습니다. 코어 소스·문서·이슈·기여는 [GitHub 저장소](https://github.com/joygram/DeukPack)에서 확인하세요. 상업·비상업으로 자유롭게 링크·인용해 주세요.
+이 사이트(**deukpack.app**)는 득팩 **브랜드 컨셉**과 제품을 소개하는 페이지입니다. **무료·오픈소스 코어**를 npm·[**GitHub(joygram/DeukPack)**](https://github.com/joygram/DeukPack)에서 바로 적용할 수 있고, 제품군·스타터 키트·문서로 실무 적용·도입 검토에 활용하실 수 있습니다.
+
+**득팩 코어를 바로 사용**하려면 위 **「득팩 코어 바로 사용하기」** 버튼 또는 [코어·엔진](products/core-engine.md) 페이지로 이동하세요. 해당 페이지에 **설치·CLI 예시**, **이 사이트 세부 문서**(설치, 빠른 시작, IDL·C#·C++ 가이드, 파이프라인, 스타터 키트), **GitHub 세부 문서**(배포본 vs 소스본, npm 사용, QUICKSTART, 릴리스 문서 목록) 링크가 정리되어 있습니다. 코어 소스·이슈·기여는 [GitHub 저장소](https://github.com/joygram/DeukPack)에서 확인하세요. 상업·비상업으로 자유롭게 링크·인용해 주세요.
 
 ---
 

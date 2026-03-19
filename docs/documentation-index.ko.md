@@ -23,6 +23,7 @@
 
 | 문서 | 영문 | 한글 |
 |------|------|------|
+| **배포본 vs 소스본** | [docs/DISTRIBUTION_VS_SOURCE.md](https://github.com/joygram/DeukPack/blob/main/docs/DISTRIBUTION_VS_SOURCE.md) | [docs/DISTRIBUTION_VS_SOURCE.ko.md](https://github.com/joygram/DeukPack/blob/main/docs/DISTRIBUTION_VS_SOURCE.ko.md) |
 | **README** | [README.md](https://github.com/joygram/DeukPack/blob/main/README.md) | [README.ko.md](https://github.com/joygram/DeukPack/blob/main/README.ko.md) |
 | **빠른 시작 (언어별)** | [docs/QUICKSTART.md](https://github.com/joygram/DeukPack/blob/main/docs/QUICKSTART.md) | [docs/QUICKSTART.ko.md](https://github.com/joygram/DeukPack/blob/main/docs/QUICKSTART.ko.md) |
 | **전체 문서 트리** | [docs/README.md](https://github.com/joygram/DeukPack/blob/main/docs/README.md) | *(동일)* |
