@@ -8,10 +8,10 @@
 
 | 구분 | 설명 |
 |------|------|
-| [API·타입 참조](api/) | 생성 코드 API, 직렬화·프로토콜 타입, 스키마 메타 등 |
-| **코어·엔진** | IDL 문법, 코드 생성 옵션, 스키마 JSON 형식 (추가 예정) |
-| **프로토콜** | Binary/Compact/JSON 포맷, msgId·ProtocolRegistry 사용법 (추가 예정) |
-| **Excel·Unity** | 헤더 규칙, 에디터 설정, 파이프라인 옵션 (추가 예정) |
+| [API·타입 참조](api.md) | CLI 옵션, 생성 코드 API(GetSchema, ProtocolRegistry 등), 프로토콜·직렬화 타입 |
+| **코어·엔진** | [코어·엔진](../products/core-engine.md) — IDL 입력, 코드 생성, 스키마·SQLite |
+| **프로토콜** | [프로토콜](../products/protocol.md) — Binary/Compact/JSON, msgId·ProtocolRegistry |
+| **Excel·Unity** | [Excel 애드인](../products/excel-addin.md), [파이프라인·Unity](../products/pipeline-unity.md) |
 
 ---
 

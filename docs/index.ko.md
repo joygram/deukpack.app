@@ -107,10 +107,10 @@ hide:
 ## 다음 단계
 
 - [**코어 라이브러리 사용하기**](products/core-engine/#코어-라이브러리-바로-사용하기) — npm·GitHub 링크, 설치·CLI·튜토리얼로 바로 사용
+- [**스타터 키트**](starter-kits.md) — 스택별 샘플·저장소 링크·바로 적용 예시
 - [제품군 개요](products/) — 제품별 역할·포함 범위
 - [제품 관계도](architecture.md) — 제품 간 관계·데이터 흐름 다이어그램
 - [튜토리얼](tutorial/) — 빠른 시작·단계별 가이드
-- [스타터 키트](starter-kits.md) — 스택별 샘플·연동 예시
 - [레퍼런스 가이드](reference/) — API·타입 참조
 - [포지셔닝](positioning/) — 타깃·포지션
 - [라이선스·비용](license/) — 이용 조건·비용 안내

@@ -16,9 +16,12 @@ markdown_extensions:
 
 nav:
   - 홈: index.md
+  - 문서 안내: documentation-index.md
+  - 스타터 키트: starter-kits.md
   - 제품:
     - 제품군 개요: products/index.md
     - AI·에이전트 파이프라인: ai-pipeline-integration.md
+    - AI 도구 연동(Antigravity·Cursor 등): ai-ide-tools-guide.md
     - 코어·엔진: products/core-engine.md
     - 프로토콜: products/protocol.md
     - Excel 애드인: products/excel-addin.md
@@ -31,7 +34,11 @@ nav:
   - 튜토리얼:
     - 개요: tutorial/index.md
     - 빠른 시작: tutorial/quickstart.md
-  - 스타터 키트: starter-kits.md
+    - IDL 가이드: tutorial/idl-guide.md
+    - 프로토콜·직렬화: tutorial/protocol-serialization.md
+    - C# 가이드: tutorial/csharp-guide.md
+    - C++ 가이드: tutorial/cpp-guide.md
+    - 파이프라인 만들기: tutorial/pipeline-guide.md
   - 포지셔닝: positioning.md
   - 라이선스·비용: license.md
 
@@ -71,4 +78,42 @@ extra_css:
   - stylesheets/extra.css
 
 plugins:
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      languages:
+        - locale: ko
+          default: true
+          name: 한국어
+          build: true
+        - locale: en
+          name: English
+          build: true
+          nav_translations:
+            문서 안내: Documentation
+            홈: Home
+            스타터 키트: Starter kits
+            제품: Products
+            제품군 개요: Products overview
+            AI·에이전트 파이프라인: AI / agent pipeline
+            AI 도구 연동(Antigravity·Cursor 등): AI tools (Antigravity, Cursor, …)
+            코어·엔진: Core · engine
+            프로토콜: Protocol
+            Excel 애드인: Excel add-in
+            파이프라인·Unity: Pipeline · Unity
+            확장 제품군: Extension
+            제품 관계도: Architecture
+            레퍼런스 가이드: Reference
+            개요: Overview
+            API·타입 참조: API reference
+            튜토리얼: Tutorial
+            빠른 시작: Quick start
+            IDL 가이드: IDL guide
+            프로토콜·직렬화: Protocol & serialization
+            C# 가이드: C# guide
+            C++ 가이드: C++ guide
+            파이프라인 만들기: Pipeline guide
+            포지셔닝: Positioning
+            라이선스·비용: License
   - search
