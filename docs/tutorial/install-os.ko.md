@@ -82,4 +82,4 @@ npx deukpack ./schema.deuk ./out --csharp
 
 - [빠른 시작](quickstart.md) — IDL → C#·C++·TS 생성 예제
 - [코어·엔진](../products/core-engine.md) — npm·GitHub 링크
-- 저장소 상세: [GitHub joygram/DeukPack](https://github.com/joygram/DeukPack) — `docs/INSTALL_OS.ko.md`
+- 저장소 및 소스 빌드: [GitHub DeukPack](https://github.com/joygram/DeukPack). 설치·튜토리얼 문서는 이 사이트에만 보관됩니다.

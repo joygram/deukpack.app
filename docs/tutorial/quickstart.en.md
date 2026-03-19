@@ -38,7 +38,7 @@ struct HelloResponse {
 }
 ```
 
-For `.deuk` syntax, see the [reference](../reference/) and the core repo [docs](https://github.com/joygram/DeukPack/tree/main/docs).
+For `.deuk` syntax, see the [reference](../reference/index.md) and the core repo [docs](https://github.com/joygram/DeukPack/tree/main/docs).
 
 ---
 

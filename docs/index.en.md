@@ -27,4 +27,4 @@ npm install deukpack
 npx deukpack ./schema.deuk ./out --csharp --cpp
 ```
 
-Detailed docs: [deukpack.app](https://deukpack.app/) (Korean) · [GitHub DeukPack](https://github.com/joygram/DeukPack) · [QUICKSTART.md](https://github.com/joygram/DeukPack/blob/main/docs/QUICKSTART.md).
+Detailed docs: [deukpack.app](https://deukpack.app/) (Korean) · [GitHub DeukPack](https://github.com/joygram/DeukPack). Quick start and tutorials live on this site.

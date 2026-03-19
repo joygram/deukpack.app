@@ -20,10 +20,10 @@ hide:
       <span class="dp-pill">AI·에이전트 파이프라인 연동</span>
     </div>
     <p class="dp-actions">
-      <a href="products/core-engine/#득팩-코어-바로-사용하기" class="md-button md-button--primary">득팩 코어 바로 사용하기</a>
-      <a href="products/" class="md-button">제품군 개요</a>
-      <a href="starter-kits/" class="md-button">스타터 키트</a>
-      <a href="positioning/" class="md-button">포지셔닝</a>
+      <a href="products/core-engine.md#득팩-코어-바로-사용하기" class="md-button md-button--primary">득팩 코어 바로 사용하기</a>
+      <a href="products/index.md" class="md-button">제품군 개요</a>
+      <a href="starter-kits.md" class="md-button">스타터 키트</a>
+      <a href="positioning.md" class="md-button">포지셔닝</a>
     </p>
   </div>
 </div>
@@ -40,7 +40,7 @@ hide:
 | **득팩 파이프라인·Unity** | 정의·메타 → 코드·스키마·테이블 → Unity·서버 검증·로드. 서버 연동·실시간 게임 연동까지 동일 스키마로 연결. |
 | **확장 제품군** | EF, DB 마이그레이터, Google Sheets, Unreal/Elixir 등 부가 제품. |
 
-→ [제품 관계도](architecture.md)에서 제품 간 데이터·스키마 흐름을 다이어그램으로 볼 수 있습니다. 자세한 내용은 [제품군 개요](products/)와 각 제품 페이지를 참고하세요. **스택별 바로 적용 예시**는 [스타터 키트](starter-kits.md)에서 안내합니다.
+→ [제품 관계도](architecture.md)에서 제품 간 데이터·스키마 흐름을 다이어그램으로 볼 수 있습니다. 자세한 내용은 [제품군 개요](products/index.md)와 각 제품 페이지를 참고하세요. **스택별 바로 적용 예시**는 [스타터 키트](starter-kits.md)에서 안내합니다.
 
 ---
 
@@ -48,7 +48,7 @@ hide:
 
 이 사이트(**deukpack.app**)는 득팩 **브랜드 컨셉**과 제품을 소개하는 페이지입니다. **무료·오픈소스 코어**를 npm·[**GitHub(joygram/DeukPack)**](https://github.com/joygram/DeukPack)에서 바로 적용할 수 있고, 제품군·스타터 키트·문서로 실무 적용·도입 검토에 활용하실 수 있습니다.
 
-**득팩 코어를 바로 사용**하려면 위 **「득팩 코어 바로 사용하기」** 버튼 또는 [코어·엔진](products/core-engine.md) 페이지로 이동하세요. 해당 페이지에 **설치·CLI 예시**, **이 사이트 세부 문서**(설치, 빠른 시작, IDL·C#·C++ 가이드, 파이프라인, 스타터 키트), **GitHub 세부 문서**(배포본 vs 소스본, npm 사용, QUICKSTART, 릴리스 문서 목록) 링크가 정리되어 있습니다. 코어 소스·이슈·기여는 [GitHub 저장소](https://github.com/joygram/DeukPack)에서 확인하세요. 상업·비상업으로 자유롭게 링크·인용해 주세요.
+**득팩 코어를 바로 사용**하려면 위 **「득팩 코어 바로 사용하기」** 버튼 또는 [코어·엔진](products/core-engine.md) 페이지로 이동하세요. 해당 페이지에 **설치·CLI 예시**, **이 사이트 세부 문서**(설치, 빠른 시작, IDL·C#·C++ 가이드, 파이프라인, 스타터 키트), **GitHub**(README, 릴리스 문서 목록) 링크가 정리되어 있습니다. 코어 소스·이슈·기여는 [GitHub 저장소](https://github.com/joygram/DeukPack)에서 확인하세요. 상업·비상업으로 자유롭게 링크·인용해 주세요.
 
 ---
 
@@ -70,7 +70,7 @@ hide:
   <div class="dp-card dp-card--highlight">
     <h3>AI 시대에서도 필요한 이유</h3>
     <p>에이전트는 <strong>스펙 초안·로직</strong>에는 강하지만, <strong>결정론적 출력·와이어 호환·다언어 동시 정합성·빌드 재현성</strong>은 보장하기 어렵습니다. 득팩은 그 부분을 담당합니다. 스키마를 단일 소스로 두고 <strong>동일 입력 → 동일 코드·직렬화</strong>를 내주므로, 에이전트는 스펙·로직만 만들고 득팩이 “실행 가능한 타입·파이프라인”으로 바꿔 줍니다.</p>
-    <p><a href="ai-pipeline-integration/">에이전트가 할 수 없는 일 · 연동 정리 →</a></p>
+    <p><a href="ai-pipeline-integration.md">에이전트가 할 수 없는 일 · 연동 정리 →</a></p>
   </div>
 </div>
 
@@ -102,17 +102,17 @@ hide:
 - **연동 포인트**: 에이전트가 만든 **`.deuk`, `.proto`, `.thrift`, OpenAPI** 를 **득팩 입력**으로 넘기고 CLI로 코드·타입·직렬화를 생성. 에이전트는 “이 타입을 쓰는 로직”만 만들면 됩니다.
 - 에이전트가 스키마를 **생성·수정**해도, **“실행 가능한 타입·직렬화·다언어 코드”**로 바꿔 주는 건 **전문 도구(득팩)**가 담당하는 편이 안전하다. 에이전트는 그 도구를 **도구로 호출**하면 된다.
 
-→ 상세: [에이전트가 할 수 없는 일 · AI 파이프라인 연동 정리](ai-pipeline-integration/)
+→ 상세: [에이전트가 할 수 없는 일 · AI 파이프라인 연동 정리](ai-pipeline-integration.md)
 
 ---
 
 ## 다음 단계
 
-- [**코어 라이브러리 사용하기**](products/core-engine/#코어-라이브러리-바로-사용하기) — npm·GitHub 링크, 설치·CLI·튜토리얼로 바로 사용
+- [**코어 라이브러리 사용하기**](products/core-engine.md#코어-라이브러리-바로-사용하기) — npm·GitHub 링크, 설치·CLI·튜토리얼로 바로 사용
 - [**스타터 키트**](starter-kits.md) — 스택별 샘플·저장소 링크·바로 적용 예시
-- [제품군 개요](products/) — 제품별 역할·포함 범위
+- [제품군 개요](products/index.md) — 제품별 역할·포함 범위
 - [제품 관계도](architecture.md) — 제품 간 관계·데이터 흐름 다이어그램
-- [튜토리얼](tutorial/) — 빠른 시작·단계별 가이드
-- [레퍼런스 가이드](reference/) — API·타입 참조
-- [포지셔닝](positioning/) — 타깃·포지션
-- [라이선스·비용](license/) — 이용 조건·비용 안내
+- [튜토리얼](tutorial/index.md) — 빠른 시작·단계별 가이드
+- [레퍼런스 가이드](reference/index.md) — API·타입 참조
+- [포지셔닝](positioning.md) — 타깃·포지션
+- [라이선스·비용](license.md) — 이용 조건·비용 안내

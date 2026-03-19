@@ -38,7 +38,7 @@ struct HelloResponse {
 }
 ```
 
-`.deuk` 문법은 [레퍼런스 가이드](../reference/)와 코어 저장소 [docs](https://github.com/joygram/DeukPack/tree/main/docs)를 참고하세요.
+`.deuk` 문법은 [레퍼런스 가이드](../reference/index.md)와 코어 저장소 [docs](https://github.com/joygram/DeukPack/tree/main/docs)를 참고하세요.
 
 ---
 

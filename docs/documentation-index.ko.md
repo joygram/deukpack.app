@@ -23,14 +23,14 @@
 
 | 문서 | 영문 | 한글 |
 |------|------|------|
-| **배포본 vs 소스본** | [docs/DISTRIBUTION_VS_SOURCE.md](https://github.com/joygram/DeukPack/blob/main/docs/DISTRIBUTION_VS_SOURCE.md) | [docs/DISTRIBUTION_VS_SOURCE.ko.md](https://github.com/joygram/DeukPack/blob/main/docs/DISTRIBUTION_VS_SOURCE.ko.md) |
+| **배포본 vs 소스본** | [이 사이트: 배포본 vs 소스본](tutorial/distribution-vs-source.md) | 동일 페이지에서 **언어 전환** |
 | **README** | [README.md](https://github.com/joygram/DeukPack/blob/main/README.md) | [README.ko.md](https://github.com/joygram/DeukPack/blob/main/README.ko.md) |
-| **빠른 시작 (언어별)** | [docs/QUICKSTART.md](https://github.com/joygram/DeukPack/blob/main/docs/QUICKSTART.md) | [docs/QUICKSTART.ko.md](https://github.com/joygram/DeukPack/blob/main/docs/QUICKSTART.ko.md) |
+| **빠른 시작 (언어별)** | [빠른 시작 (이 사이트)](tutorial/quickstart.md) | 동일 페이지에서 **언어 전환** |
 | **전체 문서 트리** | [docs/README.md](https://github.com/joygram/DeukPack/blob/main/docs/README.md) | *(동일)* |
 
 ---
 
 ## 요약
 
-- **한글**: 튜토리얼·레퍼런스·제품 문서는 이 사이트에서 한글로 제공됩니다. OSS 저장소는 README.ko.md, QUICKSTART.ko.md.
-- **English**: Use the **language switcher** (top right) for Quick start, Tutorial index, and API reference in English. OSS repo: README.md, docs/QUICKSTART.md.
+- **한글**: 튜토리얼·레퍼런스·제품 문서는 이 사이트에서 한글로 제공됩니다. OSS 저장소: README.ko.md, docs/README.md.
+- **English**: Use the **language switcher** (top right) for Quick start, Tutorial index, and API reference in English. OSS repo: README.md, docs/README.md.

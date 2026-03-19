@@ -36,8 +36,8 @@ npm install deukpack
 npx deukpack ./schema.deuk ./out --csharp --cpp
 ```
 
-- **상세**: [NPM_PACKAGE.md](NPM_PACKAGE.md) — 설치, CLI, 파이프라인  
-- **OS별 설치**: [INSTALL_OS.ko.md](INSTALL_OS.ko.md) — Windows·Linux Node 설치, .tgz 설치
+- **상세**: [설치 (Windows·Linux)](install-os.md) — npm 설치, CLI, .tgz  
+- **빠른 시작**: [빠른 시작](quickstart.md) — IDL → C#·C++·TS 생성
 
 ### 포함되는 것
 
@@ -76,7 +76,7 @@ npm run build
 node scripts/build_deukpack.js ./examples/sample_idl/sample.thrift ./examples/out --csharp --cpp --js
 ```
 
-- **상세**: [SOURCE_AND_SUBMODULE_GUIDE.md](SOURCE_AND_SUBMODULE_GUIDE.md) — 클론, 빌드, 서브모듈, 파이프라인 연결
+- **상세**: [GitHub — 소스·서브모듈 가이드](https://github.com/joygram/DeukPack/blob/main/docs/README.md) — 클론, 빌드, 서브모듈은 저장소 docs 참고
 
 ### 포함되는 것
 
@@ -106,8 +106,6 @@ node scripts/build_deukpack.js ./examples/sample_idl/sample.thrift ./examples/ou
 
 | 문서 | 용도 |
 |------|------|
-| [NPM_PACKAGE.md](NPM_PACKAGE.md) | 배포본(npm) 설치·CLI·파이프라인 요약 |
-| [INSTALL_OS.ko.md](INSTALL_OS.ko.md) | 배포본 사용 시 Windows·Linux 설치 |
-| [SOURCE_AND_SUBMODULE_GUIDE.md](SOURCE_AND_SUBMODULE_GUIDE.md) | 소스본 클론·빌드·서브모듈·파이프라인 연결 |
-| [QUICKSTART.ko.md](QUICKSTART.ko.md) | 언어별 빠른 시작 (배포본·소스본 공통) |
-| [RELEASE_DOCS_INDEX.md](RELEASE_DOCS_INDEX.md) | 릴리스·사용자용 문서 목록 |
+| [설치 (Windows·Linux)](install-os.md) | 배포본(npm) 설치, Node·.tgz, Windows·Linux |
+| [빠른 시작](quickstart.md) | IDL → C#·C++·TS 생성, 언어별 예제 |
+| [GitHub DeukPack docs](https://github.com/joygram/DeukPack/tree/main/docs) | 소스·서브모듈·릴리스 문서 (저장소) |

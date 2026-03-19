@@ -36,8 +36,8 @@ npm install deukpack
 npx deukpack ./schema.deuk ./out --csharp --cpp
 ```
 
-- **Details**: [NPM_PACKAGE.md](NPM_PACKAGE.md)
-- **OS-specific install**: [INSTALL_OS.md](INSTALL_OS.md)
+- **Details**: [Install (Windows · Linux)](install-os.md) — npm install, CLI, .tgz
+- **Quick start**: [Quick start](quickstart.md) — IDL → C#, C++, TS
 
 ### What you get
 
@@ -70,7 +70,7 @@ npm run build
 node scripts/build_deukpack.js ./examples/sample_idl/sample.thrift ./examples/out --csharp --cpp --js
 ```
 
-- **Details**: [SOURCE_AND_SUBMODULE_GUIDE.md](SOURCE_AND_SUBMODULE_GUIDE.md)
+- **Details**: [GitHub — source and submodule](https://github.com/joygram/DeukPack/blob/main/docs/README.md) — clone, build, submodule in repo docs
 
 ### What you get
 
@@ -99,8 +99,6 @@ node scripts/build_deukpack.js ./examples/sample_idl/sample.thrift ./examples/ou
 
 | Doc | Purpose |
 |-----|---------|
-| [NPM_PACKAGE.md](NPM_PACKAGE.md) | Distribution install, CLI, pipeline |
-| [INSTALL_OS.md](INSTALL_OS.md) | Windows · Linux install for distribution |
-| [SOURCE_AND_SUBMODULE_GUIDE.md](SOURCE_AND_SUBMODULE_GUIDE.md) | Source clone, build, submodule, pipeline |
-| [QUICKSTART.md](QUICKSTART.md) | Quick start by language |
-| [RELEASE_DOCS_INDEX.md](RELEASE_DOCS_INDEX.md) | Release-facing doc index |
+| [Install (Windows · Linux)](install-os.md) | Distribution install, Node, .tgz |
+| [Quick start](quickstart.md) | IDL → C#, C++, TS, by language |
+| [GitHub DeukPack docs](https://github.com/joygram/DeukPack/tree/main/docs) | Source, submodule, release docs (repo) |

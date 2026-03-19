@@ -36,13 +36,11 @@ npx deukpack ./idl/root.deuk ./gen --csharp --cpp --js -I ./idl
 | [스타터 키트](../starter-kits.md) | Unity·C++·Console·EF·TS 등 샘플 |
 | [문서 안내](../documentation-index.md) | 한글·영문 문서 위치 |
 
-### GitHub 저장소 세부 문서
+### GitHub 저장소
 
 | 문서 | 내용 |
 |------|------|
-| [배포본 vs 소스본](https://github.com/joygram/DeukPack/blob/main/docs/DISTRIBUTION_VS_SOURCE.ko.md) | npm 사용 vs 클론·빌드 선택 |
-| [npm 패키지 사용](https://github.com/joygram/DeukPack/blob/main/docs/NPM_PACKAGE.md) | 설치·CLI·파이프라인 요약 |
-| [빠른 시작 (언어별)](https://github.com/joygram/DeukPack/blob/main/docs/QUICKSTART.ko.md) | C#·C++·TS·JS 예제 실행 |
+| [배포본 vs 소스본](../tutorial/distribution-vs-source.md) | npm 사용 vs 클론·빌드 (이 사이트) |
 | [README (한글)](https://github.com/joygram/DeukPack/blob/main/README.ko.md) | 저장소 진입·요약 |
 | [릴리스용 문서 목록](https://github.com/joygram/DeukPack/blob/main/docs/RELEASE_DOCS_INDEX.md) | 배포·사용자용 문서 인덱스 |
 

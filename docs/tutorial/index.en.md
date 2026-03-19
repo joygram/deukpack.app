@@ -43,4 +43,4 @@ Use the **language switcher** (top) for 한국어.
 - **C++**: CMake, C++17, generated headers/sources
 - **Excel / Unity**: See each product page
 
-Product overview: [Products](../products/). Full reference: [Reference](../reference/).
+Product overview: [Products](../products/index.md). Full reference: [Reference](../reference/index.md).

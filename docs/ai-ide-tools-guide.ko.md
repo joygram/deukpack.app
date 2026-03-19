@@ -108,6 +108,6 @@ Google의 **에이전트 중심 IDE**(Gemini 계열). “GitHub 연결”은 보
 
 - [AI·에이전트 파이프라인](ai-pipeline-integration.md) — 역할 분리·득팩 연동
 - [튜토리얼 · 빠른 시작](tutorial/quickstart.md)
-- OSS: [docs/QUICKSTART.md](https://github.com/joygram/DeukPack/blob/main/docs/QUICKSTART.md)
+- 빠른 시작: [이 사이트 튜토리얼](tutorial/quickstart.md) · OSS: [GitHub DeukPack](https://github.com/joygram/DeukPack)
 
 **English**: Use the language switcher (top right).

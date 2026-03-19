@@ -56,7 +56,7 @@ npm run build
 }
 ```
 
-설정 스키마·copy 규칙 등 상세: [DeukPack docs — DEUKPACK_PIPELINE.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_PIPELINE.md).
+설정 스키마·copy 규칙 등 상세: 이 문서와 저장소 [examples/pipeline.sample.json](https://github.com/joygram/DeukPack/blob/main/examples/pipeline.sample.json) 참고.
 
 ### 1.3 파이프라인 실행 (소스 빌드 후)
 
@@ -128,6 +128,6 @@ npx deukpack --pipeline /absolute/path/to/your/deukpack-pipeline.json
 
 ## 4. 참고
 
-- **파이프라인 설정 스키마·필드 설명**: [DeukPack — DEUKPACK_PIPELINE.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_PIPELINE.md)
+- **파이프라인 설정 스키마·필드**: 이 문서 §1–§3 및 [examples/pipeline.sample.json](https://github.com/joygram/DeukPack/blob/main/examples/pipeline.sample.json)
 - **샘플 설정**: [examples/pipeline.sample.json](https://github.com/joygram/DeukPack/blob/main/examples/pipeline.sample.json), [examples/pipeline.example.json](https://github.com/joygram/DeukPack/blob/main/examples/pipeline.example.json)
 - **CI에서 사용**: [DEUKPACK_CI_CD_AND_DEV_PIPELINE.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_CI_CD_AND_DEV_PIPELINE.md)

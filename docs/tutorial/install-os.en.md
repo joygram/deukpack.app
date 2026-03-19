@@ -82,4 +82,4 @@ npx deukpack ./schema.deuk ./out --csharp
 
 - [Quick start](quickstart.md) — IDL → C#, C++, TS example
 - [Core · engine](../products/core-engine.md) — npm · GitHub links
-- Full doc in repo: [GitHub joygram/DeukPack](https://github.com/joygram/DeukPack) — `docs/INSTALL_OS.md`
+- Repo and source build: [GitHub DeukPack](https://github.com/joygram/DeukPack). Install/tutorial docs live on this site only.
