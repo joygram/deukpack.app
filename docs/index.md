@@ -10,7 +10,8 @@ hide:
   <div class="dp-hero-copy">
     <p class="dp-eyebrow">DeukPack — 브랜드 컨셉</p>
     <h1>이득을 묶어 전달하는<br>개발자용 제품 팩</h1>
-    <p class="dp-lead"><strong>무료로 사용할 수 있고, 바로 적용할 수 있는 코어 라이브러리</strong>가 있습니다. <strong>득팩(DeukPack)</strong> 은 <strong>네이티브 IDL(.deuk)</strong> 과 <strong>코드 생성·직렬화·프로토콜·스키마 메타</strong>를 한 엔진에서 다루는 <strong>독립 제품</strong>입니다. Protobuf·OpenAPI·CSV·DB·레거시 .thrift 등은 <strong>같은 파이프라인에 넣을 수 있는 입력</strong>일 뿐, “Thrift 대체품”으로 국한되지 않습니다.<br>서버·실시간 게임·내부 툴까지 동일 계약으로 연결할 수 있습니다.</p>
+    <p class="dp-tagline">무료 · 자유롭게 · 바로 사용 가능한 코어</p>
+    <p class="dp-lead"><strong>무료로</strong>, <strong>자유롭게</strong>, <strong>바로</strong> 사용·적용할 수 있는 코어 라이브러리가 있습니다. <strong>득팩(DeukPack)</strong> 은 <strong>네이티브 IDL(.deuk)</strong> 과 <strong>코드 생성·직렬화·프로토콜·스키마 메타</strong>를 한 엔진에서 다루는 <strong>독립 제품</strong>입니다. Protobuf·OpenAPI·CSV·DB·레거시 .thrift 등은 <strong>같은 파이프라인에 넣을 수 있는 입력</strong>일 뿐, “Thrift 대체품”으로 국한되지 않습니다.<br>서버·실시간 게임·내부 툴까지 동일 계약으로 연결할 수 있습니다.</p>
     <div class="dp-pills">
       <span class="dp-pill">무료 · Apache-2.0 · 바로 적용 가능</span>
       <span class="dp-pill">IDL + Schema</span>
