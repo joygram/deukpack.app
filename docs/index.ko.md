@@ -21,7 +21,7 @@ hide:
     </div>
     <p class="dp-actions">
       <a href="products/core-engine/#득팩-코어-바로-사용하기" class="md-button md-button--primary">득팩 코어 바로 사용하기</a>
-      <a href="products/index/" class="md-button">제품군 개요</a>
+      <a href="products/" class="md-button">제품군 개요</a>
       <a href="starter-kits/" class="md-button">스타터 키트</a>
       <a href="positioning/" class="md-button">포지셔닝</a>
     </p>
