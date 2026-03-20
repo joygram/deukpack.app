@@ -143,7 +143,7 @@ cd DeukPackStarterKit
 
 **코드젠에 포함** (IDL 변경 없음):
 
-- **C#**: 모든 struct에 `WriteWithOverrides(oprot, Dictionary<int, object>)` — [튜토리얼: WriteWithOverrides](../tutorial/write-with-overrides.md), [API·타입 참조](../reference/api.md).
+- **C#**: 모든 struct에 `WriteWithOverrides(oprot, Dictionary<int, object>)` — [튜토리얼: WriteWithOverrides](tutorial/write-with-overrides.md), [API·타입 참조](reference/api.md).
 - **JavaScript** (`--js`): `generated.js`의 struct 헬퍼에 `applyOverrides` / `toJsonWithOverrides`.
 - **C++**: 각 struct에 `apply_overrides(std::unordered_map<int, std::any>)` — 이후 프로젝트 직렬화.
 

@@ -143,7 +143,7 @@ Details: [DeukPackStarterKit README](https://github.com/joygram/DeukPackStarterK
 
 **Built into codegen** (no IDL change):
 
-- **C#**: `WriteWithOverrides(oprot, Dictionary<int, object>)` on every struct — see [Tutorial: Write with overrides](../tutorial/write-with-overrides.md) and [API reference](../reference/api.md).
+- **C#**: `WriteWithOverrides(oprot, Dictionary<int, object>)` on every struct — see [Tutorial: Write with overrides](tutorial/write-with-overrides.md) and [API reference](reference/api.md).
 - **JavaScript** (`--js`): `applyOverrides` / `toJsonWithOverrides` on each struct helper in `generated.js`.
 - **C++**: `apply_overrides(std::unordered_map<int, std::any>)` on each struct; serialize with your stack afterward.
 

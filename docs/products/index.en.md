@@ -27,7 +27,7 @@ DeukPack covers **IDL, schema, code generation, serialization, meta, and pipelin
 | **Replacement (WriteWithOverrides)** | Per-recipient field values without cloning | Memory/perf optimization for fan-out and push |
 | **Rich data types** | float, double, int8–int64, list/set/map, **tablelink** (DB row ref), datetime, decimal | DB model, numeric precision, and meta/table schemas in one type system |
 
-→ **Extended data types (vs Protobuf/Thrift), one line:** `int8–int64`, `uint8–uint64`, `float`/`double`, `bool`, `string`/`binary`, `list`/`set`/`map`, **tablelink**, `datetime`/`decimal`, **struct extends**. Full list and semantics: [Reference → API](reference/api.md).  
+→ **Extended data types (vs Protobuf/Thrift), one line:** `int8–int64`, `uint8–uint64`, `float`/`double`, `bool`, `string`/`binary`, `list`/`set`/`map`, **tablelink**, `datetime`/`decimal`, **struct extends**. Full list and semantics: [Reference → API](../reference/api.md).  
 → **Core differentiators**: **struct inheritance (extends)** and the above type set (including DB model support) are built into the engine. The three serialization features (WriteFields, WriteWithOverrides, Wire Profile) are **composable**. Details: [Overrides · WriteFields · extends](../tutorial/write-with-overrides.md), [API reference](../reference/api.md).
 
 ---

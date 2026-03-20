@@ -27,7 +27,7 @@
 | **교체 (WriteWithOverrides)** | Clone 없이 수신자별 필드만 바꿔 직렬화 | 팬아웃·푸시의 메모리·성능 최적화 |
 | **다양한 데이터 타입** | float, double, int8–int64, list/set/map, **tablelink**(DB 행 참조), datetime, decimal | DB 모델·수치 정밀도·메타/테이블 스키마를 한 타입 시스템으로 |
 
-→ **확장 데이터 타입 (Protobuf/Thrift 대비) 한 줄:** `int8–int64`, `uint8–uint64`, `float`/`double`, `bool`, `string`/`binary`, `list`/`set`/`map`, **tablelink**, `datetime`/`decimal`, **struct extends**. 전체 목록·의미: [레퍼런스 → API](reference/api.md).  
+→ **확장 데이터 타입 (Protobuf/Thrift 대비) 한 줄:** `int8–int64`, `uint8–uint64`, `float`/`double`, `bool`, `string`/`binary`, `list`/`set`/`map`, **tablelink**, `datetime`/`decimal`, **struct extends**. 전체 목록·의미: [레퍼런스 → API](../reference/api.md).  
 → **코어 차별화:** **구조체 상속(extends)** 와 위 타입 세트(DB 모델 지원 포함)가 엔진에 내장됨. 세 직렬화 기능(WriteFields, WriteWithOverrides, Wire Profile)은 **조합 가능**. 상세: [WriteWithOverrides 튜토리얼](../tutorial/write-with-overrides.md), [API 참조](../reference/api.md).
 
 ---

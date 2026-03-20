@@ -41,6 +41,7 @@ nav:
     - C# 가이드: tutorial/csharp-guide.md
     - C++ 가이드: tutorial/cpp-guide.md
     - 파이프라인 만들기: tutorial/pipeline-guide.md
+    - WriteWithOverrides·WriteFields·extends: tutorial/write-with-overrides.md
   - 포지셔닝: positioning.md
   - 라이선스·비용: license.md
 
@@ -118,6 +119,7 @@ plugins:
             C# 가이드: C# guide
             C++ 가이드: C++ guide
             파이프라인 만들기: Pipeline guide
+            WriteWithOverrides·WriteFields·extends: Overrides · WriteFields · extends
             포지셔닝: Positioning
             라이선스·비용: License
   - search
