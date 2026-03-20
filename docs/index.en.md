@@ -28,3 +28,5 @@ npx deukpack ./schema.deuk ./out --csharp --cpp
 ```
 
 Detailed docs: [deukpack.app](https://deukpack.app/) (Korean) · [GitHub DeukPack](https://github.com/joygram/DeukPack). Quick start and tutorials live on this site.
+
+**License & support:** [License](license.md) — terms, pricing, and how to support development (PayPal, Ko-fi).

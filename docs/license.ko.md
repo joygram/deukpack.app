@@ -18,6 +18,17 @@
 
 ---
 
+## 개발 후원
+
+득팩 코어는 **무료·Apache-2.0**입니다. 도움이 되셨다면 후원으로 응원해 주세요.
+
+- **PayPal**: 앱/웹에서 **송금(Send)** → 수신자 **`joygram@gmail.com`**
+- **Ko-fi**: [Ko-fi로 후원하기](https://ko-fi.com/joygram) (카드·Apple Pay·Google Pay 등)
+
+후원이 어렵다면 **저장소 Star**, **이슈**, **PR**, **소개**만으로도 큰 힘이 됩니다.
+
+---
+
 ## 문의
 
 라이선스·비용·도입 문의는 **contact@deukpack.app** 또는 [deukpack.app](https://deukpack.app/) 문의 안내를 이용해 주세요.

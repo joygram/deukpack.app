@@ -115,4 +115,4 @@ hide:
 - [튜토리얼](tutorial/index.md) — 빠른 시작·단계별 가이드
 - [레퍼런스 가이드](reference/index.md) — API·타입 참조
 - [포지셔닝](positioning.md) — 타깃·포지션
-- [라이선스·비용](license.md) — 이용 조건·비용 안내
+- [라이선스·비용·후원](license.md) — 이용 조건·비용·개발 후원(PayPal, Ko-fi) 안내
