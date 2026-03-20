@@ -83,7 +83,20 @@ var schema = DemoUser.GetSchema();
 
 ---
 
-## 6. In Unity
+## 6. WriteWithOverrides · WriteFields · extends
+
+Every generated struct includes:
+
+- **`WriteWithOverrides(oprot, overrides)`** — serialize with field ID → replacement value, no cloning (fan-out).
+- **`WriteFields(oprot, fieldIds, overrides?)`** — serialize only selected fields (runtime projection).
+- **`FieldId` nested class** — `StructName.FieldId.PropertyName` for compile-time safe field ID references.
+- **struct extends** — use `extends` in IDL to auto-merge parent fields into child structs.
+
+Tutorial & comparison: [Overrides · WriteFields · extends](write-with-overrides.md). API tables: [API reference](../reference/api.md). Core spec: [DEUKPACK_WRITE_WITH_OVERRIDES_API.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
+
+---
+
+## 7. In Unity
 
 - Include generated C# + **DeukPack.Protocol** (or Unity runtime) in your Unity project.
 - If using asmdef, place generated code and runtime in the same assembly or set up a reference relationship.
@@ -91,8 +104,9 @@ var schema = DemoUser.GetSchema();
 
 ---
 
-## 7. Next steps
+## 8. Next steps
 
 - [Protocol & serialization](protocol-serialization.md) — Binary/Compact/JSON differences and selection
-- [API reference](../reference/api.md) — CLI, GetSchema, ProtocolRegistry summary
+- [API reference](../reference/api.md) — CLI, WriteWithOverrides, WriteFields, FieldId, GetSchema, ProtocolRegistry
+- [Overrides · WriteFields · extends](write-with-overrides.md) — replace, select, inherit patterns
 - [Core examples/consumer-csharp](https://github.com/joygram/DeukPack/tree/main/examples/consumer-csharp) — Runnable C# sample

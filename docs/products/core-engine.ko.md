@@ -4,6 +4,16 @@
 
 ---
 
+## 코어 차별화
+
+| 영역 | 득팩 코어에서 제공하는 것 |
+|------|---------------------------|
+| **상속** | **구조체 extends** — 다단계 상속, 부모 필드 코드 생성 시 병합; 와이어 호환, 필드 ID 중복 없음. |
+| **데이터 타입** | **기본형**: bool, byte, int8–int64, float, double, string, binary; **컨테이너**: list, set, map; **tablelink**(DB·테이블 행 참조); datetime, decimal. C#·C++·TS·JS 동일 타입 세트. |
+| **DB 모델** | AST → SQLite DDL; EF 연동 속성·코드 생성; 메타·행 타입용 IDL table/container. |
+
+---
+
 ## 득팩 코어 바로 사용하기
 
 득팩 **코어**는 **무료·Apache-2.0**으로 **바로** 설치해 쓸 수 있습니다. CLI·코드 생성·C# 런타임까지 npm 하나로 사용할 수 있습니다.
@@ -77,6 +87,8 @@ npx deukpack ./idl/root.deuk ./gen --csharp --cpp --js -I ./idl
 | **IDL 입력** | **Deuk(.deuk)**, Protobuf(.proto), .thrift 파싱. 한 빌드에서 혼합 가능. |
 | **스키마 임포트** | OpenAPI 3.x → AST, JSON Schema → AST, CSV → AST(스키마 추론). |
 | **코드 생성** | C#, C++, TypeScript, JavaScript. GetSchema(), ProtocolRegistry, MetaTableRegistry 등 생성. |
-| **데이터베이스** | SQLite: AST → DDL + C# 접근 코드. |
+| **데이터베이스** | SQLite: AST → DDL + C# 접근 코드. EF 연동 코드 생성. |
+| **상속** | 구조체 `extends` — 다단계·와이어 호환; 부모 필드 코드 생성 시 자식에 병합. |
+| **타입 시스템** | float, double, int8–int64, bool, string, binary, list/set/map, tablelink, datetime, decimal — 언어 간 일관. |
 
 한 번의 정의로 다언어·다출력 동시 생성과 고속 빌드를 얻을 수 있고, 기존 정의를 그대로 재사용할 수 있습니다.

@@ -137,6 +137,20 @@ Details: [DeukPackStarterKit README](https://github.com/joygram/DeukPackStarterK
 
 ---
 
+## Fan-out & per-recipient fields (messenger pattern)
+
+**For** chat, push, or any flow where **one in-memory message** goes to **many recipients** and only **a few fields** differ (display name, read flag, locale).
+
+**Built into codegen** (no IDL change):
+
+- **C#**: `WriteWithOverrides(oprot, Dictionary<int, object>)` on every struct — see [Tutorial: Write with overrides](../tutorial/write-with-overrides.md) and [API reference](../reference/api.md).
+- **JavaScript** (`--js`): `applyOverrides` / `toJsonWithOverrides` on each struct helper in `generated.js`.
+- **C++**: `apply_overrides(std::unordered_map<int, std::any>)` on each struct; serialize with your stack afterward.
+
+**Starter kit authors**: in send loops, prefer **WriteWithOverrides** + a small overrides map per recipient instead of **Clone()** per user. Full spec: [DEUKPACK_WRITE_WITH_OVERRIDES_API.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
+
+---
+
 ## TypeScript / Node
 
 **For** teams using **CLI codegen** or **parsing API** in BFF, internal tools, or **AI agent** scripts.

@@ -62,7 +62,19 @@ user.home.y = 20;
 
 ---
 
-## 4. 프로토콜 (Binary / Compact / JSON)
+## 4. apply_overrides · kFieldId · extends
+
+생성된 각 `struct`에 다음이 포함됩니다:
+
+- **`apply_overrides(const std::unordered_map<int, std::any>&)`** — 직렬화 전에 필드 ID로 멤버를 덮어씀 (팬아웃).
+- **`kFieldId_*`** — `static constexpr int` 필드 ID 상수. `StructName::kFieldId_PropertyName`으로 참조.
+- **struct extends** — IDL에서 `extends`로 부모 필드를 자식에 자동 병합. 코드젠 시 플랫 구조로 생성.
+
+튜토리얼·비교표: [WriteWithOverrides·WriteFields·extends](write-with-overrides.md) · [API·타입 참조](../reference/api.md).
+
+---
+
+## 5. 프로토콜 (Binary / Compact / JSON)
 
 생성 시 `--protocol binary`(또는 compact, json)에 따라 사용하는 Reader/Writer가 달라집니다.  
 - **binary**: Thrift Binary 프로토콜과 호환되는 바이너리 포맷.  
@@ -73,8 +85,9 @@ user.home.y = 20;
 
 ---
 
-## 5. 다음 단계
+## 6. 다음 단계
 
+- [WriteWithOverrides·WriteFields·extends](write-with-overrides.md) — 교체·선택·상속 패턴
 - [프로토콜·직렬화](protocol-serialization.md) — 프로토콜별 차이와 사용 흐름
 - [API·타입 참조](../reference/api.md) — CLI 옵션·생성물 개요
 - [코어 examples/consumer-cpp](https://github.com/joygram/DeukPack/tree/main/examples/consumer-cpp) — CMake + 실행 가능한 C++ 샘플

@@ -62,19 +62,32 @@ See the generated code and core C++ runtime documentation for the exact API.
 
 ---
 
-## 4. Protocol (Binary / Compact / JSON)
+## 4. apply_overrides · kFieldId · extends
 
-The Reader/Writer used depends on `--protocol binary` (or compact, json) at generation time.  
-- **binary**: Binary format compatible with Thrift Binary protocol.  
-- **compact**: Space-efficient binary.  
+Each generated `struct` includes:
+
+- **`apply_overrides(const std::unordered_map<int, std::any>&)`** — set member fields by field ID before serialization (fan-out).
+- **`kFieldId_*`** — `static constexpr int` field ID constants. Use `StructName::kFieldId_PropertyName`.
+- **struct extends** — use `extends` in IDL to auto-merge parent fields into child. Generated as a flat struct.
+
+Tutorial & comparison: [Overrides · WriteFields · extends](write-with-overrides.md) · [API reference](../reference/api.md).
+
+---
+
+## 5. Protocol (Binary / Compact / JSON)
+
+The Reader/Writer used depends on `--protocol binary` (or compact, json) at generation time.
+- **binary**: Binary format compatible with Thrift Binary protocol.
+- **compact**: Space-efficient binary.
 - **json**: Useful for debugging and REST integration.
 
 For selection criteria, see [Protocol & serialization](protocol-serialization.md).
 
 ---
 
-## 5. Next steps
+## 6. Next steps
 
+- [Overrides · WriteFields · extends](write-with-overrides.md) — Replace, select, inherit patterns
 - [Protocol & serialization](protocol-serialization.md) — Protocol differences and usage flow
 - [API reference](../reference/api.md) — CLI options and generated artifacts overview
 - [Core examples/consumer-cpp](https://github.com/joygram/DeukPack/tree/main/examples/consumer-cpp) — CMake + runnable C++ sample

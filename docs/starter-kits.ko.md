@@ -137,6 +137,20 @@ cd DeukPackStarterKit
 
 ---
 
+## 팬아웃·수신자별 필드 (메신저 패턴)
+
+**대상** 채팅, 푸시 등 **메모리상 메시지 하나**를 **많은 수신자**에게 보내고, **소수 필드만** 다를 때(표시 이름, 읽음, 로케일).
+
+**코드젠에 포함** (IDL 변경 없음):
+
+- **C#**: 모든 struct에 `WriteWithOverrides(oprot, Dictionary<int, object>)` — [튜토리얼: WriteWithOverrides](../tutorial/write-with-overrides.md), [API·타입 참조](../reference/api.md).
+- **JavaScript** (`--js`): `generated.js`의 struct 헬퍼에 `applyOverrides` / `toJsonWithOverrides`.
+- **C++**: 각 struct에 `apply_overrides(std::unordered_map<int, std::any>)` — 이후 프로젝트 직렬화.
+
+**스타터 키트 작성 시**: 송신 루프에서 사용자마다 **전체 Clone** 대신 **WriteWithOverrides + 작은 overrides 맵** 사용을 권장. 상세: [DEUKPACK_WRITE_WITH_OVERRIDES_API.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
+
+---
+
 ## TypeScript / Node
 
 **누구에게** BFF·내부 도구·**AI 에이전트**가 호출하는 스크립트에서 **CLI 코드젠** 또는 **파싱 API**를 쓰고 싶은 팀.

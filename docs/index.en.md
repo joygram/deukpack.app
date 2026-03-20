@@ -13,7 +13,7 @@ Use the **language switcher** (top right) to switch to **한국어**.
 
 ## At a glance
 
-- **Core**: [Core · engine](products/core-engine.md) — Install, CLI, C#/C++/JS codegen. [Quick start](tutorial/quickstart.md).
+- **Core**: [Core · engine](products/core-engine.md) — Install, CLI, C#/C++/JS codegen. **Differentiators:** struct inheritance (extends), rich types (float, DB model, tablelink). [Quick start](tutorial/quickstart.md).
 - **Starter kits**: [Starter kits](starter-kits.md) — Unity, C++, Network, TS, Web App.
 - **Tutorial**: [Tutorial](tutorial/index.md) — Quick start, IDL guide, C#/C++ guides, pipeline.
 - **Reference**: [API reference](reference/api.md).

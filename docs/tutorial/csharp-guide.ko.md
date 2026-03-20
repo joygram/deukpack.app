@@ -83,7 +83,20 @@ var schema = DemoUser.GetSchema();
 
 ---
 
-## 6. Unity에서
+## 6. WriteWithOverrides · WriteFields · extends
+
+생성된 struct마다 다음 API가 포함됩니다:
+
+- **`WriteWithOverrides(oprot, overrides)`** — 필드 ID → 대체 값으로 Clone 없이 직렬화 (팬아웃).
+- **`WriteFields(oprot, fieldIds, overrides?)`** — 지정한 필드만 직렬화 (런타임 projection).
+- **`FieldId` nested class** — `StructName.FieldId.PropertyName`으로 필드 ID 참조. 매직 넘버 제거.
+- **struct extends** — IDL에서 부모 필드를 자식에 자동 병합.
+
+튜토리얼·비교표: [WriteWithOverrides·WriteFields·extends](write-with-overrides.md). API 표: [API·타입 참조](../reference/api.md). 코어 명세: [DEUKPACK_WRITE_WITH_OVERRIDES_API.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
+
+---
+
+## 7. Unity에서
 
 - 생성 C# + **DeukPack.Protocol** (또는 Unity용 런타임)을 Unity 프로젝트에 포함합니다.
 - asmdef가 있다면 생성 코드·런타임을 같은 어셈블리 또는 참조 관계로 두면 됩니다.
@@ -91,8 +104,9 @@ var schema = DemoUser.GetSchema();
 
 ---
 
-## 7. 다음 단계
+## 8. 다음 단계
 
 - [프로토콜·직렬화](protocol-serialization.md) — Binary/Compact/JSON 차이와 선택
-- [API·타입 참조](../reference/api.md) — CLI·GetSchema·ProtocolRegistry 요약
+- [API·타입 참조](../reference/api.md) — CLI·WriteWithOverrides·WriteFields·FieldId·GetSchema·ProtocolRegistry
+- [WriteWithOverrides·WriteFields·extends](write-with-overrides.md) — 교체·선택·상속 패턴
 - [코어 examples/consumer-csharp](https://github.com/joygram/DeukPack/tree/main/examples/consumer-csharp) — 실행 가능한 C# 샘플

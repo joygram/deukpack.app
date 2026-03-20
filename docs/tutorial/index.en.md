@@ -13,6 +13,7 @@ Use the **language switcher** (top) for 한국어.
 | 1 | [**Quick start**](quickstart.md) | Install → one IDL → generate code → check output (~5 min) |
 | 2 | [**IDL guide**](idl-guide.md) | .deuk / .thrift syntax: types, struct, enum, namespace, include |
 | 3 | [**Protocol & serialization**](protocol-serialization.md) | Binary / Compact / JSON, read/write flow |
+| [**Overrides · WriteFields · extends**](write-with-overrides.md) | Replace (per-recipient fields), Select (project specific fields), Inherit (shared fields once). Includes comparison table. |
 
 ---
 
@@ -20,7 +21,7 @@ Use the **language switcher** (top) for 한국어.
 
 | Doc | For | Content |
 |-----|-----|---------|
-| [**C# guide**](csharp-guide.md) | .NET / Unity | Generated code, Read/Write, GetSchema, ProtocolRegistry |
+| [**C# guide**](csharp-guide.md) | .NET / Unity | Generated code, Read/Write, **WriteWithOverrides**, GetSchema, ProtocolRegistry |
 | [**C++ guide**](cpp-guide.md) | Native / server | Generated headers/sources, CMake, serialization |
 | *(TBD)* | Excel / Unity pipeline | Meta tables, Unity load |
 | *(TBD)* | Thrift/Protobuf migration | Mixed IDL, gradual adoption |
@@ -32,6 +33,7 @@ Use the **language switcher** (top) for 한국어.
 - **Try the core only**: [Quick start](quickstart.md) → [API reference](../reference/api.md)
 - **IDL & protocol**: [IDL guide](idl-guide.md) → [Protocol & serialization](protocol-serialization.md)
 - **C#**: [Quick start](quickstart.md) → [C# guide](csharp-guide.md)
+- **Fan-out messaging**: [Write with overrides](write-with-overrides.md) → [API reference](../reference/api.md)
 - **C++**: [Quick start](quickstart.md) → [C++ guide](cpp-guide.md)
 
 ---

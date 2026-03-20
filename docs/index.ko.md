@@ -34,7 +34,7 @@ hide:
 
 | 제품 | 핵심 역할 |
 |------|-----------|
-| **득팩 코어·엔진** | **Apache-2.0**, **바로 사용 가능**. .deuk 중심 IDL, AST, 코드 생성, 스키마·메타. Protobuf·OpenAPI·CSV·JSON·DB·.thrift 등 **다중 입력**. |
+| **득팩 코어·엔진** | **Apache-2.0**, **바로 사용 가능**. .deuk 중심 IDL, AST, 코드 생성, 스키마·메타. **차별화:** 구조체 상속(extends), 다양한 타입(float·DB 모델·tablelink). Protobuf·OpenAPI·CSV·JSON·DB·.thrift 등 **다중 입력**. |
 | **득팩 프로토콜** | Binary/Compact/JSON 직렬화, msgId·ProtocolRegistry, 제로카피 옵션. |
 | **득팩 Excel 애드인** | 스키마 기반 메타 작업(헤더·검증·비교) — Excel 등 스프레드시트에서 제공. |
 | **득팩 파이프라인·Unity** | 정의·메타 → 코드·스키마·테이블 → Unity·서버 검증·로드. 서버 연동·실시간 게임 연동까지 동일 스키마로 연결. |
@@ -67,6 +67,19 @@ hide:
     <h3>메타 작업을 더 빠르게</h3>
     <p>스키마 기반 메타 편집·검증부터 Unity·서버 로드 파이프라인까지 이어지는 실제 작업 흐름 중심 구성입니다.</p>
   </div>
+  <div class="dp-card">
+    <h3>테이블 · 네이티브 메시지 · 상속 · 선택 · 교체</h3>
+    <p>게임·서버에서 반복되는 다섯 가지 문제를 IDL 선언과 코드젠으로 해결합니다.</p>
+    <ul style="margin:0.4em 0 0 1.2em; padding:0; font-size:0.92em;">
+      <li><strong>테이블</strong> — 스키마 기반 <code>MetaTableRegistry</code>로 메타 데이터를 검증·로드. Excel 애드인과 단일 키·복합키까지.</li>
+      <li><strong>네이티브 메시지</strong> — <code>msgId</code>·<code>ProtocolRegistry</code>가 IDL에서 자동 생성. 디스패치·핸들러 등록을 별도 관리 없이.</li>
+      <li><strong>상속 (extends)</strong> — 부모 struct 필드를 자식에 자동 병합. 다단 상속, 필드 ID 충돌 검사, 와이어 호환.</li>
+      <li><strong>선택 (WriteFields)</strong> — 풀 레코드에서 원하는 필드만 골라 직렬화. 런타임 projection, partial 타입 불필요.</li>
+      <li><strong>교체 (WriteWithOverrides)</strong> — Clone 없이 수신자마다 다른 필드 값으로 직렬화. 팬아웃·푸시에 최적.</li>
+      <li><strong>다양한 데이터 타입</strong> — float, double, int8–int64, list/set/map, <strong>tablelink</strong>(DB·테이블 행 참조), datetime, decimal. DB 모델·메타 스키마를 한 타입 시스템으로.</li>
+    </ul>
+    <p style="margin-top:0.6em;">세 직렬화 기능(<code>WriteFields</code>, <code>WriteWithOverrides</code>, Wire Profile)은 조합 가능합니다. 자세히: <a href="tutorial/write-with-overrides/">WriteWithOverrides 튜토리얼</a></p>
+  </div>
   <div class="dp-card dp-card--highlight">
     <h3>AI 시대에서도 필요한 이유</h3>
     <p>에이전트는 <strong>스펙 초안·로직</strong>에는 강하지만, <strong>결정론적 출력·와이어 호환·다언어 동시 정합성·빌드 재현성</strong>은 보장하기 어렵습니다. 득팩은 그 부분을 담당합니다. 스키마를 단일 소스로 두고 <strong>동일 입력 → 동일 코드·직렬화</strong>를 내주므로, 에이전트는 스펙·로직만 만들고 득팩이 “실행 가능한 타입·파이프라인”으로 바꿔 줍니다.</p>
@@ -74,10 +87,11 @@ hide:
   </div>
 </div>
 
-- **IDL·정의**: **.deuk** 네이티브; Protobuf·레거시 .thrift 파싱. OpenAPI·JSON Schema·CSV·DB 임포트로 한 빌드에 혼합.
-- **프로토콜·직렬화**: Binary, Compact, JSON. 제로카피(선택). `msgId`·`ProtocolRegistry` 네이티브 메시지 핸들링.
-- **코드 생성**: C#, C++, TypeScript, JavaScript. SQLite DDL·접근 코드.
-- **메타·스프레드시트**: 스키마 기반 헤더·검증·비교(Excel 애드인 등). 단일 키·복합키 지원.
+- **IDL·정의**: **.deuk** 네이티브; Protobuf·레거시 .thrift 파싱. OpenAPI·JSON Schema·CSV·DB 임포트로 한 빌드에 혼합. **struct extends**: 공통 필드를 부모에 한 번 정의, 자식은 고유 필드만 추가 (다단 상속·필드 ID 충돌 검사).
+- **프로토콜·직렬화**: Binary, Compact, JSON. 제로카피(선택). `msgId`·`ProtocolRegistry` **네이티브 메시지 핸들링** — 메시지 ID·디스패치가 IDL 선언만으로 자동 생성.
+- **코드 생성**: C#, C++, TypeScript, JavaScript. SQLite DDL·접근 코드. 모든 struct에 **FieldId 상수** 자동 생성 (매직 넘버 제거, 컴파일 타임 안전).
+- **선택·교체·프로젝션**: **WriteWithOverrides** (동일 인스턴스, 수신자별 필드만 교체), **WriteFields** (풀 레코드에서 선택한 필드만 직렬화), **Wire Profile** (빌드 타임에 프로파일별 서브셋 타입 생성). 세 기능을 조합해 팬아웃·부분 전송·DTO 분리를 해결.
+- **테이블·메타**: 스키마 기반 메타 편집·검증·비교(Excel 애드인). 단일 키·복합키. `MetaTableRegistry`로 런타임 테이블 로드·검증.
 - **파이프라인·연동**: 정의·메타 → 코드·스키마·테이블 → Unity·서버 검증·로드. 서버 연동·실시간 게임 연동에서 동일 스키마·프로토콜 사용.
 
 ---

@@ -4,6 +4,16 @@
 
 ---
 
+## Core differentiators
+
+| Area | What DeukPack offers |
+|------|----------------------|
+| **Inheritance** | **Struct extends** — multi-level inheritance, parent fields merged at codegen; wire-compatible, no duplicate field IDs. |
+| **Data types** | **Primitives**: bool, byte, int8–int64, float, double, string, binary; **containers**: list, set, map; **tablelink** (DB/table row reference); datetime, decimal. Same type set across C#, C++, TS, JS. |
+| **DB model** | SQLite DDL from AST; EF-ready attributes and codegen; table/container in IDL for meta and row types. |
+
+---
+
 ## Use the core now
 
 The DeukPack **core** is **free (Apache-2.0)** and **ready to install**. CLI, codegen, and C# runtime are available from a single npm package.
@@ -77,6 +87,8 @@ npx deukpack ./idl/root.deuk ./gen --csharp --cpp --js -I ./idl
 | **IDL input** | **Deuk (.deuk)**, Protobuf (.proto), .thrift parsing. Mixable in one build. |
 | **Schema import** | OpenAPI 3.x → AST, JSON Schema → AST, CSV → AST (schema inference). |
 | **Code generation** | C#, C++, TypeScript, JavaScript. GetSchema(), ProtocolRegistry, MetaTableRegistry, etc. |
-| **Database** | SQLite: AST → DDL + C# access code. |
+| **Database** | SQLite: AST → DDL + C# access code. EF-ready codegen. |
+| **Inheritance** | Struct `extends` — multi-level, wire-compatible; parent fields merged into child at codegen. |
+| **Type system** | float, double, int8–int64, bool, string, binary, list/set/map, tablelink, datetime, decimal — consistent across languages. |
 
 One definition yields multi-language, multi-output simultaneous generation with fast builds, and existing definitions can be reused as-is.

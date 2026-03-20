@@ -13,6 +13,7 @@
 | **IDL 가이드** | [IDL 가이드](tutorial/idl-guide.md) | *(한글 문서 참고)* |
 | **프로토콜·직렬화** | [프로토콜·직렬화](tutorial/protocol-serialization.md) | *(한글 문서 참고)* |
 | **C# / C++ 가이드** | [C# 가이드](tutorial/csharp-guide.md), [C++ 가이드](tutorial/cpp-guide.md) | *(한글 문서 참고)* |
+| **WriteWithOverrides·WriteFields·extends** | [튜토리얼](tutorial/write-with-overrides.md) | 교체·선택·상속, C#·JS·C++, 비교표 |
 | **API·레퍼런스** | [API·타입 참조](reference/api.md) | 같은 페이지에서 **언어 전환** → English |
 | **제품·스타터 키트** | [제품군](products/index.md), [스타터 키트](starter-kits.md) | *(동일 경로, 한글)* |
 | **AI 도구 연동** | [Antigravity·Cursor·Copilot·Codex](ai-ide-tools-guide.md) | 언어 전환 → English |

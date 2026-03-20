@@ -13,6 +13,7 @@ An overview of **Korean / English** documentation available on this site and in 
 | **IDL guide** | [IDL 가이드](tutorial/idl-guide.md) | Use the **language switcher** → English |
 | **Protocol & serialization** | [프로토콜·직렬화](tutorial/protocol-serialization.md) | Use the **language switcher** → English |
 | **C# / C++ guide** | [C# 가이드](tutorial/csharp-guide.md), [C++ 가이드](tutorial/cpp-guide.md) | Use the **language switcher** → English |
+| **Overrides · WriteFields · extends** | [Tutorial](tutorial/write-with-overrides.md) | Replace · Select · Inherit, C#·JS·C++, comparison table |
 | **API reference** | [API·타입 참조](reference/api.md) | Same page — **language switcher** → English |
 | **Products & starter kits** | [제품군](products/index.md), [스타터 키트](starter-kits.md) | Same path — **language switcher** → English |
 | **AI tools integration** | [Antigravity·Cursor·Copilot·Codex](ai-ide-tools-guide.md) | **Language switcher** → English |
