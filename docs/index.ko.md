@@ -20,10 +20,10 @@ hide:
       <span class="dp-pill">AI·에이전트 파이프라인 연동</span>
     </div>
     <p class="dp-actions">
-      <a href="products/core-engine.md#득팩-코어-바로-사용하기" class="md-button md-button--primary">득팩 코어 바로 사용하기</a>
-      <a href="products/index.md" class="md-button">제품군 개요</a>
-      <a href="starter-kits.md" class="md-button">스타터 키트</a>
-      <a href="positioning.md" class="md-button">포지셔닝</a>
+      <a href="products/core-engine/#득팩-코어-바로-사용하기" class="md-button md-button--primary">득팩 코어 바로 사용하기</a>
+      <a href="products/index/" class="md-button">제품군 개요</a>
+      <a href="starter-kits/" class="md-button">스타터 키트</a>
+      <a href="positioning/" class="md-button">포지셔닝</a>
     </p>
   </div>
 </div>
@@ -108,7 +108,7 @@ hide:
 
 ## 다음 단계
 
-- [**코어 라이브러리 사용하기**](products/core-engine.md#코어-라이브러리-바로-사용하기) — npm·GitHub 링크, 설치·CLI·튜토리얼로 바로 사용
+- [**코어 라이브러리 사용하기**](products/core-engine/#득팩-코어-바로-사용하기) — npm·GitHub 링크, 설치·CLI·튜토리얼로 바로 사용
 - [**스타터 키트**](starter-kits.md) — 스택별 샘플·저장소 링크·바로 적용 예시
 - [제품군 개요](products/index.md) — 제품별 역할·포함 범위
 - [제품 관계도](architecture.md) — 제품 간 관계·데이터 흐름 다이어그램
