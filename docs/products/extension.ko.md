@@ -1,6 +1,21 @@
 # 확장 제품군
 
-득팩 **코어 위에 붙는 부가 제품**입니다. 기본 4대 제품군(코어·엔진, 프로토콜, Excel 애드인, 파이프라인·Unity)을 확장하는 옵션입니다.
+득팩 **코어 위에 붙는 부가 제품**입니다. 기본 제품군(코어·엔진, 프로토콜, Excel 애드인, 파이프라인·Unity, **DeukNavigation**)을 확장하는 옵션입니다.
+
+---
+
+## Deuk UI·에디터 도구
+
+DeukPack 스키마·데이터와 연동하는 에디터 UI와 독립 실행 도구입니다.
+
+| 영역 | 내용 |
+|------|------|
+| **Excel 애드인 UI** | 스키마 기반 헤더·검증·Apply·시트 편집. [Excel 애드인](excel-addin.md) 참고. |
+| **DeukNavigation 에디터** | Unity NavMesh 빌드 윈도우, BakedNavmesh Save/Load/Clear, Recast 파라미터, 타일 빌드 파이프라인. [DeukNavigation](navigation.md) 참고. |
+| **DeukNaviTool** | 독립 실행 C++ NavMesh 도구(SoloMesh/TileMesh, .obj, .dpk/.bin 내보내기) 및 전용 UI. |
+| **스키마·메타 에디터** | 스키마 기반 검증·테이블 에디터; 파이프라인 연동 플러그인(Unity 에셋 스토어 등). |
+
+이 UI들은 정의·메타·NavMesh 데이터를 동일 스키마·와이어 포맷과 맞춰 유지합니다.
 
 ---
 

@@ -1,6 +1,6 @@
 # Products overview
 
-DeukPack covers **IDL, schema, code generation, serialization, meta, and pipelines**, extending to **server integration and real-time game networking** with the same schema and protocol. The product family is organized into **Core · engine / Protocol / Spreadsheet add-in (Excel, etc.) / Pipeline · Unity / Extensions**. For inter-product relationships and data flow, see the [Architecture](../architecture.md) diagram.
+DeukPack covers **IDL, schema, code generation, serialization, meta, and pipelines**, extending to **server integration and real-time game networking** with the same schema and protocol. The product family is organized into **Core · engine / Protocol / Spreadsheet add-in (Excel, etc.) / Pipeline · Unity / DeukNavigation / Extensions**. For inter-product relationships and data flow, see the [Architecture](../architecture.md) diagram.
 
 ---
 
@@ -12,7 +12,8 @@ DeukPack covers **IDL, schema, code generation, serialization, meta, and pipelin
 | **DeukPack Protocol** | Serialization runtime and messaging protocol | Binary/Compact/JSON, msgId, ProtocolRegistry, zero-copy option, packet body serialization | [Protocol](protocol.md) |
 | **DeukPack Excel add-in** | Schema-based meta editing in Excel | Header generation, validation, schema diff, Apply, sheet-based meta editing | [Excel add-in](excel-addin.md) |
 | **DeukPack Pipeline · Unity** | Connect artifacts to projects/Unity/servers | IDL/Excel → code/schema/tables → Unity/server validation & load. Server integration, real-time game networking | [Pipeline · Unity](pipeline-unity.md) |
-| **Extensions** | Add-on products on top of core | EF, DB migrator, Google Sheets, Unreal/Elixir, plugins | [Extensions](extension.md) |
+| **DeukNavigation** | Recast/Detour NavMesh with shared Deuk wire (.dpk) for Unity and server | DeukNavRuntime, CrowdContext, DeukNavAgent, baking, DeukNaviTool. Client–server same mesh & API | [DeukNavigation](navigation.md) |
+| **Extensions** | Add-on products on top of core | Deuk UI & editor tooling, EF, DB migrator, Google Sheets, Unreal/Elixir, plugins | [Extensions](extension.md) |
 
 ---
 
@@ -39,3 +40,4 @@ DeukPack covers **IDL, schema, code generation, serialization, meta, and pipelin
 - **Need packet/meta serialization, server integration, real-time game networking** → [Protocol](protocol.md)
 - **Want to manage planning/balance meta in spreadsheets according to schema** → [Excel add-in](excel-addin.md)
 - **Want to apply definition/meta artifacts to Unity/server and enable server or real-time game integration** → [Pipeline · Unity](pipeline-unity.md)
+- **Need NavMesh pathfinding and crowd simulation shared between Unity and server (same .dpk)** → [DeukNavigation](navigation.md)

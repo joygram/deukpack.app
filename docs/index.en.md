@@ -14,6 +14,7 @@ Use the **language switcher** (top right) to switch to **한국어**.
 ## At a glance
 
 - **Core**: [Core · engine](products/core-engine.md) — Install, CLI, C#/C++/JS codegen. **Differentiators:** struct inheritance (extends), rich types (float, DB model, tablelink). [Quick start](tutorial/quickstart.md).
+- **Navigation**: [DeukNavigation](products/navigation.md) — NavMesh and crowd with shared Deuk wire (.dpk) for Unity and server; DeukNavRuntime, baking, DeukNaviTool.
 - **Starter kits**: [Starter kits](starter-kits.md) — Unity, C++, Network, TS, Web App.
 - **Tutorial**: [Tutorial](tutorial/index.md) — Quick start, IDL guide, C#/C++ guides, pipeline.
 - **Reference**: [API reference](reference/api.md).

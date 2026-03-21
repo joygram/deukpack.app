@@ -38,7 +38,8 @@ hide:
 | **득팩 프로토콜** | Binary/Compact/JSON 직렬화, msgId·ProtocolRegistry, 제로카피 옵션. |
 | **득팩 Excel 애드인** | 스키마 기반 메타 작업(헤더·검증·비교) — Excel 등 스프레드시트에서 제공. |
 | **득팩 파이프라인·Unity** | 정의·메타 → 코드·스키마·테이블 → Unity·서버 검증·로드. 서버 연동·실시간 게임 연동까지 동일 스키마로 연결. |
-| **확장 제품군** | EF, DB 마이그레이터, Google Sheets, Unreal/Elixir 등 부가 제품. |
+| **DeukNavigation** | Unity·서버 공용 Deuk 와이어(.dpk) 기반 Recast/Detour NavMesh. DeukNavRuntime·CrowdContext·DeukNavAgent·베이킹·DeukNaviTool. |
+| **확장 제품군** | Deuk UI·에디터 도구, EF, DB 마이그레이터, Google Sheets, Unreal/Elixir 등 부가 제품. |
 
 → [제품 관계도](architecture.md)에서 제품 간 데이터·스키마 흐름을 다이어그램으로 볼 수 있습니다. 자세한 내용은 [제품군 개요](products/index.md)와 각 제품 페이지를 참고하세요. **스택별 바로 적용 예시**는 [스타터 키트](starter-kits.md)에서 안내합니다.
 
