@@ -1,18 +1,35 @@
 # Reference
 
-API, types, and configuration for the DeukPack product family.
-
-**Extended types (vs Protobuf/Thrift), one line:** `int8`–`int64`, `uint8`–`uint64`, `float`/`double`, `bool`, `string`/`binary`, `list`/`set`/`map`, **tablelink**, `datetime`/`decimal`, **struct extends** — details in [API & type reference](api.md).
+Use this section for **names, CLI flags, and generated APIs**. For **what the product does**, see [Products overview](../products/index.md). For **step-by-step**, see the [Tutorial](../tutorial/index.md).
 
 ---
 
-## Contents
+## By topic
 
-| Item | Description |
-|------|-------------|
-| [API & type reference](api.md) | CLI, **extended data types** (full list vs P/T), **extension features**, **WriteFields** (selection), **WriteWithOverrides** (partial replacement), GetSchema, ProtocolRegistry, protocol & serialization |
-| **Core · engine** | [Core · engine](../products/core-engine.md) — IDL input, codegen, schema, SQLite |
-| **Protocol** | [Protocol](../products/protocol.md) — Binary/Compact/JSON, msgId, ProtocolRegistry |
-| **Excel · Unity** | [Excel add-in](../products/excel-addin.md), [Pipeline · Unity](../products/pipeline-unity.md) |
+| Topic | What it covers | Doc |
+|-------|----------------|-----|
+| **Fundamentals** | IDL keywords (`record`, `message`, `table`, `entity`), CLI & includes, library parse | [Fundamentals](fundamentals.md) |
+| **Tables** | `table` / meta tables, row structs, `MetaTableRegistry`, `GetSchema` | [Tables](tables.md) |
+| **Messages & wire** | `message`, `ProtocolRegistry`, `Write`/`Read`, WriteFields / overrides | [Messages & wire](messages.md) |
+| **Wire protocol families** | Interop Thrift (`tbinary`, `tcompact`, `tjson`) vs Deuk native (`pack`, `json`, `yaml`), JS + schema, default npm `serialize` | [Wire protocol families](wire-protocols.md) |
+| **Database & entities** | `entity`, `--ef`, `tablelink`, ORM attributes | [Database & entities](database.md) |
+| **Full digest** | Full CLI table, C#/C++/JS API tables, type comparison | [API & type reference](api.md) |
 
-Use the **language switcher** (top) for 한국어.
+**Schema I/O** (OpenAPI, CSV, JSON, Excel merge / emit) lives under [API reference — Schema import & export](api.md#schema-import-export).
+
+---
+
+## vs product pages
+
+- **Product pages**: value, scope, adoption.
+- **Reference**: exact **flags**, **generated methods**, **IDL keywords**.
+
+---
+
+## Hands-on (DeukPack Kits)
+
+- **Saga map:** [Saga journey](https://kits.deukpack.app/en/journey/)
+- **Wire & serialization topics:** [topics/serialization](https://kits.deukpack.app/en/topics/serialization/)
+- **Starter chronicle:** [*Ruins* title page](https://kits.deukpack.app/en/starter-course/)
+
+**한국어:** Use the site **language** menu and pick **한국어** for the same outline in Korean.

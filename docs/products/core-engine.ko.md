@@ -2,6 +2,8 @@
 
 **한 줄**: **득팩 네이티브 IDL(.deuk)** 을 중심으로 **파싱·AST·코드 생성·스키마·메타**를 한 엔진에서 제공합니다. C#·C++·TS·JS 출력; Protobuf·OpenAPI·CSV·레거시 .thrift 는 **같은 파이프라인 입력**입니다.
 
+--8<-- "_includes/product-notices-landing-core-engine.ko.md"
+
 ---
 
 ## 코어 차별화
@@ -43,7 +45,7 @@ npx deukpack ./idl/root.deuk ./gen --csharp --cpp --js -I ./idl
 | [C# 가이드](../tutorial/csharp-guide.md) | C# 생성물·프로토콜·참조 |
 | [C++ 가이드](../tutorial/cpp-guide.md) | C++ 빌드·include·실행 |
 | [파이프라인 만들기](../tutorial/pipeline-guide.md) | 여러 잡·설정 JSON |
-| [스타터 키트](../starter-kits.md) | Unity·C++·Console·EF·TS 등 샘플 |
+| [득팩 키트 라인업](../starter-kits.md) | Unity·C++·Console·EF·TS 등 샘플 |
 | [문서 안내](../documentation-index.md) | 한글·영문 문서 위치 |
 
 ### GitHub 저장소
@@ -59,7 +61,7 @@ npx deukpack ./idl/root.deuk ./gen --csharp --cpp --js -I ./idl
 ## 코어 라이브러리 요약
 
 - **공식 OSS**: [github.com/joygram/DeukPack](https://github.com/joygram/DeukPack) — 소스, README, 이슈, 기여, 릴리스. 클론·로컬 빌드·기여는 저장소의 README·RELEASING을 참고하세요.
-- **C#·Unity**: npm 패키지의 `dist/csharp` 런타임 참조 또는 [스타터 키트](../starter-kits.md) 샘플.
+- **C#·Unity**: npm 패키지의 `dist/csharp` 런타임 참조 또는 [키트 라인업](../starter-kits.md) 샘플.
 
 ---
 

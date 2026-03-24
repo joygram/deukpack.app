@@ -57,7 +57,7 @@ msg.WriteWithOverrides(oprot, overrides);
 
 ## 3. JavaScript (`--js`)
 
-`javascript/generated.js`에 struct 헬퍼마다 **`applyOverrides`**, **`toJsonWithOverrides`**, **`FieldId`**가 붙습니다.
+`javascript/generated_deuk.js`에 struct 헬퍼마다 **`applyOverrides`**, **`toJsonWithOverrides`**, **`FieldId`**가 붙습니다.
 
 ```javascript
 var F = ChatMessage.FieldId;

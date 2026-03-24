@@ -4,6 +4,8 @@
 
 **한 줄**: **스키마 기반 메타 작업**(헤더 생성·검증·스키마 비교·Apply·시트 편집)을 스프레드시트에서 하는 애드인입니다. Excel에서 제공합니다.
 
+--8<-- "_includes/product-notices-landing-excel-addin.ko.md"
+
 ---
 
 ## 무엇을 얻을 수 있나요

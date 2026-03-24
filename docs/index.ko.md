@@ -1,6 +1,8 @@
 ---
 hide:
   - toc
+--8<-- "_includes/deukpack-release-notice.ko.md"
+
 ---
 
 <div class="dp-hero">
@@ -11,7 +13,7 @@ hide:
     <p class="dp-eyebrow">DeukPack — 브랜드 컨셉</p>
     <h1>이득을 묶어 전달하는<br>개발자용 제품 팩</h1>
     <p class="dp-tagline">무료 · 자유롭게 · 바로 사용 가능한 코어</p>
-    <p class="dp-lead"><strong>무료로</strong>, <strong>자유롭게</strong>, <strong>바로</strong> 사용·적용할 수 있는 코어 라이브러리가 있습니다. <strong>득팩(DeukPack)</strong> 은 <strong>네이티브 IDL(.deuk)</strong> 과 <strong>코드 생성·직렬화·프로토콜·스키마 메타</strong>를 한 엔진에서 다루는 <strong>독립 제품</strong>입니다. Protobuf·OpenAPI·CSV·DB·레거시 .thrift 등은 <strong>같은 파이프라인에 넣을 수 있는 입력</strong>일 뿐, “Thrift 대체품”으로 국한되지 않습니다.<br>서버·실시간 게임·내부 툴까지 동일 계약으로 연결할 수 있습니다.</p>
+    <p class="dp-lead"><strong>무료로</strong>, <strong>자유롭게</strong>, <strong>바로</strong> 쓸 수 있는 코어가 있습니다.<br><br><strong>득팩(DeukPack)</strong>은 <strong>네이티브 IDL(.deuk)</strong>과 <strong>코드 생성·직렬화·프로토콜·스키마 메타</strong>를 한 엔진에서 다루는 <strong>독립 제품</strong>입니다.<br><br>Protobuf·OpenAPI·CSV·DB·레거시 .thrift 등은 <strong>같은 파이프라인에 넣을 입력</strong>일 뿐입니다. “Thrift 대체품”으로만 보지 않아도 됩니다.<br><br>서버·실시간 게임·내부 툴까지 <strong>같은 계약</strong>으로 이어질 수 있습니다.</p>
     <div class="dp-pills">
       <span class="dp-pill">무료 · Apache-2.0 · 바로 적용 가능</span>
       <span class="dp-pill">IDL + Schema</span>
@@ -22,11 +24,16 @@ hide:
     <p class="dp-actions">
       <a href="products/core-engine.md#득팩-코어-바로-사용하기" class="md-button md-button--primary">득팩 코어 바로 사용하기</a>
       <a href="products/" class="md-button">제품군 개요</a>
-      <a href="starter-kits/" class="md-button">스타터 키트</a>
+      <a href="starter-kits/" class="md-button">득팩 키트 라인업</a>
       <a href="positioning/" class="md-button">포지셔닝</a>
     </p>
   </div>
 </div>
+
+!!! tip "언어 전환 (한국어 ↔ English)"
+    - **영문:** 페이지 **우측 상단** → **언어** 메뉴.
+    - **URL:** 한국어는 사이트 루트, English는 **`/en/…`**.
+    - **GitHub README:** [README.md](https://github.com/joygram/DeukPack/blob/main/README.md) · [README.ko.md](https://github.com/joygram/DeukPack/blob/main/README.ko.md).
 
 ---
 
@@ -41,15 +48,21 @@ hide:
 | **DeukNavigation** | Unity·서버 공용 Deuk 와이어(.dpk) 기반 Recast/Detour NavMesh. DeukNavRuntime·CrowdContext·DeukNavAgent·베이킹·DeukNaviTool. |
 | **확장 제품군** | Deuk UI·에디터 도구, EF, DB 마이그레이터, Google Sheets, Unreal/Elixir 등 부가 제품. |
 
-→ [제품 관계도](architecture.md)에서 제품 간 데이터·스키마 흐름을 다이어그램으로 볼 수 있습니다. 자세한 내용은 [제품군 개요](products/index.md)와 각 제품 페이지를 참고하세요. **스택별 바로 적용 예시**는 [스타터 키트](starter-kits.md)에서 안내합니다.
+→ [제품 관계도](architecture.md)에서 제품 간 데이터·스키마 흐름을 다이어그램으로 볼 수 있습니다. 자세한 내용은 [제품군 개요](products/index.md)와 각 제품 페이지를 참고하세요. **스택별 바로 적용 예시**는 [득팩 키트 라인업](starter-kits.md)에서 안내합니다.
 
 ---
 
 ## 이 페이지 소개
 
-이 사이트(**deukpack.app**)는 득팩 **브랜드 컨셉**과 제품을 소개하는 페이지입니다. **무료·오픈소스 코어**를 npm·[**GitHub(joygram/DeukPack)**](https://github.com/joygram/DeukPack)에서 바로 적용할 수 있고, 제품군·스타터 키트·문서로 실무 적용·도입 검토에 활용하실 수 있습니다.
+**deukpack.app**은 득팩 **브랜드·제품·튜토리얼·레퍼런스**의 **코어 정본**입니다.
 
-**득팩 코어를 바로 사용**하려면 위 **「득팩 코어 바로 사용하기」** 버튼 또는 [코어·엔진](products/core-engine.md) 페이지로 이동하세요. 해당 페이지에 **설치·CLI 예시**, **이 사이트 세부 문서**(설치, 빠른 시작, IDL·C#·C++ 가이드, 파이프라인, 스타터 키트), **GitHub**(README, 릴리스 문서 목록) 링크가 정리되어 있습니다. 코어 소스·이슈·기여는 [GitHub 저장소](https://github.com/joygram/DeukPack)에서 확인하세요. 상업·비상업으로 자유롭게 링크·인용해 주세요.
+**무료·오픈소스 코어**는 npm과 [**GitHub(joygram/DeukPack)**](https://github.com/joygram/DeukPack)에서 바로 적용할 수 있습니다.
+
+**손으로 따라 하며 검증**하거나 **《시작의 폐허》·서사 저니**를 읽으려면 **[kits.deukpack.app](https://kits.deukpack.app/)** 로 가면 됩니다. 저장소 README · 이 사이트 · 키트 사이트는 **같은 제품을 다른 깊이**로 보여 줍니다. 관계 표는 [문서 안내](documentation-index.md)를 보세요.
+
+**득팩 코어를 바로 쓰려면** 위 **「득팩 코어 바로 사용하기」** 또는 [코어·엔진](products/core-engine.md)으로 이동하세요. 그 페이지에 **설치·CLI**, 이 사이트의 **설치·빠른 시작·IDL·C#·C++·파이프라인·키트 라인업**, **GitHub**(README·릴리스 문서) 링크가 모여 있습니다.
+
+소스·이슈·기여는 [GitHub 저장소](https://github.com/joygram/DeukPack)에서 확인하세요. 링크·인용은 상업·비상업 모두 자유롭습니다.
 
 ---
 
@@ -124,7 +137,7 @@ hide:
 ## 다음 단계
 
 - [**코어 라이브러리 사용하기**](products/core-engine.md#득팩-코어-바로-사용하기) — npm·GitHub 링크, 설치·CLI·튜토리얼로 바로 사용
-- [**스타터 키트**](starter-kits.md) — 스택별 샘플·저장소 링크·바로 적용 예시
+- [**득팩 키트 라인업**](starter-kits.md) — 스택별 샘플·저장소 링크·바로 적용 예시
 - [제품군 개요](products/index.md) — 제품별 역할·포함 범위
 - [제품 관계도](architecture.md) — 제품 간 관계·데이터 흐름 다이어그램
 - [튜토리얼](tutorial/index.md) — 빠른 시작·단계별 가이드

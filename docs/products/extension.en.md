@@ -2,6 +2,8 @@
 
 Add-on products that **build on top of the DeukPack core**. These extend the main products (Core · engine, Protocol, Excel add-in, Pipeline · Unity, **DeukNavigation**) with additional capabilities.
 
+--8<-- "_includes/product-notices-landing-extension.en.md"
+
 ---
 
 ## Deuk UI & editor tooling

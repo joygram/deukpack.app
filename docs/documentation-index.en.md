@@ -1,6 +1,16 @@
 # Documentation
 
-An overview of **Korean / English** documentation available on this site and in the DeukPack OSS repository.
+An overview of **Korean / English** documentation on this site and in the DeukPack OSS repo.
+
+---
+
+## Three layers
+
+| Layer | Role | Entry |
+|-------|------|-------|
+| **DeukPack** (GitHub) | Engine, CLI, npm, CI, README | [joygram/DeukPack](https://github.com/joygram/DeukPack) |
+| **deukpack.app** (this site) | Product, tutorials, protocol, **API reference**, kits portal | [deukpack.app](https://deukpack.app/en/) |
+| **kits.deukpack.app** | Labs, *Ruins*, journey, topics | [kits.deukpack.app](https://kits.deukpack.app/en/) — header **language** menu for KO↔EN (`/en/…`) |
 
 ---
 
@@ -15,7 +25,9 @@ An overview of **Korean / English** documentation available on this site and in 
 | **C# / C++ guide** | [C# 가이드](tutorial/csharp-guide.md), [C++ 가이드](tutorial/cpp-guide.md) | Use the **language switcher** → English |
 | **Overrides · WriteFields · extends** | [Tutorial](tutorial/write-with-overrides.md) | Replace · Select · Inherit, C#·JS·C++, comparison table |
 | **API reference** | [API·타입 참조](reference/api.md) | Same page — **language switcher** → English |
-| **Products & starter kits** | [제품군](products/index.md), [스타터 키트](starter-kits.md) | Same path — **language switcher** → English |
+| **Wire protocol families** | [Wire protocol families](reference/wire-protocols.md) | Interop vs Deuk native, JS limits |
+| **Products & kits lineup** | [제품군](products/index.md), [득팩 키트 라인업](starter-kits.md) | Same path — **language switcher** → English |
+| **Releases · news** | [릴리스 · 뉴스](releases.md) | This page — **language switcher** → English |
 | **AI tools integration** | [Antigravity·Cursor·Copilot·Codex](ai-ide-tools-guide.md) | **Language switcher** → English |
 
 ---
@@ -33,5 +45,12 @@ An overview of **Korean / English** documentation available on this site and in 
 
 ## Summary
 
-- **한국어**: Tutorials, reference, and product docs are available in Korean on this site. OSS repo: README.ko.md, docs/README.md.
-- **English**: Use the **language switcher** (top right) on any page for the English version. OSS repo: README.md, docs/README.md.
+**한국어 (Korean)**
+
+- Tutorials, reference, product pages: this site (default URLs).
+- OSS repo: README.ko.md, docs/README.md.
+
+**English**
+
+- Switch with the **language menu** (top right).
+- OSS repo: README.md, docs/README.md.

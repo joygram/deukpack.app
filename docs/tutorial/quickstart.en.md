@@ -53,8 +53,9 @@ npx deukpack ./schema.deuk ./gen --csharp --cpp
 # With include paths
 npx deukpack ./schema.deuk ./gen -I ./idl --csharp --cpp
 
-# Protocol (binary / compact / json)
-npx deukpack ./schema.deuk ./gen --csharp --protocol binary
+# Protocol: interop → tbinary / tcompact / tjson; Deuk native → pack / json / yaml (default pack)
+npx deukpack ./schema.deuk ./gen --csharp --protocol tbinary
+npx deukpack ./schema.deuk ./gen-native --csharp --protocol pack
 ```
 
 Output goes under `./gen` (or your path), e.g. `gen/csharp/`, `gen/cpp/`.
@@ -70,10 +71,10 @@ Output goes under `./gen` (or your path), e.g. `gen/csharp/`, `gen/cpp/`.
 
 ## 5. Next steps
 
-- **C# / Unity**: Include generated code in your solution and wire serialization using [Protocol](../products/protocol.md). Use npm `dist/csharp` runtime or [Starter kits](../starter-kits.md).
+- **C# / Unity**: Include generated code in your solution and wire serialization using [Protocol](../products/protocol.md). Use npm `dist/csharp` runtime or the [kits lineup](../starter-kits.md).
 - **Pipeline**: For multiple IDL/outputs, use [pipeline mode](https://github.com/joygram/DeukPack#simple-usage-cli) (`--pipeline ./deukpack-pipeline.json`).
 - **Excel / Unity**: See [Excel add-in](../products/excel-addin.md), [Pipeline·Unity](../products/pipeline-unity.md).
 
 ---
 
-*Full CLI options: `npx deukpack --help` or [API reference](../reference/api.md).*
+*Full CLI options: `npx deukpack --help` or [API reference](../reference/api.md). Interop vs native matrix: [Wire protocol families](../reference/wire-protocols.md).*

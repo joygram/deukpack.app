@@ -57,7 +57,7 @@ Full API tables and C++/JS: [API reference](../reference/api.md) · core repo [D
 
 ## 3. JavaScript (`--js`)
 
-Generated `javascript/generated.js` adds **`applyOverrides`**, **`toJsonWithOverrides`**, and **`FieldId`** on each struct helper:
+Generated `javascript/generated_deuk.js` adds **`applyOverrides`**, **`toJsonWithOverrides`**, and **`FieldId`** on each struct helper:
 
 ```javascript
 var F = ChatMessage.FieldId;
@@ -163,4 +163,4 @@ The generated `UserFull` has all 4 fields (1–4). Multi-level inheritance (A �
 
 - [C# guide](csharp-guide.md) — Read/Write, GetSchema, runtime reference
 - [API reference](../reference/api.md) — CLI including `--wire-profile`
-- [Starter kits](../starter-kits.md) — fan-out note for network/chat starters
+- [Kits lineup](../starter-kits.md) — fan-out note for network/chat kits

@@ -1,61 +1,86 @@
-# Protocol & Serialization
+# Protocol & serialization
 
-DeukPack supports three serialization protocols: **Binary**, **Compact**, and **JSON**. Select one with `--protocol` at codegen time; the matching Reader/Writer is generated.
+DeukPack splits wires into **two families**: **interop** (Thrift-compatible bytes) and **Deuk native** (`pack` / `json` / `yaml`). Pick the family first, then the `protocol` string. The full matrix is in [Wire protocol families](../reference/wire-protocols.md).
 
 ---
 
-## 1. Protocol types
+## 1. Families and protocol names
 
-| Protocol | Option | Use case | Characteristics |
-|----------|--------|----------|----------------|
-| **Binary** | `--protocol binary` | Binary communication between server and client, Thrift Binary compatible | Field-ID/type-based, fast serialization and parsing |
-| **Compact** | `--protocol compact` | Bandwidth/storage savings | Smaller payload than Binary |
-| **JSON** | `--protocol json` | REST, debugging, logging | Human-readable, text-based |
+### Deuk native (`wireFamily: deuk`)
 
-One protocol per IDL generation. If multiple protocols are needed, generate into separate output folders or define multiple jobs in a pipeline config.
+| Protocol | CLI example | Role |
+|----------|-------------|------|
+| **`pack`** | `--protocol pack` (default-ish codegen hint) | Tagged binary. **npm** `serialize` default |
+| **`json`** | `--protocol json` | UTF-8 JSON, values only (not the same as **`tjson`** / Thrift JSON) |
+| **`yaml`** | `--protocol yaml` | UTF-8 YAML, values only |
+
+### Interop — Thrift side (`wireFamily: interop`)
+
+| Protocol | CLI example | Role |
+|----------|-------------|------|
+| **`tbinary`** | `--protocol tbinary` | Thrift Binary compatible |
+| **`tcompact`** | `--protocol tcompact` | Thrift Compact |
+| **`tjson`** | `--protocol tjson` | Thrift JSON (`DpJsonProtocol`) |
+
+**JS:** **`pack` / `json` / `yaml`** need no extra metadata. **`tbinary` / `tcompact` / `tjson`** require **`interopRootStruct`** (+ **`interopStructDefs`** for nested named structs) on `SerializationOptions`, or use **`serializeInteropStruct`**. **Generated C# / C++** remains the usual path for services.
+
+One `--protocol` hint per codegen output; split folders or use `--pipeline` for multiple wires.
 
 ---
 
 ## 2. Serialization flow (concept)
 
-1. **Write**: In-memory struct/object → passed to **Writer** → byte stream (or JSON string) output.
-2. **Read**: Byte stream (or JSON string) → parsed by **Reader** → struct/object restored.
+1. **Write**: struct/object → **Writer** (or npm `serialize`) → bytes or text.
+2. **Read**: bytes/text → **Reader** (or npm `deserialize`) → struct/object.
 
-With the same schema and protocol, bytes written in C# can be read in C++ and vice versa (wire compatibility).
-
----
-
-## 3. Protocol selection guide
-
-- **Game / real-time server, performance critical**: **Binary** or **Compact**.
-- **Compatibility with existing Thrift Binary services**: **Binary**.
-- **HTTP/REST, logs, monitoring**: **JSON**.
-- **Minimize storage/bandwidth**: **Compact**.
-
-For detailed specs and field encoding, see [Protocol](../products/protocol.md) and [core repo protocol policy](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_PROTOCOL_POLICY.md).
+**Same schema, same `protocol`, same family** → cross-language bytes match. **Different families** → different byte layouts.
 
 ---
 
-## 4. Specifying at codegen
+## 3. How to choose
+
+- **New Node/browser tooling, JS only:** **`pack`** or `json` / `yaml` (Deuk native).
+- **Byte-compatible with existing Thrift Binary/Compact:** **`tbinary`** or **`tcompact`** — **generated C# / C++** (or JS with schema options).
+- **Human-readable logs with Deuk native JSON:** **`json`** (deuk). For Thrift JSON wire, use **`tjson`**.
+
+Details: [Protocol](../products/protocol.md), [Interop vs native wire](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WIRE_INTEROP_VS_NATIVE.md), [core protocol policy](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_PROTOCOL_POLICY.md).
+
+---
+
+## 4. Codegen
 
 ```bash
-npx deukpack ./schema.deuk ./gen --csharp --protocol binary
+npx deukpack ./schema.deuk ./gen --csharp --protocol pack
+npx deukpack ./schema.deuk ./gen-interop --csharp --protocol tbinary
 npx deukpack ./schema.deuk ./gen-json --csharp --protocol json
 ```
 
-Generated C#/C++ code includes Read/Write implementations for the selected protocol.
+Generated C#/C++ includes Read/Write for the selected protocol (and family).
 
 ---
 
-## 5. msgId & ProtocolRegistry (C#)
+## 5. npm one-liners (Deuk native)
 
-To dispatch by message type using **msgId**, the generated **ProtocolRegistry** pairs each type with its ID. Read msgId from the receive buffer, look up the type in the Registry, then call **Read** to deserialize.  
-For detailed usage, see [C# guide](csharp-guide.md) and [Protocol](../products/protocol.md).
+```ts
+import { serialize, deserialize } from 'deukpack';
+const bytes = serialize(obj);       // default = pack
+const again = deserialize(bytes);
+```
+
+Interop binary is **not** produced through this path alone. See [Wire protocol families](../reference/wire-protocols.md).
 
 ---
 
-## 6. Next steps
+## 6. msgId & ProtocolRegistry (C#)
 
-- [C# guide](csharp-guide.md) — Read/Write usage in C#
-- [C++ guide](cpp-guide.md) — Serialization in C++
-- [API reference](../reference/api.md) — CLI and generated API summary
+To dispatch by **msgId**, use generated **ProtocolRegistry**. Read msgId from the buffer, resolve the type, then **Read**.  
+See [C# guide](csharp-guide.md) and [Protocol](../products/protocol.md).
+
+---
+
+## 7. Next steps
+
+- [Wire protocol families](../reference/wire-protocols.md) — matrix & JS limits
+- [C# guide](csharp-guide.md)
+- [C++ guide](cpp-guide.md)
+- [API reference](../reference/api.md)

@@ -2,6 +2,8 @@
 
 득팩 **코어 위에 붙는 부가 제품**입니다. 기본 제품군(코어·엔진, 프로토콜, Excel 애드인, 파이프라인·Unity, **DeukNavigation**)을 확장하는 옵션입니다.
 
+--8<-- "_includes/product-notices-landing-extension.ko.md"
+
 ---
 
 ## Deuk UI·에디터 도구

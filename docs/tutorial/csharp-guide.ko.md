@@ -9,10 +9,10 @@
 IDL에서 C#을 뽑을 때는 `--csharp` 를 지정합니다.
 
 ```bash
-npx deukpack ./schema.deuk ./gen --csharp --protocol binary
+npx deukpack ./schema.deuk ./gen --csharp --protocol tbinary
 ```
 
-생성물은 보통 `gen/csharp/` (또는 지정한 출력 폴더) 아래에 `.cs` 파일들로 나옵니다.  
+생성물은 보통 `gen/csharp/` (또는 지정한 출력 폴더) 아래에 IDL 소스당 `<stem>_deuk.cs` 형태로 나옵니다(수동 작성 `Player.cs` 등과 이름 충돌 완화). `MetaTableRegistry.g.cs` 등 공용 파일명은 기존과 같습니다.  
 **런타임**은 npm 패키지의 `dist/csharp` 또는 [DeukPack 코어 저장소](https://github.com/joygram/DeukPack)의 `DeukPack.Protocol` 프로젝트를 참조해야 합니다. 생성 코드만으로는 동작하지 않습니다.
 
 ---
@@ -39,7 +39,7 @@ npm만 설치한 경우: `node_modules/deukpack/dist/csharp` 에 있는 런타�
 
 ## 3. 직렬화·역직렬화 (읽기/쓰기)
 
-생성된 타입은 **IDeukPackReader** / **IDeukPackWriter** (또는 프로토콜별 Reader/Writer)로 직렬화·역직렬화합니다. 프로토콜은 생성 시 `--protocol binary`(또는 compact, json)에 맞춰 선택합니다.
+생성된 타입은 **IDeukPackReader** / **IDeukPackWriter** (또는 프로토콜별 Reader/Writer)로 직렬화·역직렬화합니다. 프로토콜은 생성 시 `--protocol tbinary`(또는 `tcompact`, `tjson`, `pack`, `json` 등)에 맞춰 선택합니다.
 
 **쓰기 예시 (개념)**:
 
@@ -100,7 +100,7 @@ var schema = DemoUser.GetSchema();
 
 - 생성 C# + **DeukPack.Protocol** (또는 Unity용 런타임)을 Unity 프로젝트에 포함합니다.
 - asmdef가 있다면 생성 코드·런타임을 같은 어셈블리 또는 참조 관계로 두면 됩니다.
-- **스타터 키트**: [deukpack.app 스타터 키트](../starter-kits.md)의 Unity·Web App 항목에서 샘플·경로 안내를 확인할 수 있습니다.
+- **키트 라인업**: [deukpack.app 득팩 키트 라인업](../starter-kits.md)의 Unity·Web App 항목에서 샘플·경로 안내를 확인할 수 있습니다.
 
 ---
 

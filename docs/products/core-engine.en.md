@@ -2,6 +2,8 @@
 
 **One-liner**: Centered on the **DeukPack native IDL (.deuk)**, provides **parsing, AST, code generation, schema, and meta** in a single engine. Outputs C#, C++, TS, JS; Protobuf, OpenAPI, CSV, and legacy .thrift are **inputs to the same pipeline**.
 
+--8<-- "_includes/product-notices-landing-core-engine.en.md"
+
 ---
 
 ## Core differentiators
@@ -43,7 +45,7 @@ npx deukpack ./idl/root.deuk ./gen --csharp --cpp --js -I ./idl
 | [C# guide](../tutorial/csharp-guide.md) | C# generated code, protocol, references |
 | [C++ guide](../tutorial/cpp-guide.md) | C++ build, include, execution |
 | [Pipeline guide](../tutorial/pipeline-guide.md) | Multiple jobs, config JSON |
-| [Starter kits](../starter-kits.md) | Unity, C++, Console, EF, TS, etc. |
+| [Kits lineup](../starter-kits.md) | Unity, C++, Console, EF, TS, etc. |
 | [Documentation](../documentation-index.md) | Korean / English document locations |
 
 ### GitHub repository
@@ -59,7 +61,7 @@ npx deukpack ./idl/root.deuk ./gen --csharp --cpp --js -I ./idl
 ## Core library summary
 
 - **Official OSS**: [github.com/joygram/DeukPack](https://github.com/joygram/DeukPack) — source, README, issues, contributions, releases. See the repo README and RELEASING for clone, local build, and contribution.
-- **C# / Unity**: Reference the npm package's `dist/csharp` runtime or see the [Starter kits](../starter-kits.md) samples.
+- **C# / Unity**: Reference the npm package's `dist/csharp` runtime or see the [kits lineup](../starter-kits.md) samples.
 
 ---
 

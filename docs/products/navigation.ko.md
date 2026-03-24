@@ -2,6 +2,10 @@
 
 **한 줄**: **Recast/Detour 기반 NavMesh**와 **공유 Deuk 와이어 포맷**(.dpk)으로 **Unity와 서버**에서 동일 메시·쿼리 API를 사용. 경로 탐색·크라우드 시뮬레이션·베이킹을 한 패키지에서 제공.
 
+**웹·블로그 (예정):** **deukpack.app** 에서 **도메인 오버로딩**으로 이 제품 전용 허브를 둘 예정입니다. 후보: **deuknavigation.deukpack.app** · **navigation.deukpack.app** (운영에서 하나 또는 병행 선택).
+
+--8<-- "_includes/product-notices-landing-navigation.ko.md"
+
 ---
 
 ## 제공 내용

@@ -2,6 +2,9 @@
 
 DeukPack covers **IDL, schema, code generation, serialization, meta, and pipelines**, extending to **server integration and real-time game networking** with the same schema and protocol. The product family is organized into **Core · engine / Protocol / Spreadsheet add-in (Excel, etc.) / Pipeline · Unity / DeukNavigation / Extensions**. For inter-product relationships and data flow, see the [Architecture](../architecture.md) diagram.
 
+!!! tip "Latest notices by product line"
+    All product-line notices in **reverse chronological order** live on [Releases · news](../releases.md). Each product page below shows notices **tagged for that line only**.
+
 ---
 
 ## Product roles

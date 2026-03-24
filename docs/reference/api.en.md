@@ -1,85 +1,149 @@
 # API & type reference
 
-Summary of **CLI usage** and **APIs used in generated code and runtime**. For details see the [GitHub core repo](https://github.com/joygram/DeukPack) and product docs.
+**CLI**, **IDL kinds**, and **C# / C++ / JavaScript** surfaces for the DeukPack core. Implementation details: [GitHub core](https://github.com/joygram/DeukPack) `src/` and `docs/`.
 
-**한국어**: Use the language switcher (top right).
+**한국어:** Use the site **language** menu → **한국어**.
+
+---
+
+## On this page
+
+- [CLI](#cli) — full option table (`npx deukpack` = `scripts/build_deukpack.js`)
+- [IDL declaration kinds](#idl-declaration-kinds) — `record` / `message` / `table` / `entity`
+- [Tables](#tables) — table axis (short)
+- [Messages and wire](#messages-and-wire) — message axis (short)
+- [Wire protocol families](wire-protocols.md) — interop vs native matrix (separate page)
+- [Database and entities](#database-and-entities) — DB axis (short)
+- [Schema import and export](#schema-import-and-export) — OpenAPI, CSV, JSON, Excel
+- [Generated C# APIs](#generated-c-apis)
+- [Generated C++ APIs](#generated-c-apis)
+- [Extended types](#extended-types)
+- [Cross-cutting features](#cross-cutting-features)
+- [WriteFields and WriteWithOverrides](#writefields-and-writewithoverrides)
+- [JavaScript (`--js`)](#javascript-js)
+- [Related product docs](#related-product-docs)
+
+Shorter topic pages: [Reference overview](index.md) · [Fundamentals](fundamentals.md) · [Tables](tables.md) · [Messages & wire](messages.md) · [Database & entities](database.md).
 
 ---
 
 ## CLI
 
-**Command form**
+**Form**
 
 ```bash
-npx deukpack <entry_IDL_path> <output_directory> [options]
+npx deukpack <entry_idl_path> <output_directory> [options]
+npx deukpack --pipeline <pipeline_config.json>
 ```
 
-**Main options**
+**Options** (from `scripts/build_deukpack.js`; if something is missing, run `npx deukpack --help`)
 
 | Option | Description |
 |--------|-------------|
-| `--csharp` | Generate C# code |
-| `--cpp` | Generate C++ code |
-| `--js` | Generate JavaScript (tools, BFF, etc.) |
-| `-I <path>` | Include path (multiple allowed) |
-| `--protocol <binary\|compact\|json>` | Serialization protocol |
-| `--pipeline <config.json>` | Run multiple jobs from a pipeline config |
-| `--wire-profile <name>` | Emit wire-profile subset types / JS helpers (repeat or comma-separated). See [Wire profile subset](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WIRE_PROFILE_SUBSET.md). |
+| `-I` / `-i <path>` | Include path (repeatable) |
+| `-r` / `--include-recursive <path>` | Include path and **all nested subdirectories** (deep recursion) |
+| `--define-root <name>` | IDL root folder name (default `_deuk_define`, legacy `_thrift`) |
+| `--csharp` | Emit C# (emits `DeukDefine.csproj` by default) |
+| `--csharp-project-name <name>` | Assembly / project filename (default `DeukDefine`) |
+| `--csharp-nullable` | Enable nullable reference style in emitted C# |
+| `--no-csharp-csproj` | Skip `.csproj` |
+| `--allow-multi-namespace` | Allow multiple namespace blocks in one `.deuk` file |
+| `--brace-less-namespace` | Omit `namespace { }` braces for single-namespace output (indented) |
+| `--cpp` | Emit C++ |
+| `--ts` | Emit TypeScript (first stage; apps continue via tsc/bundler) |
+| `--js` | Emit JavaScript directly (Node/tools path) |
+| `--ef` | EF Core: `DbContext`, fluent config, meta/entity alignment |
+| `--protocol <name>` | Wire hint. **Deuk native:** `pack` (default), `json`, `yaml` — **Interop (Thrift):** **`tbinary`**, **`tcompact`**, **`tjson`**. Table & JS: [Wire protocol families](wire-protocols.md) · [interop vs native](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WIRE_INTEROP_VS_NATIVE.md) |
+| `--endianness little\|big` | Endianness |
+| `--wire-profile <name>` | Profile names, repeat or comma-separated. [Wire profile subset](https://github.com/joygram/DeukPack/blob/main/docs/internal/DEUKPACK_WIRE_PROFILE_SUBSET.md) |
+| `--convert-to-deuk [subdir]` | Also emit `.deuk` from parsed `.thrift` (subdir default `deuk`) |
+| `--emit-per-file` | Emit per-`sourceFile` `.deuk` slices (split server DB IDL, etc.) |
+| `--import-openapi <file>` | Merge OpenAPI 3.x into AST |
+| `--openapi <file>` | Emit OpenAPI 3.x from AST |
+| `--import-csv` / `--import-psv` / `--import-json` / `--import-excel` `<file>` | Merge schema from first row/keys |
+| `--csv` / `--psv` / `--json` / `--excel` `<file>` | Emit schema file from AST (round-trip) |
 
 **Examples**
 
 ```bash
 npx deukpack ./schema.deuk ./gen --csharp --cpp -I ./idl
-npx deukpack ./api.deuk ./out --csharp --protocol binary
+npx deukpack ./api.deuk ./out --csharp --protocol tbinary
 npx deukpack --pipeline ./deukpack-pipeline.json
 ```
 
-Run `npx deukpack --help` for all options.
+---
+
+## IDL declaration kinds
+
+| Keyword | AST `declarationKind` | Role |
+|---------|-------------------------|------|
+| `struct` / `record` | `record` | Plain struct / DTO |
+| `message` | `message` | Network types, msgId / registry |
+| `table` | `table` | Table defs, meta containers, `MetaTableRegistry` |
+| `entity` | `entity` | DB rows, `[Table]`/`[Key]`/`[Column]`, optional `--ef` |
+
+---
+
+## Tables
+
+- See the [Tables guide](tables.md) for `MetaTableRegistry`, row key rules, reserved field IDs, `GetSchema()`.
+
+---
+
+## Messages and wire
+
+- See [Messages & wire](messages.md) for `ProtocolRegistry`, `--protocol`, readers/writers, WriteFields/overrides. **Interop vs native protocol table:** [Wire protocol families](wire-protocols.md).
+
+---
+
+## Database and entities
+
+- See [Database & entities](database.md) for `entity`, `--ef`, `tablelink`.
+
+---
+
+## Schema import and export
+
+Flags are the `--import-*` and `--csv` / `--psv` / `--json` / `--excel` rows in [CLI](#cli). Semantics: [DEUKPACK_OPENAPI_ROUNDTRIP.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_OPENAPI_ROUNDTRIP.md), [DEUKPACK_SCHEMA_FORMAT_ROUNDTRIP.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_SCHEMA_FORMAT_ROUNDTRIP.md), etc.
+
+**Hands-on:** [Part III — API & web](https://kits.deukpack.app/en/journey/part-03-api-web/) · [serialization topics](https://kits.deukpack.app/en/topics/serialization/).
 
 ---
 
 ## Programmatic (library)
 
-Use **DeukPackEngine** (or the same entry point) in Node for **parse / AST**. For **multi-language codegen**, v1 recommends **CLI** ([v1 scope](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_V1_RELEASE_SCOPE.md)).
-
-- **Core repo**: `src/` and [docs](https://github.com/joygram/DeukPack/tree/main/docs).
+Use **DeukPackEngine** (or the same entry) in Node for **parse / AST**. For **multi-language emit**, v1 recommends the **CLI** ([v1 scope](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_V1_RELEASE_SCOPE.md)).
 
 ---
 
-## Generated code API (C#)
-
-Common APIs in generated C# code:
+## Generated C# APIs
 
 | Item | Purpose |
 |------|---------|
-| **GetSchema()** | Recover schema (fields, types, defaults) from generated types. Used for meta, validation, Excel. |
-| **WriteWithOverrides(oprot, overrides)** | Serialize without cloning: `Dictionary<int, object>` keys are **field IDs**; values replace `this.Property` for that write only. If `overrides` is null or empty, same as **`Write(oprot)`**. |
-| **WriteFields(oprot, fieldIds, overrides?)** | Serialize only the fields in `fieldIds`. Optional `overrides` to replace values. Runtime projection without partial types. |
-| **FieldId (nested class)** | Auto-generated `public const int` constants on every struct. Use `StructName.FieldId.PropertyName`. Compile-time safe, no magic numbers. |
-| **ProtocolRegistry** | Message type ↔ identifier (msgId) mapping. Used for dispatch and serialization. |
-| **MetaTableRegistry** | Table / meta type registration. Table-based load and validation. |
-| **IDeukPackReader / IDeukPackWriter** | Read/write per protocol (Binary/Compact/JSON). Serialize / deserialize. |
+| **GetSchema()** | Recover schema from generated types (meta, validation, Excel). |
+| **WriteWithOverrides(oprot, overrides)** | `Dictionary<int, object>` field-ID overrides for one write; null/empty ⇒ same as `Write`. |
+| **WriteFields(oprot, fieldIds, overrides?)** | Serialize only listed fields; optional overrides. |
+| **FieldId** | `public const int` — `StructName.FieldId.PropertyName`. |
+| **ProtocolRegistry** | Message type ↔ msgId mapping. |
+| **MetaTableRegistry** | Table/meta type registration. |
+| **IDeukPackReader / IDeukPackWriter** | Protocol-specific read/write. |
 
-**struct extends**: Use `extends` in IDL to auto-merge parent fields into child structs. Multi-level inheritance and field ID collision checks.
-
-Tutorial (replace · select · inherit): [Overrides · WriteFields · extends](../tutorial/write-with-overrides.md). Full reference: [DEUKPACK_WRITE_WITH_OVERRIDES_API.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
-
-Protocol and wire format: [Protocol](../products/protocol.md). Excel and meta rules: [Excel add-in](../products/excel-addin.md).
+**struct extends:** IDL `extends`. Tutorial: [Overrides · WriteFields · extends](../tutorial/write-with-overrides.md). Deep dive: [DEUKPACK_WRITE_WITH_OVERRIDES_API](https://github.com/joygram/DeukPack/blob/main/docs/internal/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
 
 ---
 
-## Generated code API (C++)
+## Generated C++ APIs
 
 | Item | Purpose |
 |------|---------|
-| **apply_overrides(std::unordered_map<int, std::any>)** | Member on each generated `struct`: apply per-field-ID values before your own serialization step. Header includes `<any>` and `<unordered_map>`. |
-| **kFieldId_\*** | `static constexpr int` field ID constants on each struct. `StructName::kFieldId_PropertyName`. |
+| **apply_overrides(std::unordered_map<int, std::any>)** | Apply per-field-ID values before your serialize step. Uses `<any>`, `<unordered_map>`. |
+| **kFieldId_\*** | `static constexpr int` — `StructName::kFieldId_PropertyName`. |
 
 ---
 
-## Extended data types (vs Protobuf / Thrift)
+## Extended types
 
-**One-line summary:** `int8`–`int64`, `uint8`–`uint64`, `float`/`double`, `bool`, `string`/`binary`, `list`/`set`/`map`, **tablelink**, `datetime`/`decimal`, **struct extends**.
+**One line:** `int8`–`int64`, `uint8`–`uint64`, `float`/`double`, `bool`, `string`/`binary`, `list`/`set`/`map`, **tablelink**, `datetime`/`decimal`, **struct extends**.
 
 | Type / feature | DeukPack | Protobuf | Thrift |
 |----------------|----------|----------|--------|
@@ -88,70 +152,55 @@ Protocol and wire format: [Protocol](../products/protocol.md). Excel and meta ru
 | float / double | ✓ | ✓ | ✓ |
 | bool, string, binary | ✓ | ✓ (bytes) | ✓ |
 | list / set / map | ✓ | repeated/map | list/set/map ✓ |
-| **tablelink** | ✓ (DB/table row ref) | — | — |
-| **datetime** | ✓ (extension) | — | — |
-| **decimal** | ✓ (extension) | — | — |
-| **struct extends** | ✓ (multi-level, wire-compatible) | oneof / message nesting | — |
-
-Semantics (defaults, wire format, C#/C++/JS mapping) are defined per type in the IDL and codegen; see generated code and schema for details.
+| **tablelink** | ✓ | — | — |
+| **datetime** | ✓ | — | — |
+| **decimal** | ✓ | — | — |
+| **struct extends** | ✓ | oneof / nesting | — |
 
 ---
 
-## Extension features
+## Cross-cutting features
 
-- **Struct inheritance (extends):** Base/derived structs; multi-level; wire layout remains compatible so older clients can skip unknown fields.
-- **FieldId constants:** Every struct gets a static `FieldId` (C#: `StructName.FieldId.FieldName`, JS: `StructName.FieldId.PropertyName`) for use in **WriteFields** and **WriteWithOverrides**.
-- **Wire profiles:** Binary/Compact/JSON and optional msgId; protocol registry for versioning.
-- **Custom / plug-in codegen:** Codegen is script-driven (e.g. `build_deukpack.js`); generators can be extended or replaced for new targets or conventions.
-
----
-
-## Selection (WriteFields — “골라보내기”)
-
-Send only a **subset of fields**; optionally override some of them.
-
-- **C#:** `WriteFields(stream, obj, fieldIds, overrides?)` — serializes only the given field IDs; `overrides` is `Dictionary<int, object>` applied before writing (same semantics as WriteWithOverrides).
-- **JS:** `projectFields(obj, fieldIds, overrides?)` returns an object with only those fields; `toJsonWithFields(obj, fieldIds, overrides?)` serializes that to Thrift JSON.
-
-**Typical use:** Reduce payload (e.g. mobile) or hide sensitive fields by omitting them from `fieldIds`. Overrides let you substitute values for selected fields (e.g. mask PII) without cloning the whole object elsewhere.
-
-**Example (concept):** `fieldIds = [StructName.FieldId.Name, StructName.FieldId.Level]` → only those two fields are written; optional `overrides: { [FieldId.Name]: "***" }` to replace the value for `Name`.
+- **extends:** merge parent fields with wire compatibility.
+- **FieldId:** used by WriteFields / overrides in C# and JS.
+- **Wire profiles:** `--wire-profile` + `wireProfiles` annotation. [DEUKPACK_WIRE_PROFILE_SUBSET](https://github.com/joygram/DeukPack/blob/main/docs/internal/DEUKPACK_WIRE_PROFILE_SUBSET.md).
+- **Annotations such as `geometry`:** may emit C# `deuk` partials (per generator).
 
 ---
 
-## Partial replacement (WriteWithOverrides — “일부 교체”)
+## WriteFields and WriteWithOverrides
 
-Serialize with **per-field overrides** (e.g. per-recipient or per-request substitution) **without cloning** the original struct.
+**WriteFields** — send a subset; optionally override those fields only.
 
-- **C#:** `WriteWithOverrides(stream, obj, overrides)` where `overrides` is `Dictionary<int, object>`. Only the keys present in `overrides` are replaced for serialization; the rest come from `obj`. The implementation writes from a virtual view (overrides applied on the fly), so the original `obj` is not mutated.
-- **JS:** `applyOverrides(obj, overrides)` returns a shallow copy with overrides applied; `toJsonWithOverrides(obj, overrides)` does that then Thrift JSON.
+- **C#:** `WriteFields(stream, obj, fieldIds, overrides?)`
+- **JS:** `projectFields`, `toJsonWithFields`
 
-**Typical use:** Same logical struct, different values for some fields per recipient (e.g. A gets `price`, B gets `"***"`) or per request (e.g. server timestamp overwrite). One base object, many serialized variants.
+**WriteWithOverrides** — serialize with per-field replacements **without cloning** the source object (C# view-based).
 
-**Example (concept):** `overrides = { [StructName.FieldId.Price]: 0, [StructName.FieldId.Timestamp]: serverNow }` → serialized output uses those values for `Price` and `Timestamp`, and original values for all other fields.
+- **C#:** `WriteWithOverrides(stream, obj, overrides)`
+- **JS:** `applyOverrides`, `toJsonWithOverrides`
+
+Tutorial: [../tutorial/write-with-overrides.md](../tutorial/write-with-overrides.md)
 
 ---
 
-## Generated code API (JavaScript, `--js`)
+## JavaScript (`--js`)
 
-Each struct helper in `javascript/generated.js`:
+Helpers in `javascript/generated_deuk.js`:
 
 | Item | Purpose |
 |------|---------|
-| **applyOverrides(obj, overrides)** | Shallow copy of `obj`, then apply `{ fieldId: value }`. Does not mutate `obj`. |
-| **toJsonWithOverrides(obj, overrides)** | Same as above, then Thrift JSON string via `_toThriftJson`. |
-| **projectFields(obj, fieldIds, overrides?)** | Extract only `fieldIds` fields into a new object. Optional `overrides`. |
-| **toJsonWithFields(obj, fieldIds, overrides?)** | Same as above, then Thrift JSON string. |
-| **FieldId** | `StructName.FieldId = { PropertyName: id, ... }`. Field ID constants object per struct. |
-
-Global helpers: `_applyOverrides(obj, overrides, schema)`, `_projectFields(obj, fieldIds, schema, overrides)` (internal).
+| **applyOverrides** | Shallow copy + apply field-ID map. |
+| **toJsonWithOverrides** | Above + Thrift JSON string. |
+| **projectFields** / **toJsonWithFields** | Subset + optional overrides. |
+| **FieldId** | `{ PropertyName: id, ... }` |
 
 ---
 
-## Product docs
+## Related product docs
 
 | Area | Doc |
 |------|-----|
-| **Core·engine** | [Core·engine](../products/core-engine.md) — IDL input, codegen, schema, SQLite |
-| **Protocol** | [Protocol](../products/protocol.md) — Binary/Compact/JSON, msgId, serialization |
-| **Excel·Unity** | [Excel add-in](../products/excel-addin.md), [Pipeline·Unity](../products/pipeline-unity.md) |
+| **Core · engine** | [Core · engine](../products/core-engine.md) |
+| **Protocol** | [Protocol](../products/protocol.md) |
+| **Excel · Unity** | [Excel add-in](../products/excel-addin.md), [Pipeline · Unity](../products/pipeline-unity.md) |

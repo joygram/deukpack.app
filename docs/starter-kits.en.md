@@ -1,12 +1,22 @@
-# Starter kits
+# DeukPack kits lineup
 
-Detailed introductions, **repository links (clone)**, and **local guides** organized by stack.  
-Each kit lives in a **separate repository from the core**; its README lists **required tools, codegen commands, and build steps**.
+**Lineup & portal (overview):** stack introductions, **clone URLs**, and **shared prerequisites**—what each kit is and where it lives. (The `starter-kits` URL slug stays for existing links.)
 
-> **Note:** Some kits may not have repositories yet. If a link shows `TBD`, try the [DeukPack OSS GitHub](https://github.com/joygram/DeukPack) · [Starter Kit unified repo](https://github.com/joygram/DeukPackStarterKit) · [npm `deukpack`](https://www.npmjs.com/package/deukpack) · core [examples](https://github.com/joygram/DeukPack/tree/main/examples) first.
+!!! info "Overview vs kits documentation site"
+    **This page (deukpack.app/starter-kits):** **overview**—what to clone and what you need up front.  
+    **Hands-on labs, copy-paste drills, the *Ruins* course, saga journey, and topic pages** for **walking the kits end-to-end** live on the official kits site **[kits.deukpack.app](https://kits.deukpack.app/en/)** (same navigation as the `StarterKit/` READMEs).
 
-**Starter Kit unified repository (GitHub)**  
-- [joygram/DeukPackStarterKit](https://github.com/joygram/DeukPackStarterKit) — Unity, C++, Network, TypeScript, and other stack samples in one repo. `git clone https://github.com/joygram/DeukPackStarterKit.git`
+!!! note "Growing under “Kits” (roadmap)"
+    **Main-line kits (`StarterKit/`)** and the **app-kit (`AppKit/`) teaser** are expected to **open and deepen over time** under the **DeukPack Kits** umbrella—docs, templates, and teaser areas **without a fixed product ship calendar**. Watch **[kits.deukpack.app](https://kits.deukpack.app/en/)** for what unlocks next.
+
+Each kit lives in a **separate repository from the core** (or a folder in the unified repo); its README lists **required tools, codegen commands, and build steps**.
+
+> **Note:** Some kits may not have repositories yet. If a link shows `TBD`, try the [DeukPack OSS GitHub](https://github.com/joygram/DeukPack) · [DeukPackKits (unified)](https://github.com/joygram/DeukPackKits) · [DeukPackKitsOSS](https://github.com/joygram/DeukPackKitsOSS) · [npm `deukpack`](https://www.npmjs.com/package/deukpack) · core [examples](https://github.com/joygram/DeukPack/tree/main/examples) first.
+
+**Unified kits repository (GitHub)**  
+- [joygram/DeukPackKits](https://github.com/joygram/DeukPackKits) — Unity, C++, Network, TypeScript, and other stack samples in one repo. `git clone https://github.com/joygram/DeukPackKits.git`  
+- **Kits docs site (hands-on · journey):** [kits.deukpack.app](https://kits.deukpack.app/en/) — public MkDocs (KO/EN); in-site links match the repo README scheme.  
+- [joygram/DeukPackKitsOSS](https://github.com/joygram/DeukPackKitsOSS) — OSS-oriented clone. `git clone https://github.com/joygram/DeukPackKitsOSS.git`
 
 ---
 
@@ -25,7 +35,7 @@ Before that, you need **Node.js, npm, and other environment prerequisites**.
 | **Per-starter** | C# → .NET SDK, C++ → CMake & compiler, Unity → Unity Editor, etc. See each kit README |
 | **IDL** | `.thrift` / `.deuk` files — included in the kit or as submodules |
 
-**DeukPackStarterKit** provides `npm run check-env` to verify Node (≥16) and npm automatically; `npm run init` runs the same check first. If requirements are not met, an **OS-specific** install guide is shown.
+**DeukPackKits** provides `npm run check-env` to verify Node (≥16) and npm automatically; `npm run init` or `npm run bootstrap` (same as setup) runs the same check first. If requirements are not met, an **OS-specific** install guide is shown.
 
 **OS-specific initial setup**: Only Node/npm installation varies by OS; after that, `npm run check-env` / `npm run init` are the same.  
 - **Windows**: nodejs.org or `winget install OpenJS.NodeJS.LTS`  
@@ -39,7 +49,7 @@ After setup, run `npm install` → codegen → build from the **project (repo) r
 **We recommend treating each starter as "one project = one repository" and installing DeukPack inside that repo.**  
 Copy only the starter you want into a new repo, then run `npm install deukpack` → codegen → build/run from **that repo root**.
 
-**Use the unified repo (full DeukPackStarterKit clone) only** when you want all starters together; in that case, run initialization from the root.
+**Use the unified repo (full DeukPackKits clone) only** when you want all starters together; in that case, run initialization from the root.
 
 **Basic flow after cloning**
 
@@ -51,24 +61,92 @@ cd <project folder>
 # 3) Follow kit README → codegen → build
 ```
 
-### DeukPackStarterKit one-time initialization (after cloning the unified repo)
+### DeukPackKits one-time initialization (after cloning the unified repo)
 
-After cloning the full [DeukPackStarterKit](https://github.com/joygram/DeukPackStarterKit), run the following **once** — it will attempt to install Node if missing, then initialize:
+After cloning the full [DeukPackKits](https://github.com/joygram/DeukPackKits), run the following **once** — it will attempt to install Node if missing, then initialize:
 
 ```bash
-git clone https://github.com/joygram/DeukPackStarterKit.git
-cd DeukPackStarterKit
-# Linux/macOS:
-./scripts/bootstrap.sh
-# Windows:  scripts\bootstrap.cmd
+git clone https://github.com/joygram/DeukPackKits.git
+cd DeukPackKits
 ```
 
-- **bootstrap.sh / bootstrap.cmd**: If Node exists, runs setup immediately; otherwise installs via nvm (Linux/macOS), winget (Windows), or Docker first. **One-step initialization.**
-- When Node is already present: `node scripts/setup.js` or `npm run init`.
-- Then navigate to a starter folder to build/run (e.g. `cd starters/console && dotnet run`).
-- **Copying just one starter into an independent project** is the recommended approach. In that case, run `npm install deukpack` and `npx deukpack` codegen from **that project root**.
+**One-shot init — Linux / macOS**
 
-Details: [DeukPackStarterKit README](https://github.com/joygram/DeukPackStarterKit/blob/main/README.md).
+```bash
+./scripts/bootstrap.sh
+```
+
+**Windows (cmd)**
+
+```bat
+scripts\bootstrap.cmd
+```
+
+- **bootstrap.sh / bootstrap.cmd:** runs setup when Node exists; otherwise tries nvm, winget, or Docker first.
+
+**Node already installed — interactive setup** (registry vs sibling source, R vs K)
+
+```bash
+npm run init
+```
+
+(Same: `node scripts/setup.js`, `npm run bootstrap`)
+
+**Non-interactive / CI — defaults**
+
+```bash
+npm run init -- --skip-prompt
+```
+
+**Non-interactive — source + per-kit (env)**
+
+```bash
+export DEUKPACK_BOOTSTRAP_CHANNEL=source
+export DEUKPACK_KIT_RUNTIME=per-kit
+export DEUKPACK_SRC=../DeukPack
+npm run init -- --skip-prompt
+```
+
+**Non-interactive — flags only**
+
+```bash
+npm run init -- --use-source --kit-runtime=per-kit --skip-prompt
+```
+
+**Core-dev shortcut**
+
+```bash
+npm run bootstrap:dev
+```
+
+**Relink source only**
+
+```bash
+npm run install:from-source
+```
+
+**Version + C# DLL check**
+
+```bash
+npm run check-env -- --versions
+```
+
+**Then:** open a room under **`StarterKit/…`** and follow its README. Example:
+
+```bash
+cd StarterKit/csharp/prologue
+npx deukpack _deuk_define/csharp.deuk out -I _deuk_define --csharp
+```
+
+- **Copying one starter** into its own repo — from **that** project root:
+
+```bash
+npm install deukpack
+```
+
+Then paste the `npx deukpack …` line from that kit’s README.
+
+Details: [DeukPackKits README](https://github.com/joygram/DeukPackKits/blob/main/README.md).
 
 ---
 
@@ -144,10 +222,10 @@ Details: [DeukPackStarterKit README](https://github.com/joygram/DeukPackStarterK
 **Built into codegen** (no IDL change):
 
 - **C#**: `WriteWithOverrides(oprot, Dictionary<int, object>)` on every struct — see [Tutorial: Write with overrides](tutorial/write-with-overrides.md) and [API reference](reference/api.md).
-- **JavaScript** (`--js`): `applyOverrides` / `toJsonWithOverrides` on each struct helper in `generated.js`.
+- **JavaScript** (`--js`): `applyOverrides` / `toJsonWithOverrides` on each struct helper in `generated_deuk.js`.
 - **C++**: `apply_overrides(std::unordered_map<int, std::any>)` on each struct; serialize with your stack afterward.
 
-**Starter kit authors**: in send loops, prefer **WriteWithOverrides** + a small overrides map per recipient instead of **Clone()** per user. Full spec: [DEUKPACK_WRITE_WITH_OVERRIDES_API.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
+**Kit sample authors**: in send loops, prefer **WriteWithOverrides** + a small overrides map per recipient instead of **Clone()** per user. Full spec: [DEUKPACK_WRITE_WITH_OVERRIDES_API.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
 
 ---
 
@@ -175,9 +253,9 @@ Details: [DeukPackStarterKit README](https://github.com/joygram/DeukPackStarterK
 
 ## Web App (deukpack-webapp)
 
-**Status**: To be added to starter kits.
+**Status**: To be added to the kits lineup.
 
-**Location**: [`starters/deukpack-webapp/`](https://github.com/joygram/DeukPackStarterKit/tree/main/starters/deukpack-webapp) folder in the [DeukPackStarterKit](https://github.com/joygram/DeukPackStarterKit) repository. Clone the unified repo, then navigate to that path.
+**Location**: [`starters/deukpack-webapp/`](https://github.com/joygram/DeukPackKits/tree/main/starters/deukpack-webapp) folder in the [DeukPackKits](https://github.com/joygram/DeukPackKits) repository. Clone the unified repo, then navigate to that path.
 
 **For** teams that need a **ready-to-use** base for building **web apps with DeukPack**: Next.js (TS) frontend + C# REST API backend, microservice-style.
 
@@ -211,9 +289,9 @@ Details: [DeukPackStarterKit README](https://github.com/joygram/DeukPackStarterK
 
 | | |
 |--|--|
-| **Repository** | [joygram/DeukPackStarterKit](https://github.com/joygram/DeukPackStarterKit) — path `starters/deukpack-webapp/` |
-| **Clone** | `git clone https://github.com/joygram/DeukPackStarterKit.git` then `cd DeukPackStarterKit/starters/deukpack-webapp` |
-| **Docs** | [`README-FRAMEWORK.md`](https://github.com/joygram/DeukPackStarterKit/blob/main/starters/deukpack-webapp/README-FRAMEWORK.md) in the folder — pnpm, `codegen:all`, web & backend run order |
+| **Repository** | [joygram/DeukPackKits](https://github.com/joygram/DeukPackKits) — path `starters/deukpack-webapp/` |
+| **Clone** | `git clone https://github.com/joygram/DeukPackKits.git` then `cd DeukPackKits/starters/deukpack-webapp` |
+| **Docs** | [`README-FRAMEWORK.md`](https://github.com/joygram/DeukPackKits/blob/main/starters/deukpack-webapp/README-FRAMEWORK.md) in the folder — pnpm, `codegen:all`, web & backend run order |
 
 ---
 
@@ -246,7 +324,7 @@ Details: [DeukPackStarterKit README](https://github.com/joygram/DeukPackStarterK
 | C++ | *See above* | Updated when ready |
 | Network | *See above* | Updated when ready |
 | TypeScript / Node | *See above* | Updated when ready |
-| **Web App** (deukpack-webapp) | [DeukPackStarterKit/starters/deukpack-webapp](https://github.com/joygram/DeukPackStarterKit/tree/main/starters/deukpack-webapp) | Planned |
+| **Web App** (deukpack-webapp) | [DeukPackKits/starters/deukpack-webapp](https://github.com/joygram/DeukPackKits/tree/main/starters/deukpack-webapp) | Planned |
 | Java | *See above* | Updated when ready |
 
 ---

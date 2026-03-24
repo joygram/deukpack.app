@@ -1,13 +1,23 @@
 ---
 hide:
   - toc
+--8<-- "_includes/deukpack-release-notice.en.md"
+
 ---
 
 # DeukPack
 
 **Tagline:** Free, ready-to-use core library. One toolchain for IDL, codegen, protocol, and schema.
 
-Use the **language switcher** (top right) to switch to **한국어**.
+Use the **language switcher** (top right) to switch to **한국어**. Korean lives at the site root; English pages use the **`/en/`** prefix.
+
+**Where to read what**
+
+- **[GitHub DeukPack](https://github.com/joygram/DeukPack)** — source, npm, CI, README.
+- **deukpack.app** (this site) — product pages, tutorials, **[API reference](reference/api.md)**.
+- **[kits.deukpack.app](https://kits.deukpack.app/en/)** — hands-on labs, *[Ruins](https://kits.deukpack.app/en/starter-course/)*, **[saga journey](https://kits.deukpack.app/en/journey/)**.
+
+KO↔EN and more links: [Documentation](documentation-index.md).
 
 ---
 
@@ -15,7 +25,7 @@ Use the **language switcher** (top right) to switch to **한국어**.
 
 - **Core**: [Core · engine](products/core-engine.md) — Install, CLI, C#/C++/JS codegen. **Differentiators:** struct inheritance (extends), rich types (float, DB model, tablelink). [Quick start](tutorial/quickstart.md).
 - **Navigation**: [DeukNavigation](products/navigation.md) — NavMesh and crowd with shared Deuk wire (.dpk) for Unity and server; DeukNavRuntime, baking, DeukNaviTool.
-- **Starter kits**: [Starter kits](starter-kits.md) — Unity, C++, Network, TS, Web App.
+- **Kits lineup**: [DeukPack kits lineup](starter-kits.md) — Unity, C++, Network, TS, Web App.
 - **Tutorial**: [Tutorial](tutorial/index.md) — Quick start, IDL guide, C#/C++ guides, pipeline.
 - **Reference**: [API reference](reference/api.md).
 

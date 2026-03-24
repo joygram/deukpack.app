@@ -9,26 +9,26 @@
 IDL에서 C++를 뽑을 때는 `--cpp` 를 지정합니다.
 
 ```bash
-npx deukpack ./schema.deuk ./gen --cpp --protocol binary
+npx deukpack ./schema.deuk ./gen --cpp --protocol tbinary
 ```
 
-생성물은 `gen/cpp/` (또는 지정한 출력 폴더) 아래에 `*_types.h`, `*_types.cpp` 등이 생성됩니다. C++17을 전제로 합니다.
+생성물은 `gen/cpp/` (또는 지정한 출력 폴더) 아래에 IDL 소스당 `<stem>_deuk.h`, `<stem>_deuk.cpp` 가 생성됩니다(`_deuk` 접미사로 수동 작성 `Foo.h` 와 이름 충돌을 피함). **include만 있는** `.deuk`은 **umbrella** `<stem>_deuk.h`에 나열된 include에 대응하는 `*_deuk.h`만 앞으로 `#include`합니다(바깥 C++ `namespace`로 감싸지 않음). C++17을 전제로 합니다.
 
 ---
 
 ## 2. 빌드에 포함
 
 - **include 경로**: 생성된 헤더가 있는 디렉터리를 include path에 추가합니다 (예: `gen/cpp`, `gen/cpp/include` — 구조는 생성 결과에 따름).
-- **소스**: `*_types.cpp` 등 생성된 `.cpp` 파일을 빌드 대상에 넣습니다.
+- **소스**: 생성된 `*_deuk.cpp` 파일을 빌드 대상에 넣습니다.
 
 **CMake 예시**:
 
 ```cmake
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../gen/cpp)
 set(GEN_SOURCES
-  ../gen/cpp/DemoPoint_types.cpp
-  ../gen/cpp/DemoUser_types.cpp
-  # 또는 file(GLOB ...) 로 생성 *.cpp 수집
+  ../gen/cpp/DemoPoint_deuk.cpp
+  ../gen/cpp/DemoUser_deuk.cpp
+  # 또는 file(GLOB ...) 로 생성 *_deuk.cpp 수집
 )
 add_executable(demo main.cpp ${GEN_SOURCES})
 ```
@@ -44,7 +44,7 @@ add_executable(demo main.cpp ${GEN_SOURCES})
 **개념 예시**:
 
 ```cpp
-#include "gen/cpp/DemoUser_types.h"  // 실제 경로·헤더명은 생성 결과에 따름
+#include "gen/cpp/DemoUser_deuk.h"  // 실제 경로·헤더명은 생성 결과에 따름
 
 // 쓰기
 DemoUser user;
@@ -76,7 +76,7 @@ user.home.y = 20;
 
 ## 5. 프로토콜 (Binary / Compact / JSON)
 
-생성 시 `--protocol binary`(또는 compact, json)에 따라 사용하는 Reader/Writer가 달라집니다.  
+생성 시 `--protocol tbinary`(또는 `tcompact`, `tjson`, `pack`, `json` 등)에 따라 사용하는 Reader/Writer가 달라집니다.  
 - **binary**: Thrift Binary 프로토콜과 호환되는 바이너리 포맷.  
 - **compact**: 공간 효율이 좋은 바이너리.  
 - **json**: 디버깅·REST 연동 시 유용.

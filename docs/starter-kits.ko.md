@@ -1,12 +1,22 @@
-# 스타터 키트
+# 득팩 키트 라인업
 
-스택별 **상세 소개 · 저장소 링크(클론) · 로컬 가이드**를 아래에 모았습니다.  
-각 키트는 득팩 **코어와 별도 저장소**이며, README에 **요구 도구·코드젠 명령·빌드 순서**가 적혀 있습니다.
+스택별 **상세 소개 · 저장소 링크(클론) · 공통 전제**를 아래에 모은 **키트 라인업·포털(개요)** 페이지입니다. (URL `starter-kits` 는 기존 링크 호환을 유지합니다.)
 
-> **참고:** 일부 키트는 저장소가 아직 없을 수 있습니다. 링크가 `TBD`이면 [득팩 OSS GitHub](https://github.com/joygram/DeukPack) · [스타터 키트 통합 저장소](https://github.com/joygram/DeukPackStarterKit) · [npm `deukpack`](https://www.npmjs.com/package/deukpack) · 코어 [examples](https://github.com/joygram/DeukPack/tree/main/examples) 로 먼저 시도하세요.
+!!! info "개요 vs 키트 문서 사이트"
+    **이 페이지(deukpack.app/starter-kits):** 라인업에 포함된 키트가 **무엇인지**, **어디서 클론하는지**, **공통 환경**을 한눈에 보는 **개요**입니다.  
+    **실습·복붙 랩·《시작의 폐허》·득팩 서사 저니·주제 글**처럼 **손으로 따라 하며 확인하는 내용**은 공식 키트 문서 **[kits.deukpack.app](https://kits.deukpack.app/)** 로 연결됩니다. (저장소 `StarterKit/` README와 동일한 내비를 씁니다.)
 
-**스타터 키트 통합 저장소 (GitHub)**  
-- [joygram/DeukPackStarterKit](https://github.com/joygram/DeukPackStarterKit) — Unity, C++, Network, TypeScript 등 스택별 샘플이 한 저장소에 모여 있음. `git clone https://github.com/joygram/DeukPackStarterKit.git`
+!!! note "Kits로의 확장(향후)"
+    **본편 키트(`StarterKit/`)** 줄과 **앱 키트(`AppKit/`)** 예고 줄은 **DeukPack Kits** 아래에서 **문서·템플릿·예고 구역이 순차적으로 열리고 보강될 예정**입니다. **고정된 제품 출시 일정은 없고**, 오픈 범위·갱신은 **[kits.deukpack.app](https://kits.deukpack.app/)** 기준으로 맞춥니다.
+
+각 키트는 득팩 **코어와 별도 저장소(또는 통합 레포의 폴더)** 이며, README에 **요구 도구·코드젠 명령·빌드 순서**가 적혀 있습니다.
+
+> **참고:** 일부 키트는 저장소가 아직 없을 수 있습니다. 링크가 `TBD`이면 [득팩 OSS GitHub](https://github.com/joygram/DeukPack) · [DeukPackKits 통합](https://github.com/joygram/DeukPackKits) · [DeukPackKitsOSS](https://github.com/joygram/DeukPackKitsOSS) · [npm `deukpack`](https://www.npmjs.com/package/deukpack) · 코어 [examples](https://github.com/joygram/DeukPack/tree/main/examples) 로 먼저 시도하세요.
+
+**키트 통합 저장소 (GitHub)**  
+- [joygram/DeukPackKits](https://github.com/joygram/DeukPackKits) — Unity, C++, Network, TypeScript 등 스택별 샘플이 한 저장소에 모여 있음. `git clone https://github.com/joygram/DeukPackKits.git`  
+- **키트 문서 사이트(실습·저니):** [kits.deukpack.app](https://kits.deukpack.app/) — 공개 MkDocs(한·영). **스타터를 돌려볼 때**는 이쪽이 정본 내비입니다. 저장소 README와 동일 링크 체계입니다.  
+- [joygram/DeukPackKitsOSS](https://github.com/joygram/DeukPackKitsOSS) — OSS용 클론. `git clone https://github.com/joygram/DeukPackKitsOSS.git`
 
 ---
 
@@ -21,11 +31,11 @@
 |------|------|
 | **Node.js** | v16 이상 필요, v18+ 권장. [nodejs.org](https://nodejs.org/) |
 | **npm** | Node 설치 시 포함. `npm -v`로 확인 |
-| **DeukPack CLI** | 해당 레포에서 `npm install deukpack` 후 `npx deukpack` 사용. 키트 README 버전 맞출 것 |
+| **DeukPack CLI** | `npm install deukpack` 후 `npx deukpack`. 키트 README에 적힌 요구·명령을 따른다 |
 | **스타터별** | C# → .NET SDK, C++ → CMake·컴파일러, Unity → Unity 에디터 등. 각 키트 README 참고 |
 | **IDL** | `.thrift` / `.deuk` 등 — 키트에 포함되거나 서브모듈 |
 
-**DeukPackStarterKit**에서는 `npm run check-env`로 Node(>=16)·npm을 자동 검사할 수 있고, `npm run init` 시에도 동일 검사가 먼저 실행됩니다. 미충족 시 **OS별** 설치 안내 후 종료합니다.
+**DeukPackKits**에서는 `npm run check-env`로 Node(>=16)·npm을 자동 검사할 수 있고, `npm run init` 또는 `npm run bootstrap`(setup과 동일) 시에도 동일 검사가 먼저 실행됩니다. 미충족 시 **OS별** 설치 안내 후 종료합니다.
 
 **OS별 초기 설정**: Node·npm 설치 방법만 OS마다 다르고, 이후 `npm run check-env` / `npm run init` 은 동일합니다.  
 - **Windows**: nodejs.org 또는 `winget install OpenJS.NodeJS.LTS`  
@@ -39,7 +49,7 @@
 **스타터는 각각 “한 프로젝트 = 한 저장소”로 두고, 그 레포 안에서 득팩을 설치·사용하는 것을 권장합니다.**  
 원하는 스타터만 복사해 새 레포로 두고, **그 레포 안에서** `npm install deukpack` → 코드젠 → 빌드·실행을 하면 됩니다.
 
-**통합 저장소(DeukPackStarterKit 전체)를 그대로 쓸 때**만 아래 초기화를 루트에서 실행합니다.
+**통합 저장소(DeukPackKits 전체)를 그대로 쓸 때**만 아래 초기화를 루트에서 실행합니다.
 
 **클론 후 기본 흐름**
 
@@ -51,24 +61,92 @@ cd <프로젝트 폴더>
 # 3) 키트 README → 코드젠 → 빌드 순서대로 진행
 ```
 
-### DeukPackStarterKit 초기화 한 번에 (통합 레포 클론 후)
+### DeukPackKits 초기화 한 번에 (통합 레포 클론 후)
 
-[DeukPackStarterKit](https://github.com/joygram/DeukPackStarterKit) **전체**를 클론한 뒤, **한 번만** 아래를 실행하면 Node가 없어도 설치 시도 후 초기화까지 진행합니다.
+[DeukPackKits](https://github.com/joygram/DeukPackKits) **전체**를 클론한 뒤, **한 번만** 아래를 실행하면 Node가 없어도 설치 시도 후 초기화까지 진행합니다.
 
 ```bash
-git clone https://github.com/joygram/DeukPackStarterKit.git
-cd DeukPackStarterKit
-# Linux/macOS:
-./scripts/bootstrap.sh
-# Windows:  scripts\bootstrap.cmd
+git clone https://github.com/joygram/DeukPackKits.git
+cd DeukPackKits
 ```
 
-- **bootstrap.sh / bootstrap.cmd**: Node가 있으면 바로 setup, 없으면 nvm(Linux/macOS) 또는 winget(Windows) 또는 Docker로 설치 후 setup. **한 방에 초기화**.
-- Node가 이미 있을 때만: `node scripts/setup.js` 또는 `npm run init`.
-- 이후 스타터 폴더로 이동해 빌드·실행 (예: `cd starters/console && dotnet run`).
-- **스타터만 복사해 독립 프로젝트로 쓰는 것**이 사용자에게는 더 적절합니다. 그때는 복사한 **그 프로젝트 루트**에서 `npm install deukpack` 및 `npx deukpack` 코드젠을 하면 됩니다.
+**한 방 초기화 — Linux / macOS**
 
-상세: [DeukPackStarterKit README](https://github.com/joygram/DeukPackStarterKit/blob/main/README.md).
+```bash
+./scripts/bootstrap.sh
+```
+
+**Windows (cmd)**
+
+```bat
+scripts\bootstrap.cmd
+```
+
+- **bootstrap.sh / bootstrap.cmd:** Node가 있으면 곧바로 setup, 없으면 nvm·winget·Docker 등으로 맞춘 뒤 setup.
+
+**Node가 이미 있을 때 — 대화형 setup** (레지스트리 vs 형제 소스, R vs K)
+
+```bash
+npm run init
+```
+
+(동일: `node scripts/setup.js`, `npm run bootstrap`)
+
+**비대화식 · CI — 기본값만**
+
+```bash
+npm run init -- --skip-prompt
+```
+
+**비대화식 — 소스 + 키트별 (환경 변수)**
+
+```bash
+export DEUKPACK_BOOTSTRAP_CHANNEL=source
+export DEUKPACK_KIT_RUNTIME=per-kit
+export DEUKPACK_SRC=../DeukPack
+npm run init -- --skip-prompt
+```
+
+**비대화식 — 플래그만**
+
+```bash
+npm run init -- --use-source --kit-runtime=per-kit --skip-prompt
+```
+
+**코어 개발 단축**
+
+```bash
+npm run bootstrap:dev
+```
+
+**소스만 다시 링크**
+
+```bash
+npm run install:from-source
+```
+
+**버전·DLL 확인**
+
+```bash
+npm run check-env -- --versions
+```
+
+**이후:** `StarterKit/…` 각 방 README대로 코드젠·빌드. 예:
+
+```bash
+cd StarterKit/csharp/prologue
+npx deukpack _deuk_define/csharp.deuk out -I _deuk_define --csharp
+```
+
+- **스타터만 복사**해 독립 프로젝트로 쓸 때는 그 루트에서:
+
+```bash
+npm install deukpack
+```
+
+이어서 해당 키트 README에 적힌 `npx deukpack …` 한 줄을 복사해 실행합니다.
+
+상세: [DeukPackKits README](https://github.com/joygram/DeukPackKits/blob/main/README.md).
 
 ---
 
@@ -144,10 +222,10 @@ cd DeukPackStarterKit
 **코드젠에 포함** (IDL 변경 없음):
 
 - **C#**: 모든 struct에 `WriteWithOverrides(oprot, Dictionary<int, object>)` — [튜토리얼: WriteWithOverrides](tutorial/write-with-overrides.md), [API·타입 참조](reference/api.md).
-- **JavaScript** (`--js`): `generated.js`의 struct 헬퍼에 `applyOverrides` / `toJsonWithOverrides`.
+- **JavaScript** (`--js`): `generated_deuk.js`의 struct 헬퍼에 `applyOverrides` / `toJsonWithOverrides`.
 - **C++**: 각 struct에 `apply_overrides(std::unordered_map<int, std::any>)` — 이후 프로젝트 직렬화.
 
-**스타터 키트 작성 시**: 송신 루프에서 사용자마다 **전체 Clone** 대신 **WriteWithOverrides + 작은 overrides 맵** 사용을 권장. 상세: [DEUKPACK_WRITE_WITH_OVERRIDES_API.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
+**키트 샘플 작성 시**: 송신 루프에서 사용자마다 **전체 Clone** 대신 **WriteWithOverrides + 작은 overrides 맵** 사용을 권장. 상세: [DEUKPACK_WRITE_WITH_OVERRIDES_API.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
 
 ---
 
@@ -175,9 +253,9 @@ cd DeukPackStarterKit
 
 ## Web App (deukpack-webapp)
 
-**상태**: 스타터 키트에 **반영 예정**.
+**상태**: 키트 라인업에 **반영 예정**.
 
-**위치**: [DeukPackStarterKit](https://github.com/joygram/DeukPackStarterKit) 저장소의 **`starters/deukpack-webapp/`** 폴더. (통합 레포를 클론한 뒤 해당 경로로 이동해 사용합니다.)
+**위치**: [DeukPackKits](https://github.com/joygram/DeukPackKits) 저장소의 **`starters/deukpack-webapp/`** 폴더. (통합 레포를 클론한 뒤 해당 경로로 이동해 사용합니다.)
 
 **누구에게** 득팩으로 **웹앱을 만들 수 있게** 해 주는, **바로 가져다 쓸 수 있는** 기본 구성이 필요한 팀. Next.js(TS) 프론트엔드 + C# REST API 백엔드, 마이크로서비스형.
 
@@ -211,9 +289,9 @@ cd DeukPackStarterKit
 
 | | |
 |--|--|
-| **저장소** | [joygram/DeukPackStarterKit](https://github.com/joygram/DeukPackStarterKit) — 경로 `starters/deukpack-webapp/` |
-| **클론** | `git clone https://github.com/joygram/DeukPackStarterKit.git` 후 `cd DeukPackStarterKit/starters/deukpack-webapp` |
-| **문서** | 폴더 내 [`README-FRAMEWORK.md`](https://github.com/joygram/DeukPackStarterKit/blob/main/starters/deukpack-webapp/README-FRAMEWORK.md) — pnpm, `codegen:all`, 웹·백엔드 실행 순서 |
+| **저장소** | [joygram/DeukPackKits](https://github.com/joygram/DeukPackKits) — 경로 `starters/deukpack-webapp/` |
+| **클론** | `git clone https://github.com/joygram/DeukPackKits.git` 후 `cd DeukPackKits/starters/deukpack-webapp` |
+| **문서** | 폴더 내 [`README-FRAMEWORK.md`](https://github.com/joygram/DeukPackKits/blob/main/starters/deukpack-webapp/README-FRAMEWORK.md) — pnpm, `codegen:all`, 웹·백엔드 실행 순서 |
 
 ---
 
@@ -246,7 +324,7 @@ cd DeukPackStarterKit
 | C++ | *위 표 참고* | 준비 시 갱신 |
 | Network | *위 표 참고* | 준비 시 갱신 |
 | TypeScript / Node | *위 표 참고* | 준비 시 갱신 |
-| **Web App** (deukpack-webapp) | [DeukPackStarterKit/starters/deukpack-webapp](https://github.com/joygram/DeukPackStarterKit/tree/main/starters/deukpack-webapp) | 반영 예정 |
+| **Web App** (deukpack-webapp) | [DeukPackKits/starters/deukpack-webapp](https://github.com/joygram/DeukPackKits/tree/main/starters/deukpack-webapp) | 반영 예정 |
 | Java | *위 표 참고* | 준비 시 갱신 |
 
 ---

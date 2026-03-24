@@ -6,6 +6,12 @@ site_url: https://deukpack.app/
 
 extra:
   generator: false
+  # 배너 문구 정본: DeukPack 루트 release-notice.json → npm run release-notice:apply
+  announce: >-
+    <strong>득팩 코어 1.2.0</strong> —
+    <a href="https://github.com/joygram/DeukPack/releases/latest">GitHub Releases</a>
+    · <a href="https://deukpack.app/releases/">릴리스 요약</a>
+    · <a href="https://deukpack.app/en/releases/">EN</a>
 
 markdown_extensions:
   - pymdownx.superfences:
@@ -13,11 +19,15 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.snippets:
+      base_path: ["docs"]
+      check_paths: true
 
 nav:
   - 홈: index.md
   - 문서 안내: documentation-index.md
-  - 스타터 키트: starter-kits.md
+  - 릴리스·뉴스: releases.md
+  - 득팩 키트 라인업: starter-kits.md
   - 제품:
     - 제품군 개요: products/index.md
     - AI·에이전트 파이프라인: ai-pipeline-integration.md
@@ -30,6 +40,11 @@ nav:
     - 제품 관계도: architecture.md
   - 레퍼런스 가이드:
     - 개요: reference/index.md
+    - 기본 구성: reference/fundamentals.md
+    - 테이블: reference/tables.md
+    - 메시지·와이어: reference/messages.md
+    - 와이어·프로토콜 계열: reference/wire-protocols.md
+    - DB·엔티티: reference/database.md
     - API·타입 참조: reference/api.md
   - 튜토리얼:
     - 개요: tutorial/index.md
@@ -96,7 +111,8 @@ plugins:
           nav_translations:
             문서 안내: Documentation
             홈: Home
-            스타터 키트: Starter kits
+            릴리스·뉴스: Releases · news
+            득팩 키트 라인업: Kits lineup
             제품: Products
             제품군 개요: Products overview
             AI·에이전트 파이프라인: AI / agent pipeline
@@ -109,6 +125,11 @@ plugins:
             제품 관계도: Architecture
             레퍼런스 가이드: Reference
             개요: Overview
+            기본 구성: Fundamentals
+            테이블: Tables
+            메시지·와이어: Messages & wire
+            와이어·프로토콜 계열: Wire protocol families
+            DB·엔티티: Database & entities
             API·타입 참조: API reference
             튜토리얼: Tutorial
             배포본 vs 소스본: Distribution vs source
