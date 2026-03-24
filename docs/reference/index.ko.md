@@ -10,7 +10,7 @@
 |------|----------------|------|
 | **기본 구성** | IDL 키워드(`record`·`message`·`table`·`entity`), CLI·include, 라이브러리 파싱 | [기본 구성](fundamentals.md) |
 | **테이블** | `table`·메타 테이블, 행 레코드, `MetaTableRegistry`, `GetSchema` | [테이블](tables.md) |
-| **메시지·와이어** | `message`, `ProtocolRegistry`, `Write`/`Read`, 필드 골라내기·오버라이드 | [메시지·와이어](messages.md) |
+| **메시지·와이어** | `message`, `ProtocolRegistry`, `Write`/`Read`, 통합 Write(서브셋·오버라이드) | [메시지·와이어](messages.md) |
 | **와이어·프로토콜 계열** | Thrift 호환(`tbinary`·`tcompact`·`tjson`) vs 득팩 전용(`pack`·`json`·`yaml`), JS+스키마, npm `serialize` 기본값 | [와이어 프로토콜 계열](wire-protocols.md) |
 | **DB·엔티티** | `entity`, `--ef`, `tablelink`, ORM 어노테이션 | [DB·엔티티](database.md) |
 | **통합 참조** | CLI 전 옵션표, C#/C++/JS API 표, 타입 대조표 | [API·타입 참조](api.md) |

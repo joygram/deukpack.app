@@ -1,4 +1,4 @@
-# Tutorial: Write with overrides (fan-out without cloning)
+# Tutorial: Unified Write — overrides and field selection
 
 **Time**: ~10 minutes · **Prerequisite**: [Quick start](quickstart.md) or [C# guide](csharp-guide.md)
 
@@ -10,7 +10,7 @@ Use the **language switcher** for 한국어.
 
 You have **one large in-memory message** (chat, notification, state snapshot) and must send it to **many recipients**. Only a **few fields** differ per recipient (display name, read flag, locale-specific text). Cloning the whole object **N times** is expensive.
 
-DeukPack generates **`WriteWithOverrides`** on every C# struct: serialize using **field IDs → replacement values** without mutating or cloning the message.
+DeukPack generates a single **`Write(oprot, fieldIds, overrides?)`** on every C# struct: pass **`null`** for `fieldIds` to send **all** fields, and an optional **`Dictionary<int, object>`** for per-field replacement values — **without** mutating or cloning the message.
 
 ---
 
@@ -31,7 +31,7 @@ After `npx deukpack ... --csharp`, the generated class includes a nested **`Fiel
 
 ---
 
-## 2. C# usage
+## 2. C# — overrides (all fields)
 
 ```csharp
 var msg = BuildMessageOnce(); // heavy work once
@@ -41,14 +41,14 @@ var overrides = new Dictionary<int, object>
     { ChatMessage.FieldId.DisplayNameForRecipient, "Alice (you)" },
     { ChatMessage.FieldId.IsReadForRecipient, false }
 };
-msg.WriteWithOverrides(oprot, overrides);
+msg.Write(oprot, null, overrides);
 ```
 
 Rules:
 
 - **Keys** = use `StructName.FieldId.PropertyName` (generated `const int`). Never hard-code numbers.
 - **Values** = same CLR types as the generated properties (wrong type → cast exception).
-- If `overrides` is **null** or **empty**, behavior matches **`Write(oprot)`**.
+- If `overrides` is **null** or **empty**, behavior matches **`Write(oprot)`** / **`Write(oprot, null, null)`**.
 - For a field whose type is **another struct** or **list/map**, pass a **whole instance** of that type (or the whole collection). There is **no** nested path API to tweak inner members only. See core [DEUKPACK_WRITE_WITH_OVERRIDES_API.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WRITE_WITH_OVERRIDES_API.md) **§1.3**.
 
 Full API tables and C++/JS: [API reference](../reference/api.md) · core repo [DEUKPACK_WRITE_WITH_OVERRIDES_API.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
@@ -57,47 +57,43 @@ Full API tables and C++/JS: [API reference](../reference/api.md) · core repo [D
 
 ## 3. JavaScript (`--js`)
 
-Generated `js/generated_deuk.js` adds **`applyOverrides`**, **`toJsonWithOverrides`**, and **`FieldId`** on each struct helper:
+Generated `js/generated_deuk.js` adds **`toJson`**, **`toBinary`**, and **`FieldId`** on each struct helper. Unused parameters are **`null`**:
 
 ```javascript
 var F = ChatMessage.FieldId;
-var patched = ChatMessage.applyOverrides(msg, { [F.DisplayNameForRecipient]: "Bob" });
-var json = ChatMessage.toJsonWithOverrides(msg, { [F.DisplayNameForRecipient]: "Bob", [F.IsReadForRecipient]: true });
+var json = ChatMessage.toJson(msg, null, {
+  [F.DisplayNameForRecipient]: "Bob",
+  [F.IsReadForRecipient]: true
+});
 ```
 
 ---
 
 ## 4. C++
 
-Each struct gets **`kFieldId_*`** constants and **`apply_overrides(const std::unordered_map<int, std::any>&)`**:
-
-```cpp
-std::unordered_map<int, std::any> o;
-o[ChatMessage::kFieldId_DisplayNameForRecipient] = std::string("Bob");
-msg.apply_overrides(o);
-```
+Each struct gets **`kFieldId_*`** constants aligned with C#/JS. Use the **generated pack/binary (or Thrift interop) write path** next to your types; there is **no** separate `apply_overrides` step in current emit.
 
 See [API reference](../reference/api.md).
 
 ---
 
-## 5. WriteFields — field projection
+## 5. Field selection — same `Write`
 
-`WriteFields` serializes **only the fields you choose** from a full record. No need to create partial types or copy fields one by one.
+**`Write(oprot, fieldIds, overrides?)`** serializes **only** the fields you list when `fieldIds` is non-null. No partial types or manual field copying.
 
 ```csharp
 var full = LoadFullUser();
-full.WriteFields(oprot, new[] {
+full.Write(oprot, new[] {
     UserRecord.FieldId.DisplayName,
     UserRecord.FieldId.Level,
     UserRecord.FieldId.AvatarUrl
-});
+}, null);
 ```
 
-Combine with overrides:
+Combine selection with overrides:
 
 ```csharp
-full.WriteFields(oprot, new[] {
+full.Write(oprot, new[] {
     UserRecord.FieldId.DisplayName,
     UserRecord.FieldId.Level
 }, new Dictionary<int, object> {
@@ -105,12 +101,13 @@ full.WriteFields(oprot, new[] {
 });
 ```
 
-JavaScript uses `projectFields` and `toJsonWithFields`:
+JavaScript — same signature shape:
 
 ```javascript
 var F = UserRecord.FieldId;
-var partial = UserRecord.projectFields(full, [F.DisplayName, F.Level]);
-var json = UserRecord.toJsonWithFields(full, [F.DisplayName, F.Level]);
+var ids = [F.DisplayName, F.Level];
+var json = UserRecord.toJson(full, ids, null);
+var json2 = UserRecord.toJson(full, ids, { [F.DisplayName]: r.LocalizedName });
 ```
 
 ---
@@ -143,11 +140,11 @@ The generated `UserFull` has all 4 fields (1–4). Multi-level inheritance (A �
 
 ## 8. Feature comparison
 
-| | WriteWithOverrides | WriteFields | Wire Profile | extends |
+| | Overrides (all fields) | Field subset | Wire Profile | extends |
 |---|---|---|---|---|
 | Purpose | All fields, some **values** replaced | Only **selected fields** | Build-time subset type | Common field inheritance |
 | Decision time | Runtime | Runtime | Build time | IDL definition |
-| Composable | — | `overrides` param | — | With all features |
+| API surface | `Write(oprot, null, overrides)` | `Write(oprot, fieldIds, overrides?)` | — | With all features |
 | Dynamic | Yes | Yes | No | — |
 
 ---

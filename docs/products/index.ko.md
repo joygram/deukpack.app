@@ -27,12 +27,12 @@
 | **테이블·메타** | 스키마 기반 `MetaTableRegistry`, Excel 애드인 | 메타 데이터 검증·로드·편집을 스키마와 일치시킴 |
 | **네이티브 메시지** | `msgId`·`ProtocolRegistry` 자동 생성 | 메시지 ID·디스패치·핸들러 등록을 수작업 없이 |
 | **상속 (extends)** | 부모 struct 필드 자동 병합 | 공통 필드 중복 정의, 다단 상속, 와이어 호환 유지 |
-| **선택 (WriteFields)** | 풀 레코드에서 필드 골라 직렬화 | partial 타입 없이 런타임 프로젝션 |
-| **교체 (WriteWithOverrides)** | Clone 없이 수신자별 필드만 바꿔 직렬화 | 팬아웃·푸시의 메모리·성능 최적화 |
+| **선택 (`Write` + fieldIds)** | 풀 레코드에서 필드 골라 직렬화 | partial 타입 없이 런타임 프로젝션 |
+| **교체 (`Write` + overrides)** | Clone 없이 수신자별 필드만 바꿔 직렬화 | 팬아웃·푸시의 메모리·성능 최적화 |
 | **다양한 데이터 타입** | float, double, int8–int64, list/set/map, **tablelink**(DB 행 참조), datetime, decimal | DB 모델·수치 정밀도·메타/테이블 스키마를 한 타입 시스템으로 |
 
 → **확장 데이터 타입 (Protobuf/Thrift 대비) 한 줄:** `int8–int64`, `uint8–uint64`, `float`/`double`, `bool`, `string`/`binary`, `list`/`set`/`map`, **tablelink**, `datetime`/`decimal`, **struct extends**. 전체 목록·의미: [레퍼런스 → API](../reference/api.md).  
-→ **코어 차별화:** **구조체 상속(extends)** 와 위 타입 세트(DB 모델 지원 포함)가 엔진에 내장됨. 세 직렬화 기능(WriteFields, WriteWithOverrides, Wire Profile)은 **조합 가능**. 상세: [WriteWithOverrides 튜토리얼](../tutorial/write-with-overrides.md), [API 참조](../reference/api.md).
+→ **코어 차별화:** **구조체 상속(extends)** 와 위 타입 세트(DB 모델 지원 포함)가 엔진에 내장됨. 통합 **Write**(필드 선택·오버라이드)와 Wire Profile은 **조합 가능**. 상세: [통합 Write 튜토리얼](../tutorial/write-with-overrides.md), [API 참조](../reference/api.md).
 
 ---
 

@@ -88,11 +88,11 @@ hide:
       <li><strong>테이블</strong> — 스키마 기반 <code>MetaTableRegistry</code>로 메타 데이터를 검증·로드. Excel 애드인과 단일 키·복합키까지.</li>
       <li><strong>네이티브 메시지</strong> — <code>msgId</code>·<code>ProtocolRegistry</code>가 IDL에서 자동 생성. 디스패치·핸들러 등록을 별도 관리 없이.</li>
       <li><strong>상속 (extends)</strong> — 부모 struct 필드를 자식에 자동 병합. 다단 상속, 필드 ID 충돌 검사, 와이어 호환.</li>
-      <li><strong>선택 (WriteFields)</strong> — 풀 레코드에서 원하는 필드만 골라 직렬화. 런타임 projection, partial 타입 불필요.</li>
-      <li><strong>교체 (WriteWithOverrides)</strong> — Clone 없이 수신자마다 다른 필드 값으로 직렬화. 팬아웃·푸시에 최적.</li>
+      <li><strong>선택 (<code>Write</code> + fieldIds)</strong> — 풀 레코드에서 원하는 필드만 골라 직렬화. 런타임 projection, partial 타입 불필요.</li>
+      <li><strong>교체 (<code>Write</code> + overrides)</strong> — Clone 없이 수신자마다 다른 필드 값으로 직렬화. 팬아웃·푸시에 최적.</li>
       <li><strong>다양한 데이터 타입</strong> — float, double, int8–int64, list/set/map, <strong>tablelink</strong>(DB·테이블 행 참조), datetime, decimal. DB 모델·메타 스키마를 한 타입 시스템으로.</li>
     </ul>
-    <p style="margin-top:0.6em;">세 직렬화 기능(<code>WriteFields</code>, <code>WriteWithOverrides</code>, Wire Profile)은 조합 가능합니다. 자세히: <a href="tutorial/write-with-overrides/">WriteWithOverrides 튜토리얼</a></p>
+    <p style="margin-top:0.6em;">통합 <code>Write</code>(필드 선택·오버라이드)와 Wire Profile은 조합 가능합니다. 자세히: <a href="tutorial/write-with-overrides/">통합 Write 튜토리얼</a></p>
   </div>
   <div class="dp-card dp-card--highlight">
     <h3>AI 시대에서도 필요한 이유</h3>
@@ -104,7 +104,7 @@ hide:
 - **IDL·정의**: **.deuk** 네이티브; Protobuf·레거시 .thrift 파싱. OpenAPI·JSON Schema·CSV·DB 임포트로 한 빌드에 혼합. **struct extends**: 공통 필드를 부모에 한 번 정의, 자식은 고유 필드만 추가 (다단 상속·필드 ID 충돌 검사).
 - **프로토콜·직렬화**: Binary, Compact, JSON. 제로카피(선택). `msgId`·`ProtocolRegistry` **네이티브 메시지 핸들링** — 메시지 ID·디스패치가 IDL 선언만으로 자동 생성.
 - **코드 생성**: C#, C++, TypeScript, JavaScript. SQLite DDL·접근 코드. 모든 struct에 **FieldId 상수** 자동 생성 (매직 넘버 제거, 컴파일 타임 안전).
-- **선택·교체·프로젝션**: **WriteWithOverrides** (동일 인스턴스, 수신자별 필드만 교체), **WriteFields** (풀 레코드에서 선택한 필드만 직렬화), **Wire Profile** (빌드 타임에 프로파일별 서브셋 타입 생성). 세 기능을 조합해 팬아웃·부분 전송·DTO 분리를 해결.
+- **선택·교체·프로젝션**: **`Write(oprot, fieldIds, overrides?)`** (동일 인스턴스로 수신자별 값 교체·필드 서브셋 직렬화), **Wire Profile** (빌드 타임에 프로파일별 서브셋 타입 생성). 조합해 팬아웃·부분 전송·DTO 분리를 해결.
 - **테이블·메타**: 스키마 기반 메타 편집·검증·비교(Excel 애드인). 단일 키·복합키. `MetaTableRegistry`로 런타임 테이블 로드·검증.
 - **파이프라인·연동**: 정의·메타 → 코드·스키마·테이블 → Unity·서버 검증·로드. 서버 연동·실시간 게임 연동에서 동일 스키마·프로토콜 사용.
 

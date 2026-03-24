@@ -19,7 +19,7 @@
 - [Generated C++ APIs](#generated-c-apis)
 - [Extended types](#extended-types)
 - [Cross-cutting features](#cross-cutting-features)
-- [WriteFields and WriteWithOverrides](#writefields-and-writewithoverrides)
+- [Unified Write (field selection & overrides)](#unified-write-field-selection--overrides)
 - [JavaScript (`--js`)](#javascript-js)
 - [Related product docs](#related-product-docs)
 
@@ -29,12 +29,29 @@ Shorter topic pages: [Reference overview](index.md) · [Fundamentals](fundamenta
 
 ## CLI
 
-**Form**
+**Forms**
 
 ```bash
 npx deukpack <entry_idl_path> <output_directory> [options]
 npx deukpack --pipeline <pipeline_config.json>
+npx deukpack run [pipeline.json]    # default: ./deukpack.pipeline.json in cwd
+npx deukpack init [options]         # writes pipeline JSON, bootstrap, VSIX (unless --skip-vsix)
+npx deukpack bootstrap [options]    # same as: npx deukpack init --workspace-only
 ```
+
+Use **`npx`** (or **`npm exec deukpack --`**). **`npm deukpack`** is not an npm subcommand.
+
+**Init / workspace (short)**
+
+| Command / flag | Role |
+|----------------|------|
+| `init` | Creates **`deukpack.pipeline.json`**, runs **bootstrap** (`.deukpack/workspace.json`), then **installs bundled VSIX** via `code` / `cursor` / `antigravity` unless **`--skip-vsix`**. |
+| `init --non-interactive` | Default pipeline when `_deuk_define` has `.deuk`; then bootstrap; VSIX install attempted. |
+| `init --workspace-only` | Bootstrap (+ VSIX) only. |
+| `bootstrap` | Same as **`init --workspace-only`**. |
+| Default **`installKind`** | **`package`**. Use **`--kind src`** **with** **`--engine-root`** for engine-linked layout; **`--engine-root` alone** does not imply `src`. |
+
+After init, one line reminds you: re-run **`npx deukpack init`** on updates; edit **`deukpack.pipeline.json`** / **`.deukpack/workspace.json`** for details; then **`npx deukpack run`**.
 
 **Options** (from `scripts/build_deukpack.js`; if something is missing, run `npx deukpack --help`)
 
@@ -68,7 +85,8 @@ npx deukpack --pipeline <pipeline_config.json>
 ```bash
 npx deukpack ./schema.deuk ./gen --csharp --cpp -I ./idl
 npx deukpack ./api.deuk ./out --csharp --protocol tbinary
-npx deukpack --pipeline ./deukpack-pipeline.json
+npx deukpack --pipeline ./deukpack.pipeline.json
+npx deukpack run
 ```
 
 ---
@@ -92,7 +110,7 @@ npx deukpack --pipeline ./deukpack-pipeline.json
 
 ## Messages and wire
 
-- See [Messages & wire](messages.md) for `ProtocolRegistry`, `--protocol`, readers/writers, WriteFields/overrides. **Interop vs native protocol table:** [Wire protocol families](wire-protocols.md).
+- See [Messages & wire](messages.md) for `ProtocolRegistry`, `--protocol`, readers/writers, unified **Write**. **Interop vs native protocol table:** [Wire protocol families](wire-protocols.md).
 
 ---
 
@@ -121,14 +139,14 @@ Use **DeukPackEngine** (or the same entry) in Node for **parse / AST**. For **mu
 | Item | Purpose |
 |------|---------|
 | **GetSchema()** | Recover schema from generated types (meta, validation, Excel). |
-| **WriteWithOverrides(oprot, overrides)** | `Dictionary<int, object>` field-ID overrides for one write; null/empty ⇒ same as `Write`. |
-| **WriteFields(oprot, fieldIds, overrides?)** | Serialize only listed fields; optional overrides. |
+| **Write(oprot)** | Full struct write (same as `Write(oprot, null, null)`). |
+| **Write(oprot, fieldIds, overrides?)** | Optional **`ICollection<int>? fieldIds`** — only those fields; optional **`Dictionary<int, object>? overrides`** — per field ID replacement values. Pass **`null`** for unused parameters. |
 | **FieldId** | `public const int` — `StructName.FieldId.PropertyName`. |
 | **ProtocolRegistry** | Message type ↔ msgId mapping. |
 | **MetaTableRegistry** | Table/meta type registration. |
 | **IDeukPackReader / IDeukPackWriter** | Protocol-specific read/write. |
 
-**struct extends:** IDL `extends`. Tutorial: [Overrides · WriteFields · extends](../tutorial/write-with-overrides.md). Deep dive: [DEUKPACK_WRITE_WITH_OVERRIDES_API](https://github.com/joygram/DeukPack/blob/main/docs/internal/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
+**struct extends:** IDL `extends`. Tutorial: [Unified Write · field selection · extends](../tutorial/write-with-overrides.md). Deep dive: [DEUKPACK_WRITE_WITH_OVERRIDES_API](https://github.com/joygram/DeukPack/blob/main/docs/internal/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
 
 ---
 
@@ -136,8 +154,8 @@ Use **DeukPackEngine** (or the same entry) in Node for **parse / AST**. For **mu
 
 | Item | Purpose |
 |------|---------|
-| **apply_overrides(std::unordered_map<int, std::any>)** | Apply per-field-ID values before your serialize step. Uses `<any>`, `<unordered_map>`. |
 | **kFieldId_\*** | `static constexpr int` — `StructName::kFieldId_PropertyName`. |
+| **Binary / pack emit** | Generated sources follow the same **field-ID** model as C#/JS; use the emitted pack/binary helpers next to your types (no separate `apply_overrides` step). |
 
 ---
 
@@ -162,23 +180,21 @@ Use **DeukPackEngine** (or the same entry) in Node for **parse / AST**. For **mu
 ## Cross-cutting features
 
 - **extends:** merge parent fields with wire compatibility.
-- **FieldId:** used by WriteFields / overrides in C# and JS.
+- **FieldId:** used by **Write** field selection and overrides in C# and JS.
 - **Wire profiles:** `--wire-profile` + `wireProfiles` annotation. [DEUKPACK_WIRE_PROFILE_SUBSET](https://github.com/joygram/DeukPack/blob/main/docs/internal/DEUKPACK_WIRE_PROFILE_SUBSET.md).
 - **Annotations such as `geometry`:** may emit C# `deuk` partials (per generator).
 
 ---
 
-## WriteFields and WriteWithOverrides
+## Unified Write (field selection & overrides)
 
-**WriteFields** — send a subset; optionally override those fields only.
+One **`Write`**-style surface across targets:
 
-- **C#:** `WriteFields(stream, obj, fieldIds, overrides?)`
-- **JS:** `projectFields`, `toJsonWithFields`
+- **C#:** `Write(oprot, fieldIds, overrides)` — `fieldIds` null ⇒ all fields; `overrides` null/empty ⇒ no replacements.
+- **JavaScript:** `toJson(obj, fieldIds, overrides)`, `toBinary(obj, fieldIds, overrides)` (and pack/runtime equivalents) on struct helpers.
+- **TypeScript:** same pattern on generated helpers.
 
-**WriteWithOverrides** — serialize with per-field replacements **without cloning** the source object (C# view-based).
-
-- **C#:** `WriteWithOverrides(stream, obj, overrides)`
-- **JS:** `applyOverrides`, `toJsonWithOverrides`
+Legacy separate methods (**`WriteWithOverrides`**, **`WriteFields`**, **`applyOverrides`**, **`toJsonWithFields`**, etc.) are **removed**; use **`null`** for unused parameters instead.
 
 Tutorial: [../tutorial/write-with-overrides.md](../tutorial/write-with-overrides.md)
 
@@ -186,13 +202,12 @@ Tutorial: [../tutorial/write-with-overrides.md](../tutorial/write-with-overrides
 
 ## JavaScript (`--js`)
 
-Helpers in `js/generated_deuk.js`:
+Helpers in generated JS (e.g. `js/generated_deuk.js`):
 
 | Item | Purpose |
 |------|---------|
-| **applyOverrides** | Shallow copy + apply field-ID map. |
-| **toJsonWithOverrides** | Above + Thrift JSON string. |
-| **projectFields** / **toJsonWithFields** | Subset + optional overrides. |
+| **toJson(obj, fieldIds, overrides)** | JSON wire; `fieldIds` null ⇒ all fields. |
+| **toBinary(obj, fieldIds, overrides)** | Binary/pack path with same parameters. |
 | **FieldId** | `{ PropertyName: id, ... }` |
 
 ---

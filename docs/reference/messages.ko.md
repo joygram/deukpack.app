@@ -22,14 +22,14 @@
 
 ---
 
-## 필드 골라내기·오버라이드
+## 통합 Write (필드 서브셋·오버라이드)
 
-- **WriteFields / projectFields / toJsonWithFields:** 페이로드 축소·민감 필드 제외.
-- **WriteWithOverrides / applyOverrides / toJsonWithOverrides:** 동일 struct로 수신자별·요청별로 일부 필드만 값 교체.
+- **C#:** `Write(oprot, fieldIds, overrides?)` — `fieldIds`가 null이 아니면 해당 필드만; `overrides`로 필드 ID별 치환; 안 쓰는 인자는 **`null`**.
+- **JavaScript:** 동일하게 **`(obj, fieldIds, overrides)`** 형태의 `toJson` / `toBinary`(및 pack 헬퍼).
 
-튜토리얼: [WriteWithOverrides·WriteFields·extends](../tutorial/write-with-overrides.md)  
+튜토리얼: [통합 Write](../tutorial/write-with-overrides.md)  
 상세 API: [DEUKPACK_WRITE_WITH_OVERRIDES_API](https://github.com/joygram/DeukPack/blob/main/docs/internal/DEUKPACK_WRITE_WITH_OVERRIDES_API.md)  
-표 형식 요약: [API·타입 참조 — WriteFields / WriteWithOverrides](api.md#writefields-and-writewithoverrides).
+표 형식 요약: [API·타입 참조 — 통합 Write](api.md) (문서 내 «통합 Write» 절).
 
 ---
 

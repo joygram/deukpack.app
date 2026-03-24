@@ -62,15 +62,15 @@ See the generated code and core C++ runtime documentation for the exact API.
 
 ---
 
-## 4. apply_overrides · kFieldId · extends
+## 4. kFieldId · pack/binary write · extends
 
 Each generated `struct` includes:
 
-- **`apply_overrides(const std::unordered_map<int, std::any>&)`** — set member fields by field ID before serialization (fan-out).
 - **`kFieldId_*`** — `static constexpr int` field ID constants. Use `StructName::kFieldId_PropertyName`.
+- **Emitted pack/binary (or Thrift interop) write helpers** — same field-ID model as C#/JS; use them next to your types for fan-out and partial sends (no separate `apply_overrides` step).
 - **struct extends** — use `extends` in IDL to auto-merge parent fields into child. Generated as a flat struct.
 
-Tutorial & comparison: [Overrides · WriteFields · extends](write-with-overrides.md) · [API reference](../reference/api.md).
+Tutorial & comparison: [Unified Write tutorial](write-with-overrides.md) · [API reference](../reference/api.md).
 
 ---
 
@@ -87,7 +87,7 @@ For selection criteria, see [Protocol & serialization](protocol-serialization.md
 
 ## 6. Next steps
 
-- [Overrides · WriteFields · extends](write-with-overrides.md) — Replace, select, inherit patterns
+- [Unified Write tutorial](write-with-overrides.md) — Overrides, field selection, extends
 - [Protocol & serialization](protocol-serialization.md) — Protocol differences and usage flow
 - [API reference](../reference/api.md) — CLI options and generated artifacts overview
 - [Core examples/consumer-cpp](https://github.com/joygram/DeukPack/tree/main/examples/consumer-cpp) — CMake + runnable C++ sample

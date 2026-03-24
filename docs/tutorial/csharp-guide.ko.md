@@ -83,16 +83,15 @@ var schema = DemoUser.GetSchema();
 
 ---
 
-## 6. WriteWithOverrides · WriteFields · extends
+## 6. 통합 Write · extends
 
 생성된 struct마다 다음 API가 포함됩니다:
 
-- **`WriteWithOverrides(oprot, overrides)`** — 필드 ID → 대체 값으로 Clone 없이 직렬화 (팬아웃).
-- **`WriteFields(oprot, fieldIds, overrides?)`** — 지정한 필드만 직렬화 (런타임 projection).
+- **`Write(oprot, fieldIds, overrides?)`** — `fieldIds`가 null이면 전체 필드; `overrides`로 필드 ID별 치환; 둘을 조합해 projection + 팬아웃(복제 없음).
 - **`FieldId` nested class** — `StructName.FieldId.PropertyName`으로 필드 ID 참조. 매직 넘버 제거.
 - **struct extends** — IDL에서 부모 필드를 자식에 자동 병합.
 
-튜토리얼·비교표: [WriteWithOverrides·WriteFields·extends](write-with-overrides.md). API 표: [API·타입 참조](../reference/api.md). 코어 명세: [DEUKPACK_WRITE_WITH_OVERRIDES_API.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
+튜토리얼·비교표: [통합 Write](write-with-overrides.md). API 표: [API·타입 참조](../reference/api.md). 코어 명세: [DEUKPACK_WRITE_WITH_OVERRIDES_API.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
 
 ---
 
@@ -107,6 +106,6 @@ var schema = DemoUser.GetSchema();
 ## 8. 다음 단계
 
 - [프로토콜·직렬화](protocol-serialization.md) — Binary/Compact/JSON 차이와 선택
-- [API·타입 참조](../reference/api.md) — CLI·WriteWithOverrides·WriteFields·FieldId·GetSchema·ProtocolRegistry
-- [WriteWithOverrides·WriteFields·extends](write-with-overrides.md) — 교체·선택·상속 패턴
+- [API·타입 참조](../reference/api.md) — CLI·통합 Write·FieldId·GetSchema·ProtocolRegistry
+- [통합 Write](write-with-overrides.md) — 오버라이드·필드 선택·extends
 - [코어 examples/consumer-csharp](https://github.com/joygram/DeukPack/tree/main/examples/consumer-csharp) — 실행 가능한 C# 샘플

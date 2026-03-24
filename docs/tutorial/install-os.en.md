@@ -1,12 +1,14 @@
 # Install (Windows · Linux)
 
-When using **only the distribution**, install via **npm** and use the CLI. No source clone required.
+When using **only the distribution**, install via **npm** and use the CLI with **`npx`**. No source clone required.
 
 ---
 
 ## Distribution = npm package
 
-DeukPack is distributed **via npm** only. To **use only the binary**, run `npm install deukpack` or `npx deukpack` to use the package (Node.js 16+ required, 18+ recommended).
+DeukPack is distributed **via npm**. Use **`npm install deukpack`** in your **project root** and run commands as **`npx deukpack …`**. **`npm deukpack`** is not valid — the binary lives in `node_modules/.bin`.
+
+**Node.js 18+** recommended (16+ may work).
 
 ---
 
@@ -14,10 +16,17 @@ DeukPack is distributed **via npm** only. To **use only the binary**, run `npm i
 
 ```bash
 npm install deukpack
+npx deukpack init
+npx deukpack run
+```
+
+One-shot codegen without a pipeline file:
+
+```bash
 npx deukpack ./schema.deuk ./out --csharp --cpp
 ```
 
-Global: `npm i -g deukpack` then `deukpack --help`
+Global install (`npm i -g deukpack`) is **not** the documented default; prefer a **local** dependency and **`npx`**.
 
 ---
 
@@ -35,7 +44,8 @@ Open a new terminal and run `node -v`, `npm -v`.
 
 ```powershell
 npm install deukpack
-npx deukpack .\idl\root.deuk .\out -I .\idl --csharp --cpp
+npx deukpack init
+npx deukpack .\schema.deuk .\out -I .\idl --csharp --cpp
 ```
 
 ### Install from .tgz (Release / Artifact)
@@ -44,8 +54,8 @@ npx deukpack .\idl\root.deuk .\out -I .\idl --csharp --cpp
 - Or Actions → run on main → Artifacts → `deukpack-npm-tarball-<sha>`.
 
 ```powershell
-npm install .\Downloads\deukpack-1.0.5.tgz
-npx deukpack .\schema.deuk .\out --csharp
+npm install .\Downloads\deukpack-x.y.z.tgz
+npx deukpack init
 ```
 
 ---
@@ -64,6 +74,7 @@ Check `node -v`, `npm -v`.
 
 ```bash
 npm install deukpack
+npx deukpack init
 npx deukpack ./idl/root.deuk ./out -I ./idl --csharp --cpp
 ```
 
@@ -72,14 +83,15 @@ npx deukpack ./idl/root.deuk ./out -I ./idl --csharp --cpp
 - [GitHub Releases](https://github.com/joygram/DeukPack/releases) or Actions Artifacts.
 
 ```bash
-npm install ./deukpack-1.0.5.tgz
-npx deukpack ./schema.deuk ./out --csharp
+npm install ./deukpack-x.y.z.tgz
+npx deukpack init
 ```
 
 ---
 
 ## Next
 
-- [Quick start](quickstart.md) — IDL → C#, C++, TS example
+- [Quick start](quickstart.md) — init + run + one-shot codegen
+- [Pipeline guide](pipeline-guide.md) — `deukpack.pipeline.json`, `defineScope: "all"`
 - [Core · engine](../products/core-engine.md) — npm · GitHub links
 - Repo and source build: [GitHub DeukPack](https://github.com/joygram/DeukPack). Install/tutorial docs live on this site only.

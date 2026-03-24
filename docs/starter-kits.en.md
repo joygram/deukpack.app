@@ -221,11 +221,11 @@ Details: [DeukPackKits README](https://github.com/joygram/DeukPackKits/blob/main
 
 **Built into codegen** (no IDL change):
 
-- **C#**: `WriteWithOverrides(oprot, Dictionary<int, object>)` on every struct — see [Tutorial: Write with overrides](tutorial/write-with-overrides.md) and [API reference](reference/api.md).
-- **JavaScript** (`--js`): `applyOverrides` / `toJsonWithOverrides` on each struct helper in `generated_deuk.js`.
-- **C++**: `apply_overrides(std::unordered_map<int, std::any>)` on each struct; serialize with your stack afterward.
+- **C#**: `Write(oprot, fieldIds, overrides?)` on every struct — see [Unified Write tutorial](tutorial/write-with-overrides.md) and [API reference](reference/api.md).
+- **JavaScript** (`--js`): `toJson` / `toBinary` (and pack helpers) with `(obj, fieldIds, overrides)` on each struct helper in `generated_deuk.js`.
+- **C++**: **`kFieldId_*`** constants and the generated pack/binary write path next to each struct (same field-ID model as C#/JS).
 
-**Kit sample authors**: in send loops, prefer **WriteWithOverrides** + a small overrides map per recipient instead of **Clone()** per user. Full spec: [DEUKPACK_WRITE_WITH_OVERRIDES_API.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
+**Kit sample authors**: in send loops, prefer **`Write(oprot, null, overrides)`** + a small overrides map per recipient instead of **Clone()** per user. Full spec: [DEUKPACK_WRITE_WITH_OVERRIDES_API.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
 
 ---
 

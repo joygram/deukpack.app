@@ -22,14 +22,14 @@
 
 ---
 
-## WriteFields & overrides
+## Unified Write (subset fields & overrides)
 
-- **WriteFields / projectFields / toJsonWithFields:** shrink payloads, drop sensitive fields.
-- **WriteWithOverrides / applyOverrides / toJsonWithOverrides:** same struct, different per-recipient or per-request field values.
+- **C#:** `Write(oprot, fieldIds, overrides?)` — `fieldIds` non-null ⇒ only those fields; `overrides` ⇒ per-field ID replacement values; use **`null`** for unused parameters.
+- **JavaScript:** `toJson` / `toBinary` (and pack helpers) with the same **`(obj, fieldIds, overrides)`** shape.
 
-Tutorial: [Overrides · WriteFields · extends](../tutorial/write-with-overrides.md)  
+Tutorial: [Unified Write tutorial](../tutorial/write-with-overrides.md)  
 Deep API: [DEUKPACK_WRITE_WITH_OVERRIDES_API](https://github.com/joygram/DeukPack/blob/main/docs/internal/DEUKPACK_WRITE_WITH_OVERRIDES_API.md)  
-Tables in [API reference — WriteFields / WriteWithOverrides](api.md#writefields-and-writewithoverrides).
+Tables in [API reference — Unified Write](api.md#unified-write-field-selection--overrides).
 
 ---
 

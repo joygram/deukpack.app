@@ -10,7 +10,7 @@ Use this section for **names, CLI flags, and generated APIs**. For **what the pr
 |-------|----------------|-----|
 | **Fundamentals** | IDL keywords (`record`, `message`, `table`, `entity`), CLI & includes, library parse | [Fundamentals](fundamentals.md) |
 | **Tables** | `table` / meta tables, row structs, `MetaTableRegistry`, `GetSchema` | [Tables](tables.md) |
-| **Messages & wire** | `message`, `ProtocolRegistry`, `Write`/`Read`, WriteFields / overrides | [Messages & wire](messages.md) |
+| **Messages & wire** | `message`, `ProtocolRegistry`, `Write`/`Read`, unified Write (subset & overrides) | [Messages & wire](messages.md) |
 | **Wire protocol families** | Interop Thrift (`tbinary`, `tcompact`, `tjson`) vs Deuk native (`pack`, `json`, `yaml`), JS + schema, default npm `serialize` | [Wire protocol families](wire-protocols.md) |
 | **Database & entities** | `entity`, `--ef`, `tablelink`, ORM attributes | [Database & entities](database.md) |
 | **Full digest** | Full CLI table, C#/C++/JS API tables, type comparison | [API & type reference](api.md) |

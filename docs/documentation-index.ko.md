@@ -23,7 +23,7 @@
 | **IDL 가이드** | [IDL 가이드](tutorial/idl-guide.md) | *(한글 문서 참고)* |
 | **프로토콜·직렬화** | [프로토콜·직렬화](tutorial/protocol-serialization.md) | *(한글 문서 참고)* |
 | **C# / C++ 가이드** | [C# 가이드](tutorial/csharp-guide.md), [C++ 가이드](tutorial/cpp-guide.md) | *(한글 문서 참고)* |
-| **WriteWithOverrides·WriteFields·extends** | [튜토리얼](tutorial/write-with-overrides.md) | 교체·선택·상속, C#·JS·C++, 비교표 |
+| **통합 Write·extends** | [튜토리얼](tutorial/write-with-overrides.md) | 오버라이드·필드 선택·상속, C#·JS·C++, 비교표 |
 | **API·레퍼런스** | [API·타입 참조](reference/api.md) | 같은 페이지에서 **언어 전환** → English |
 | **와이어·프로토콜 계열** | [와이어 프로토콜 계열](reference/wire-protocols.md) | 호환 vs 득팩 전용·JS 제한 |
 | **제품·키트 라인업** | [제품군](products/index.md), [득팩 키트 라인업](starter-kits.md) | *(동일 경로, 한글)* |

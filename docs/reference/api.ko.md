@@ -19,7 +19,7 @@
 - [Generated C++ APIs](#generated-c-apis)
 - [Extended types](#extended-types)
 - [Cross-cutting features](#cross-cutting-features)
-- [WriteFields and WriteWithOverrides](#writefields-and-writewithoverrides)
+- [통합 Write (필드 선택·오버라이드)](#통합-write-필드-선택오버라이드)
 - [JavaScript (`--js`)](#javascript-js)
 - [Related product docs](#related-product-docs)
 
@@ -34,7 +34,24 @@
 ```bash
 npx deukpack <진입_IDL_경로> <출력_디렉터리> [옵션]
 npx deukpack --pipeline <pipeline_config.json>
+npx deukpack run [pipeline.json]    # 기본: cwd의 ./deukpack.pipeline.json
+npx deukpack init [옵션]            # 파이프라인 JSON, bootstrap, VSIX (--skip-vsix 제외)
+npx deukpack bootstrap [옵션]       # init --workspace-only 와 동일
 ```
+
+**`npx`** 또는 **`npm exec deukpack --`** 를 쓰세요. **`npm deukpack`** 은 npm 서브커맨드가 아닙니다.
+
+**Init / 워크스페이스 (요약)**
+
+| 명령 / 플래그 | 역할 |
+|---------------|------|
+| `init` | **`deukpack.pipeline.json`** 생성, **bootstrap** (`.deukpack/workspace.json`), **`code` / `cursor` / `antigravity`** 로 동봉 VSIX 설치 시도 (**`--skip-vsix`** 제외). |
+| `init --non-interactive` | `_deuk_define` 에 `.deuk` 있으면 기본 파이프라인; bootstrap; VSIX 설치 시도. |
+| `init --workspace-only` | bootstrap (+ VSIX) 만. |
+| `bootstrap` | **`init --workspace-only`** 와 동일. |
+| 기본 **`installKind`** | **`package`**. **`--kind src`** 는 **`--engine-root`** 와 함께; **`--engine-root` 만**으로는 `src` 가 되지 않음. |
+
+init 후 한 줄 안내: 업데이트 시 **`npx deukpack init`** 재실행; **`deukpack.pipeline.json`** / **`.deukpack/workspace.json`** 편집; 그다음 **`npx deukpack run`**.
 
 **주요 옵션** (소스 `scripts/build_deukpack.js` 기준, 누락 시 `npx deukpack --help`로 확인)
 
@@ -68,7 +85,8 @@ npx deukpack --pipeline <pipeline_config.json>
 ```bash
 npx deukpack ./schema.deuk ./gen --csharp --cpp -I ./idl
 npx deukpack ./api.deuk ./out --csharp --protocol tbinary
-npx deukpack --pipeline ./deukpack-pipeline.json
+npx deukpack --pipeline ./deukpack.pipeline.json
+npx deukpack run
 ```
 
 ---
@@ -92,7 +110,7 @@ npx deukpack --pipeline ./deukpack-pipeline.json
 
 ## Messages and wire
 
-- **`ProtocolRegistry`**, `--protocol`, `IDeukPackReader` / `IDeukPackWriter`, WriteFields·Overrides 요약은 [메시지·와이어](messages.md)를 보세요. **호환 vs 전용 프로토콜 표**는 [와이어 프로토콜 계열](wire-protocols.md).
+- **`ProtocolRegistry`**, `--protocol`, `IDeukPackReader` / `IDeukPackWriter`, 통합 **Write** 요약은 [메시지·와이어](messages.md)를 보세요. **호환 vs 전용 프로토콜 표**는 [와이어 프로토콜 계열](wire-protocols.md).
 
 ---
 
@@ -121,14 +139,14 @@ Node에서 **파싱·AST**까지 쓰려면 `DeukPackEngine`(또는 동일 진입
 | 항목 | 용도 |
 |------|------|
 | **GetSchema()** | 생성 타입에서 스키마(필드·타입·기본값 등) 복구. 메타·검증·Excel. |
-| **WriteWithOverrides(oprot, overrides)** | `Dictionary<int, object>` 키=필드 ID, 해당 쓰기에서만 값 대체. null/빈 딕셔너리면 `Write`와 동일. |
-| **WriteFields(oprot, fieldIds, overrides?)** | 지정 필드만 직렬화. 선택적 overrides. |
+| **Write(oprot)** | 전체 필드 쓰기 (`Write(oprot, null, null)` 과 동일). |
+| **Write(oprot, fieldIds, overrides?)** | 선택 **`ICollection<int>? fieldIds`** — 나열된 필드만; 선택 **`Dictionary<int, object>? overrides`** — 필드 ID별 치환값. 안 쓰는 인자는 **`null`**. |
 | **FieldId** | `public const int` — `StructName.FieldId.PropertyName`. |
 | **ProtocolRegistry** | 메시지 타입 ↔ msgId 등. |
 | **MetaTableRegistry** | 테이블·메타 타입 등록. |
 | **IDeukPackReader / IDeukPackWriter** | Binary/Compact/JSON 등 프로토콜별 읽기·쓰기. |
 
-**struct extends:** IDL `extends` — 다단 상속·필드 ID 충돌 검사. 튜토리얼: [WriteWithOverrides·WriteFields·extends](../tutorial/write-with-overrides.md). 상세: [DEUKPACK_WRITE_WITH_OVERRIDES_API](https://github.com/joygram/DeukPack/blob/main/docs/internal/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
+**struct extends:** IDL `extends` — 다단 상속·필드 ID 충돌 검사. 튜토리얼: [통합 Write·필드 선택·extends](../tutorial/write-with-overrides.md). 상세: [DEUKPACK_WRITE_WITH_OVERRIDES_API](https://github.com/joygram/DeukPack/blob/main/docs/internal/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
 
 ---
 
@@ -136,8 +154,8 @@ Node에서 **파싱·AST**까지 쓰려면 `DeukPackEngine`(또는 동일 진입
 
 | 항목 | 용도 |
 |------|------|
-| **apply_overrides(std::unordered_map<int, std::any>)** | 필드 ID별 값 적용 후 프로젝트 쪽에서 직렬화. `<any>`, `<unordered_map>` 사용. |
 | **kFieldId_\*** | `static constexpr int` — `StructName::kFieldId_PropertyName`. |
+| **Binary / pack 출력** | 생성 소스가 C#/JS와 동일한 **필드 ID** 모델을 따름; 타입 옆에 나오는 pack/바이너리 헬퍼 사용(별도 `apply_overrides` 단계 없음). |
 
 ---
 
@@ -162,23 +180,21 @@ Node에서 **파싱·AST**까지 쓰려면 `DeukPackEngine`(또는 동일 진입
 ## Cross-cutting features
 
 - **extends:** 와이어 호환 유지하며 부모 필드를 자식에 병합.
-- **FieldId:** C#·JS에서 WriteFields / Overrides에 사용.
+- **FieldId:** C#·JS에서 **Write** 필드 선택·오버라이드에 사용.
 - **와이어 프로파일:** `--wire-profile` + 어노테이션 `wireProfiles`. [DEUKPACK_WIRE_PROFILE_SUBSET](https://github.com/joygram/DeukPack/blob/main/docs/internal/DEUKPACK_WIRE_PROFILE_SUBSET.md).
 - **지오메트리 등 어노테이션:** IDL `geometry` 등 확장은 생성 C# `deuk` partial 등으로 이어질 수 있음(코드 생성기 구현 기준).
 
 ---
 
-## WriteFields and WriteWithOverrides
+## 통합 Write (필드 선택·오버라이드)
 
-**WriteFields** — 일부 필드만 전송, 필요 시 해당 필드만 덮어쓰기.
+타깃 공통으로 **`Write`** 계열 한 가지:
 
-- **C#:** `WriteFields(stream, obj, fieldIds, overrides?)`
-- **JS:** `projectFields`, `toJsonWithFields`
+- **C#:** `Write(oprot, fieldIds, overrides)` — `fieldIds` 가 null 이면 전체 필드; `overrides` 가 null/비어 있으면 치환 없음.
+- **JavaScript:** struct 헬퍼의 `toJson(obj, fieldIds, overrides)`, `toBinary(obj, fieldIds, overrides)` (및 pack/런타임 동등 API).
+- **TypeScript:** 생성 헬퍼에서 동일 패턴.
 
-**WriteWithOverrides** — 원본 복제 없이 필드별 치환 후 직렬화.
-
-- **C#:** `WriteWithOverrides(stream, obj, overrides)`
-- **JS:** `applyOverrides`, `toJsonWithOverrides`
+구버전 별도 API (**`WriteWithOverrides`**, **`WriteFields`**, **`applyOverrides`**, **`toJsonWithFields`** 등)는 **제거**됨; 안 쓰는 인자는 **`null`** 로 통일.
 
 튜토리얼: [../tutorial/write-with-overrides.md](../tutorial/write-with-overrides.md)
 
@@ -186,13 +202,12 @@ Node에서 **파싱·AST**까지 쓰려면 `DeukPackEngine`(또는 동일 진입
 
 ## JavaScript (`--js`)
 
-`js/generated_deuk.js` struct 헬퍼:
+생성 JS(예: `js/generated_deuk.js`) struct 헬퍼:
 
 | 항목 | 용도 |
 |------|------|
-| **applyOverrides** | 얕은 복사 + 필드 ID 맵 적용. |
-| **toJsonWithOverrides** | 위 + Thrift JSON 문자열. |
-| **projectFields** / **toJsonWithFields** | 필드 서브셋 + 선택 overrides. |
+| **toJson(obj, fieldIds, overrides)** | JSON 와이어; `fieldIds` null 이면 전체 필드. |
+| **toBinary(obj, fieldIds, overrides)** | 동일 인자의 바이너리/pack 경로. |
 | **FieldId** | `{ PropertyName: id, ... }` 객체. |
 
 ---

@@ -50,7 +50,7 @@
 
 ## 타입·상속
 
-**확장 타입·Protobuf/Thrift 대조**는 [API·타입 참조 — Extended types](api.md#extended-types)에 표로 정리했습니다. **`extends`**(다단 상속)는 [튜토리얼: WriteWithOverrides·WriteFields·extends](../tutorial/write-with-overrides.md)와 [메시지·와이어](messages.md)에서 이어집니다.
+**확장 타입·Protobuf/Thrift 대조**는 [API·타입 참조 — Extended types](api.md#extended-types)에 표로 정리했습니다. **`extends`**(다단 상속)는 [튜토리얼: 통합 Write](../tutorial/write-with-overrides.md)와 [메시지·와이어](messages.md)에서 이어집니다.
 
 ---
 

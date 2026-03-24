@@ -50,7 +50,7 @@ Matrix & simple npm API: [Wire protocol families](wire-protocols.md). Spec: [Int
 
 ## Types & inheritance
 
-**Extended types vs Protobuf/Thrift:** [API reference — Extended types](api.md#extended-types). **`extends`:** [Overrides · WriteFields · extends tutorial](../tutorial/write-with-overrides.md) and [Messages & wire](messages.md).
+**Extended types vs Protobuf/Thrift:** [API reference — Extended types](api.md#extended-types). **`extends`:** [Unified Write tutorial](../tutorial/write-with-overrides.md) and [Messages & wire](messages.md).
 
 ---
 

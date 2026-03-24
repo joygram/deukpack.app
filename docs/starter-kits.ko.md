@@ -221,11 +221,11 @@ npm install deukpack
 
 **코드젠에 포함** (IDL 변경 없음):
 
-- **C#**: 모든 struct에 `WriteWithOverrides(oprot, Dictionary<int, object>)` — [튜토리얼: WriteWithOverrides](tutorial/write-with-overrides.md), [API·타입 참조](reference/api.md).
-- **JavaScript** (`--js`): `generated_deuk.js`의 struct 헬퍼에 `applyOverrides` / `toJsonWithOverrides`.
-- **C++**: 각 struct에 `apply_overrides(std::unordered_map<int, std::any>)` — 이후 프로젝트 직렬화.
+- **C#**: 모든 struct에 `Write(oprot, fieldIds, overrides?)` — [통합 Write 튜토리얼](tutorial/write-with-overrides.md), [API·타입 참조](reference/api.md).
+- **JavaScript** (`--js`): `generated_deuk.js` struct 헬퍼의 `toJson` / `toBinary`(및 pack) — 인자 `(obj, fieldIds, overrides)`.
+- **C++**: **`kFieldId_*`** 상수와 타입 옆 생성된 pack/바이너리 쓰기 경로(C#/JS와 동일 필드 ID 모델).
 
-**키트 샘플 작성 시**: 송신 루프에서 사용자마다 **전체 Clone** 대신 **WriteWithOverrides + 작은 overrides 맵** 사용을 권장. 상세: [DEUKPACK_WRITE_WITH_OVERRIDES_API.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
+**키트 샘플 작성 시**: 송신 루프에서 사용자마다 **전체 Clone** 대신 **`Write(oprot, null, overrides)` + 작은 overrides 맵** 사용을 권장. 상세: [DEUKPACK_WRITE_WITH_OVERRIDES_API.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
 
 ---
 

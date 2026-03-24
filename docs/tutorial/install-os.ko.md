@@ -1,12 +1,14 @@
 # 설치 (Windows · Linux)
 
-**배포본만** 사용할 때는 **npm**으로 설치해 CLI·코드 생성만 하면 됩니다. 소스 클론은 필요 없습니다.
+**배포본만** 사용할 때는 **npm**으로 프로젝트에 넣고 CLI는 **`npx deukpack`** 으로 실행합니다. 소스 클론은 필요 없습니다.
 
 ---
 
 ## 배포본 = npm 패키지
 
-득팩은 **npm** 하나로 배포됩니다. **실제 바이너리만 사용**하려면 `npm install deukpack` 또는 `npx deukpack`으로 **패키지만 다운로드**해 사용하면 됩니다. (Node.js 16+ 필요, 18+ 권장)
+득팩은 **npm**으로 배포됩니다. **프로젝트 루트**에서 **`npm install deukpack`** 후 **`npx deukpack …`** 로 실행하세요. **`npm deukpack`** 은 동작하지 않습니다. 바이너리는 `node_modules/.bin` 에 있습니다.
+
+**Node.js 18+** 권장(16+ 동작 가능).
 
 ---
 
@@ -14,10 +16,17 @@
 
 ```bash
 npm install deukpack
+npx deukpack init
+npx deukpack run
+```
+
+파이프라인 없이 한 번만 생성:
+
+```bash
 npx deukpack ./schema.deuk ./out --csharp --cpp
 ```
 
-전역: `npm i -g deukpack` 후 `deukpack --help`
+전역 `npm i -g deukpack` 은 문서상 기본 워크플로가 아닙니다. **로컬 의존성 + npx** 를 권장합니다.
 
 ---
 
@@ -35,7 +44,8 @@ npx deukpack ./schema.deuk ./out --csharp --cpp
 
 ```powershell
 npm install deukpack
-npx deukpack .\idl\root.deuk .\out -I .\idl --csharp --cpp
+npx deukpack init
+npx deukpack .\schema.deuk .\out -I .\idl --csharp --cpp
 ```
 
 ### .tgz 로 설치 (Release / Artifact)
@@ -44,8 +54,8 @@ npx deukpack .\idl\root.deuk .\out -I .\idl --csharp --cpp
 - 또는 Actions → main 푸시 run → Artifacts → `deukpack-npm-tarball-<sha>` 다운로드.
 
 ```powershell
-npm install .\Downloads\deukpack-1.0.5.tgz
-npx deukpack .\schema.deuk .\out --csharp
+npm install .\Downloads\deukpack-x.y.z.tgz
+npx deukpack init
 ```
 
 ---
@@ -64,6 +74,7 @@ npx deukpack .\schema.deuk .\out --csharp
 
 ```bash
 npm install deukpack
+npx deukpack init
 npx deukpack ./idl/root.deuk ./out -I ./idl --csharp --cpp
 ```
 
@@ -72,14 +83,15 @@ npx deukpack ./idl/root.deuk ./out -I ./idl --csharp --cpp
 - [GitHub Releases](https://github.com/joygram/DeukPack/releases) 또는 Actions Artifacts에서 tarball 다운로드.
 
 ```bash
-npm install ./deukpack-1.0.5.tgz
-npx deukpack ./schema.deuk ./out --csharp
+npm install ./deukpack-x.y.z.tgz
+npx deukpack init
 ```
 
 ---
 
 ## 다음
 
-- [빠른 시작](quickstart.md) — IDL → C#·C++·TS 생성 예제
+- [빠른 시작](quickstart.md) — init·run·단발 생성
+- [파이프라인 가이드](pipeline-guide.md) — `deukpack.pipeline.json`, `defineScope: "all"`
 - [코어·엔진](../products/core-engine.md) — npm·GitHub 링크
 - 저장소 및 소스 빌드: [GitHub DeukPack](https://github.com/joygram/DeukPack). 설치·튜토리얼 문서는 이 사이트에만 보관됩니다.

@@ -1,4 +1,4 @@
-# 튜토리얼: WriteWithOverrides (클론 없이 팬아웃)
+# 튜토리얼: 통합 Write — 오버라이드와 필드 선택
 
 **소요**: 약 10분 · **선행**: [빠른 시작](quickstart.md) 또는 [C# 가이드](csharp-guide.md)
 
@@ -10,7 +10,7 @@
 
 **큰 메시지 인스턴스 하나**를 **많은 수신자**에게 보내야 하고, 수신자마다 **소수의 필드만** 다를 때(표시 이름, 읽음 여부, 로케일별 문구 등). 전체를 **N번 Clone**하면 비용이 큽니다.
 
-득팩은 C# 생성 struct마다 **`WriteWithOverrides`**를 넣습니다. **필드 ID → 대체 값**으로 직렬화하며, 메시지 객체를 바꾸거나 통째로 복제하지 않습니다.
+득팩은 C# 생성 struct마다 **`Write(oprot, fieldIds, overrides?)`** 하나를 둡니다. **`fieldIds`에 `null`**이면 **전체 필드**를 보내고, 선택적으로 **`Dictionary<int, object>`**로 필드 ID별 치환값을 넘기며, 메시지 객체를 바꾸거나 통째로 복제하지 않습니다.
 
 ---
 
@@ -31,7 +31,7 @@ struct ChatMessage {
 
 ---
 
-## 2. C# 사용법
+## 2. C# — 오버라이드(전체 필드)
 
 ```csharp
 var msg = BuildMessageOnce(); // 무거운 작업은 한 번
@@ -41,14 +41,14 @@ var overrides = new Dictionary<int, object>
     { ChatMessage.FieldId.DisplayNameForRecipient, "Alice (you)" },
     { ChatMessage.FieldId.IsReadForRecipient, false }
 };
-msg.WriteWithOverrides(oprot, overrides);
+msg.Write(oprot, null, overrides);
 ```
 
 규칙:
 
 - **키** = `StructName.FieldId.PropertyName` (생성된 `const int`). 숫자 직접 사용 금지.
 - **값** = 생성된 프로퍼티와 같은 CLR 타입 (타입이 맞지 않으면 캐스트 예외).
-- `overrides`가 **null**이거나 **비어 있으면** **`Write(oprot)`**와 동일.
+- `overrides`가 **null**이거나 **비어 있으면** **`Write(oprot)`** / **`Write(oprot, null, null)`** 와 동일.
 - 필드가 **다른 struct**이거나 **list/map**이면 값은 **그 필드 타입 전체 인스턴스**(또는 컬렉션 전체)로 넘긴다. 안쪽 멤버만 골라 바꾸는 중첩 키 API는 없다. → 코어 [DEUKPACK_WRITE_WITH_OVERRIDES_API.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WRITE_WITH_OVERRIDES_API.md) **§1.3**.
 
 전체 API 표·C++/JS: [API·타입 참조](../reference/api.md) · 코어 저장소 [DEUKPACK_WRITE_WITH_OVERRIDES_API.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
@@ -57,47 +57,43 @@ msg.WriteWithOverrides(oprot, overrides);
 
 ## 3. JavaScript (`--js`)
 
-`js/generated_deuk.js`에 struct 헬퍼마다 **`applyOverrides`**, **`toJsonWithOverrides`**, **`FieldId`**가 붙습니다.
+`js/generated_deuk.js` struct 헬퍼마다 **`toJson`**, **`toBinary`**, **`FieldId`**가 붙습니다. 안 쓰는 인자는 **`null`**:
 
 ```javascript
 var F = ChatMessage.FieldId;
-var patched = ChatMessage.applyOverrides(msg, { [F.DisplayNameForRecipient]: "Bob" });
-var json = ChatMessage.toJsonWithOverrides(msg, { [F.DisplayNameForRecipient]: "Bob", [F.IsReadForRecipient]: true });
+var json = ChatMessage.toJson(msg, null, {
+  [F.DisplayNameForRecipient]: "Bob",
+  [F.IsReadForRecipient]: true
+});
 ```
 
 ---
 
 ## 4. C++
 
-각 struct에 **`kFieldId_*`** 상수와 **`apply_overrides(const std::unordered_map<int, std::any>&)`**가 생성됩니다:
-
-```cpp
-std::unordered_map<int, std::any> o;
-o[ChatMessage::kFieldId_DisplayNameForRecipient] = std::string("Bob");
-msg.apply_overrides(o);
-```
+각 struct에 C#/JS와 맞는 **`kFieldId_*`** 상수가 있습니다. 타입 옆에 생성된 **pack/바이너리(또는 Thrift 호환) 쓰기 경로**를 쓰면 되며, 현재 생성물에는 별도 **`apply_overrides`** 단계가 없습니다.
 
 [API·타입 참조](../reference/api.md) 참고.
 
 ---
 
-## 5. WriteFields — 필드 선택 직렬화
+## 5. 필드 선택 — 같은 `Write`
 
-`WriteFields`는 풀 레코드에서 **지정한 필드만** 직렬화한다. partial 타입을 만들거나 필드를 하나씩 복사할 필요 없이, 런타임에 원하는 컬럼만 골라 보낸다.
+**`Write(oprot, fieldIds, overrides?)`** 에서 `fieldIds`가 null이 아니면 **나열된 필드만** 직렬화합니다. partial 타입이나 필드 단위 복사가 필요 없습니다.
 
 ```csharp
 var full = LoadFullUser();
-full.WriteFields(oprot, new[] {
+full.Write(oprot, new[] {
     UserRecord.FieldId.DisplayName,
     UserRecord.FieldId.Level,
     UserRecord.FieldId.AvatarUrl
-});
+}, null);
 ```
 
-`overrides`와 결합도 가능하다:
+선택과 오버라이드를 함께:
 
 ```csharp
-full.WriteFields(oprot, new[] {
+full.Write(oprot, new[] {
     UserRecord.FieldId.DisplayName,
     UserRecord.FieldId.Level
 }, new Dictionary<int, object> {
@@ -105,12 +101,13 @@ full.WriteFields(oprot, new[] {
 });
 ```
 
-JavaScript에서는 `projectFields`와 `toJsonWithFields`를 사용한다:
+JavaScript — 인자 형태 동일:
 
 ```javascript
 var F = UserRecord.FieldId;
-var partial = UserRecord.projectFields(full, [F.DisplayName, F.Level]);
-var json = UserRecord.toJsonWithFields(full, [F.DisplayName, F.Level]);
+var ids = [F.DisplayName, F.Level];
+var json = UserRecord.toJson(full, ids, null);
+var json2 = UserRecord.toJson(full, ids, { [F.DisplayName]: r.LocalizedName });
 ```
 
 ---
@@ -143,11 +140,11 @@ struct UserFull extends UserBase {
 
 ## 8. 기능 비교표
 
-| | WriteWithOverrides | WriteFields | Wire Profile | extends |
+| | 오버라이드(전체 필드) | 필드 서브셋 | Wire Profile | extends |
 |---|---|---|---|---|
 | 목적 | 전 필드 전송, 일부 **값만** 교체 | 선택한 필드**만** 전송 | 빌드 타임 서브셋 타입 | 공통 필드 상속 |
 | 결정 시점 | 런타임 | 런타임 | 빌드 타임 | IDL 정의 시 |
-| 결합 | — | `overrides` 파라미터 | — | 모든 기능과 |
+| API | `Write(oprot, null, overrides)` | `Write(oprot, fieldIds, overrides?)` | — | 모든 기능과 |
 | 동적 선택 | 가능 | 가능 | 불가 | — |
 
 ---
@@ -156,3 +153,11 @@ struct UserFull extends UserBase {
 
 - IDL 스니펫·필드 ID 설명: [examples/write-with-overrides/README.md](https://github.com/joygram/DeukPack/tree/main/examples/write-with-overrides)
 - C# 스모크: [examples/consumer-csharp](https://github.com/joygram/DeukPack/tree/main/examples/consumer-csharp) — `DemoUser.FieldId.Name`, `DemoUser.FieldId.Home` 등 사용
+
+---
+
+## 다음 단계
+
+- [C# 가이드](csharp-guide.md) — 읽기/쓰기, GetSchema, 런타임 참조
+- [API·타입 참조](../reference/api.md) — CLI·`--wire-profile` 포함
+- [키트 라인업](../starter-kits.md) — 네트워크·채팅 키트의 팬아웃 안내
