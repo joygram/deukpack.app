@@ -186,7 +186,7 @@ Node에서 **파싱·AST**까지 쓰려면 `DeukPackEngine`(또는 동일 진입
 
 ## JavaScript (`--js`)
 
-`javascript/generated_deuk.js` struct 헬퍼:
+`js/generated_deuk.js` struct 헬퍼:
 
 | 항목 | 용도 |
 |------|------|

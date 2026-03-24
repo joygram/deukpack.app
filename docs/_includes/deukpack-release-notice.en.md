@@ -1,2 +1,2 @@
-!!! info "DeukPack core update — 1.2.0"
-    **DeukPack core 1.2.0** shipped. [GitHub Releases](https://github.com/joygram/DeukPack/releases/latest) · [Release summary](https://deukpack.app/en/releases/) · Kits regression tracks the same npm core.
+!!! info "DeukPack core update — 1.2.3"
+    **DeukPack core 1.2.3** — **`deukpack init`** interactive trimmed (directory-wide IDL); workspace **bootstrap** always; bundled **VSIX** after bootstrap (**`code`** / **`cursor`** / **`antigravity`**); **`--skip-workspace`** removed; README **`npx`** guidance. [GitHub Releases](https://github.com/joygram/DeukPack/releases/latest) · [Release summary](https://deukpack.app/en/releases/)

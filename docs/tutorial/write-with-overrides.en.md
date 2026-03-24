@@ -57,7 +57,7 @@ Full API tables and C++/JS: [API reference](../reference/api.md) · core repo [D
 
 ## 3. JavaScript (`--js`)
 
-Generated `javascript/generated_deuk.js` adds **`applyOverrides`**, **`toJsonWithOverrides`**, and **`FieldId`** on each struct helper:
+Generated `js/generated_deuk.js` adds **`applyOverrides`**, **`toJsonWithOverrides`**, and **`FieldId`** on each struct helper:
 
 ```javascript
 var F = ChatMessage.FieldId;

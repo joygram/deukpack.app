@@ -58,7 +58,7 @@ npx deukpack ./schema.deuk ./gen --csharp --protocol tbinary
 npx deukpack ./schema.deuk ./gen-native --csharp --protocol pack
 ```
 
-생성 결과는 `./gen`(또는 지정한 경로) 아래에 언어별로 나뉘어 들어갑니다 (예: `gen/csharp/`, `gen/cpp/`, `gen/javascript/`).
+생성 결과는 `./gen`(또는 지정한 경로) 아래에 언어별로 나뉘어 들어갑니다 (예: `gen/csharp/`, `gen/cpp/`, `gen/ts/`, `gen/js/`).
 
 ---
 

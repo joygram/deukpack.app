@@ -186,7 +186,7 @@ Tutorial: [../tutorial/write-with-overrides.md](../tutorial/write-with-overrides
 
 ## JavaScript (`--js`)
 
-Helpers in `javascript/generated_deuk.js`:
+Helpers in `js/generated_deuk.js`:
 
 | Item | Purpose |
 |------|---------|
