@@ -8,7 +8,7 @@ extra:
   generator: false
   # 배너 문구 정본: DeukPack 루트 release-notice.json → npm run release-notice:apply
   announce: >-
-    <strong>득팩 코어 1.2.1</strong> — README 로컬 설치 안내 정리 · 파이프라인 없을 때 CLI 경고 · VSIX npm 버전 불일치 시 자동 설치 시도 —
+    <strong>득팩 코어 1.2.6</strong> — 스키마 표준 문자열·C# 코드젠·C++ CI·<code>npm run verify</code> —
     <a href="https://github.com/joygram/DeukPack/releases/latest">GitHub Releases</a>
     · <a href="https://deukpack.app/releases/">릴리스 요약</a>
     · <a href="https://deukpack.app/en/releases/">EN</a>

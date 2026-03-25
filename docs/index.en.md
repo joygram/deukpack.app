@@ -1,9 +1,10 @@
 ---
 hide:
   - toc
+---
+
 --8<-- "_includes/deukpack-release-notice.en.md"
 
----
 
 # DeukPack
 

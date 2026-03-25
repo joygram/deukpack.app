@@ -1,9 +1,10 @@
 ---
 hide:
   - toc
+---
+
 --8<-- "_includes/deukpack-release-notice.ko.md"
 
----
 
 <div class="dp-hero">
   <div class="dp-hero-visual">
