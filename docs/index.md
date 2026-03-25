@@ -12,7 +12,7 @@ hide:
   </div>
   <div class="dp-hero-copy">
     <p class="dp-eyebrow">DeukPack — Brand Concept</p>
-    <h1>Developer product pack<br>that bundles benefits</h1>
+    <h1>Pack the gains,<br>ship the code</h1>
     <p class="dp-tagline">Free · Open · Ready-to-use core</p>
     <p class="dp-lead"><strong>Free</strong>, <strong>open</strong>, and <strong>ready to use</strong> — the core is available now.<br><br><strong>DeukPack</strong> is a <strong>standalone product</strong> that handles <strong>native IDL (.deuk)</strong>, <strong>code generation, serialization, protocol, and schema metadata</strong> in a single engine.<br><br>Protobuf, OpenAPI, CSV, DB, legacy .thrift, etc. are just <strong>inputs to the same pipeline</strong>. It's more than a "Thrift replacement."<br><br>Servers, real-time games, and internal tools can all share the <strong>same contract</strong>.</p>
     <div class="dp-pills">
