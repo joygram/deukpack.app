@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Inject release notice (DeukPack OSS 정본)
+      - name: Inject release notice
         run: |
           curl -fsSL -o /tmp/release-notice.json \
             "https://raw.githubusercontent.com/joygram/DeukPack/main/release-notice.json"
