@@ -1,16 +1,16 @@
-# deukpack.app — 제품 소개, 문서, API 레퍼런스 등 공식 사이트
+# deukpack.app — Product info, docs, API reference (official site)
 
-site_name: DeukPack 제품 소개
-site_description: 득팩(DeukPack) — 무료·바로 적용 가능한 코어 라이브러리. 브랜드 컨셉. 코어·엔진, 프로토콜, 파이프라인·Unity, 확장. Excel 프로토콜·애드인은 별도 배포.
+site_name: DeukPack
+site_description: DeukPack — Free, ready-to-use core library. Brand concept. Core · engine, protocol, pipeline · Unity, extensions. Excel protocol add-in distributed separately.
 site_url: https://deukpack.app/
 
 extra:
   generator: false
   announce: >-
-    <strong>득팩 코어 1.2.6</strong> — 스키마 표준 문자열·C# 코드젠·C++ CI·<code>npm run verify</code> —
+    <strong>DeukPack Core 1.2.6</strong> — Schema standard strings · C# codegen · C++ CI · <code>npm run verify</code> —
     <a href="https://github.com/joygram/DeukPack/releases/latest">GitHub Releases</a>
-    · <a href="https://deukpack.app/releases/">릴리스 요약</a>
-    · <a href="https://deukpack.app/en/releases/">EN</a>
+    · <a href="https://deukpack.app/releases/">Release notes</a>
+    · <a href="https://deukpack.app/ko/releases/">KO</a>
 
 markdown_extensions:
   - admonition
@@ -32,46 +32,46 @@ markdown_extensions:
       check_paths: true
 
 nav:
-  - 홈: index.md
-  - 문서 안내: documentation-index.md
-  - 릴리스·뉴스: releases.md
-  - 득팩 키트 라인업: starter-kits.md
-  - 제품:
-    - 제품군 개요: products/index.md
-    - AI·에이전트 파이프라인: ai-pipeline-integration.md
-    - AI 도구 연동(Antigravity·Cursor 등): ai-ide-tools-guide.md
-    - 코어·엔진: products/core-engine.md
-    - 프로토콜: products/protocol.md
-    - Excel 애드인: products/excel-addin.md
-    - 파이프라인·Unity: products/pipeline-unity.md
-    - 확장 제품군: products/extension.md
-    - 제품 관계도: architecture.md
-  - 레퍼런스 가이드:
-    - 개요: reference/index.md
-    - 기본 구성: reference/fundamentals.md
-    - 테이블: reference/tables.md
-    - 메시지·와이어: reference/messages.md
-    - 와이어·프로토콜 계열: reference/wire-protocols.md
-    - DB·엔티티: reference/database.md
-    - API·타입 참조: reference/api.md
-  - 튜토리얼:
-    - 개요: tutorial/index.md
-    - 배포본 vs 소스본: tutorial/distribution-vs-source.md
-    - 설치 (Windows·Linux): tutorial/install-os.md
-    - 빠른 시작: tutorial/quickstart.md
-    - IDL 가이드: tutorial/idl-guide.md
-    - 프로토콜·직렬화: tutorial/protocol-serialization.md
-    - C# 가이드: tutorial/csharp-guide.md
-    - C++ 가이드: tutorial/cpp-guide.md
-    - 파이프라인 만들기: tutorial/pipeline-guide.md
-    - 통합 Write·필드 선택·extends: tutorial/write-with-overrides.md
-  - 포지셔닝: positioning.md
-  - 라이선스·비용: license.md
+  - Home: index.md
+  - Documentation: documentation-index.md
+  - Releases · news: releases.md
+  - Kits lineup: deukpack-kits.md
+  - Products:
+    - Products overview: products/index.md
+    - AI / agent pipeline: ai-pipeline-integration.md
+    - AI tools (Antigravity, Cursor, …): ai-ide-tools-guide.md
+    - Core · engine: products/core-engine.md
+    - Protocol: products/protocol.md
+    - Excel add-in: products/excel-addin.md
+    - Pipeline · Unity: products/pipeline-unity.md
+    - Extension: products/extension.md
+    - Architecture: architecture.md
+  - Reference:
+    - Overview: reference/index.md
+    - Fundamentals: reference/fundamentals.md
+    - Tables: reference/tables.md
+    - Messages & wire: reference/messages.md
+    - Wire protocol families: reference/wire-protocols.md
+    - Database & entities: reference/database.md
+    - API reference: reference/api.md
+  - Tutorial:
+    - Overview: tutorial/index.md
+    - Distribution vs source: tutorial/distribution-vs-source.md
+    - Install (Windows · Linux): tutorial/install-os.md
+    - Quick start: tutorial/quickstart.md
+    - IDL guide: tutorial/idl-guide.md
+    - Protocol & serialization: tutorial/protocol-serialization.md
+    - C# guide: tutorial/csharp-guide.md
+    - C++ guide: tutorial/cpp-guide.md
+    - Pipeline guide: tutorial/pipeline-guide.md
+    - Unified Write · field selection · extends: tutorial/write-with-overrides.md
+  - Positioning: positioning.md
+  - License: license.md
 
 theme:
   name: material
   custom_dir: overrides
-  language: ko
+  language: en
   logo: assets/deukpack-icon-crop.png
   palette:
     - scheme: slate
@@ -79,13 +79,13 @@ theme:
       accent: amber
       toggle:
         icon: material/brightness-7
-        name: 라이트 모드로 전환
+        name: Switch to light mode
     - scheme: default
       primary: indigo
       accent: amber
       toggle:
         icon: material/brightness-4
-        name: 다크 모드로 전환
+        name: Switch to dark mode
       media: "(prefers-color-scheme: light)"
   font:
     text: Noto Sans KR
@@ -109,46 +109,46 @@ plugins:
       fallback_to_default: true
       reconfigure_material: true
       languages:
-        - locale: ko
-          default: true
-          name: 한국어
-          build: true
         - locale: en
+          default: true
           name: English
           build: true
+        - locale: ko
+          name: 한국어
+          build: true
           nav_translations:
-            문서 안내: Documentation
-            홈: Home
-            릴리스·뉴스: Releases · news
-            득팩 키트 라인업: Kits lineup
-            제품: Products
-            제품군 개요: Products overview
-            AI·에이전트 파이프라인: AI / agent pipeline
-            AI 도구 연동(Antigravity·Cursor 등): AI tools (Antigravity, Cursor, …)
-            코어·엔진: Core · engine
-            프로토콜: Protocol
-            Excel 애드인: Excel add-in
-            파이프라인·Unity: Pipeline · Unity
-            확장 제품군: Extension
-            제품 관계도: Architecture
-            레퍼런스 가이드: Reference
-            개요: Overview
-            기본 구성: Fundamentals
-            테이블: Tables
-            메시지·와이어: Messages & wire
-            와이어·프로토콜 계열: Wire protocol families
-            DB·엔티티: Database & entities
-            API·타입 참조: API reference
-            튜토리얼: Tutorial
-            배포본 vs 소스본: Distribution vs source
-            설치 (Windows·Linux): Install (Windows · Linux)
-            빠른 시작: Quick start
-            IDL 가이드: IDL guide
-            프로토콜·직렬화: Protocol & serialization
-            C# 가이드: C# guide
-            C++ 가이드: C++ guide
-            파이프라인 만들기: Pipeline guide
-            통합 Write·필드 선택·extends: Unified Write · field selection · extends
-            포지셔닝: Positioning
-            라이선스·비용: License
+            Documentation: 문서 안내
+            Home: 홈
+            Releases · news: 릴리스·뉴스
+            Kits lineup: 득팩 키트 라인업
+            Products: 제품
+            Products overview: 제품군 개요
+            AI / agent pipeline: AI·에이전트 파이프라인
+            AI tools (Antigravity, Cursor, …): AI 도구 연동(Antigravity·Cursor 등)
+            Core · engine: 코어·엔진
+            Protocol: 프로토콜
+            Excel add-in: Excel 애드인
+            Pipeline · Unity: 파이프라인·Unity
+            Extension: 확장 제품군
+            Architecture: 제품 관계도
+            Reference: 레퍼런스 가이드
+            Overview: 개요
+            Fundamentals: 기본 구성
+            Tables: 테이블
+            Messages & wire: 메시지·와이어
+            Wire protocol families: 와이어·프로토콜 계열
+            Database & entities: DB·엔티티
+            API reference: API·타입 참조
+            Tutorial: 튜토리얼
+            Distribution vs source: 배포본 vs 소스본
+            Install (Windows · Linux): 설치 (Windows·Linux)
+            Quick start: 빠른 시작
+            IDL guide: IDL 가이드
+            Protocol & serialization: 프로토콜·직렬화
+            C# guide: C# 가이드
+            C++ guide: C++ 가이드
+            Pipeline guide: 파이프라인 만들기
+            Unified Write · field selection · extends: 통합 Write·필드 선택·extends
+            Positioning: 포지셔닝
+            License: 라이선스·비용
   - search

@@ -2,7 +2,7 @@
 
 **One-liner**: The product family that **connects definition and meta artifacts** to real projects, Unity, and servers. Builds, copies, and applies code, schemas, and tables so Unity and servers can validate and load them — extending to **server integration and real-time game networking** with the same schema and protocol.
 
---8<-- "_includes/product-notices-landing-pipeline-unity.en.md"
+--8<-- "_includes/product-notices-landing-pipeline-unity.md"
 
 ---
 

@@ -121,8 +121,13 @@
 .dp-card h3 {
   margin-top: 0;
   margin-bottom: 0.45rem;
-  font-size: 1rem;
+  font-size: 1.05rem;
+  font-weight: 700;
 }
+/* 열별 제목 색상: 1열 cyan, 2열 green, 3열 amber */
+.dp-value-grid > .dp-card:nth-child(3n+1) h3 { color: #7ee8fa; }
+.dp-value-grid > .dp-card:nth-child(3n+2) h3 { color: #a5d6a7; }
+.dp-value-grid > .dp-card:nth-child(3n) h3 { color: #ffd54f; }
 .dp-card p {
   margin: 0;
   color: var(--md-default-fg-color--light);
@@ -136,14 +141,15 @@
 .dp-card--highlight h3 {
   color: var(--md-primary-fg-color, #7cb8ff);
 }
-/* 탭·로고: Material 기본 1220px → 960px로 낮춤 (개발자 창 폭 대응) */
-@media screen and (min-width: 60em) {
-  .md-tabs {
-    display: block !important;
-  }
-  .md-header__button.md-logo {
-    display: inline-block !important;
-  }
+.dp-card--ai {
+  grid-row: span 3;
+}
+/* 탭·로고: 폭과 무관하게 항상 표시 */
+.md-tabs {
+  display: block !important;
+}
+.md-header__button.md-logo {
+  display: inline-block !important;
 }
 @media screen and (max-width: 960px) {
   .dp-value-grid {

@@ -160,4 +160,4 @@ struct UserFull extends UserBase {
 
 - [C# 가이드](csharp-guide.md) — 읽기/쓰기, GetSchema, 런타임 참조
 - [API·타입 참조](../reference/api.md) — CLI·`--wire-profile` 포함
-- [키트 라인업](../starter-kits.md) — 네트워크·채팅 키트의 팬아웃 안내
+- [키트 라인업](../deukpack-kits.md) — 네트워크·채팅 키트의 팬아웃 안내

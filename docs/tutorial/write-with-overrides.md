@@ -160,4 +160,4 @@ The generated `UserFull` has all 4 fields (1–4). Multi-level inheritance (A �
 
 - [C# guide](csharp-guide.md) — Read/Write, GetSchema, runtime reference
 - [API reference](../reference/api.md) — CLI including `--wire-profile`
-- [Kits lineup](../starter-kits.md) — fan-out note for network/chat kits
+- [Kits lineup](../deukpack-kits.md) — fan-out note for network/chat kits

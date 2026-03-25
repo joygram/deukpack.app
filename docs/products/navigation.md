@@ -4,7 +4,7 @@
 
 **Web & blog (planned):** a **DeukNavigation**-focused hub on **deukpack.app** via **domain overloading**. Candidate hostnames: **deuknavigation.deukpack.app** · **navigation.deukpack.app** (one or both, per ops).
 
---8<-- "_includes/product-notices-landing-navigation.en.md"
+--8<-- "_includes/product-notices-landing-navigation.md"
 
 ---
 

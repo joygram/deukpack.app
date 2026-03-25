@@ -16,7 +16,7 @@
 
 ---
 
-## 득팩 코어 바로 사용하기
+## 득팩 코어 바로 사용하기 { #use-core }
 
 득팩 **코어**는 **무료·Apache-2.0**으로 **바로** 설치해 쓸 수 있습니다. CLI·코드 생성·C# 런타임까지 npm 하나로 사용할 수 있습니다.
 
@@ -45,7 +45,7 @@ npx deukpack ./idl/root.deuk ./gen --csharp --cpp --js -I ./idl
 | [C# 가이드](../tutorial/csharp-guide.md) | C# 생성물·프로토콜·참조 |
 | [C++ 가이드](../tutorial/cpp-guide.md) | C++ 빌드·include·실행 |
 | [파이프라인 만들기](../tutorial/pipeline-guide.md) | 여러 잡·설정 JSON |
-| [득팩 키트 라인업](../starter-kits.md) | Unity·C++·Console·EF·TS 등 샘플 |
+| [득팩 키트 라인업](../deukpack-kits.md) | Unity·C++·Console·EF·TS 등 샘플 |
 | [문서 안내](../documentation-index.md) | 한글·영문 문서 위치 |
 
 ### GitHub 저장소
@@ -61,7 +61,7 @@ npx deukpack ./idl/root.deuk ./gen --csharp --cpp --js -I ./idl
 ## 코어 라이브러리 요약
 
 - **공식 OSS**: [github.com/joygram/DeukPack](https://github.com/joygram/DeukPack) — 소스, README, 이슈, 기여, 릴리스. 클론·로컬 빌드·기여는 저장소의 README·RELEASING을 참고하세요.
-- **C#·Unity**: npm 패키지의 `dist/csharp` 런타임 참조 또는 [키트 라인업](../starter-kits.md) 샘플.
+- **C#·Unity**: npm 패키지의 `dist/csharp` 런타임 참조 또는 [키트 라인업](../deukpack-kits.md) 샘플.
 
 ---
 

@@ -1,9 +1,9 @@
 # DeukPack kits lineup
 
-**Lineup & portal (overview):** stack introductions, **clone URLs**, and **shared prerequisites**—what each kit is and where it lives. (The `starter-kits` URL slug stays for existing links.)
+**Lineup & portal (overview):** stack introductions, **clone URLs**, and **shared prerequisites**—what each kit is and where it lives. (URL: `/deukpack-kits/`)
 
 !!! info "Overview vs kits documentation site"
-    **This page (deukpack.app/starter-kits):** **overview**—what to clone and what you need up front.  
+    **This page (deukpack.app/deukpack-kits/):** **overview**—what to clone and what you need up front.  
     **Hands-on labs, copy-paste drills, the *Ruins* course, saga journey, and topic pages** for **walking the kits end-to-end** live on the official kits site **[kits.deukpack.app](https://kits.deukpack.app/en/)** (same navigation as the `StarterKit/` READMEs).
 
 !!! note "Growing under “Kits” (roadmap)"

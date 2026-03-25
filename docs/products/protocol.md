@@ -4,7 +4,7 @@
 
 **Reference table (interop vs native, per language):** [Wire protocol families](../reference/wire-protocols.md) — CLI, default npm `serialize`, and JS limits in one place.
 
---8<-- "_includes/product-notices-landing-protocol.en.md"
+--8<-- "_includes/product-notices-landing-protocol.md"
 
 ---
 

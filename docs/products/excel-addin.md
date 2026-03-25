@@ -4,7 +4,7 @@
 
 **One-liner**: An add-in for **schema-based meta editing** (header generation, validation, schema diff, Apply, sheet editing) inside Excel.
 
---8<-- "_includes/product-notices-landing-excel-addin.en.md"
+--8<-- "_includes/product-notices-landing-excel-addin.md"
 
 ---
 

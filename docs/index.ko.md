@@ -23,9 +23,9 @@ hide:
       <span class="dp-pill">AI·에이전트 파이프라인 연동</span>
     </div>
     <p class="dp-actions">
-      <a href="products/core-engine.md#득팩-코어-바로-사용하기" class="md-button md-button--primary">득팩 코어 바로 사용하기</a>
+      <a href="products/core-engine/#use-core" class="md-button md-button--primary">득팩 코어 바로 사용하기</a>
       <a href="products/" class="md-button">제품군 개요</a>
-      <a href="starter-kits/" class="md-button">득팩 키트 라인업</a>
+      <a href="deukpack-kits/" class="md-button">득팩 키트 라인업</a>
       <a href="positioning/" class="md-button">포지셔닝</a>
     </p>
   </div>
@@ -49,7 +49,7 @@ hide:
 | **DeukNavigation** | Unity·서버 공용 Deuk 와이어(.dpk) 기반 Recast/Detour NavMesh. DeukNavRuntime·CrowdContext·DeukNavAgent·베이킹·DeukNaviTool. |
 | **확장 제품군** | Deuk UI·에디터 도구, EF, DB 마이그레이터, Google Sheets, Unreal/Elixir 등 부가 제품. |
 
-→ [제품 관계도](architecture.md)에서 제품 간 데이터·스키마 흐름을 다이어그램으로 볼 수 있습니다. 자세한 내용은 [제품군 개요](products/index.md)와 각 제품 페이지를 참고하세요. **스택별 바로 적용 예시**는 [득팩 키트 라인업](starter-kits.md)에서 안내합니다.
+→ [제품 관계도](architecture.md)에서 제품 간 데이터·스키마 흐름을 다이어그램으로 볼 수 있습니다. 자세한 내용은 [제품군 개요](products/index.md)와 각 제품 페이지를 참고하세요. **스택별 바로 적용 예시**는 [득팩 키트 라인업](deukpack-kits.md)에서 안내합니다.
 
 ---
 
@@ -83,19 +83,18 @@ hide:
     <p>스키마 기반 메타 편집·검증부터 Unity·서버 로드 파이프라인까지 이어지는 실제 작업 흐름 중심 구성입니다.</p>
   </div>
   <div class="dp-card">
-    <h3>테이블 · 네이티브 메시지 · 상속 · 선택 · 교체</h3>
-    <p>게임·서버에서 반복되는 다섯 가지 문제를 IDL 선언과 코드젠으로 해결합니다.</p>
-    <ul style="margin:0.4em 0 0 1.2em; padding:0; font-size:0.92em;">
-      <li><strong>테이블</strong> — 스키마 기반 <code>MetaTableRegistry</code>로 메타 데이터를 검증·로드. Excel 애드인과 단일 키·복합키까지.</li>
-      <li><strong>네이티브 메시지</strong> — <code>msgId</code>·<code>ProtocolRegistry</code>가 IDL에서 자동 생성. 디스패치·핸들러 등록을 별도 관리 없이.</li>
-      <li><strong>상속 (extends)</strong> — 부모 struct 필드를 자식에 자동 병합. 다단 상속, 필드 ID 충돌 검사, 와이어 호환.</li>
-      <li><strong>선택 (<code>Write</code> + fieldIds)</strong> — 풀 레코드에서 원하는 필드만 골라 직렬화. 런타임 projection, partial 타입 불필요.</li>
-      <li><strong>교체 (<code>Write</code> + overrides)</strong> — Clone 없이 수신자마다 다른 필드 값으로 직렬화. 팬아웃·푸시에 최적.</li>
-      <li><strong>다양한 데이터 타입</strong> — float, double, int8–int64, list/set/map, <strong>tablelink</strong>(DB·테이블 행 참조), datetime, decimal. DB 모델·메타 스키마를 한 타입 시스템으로.</li>
-    </ul>
-    <p style="margin-top:0.6em;">통합 <code>Write</code>(필드 선택·오버라이드)와 Wire Profile은 조합 가능합니다. 자세히: <a href="tutorial/write-with-overrides/">통합 Write 튜토리얼</a></p>
+    <h3>테이블 · 네이티브 메시지</h3>
+    <p>스키마 기반 <code>MetaTableRegistry</code>로 메타 검증·로드. <code>msgId</code>·<code>ProtocolRegistry</code> IDL 자동 생성.</p>
   </div>
-  <div class="dp-card dp-card--highlight">
+  <div class="dp-card">
+    <h3>상속 · 선택 · 교체</h3>
+    <p><code>extends</code>로 필드 병합, <code>Write</code> 하나로 필드 선택·오버라이드. Clone 없이 수신자별 직렬화.</p>
+  </div>
+  <div class="dp-card">
+    <h3>풍부한 타입</h3>
+    <p><strong>tablelink</strong>·datetime·decimal 등 DB 모델까지 한 타입 시스템. <a href="tutorial/write-with-overrides/">튜토리얼 →</a></p>
+  </div>
+  <div class="dp-card dp-card--highlight dp-card--ai">
     <h3>AI 시대에서도 필요한 이유</h3>
     <p>에이전트는 <strong>스펙 초안·로직</strong>에는 강하지만, <strong>결정론적 출력·와이어 호환·다언어 동시 정합성·빌드 재현성</strong>은 보장하기 어렵습니다. 득팩은 그 부분을 담당합니다. 스키마를 단일 소스로 두고 <strong>동일 입력 → 동일 코드·직렬화</strong>를 내주므로, 에이전트는 스펙·로직만 만들고 득팩이 “실행 가능한 타입·파이프라인”으로 바꿔 줍니다.</p>
     <p><a href="ai-pipeline-integration.md">에이전트가 할 수 없는 일 · 연동 정리 →</a></p>
@@ -137,8 +136,8 @@ hide:
 
 ## 다음 단계
 
-- [**코어 라이브러리 사용하기**](products/core-engine.md#득팩-코어-바로-사용하기) — npm·GitHub 링크, 설치·CLI·튜토리얼로 바로 사용
-- [**득팩 키트 라인업**](starter-kits.md) — 스택별 샘플·저장소 링크·바로 적용 예시
+- [**코어 라이브러리 사용하기**](products/core-engine/#use-core) — npm·GitHub 링크, 설치·CLI·튜토리얼로 바로 사용
+- [**득팩 키트 라인업**](deukpack-kits.md) — 스택별 샘플·저장소 링크·바로 적용 예시
 - [제품군 개요](products/index.md) — 제품별 역할·포함 범위
 - [제품 관계도](architecture.md) — 제품 간 관계·데이터 흐름 다이어그램
 - [튜토리얼](tutorial/index.md) — 빠른 시작·단계별 가이드

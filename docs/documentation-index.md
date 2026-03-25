@@ -26,7 +26,7 @@ An overview of **Korean / English** documentation on this site and in the DeukPa
 | **Unified Write · extends** | [Tutorial](tutorial/write-with-overrides.md) | Overrides · field selection · inherit, C#·JS·C++, comparison table |
 | **API reference** | [API·타입 참조](reference/api.md) | Same page — **language switcher** → English |
 | **Wire protocol families** | [Wire protocol families](reference/wire-protocols.md) | Interop vs Deuk native, JS limits |
-| **Products & kits lineup** | [제품군](products/index.md), [득팩 키트 라인업](starter-kits.md) | Same path — **language switcher** → English |
+| **Products & kits lineup** | [제품군](products/index.md), [득팩 키트 라인업](deukpack-kits.md) | Same path — **language switcher** → English |
 | **Releases · news** | [릴리스 · 뉴스](releases.md) | This page — **language switcher** → English |
 | **AI tools integration** | [Antigravity·Cursor·Copilot·Codex](ai-ide-tools-guide.md) | **Language switcher** → English |
 

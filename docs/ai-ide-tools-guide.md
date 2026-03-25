@@ -69,7 +69,7 @@ Docs: [GitHub Copilot documentation](https://docs.github.com/en/copilot)
 
 ---
 
-## Quick comparison
+## 6. Quick comparison
 
 | Tool | Primary account | Link to repo code |
 |------|-----------------|-------------------|
@@ -77,5 +77,13 @@ Docs: [GitHub Copilot documentation](https://docs.github.com/en/copilot)
 | **Cursor** | Cursor (+ optional GitHub) | Same |
 | **GitHub Copilot** | GitHub | Same + extension |
 | **ChatGPT / Codex** | OpenAI | Manual / official connectors |
+
+---
+
+## Related documents
+
+- [AI / agent pipeline](ai-pipeline-integration.md) — role separation, DeukPack integration
+- [Tutorial · Quick start](tutorial/quickstart.md)
+- Quick start: [Tutorials on this site](tutorial/quickstart.md) · OSS: [GitHub DeukPack](https://github.com/joygram/DeukPack)
 
 **한국어**: Use the language switcher (top right).

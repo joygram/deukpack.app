@@ -99,7 +99,7 @@ Tutorial & comparison: [Unified Write tutorial](write-with-overrides.md). API ta
 
 - Include generated C# + **DeukPack.Protocol** (or Unity runtime) in your Unity project.
 - If using asmdef, place generated code and runtime in the same assembly or set up a reference relationship.
-- **Kits lineup**: See the Unity and Web App entries in [DeukPack kits lineup](../starter-kits.md) for sample paths and setup guidance.
+- **Kits lineup**: See the Unity and Web App entries in [DeukPack kits lineup](../deukpack-kits.md) for sample paths and setup guidance.
 
 ---
 

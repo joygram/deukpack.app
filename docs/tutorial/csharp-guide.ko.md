@@ -99,7 +99,7 @@ var schema = DemoUser.GetSchema();
 
 - 생성 C# + **DeukPack.Protocol** (또는 Unity용 런타임)을 Unity 프로젝트에 포함합니다.
 - asmdef가 있다면 생성 코드·런타임을 같은 어셈블리 또는 참조 관계로 두면 됩니다.
-- **키트 라인업**: [deukpack.app 득팩 키트 라인업](../starter-kits.md)의 Unity·Web App 항목에서 샘플·경로 안내를 확인할 수 있습니다.
+- **키트 라인업**: [deukpack.app 득팩 키트 라인업](../deukpack-kits.md)의 Unity·Web App 항목에서 샘플·경로 안내를 확인할 수 있습니다.
 
 ---
 
