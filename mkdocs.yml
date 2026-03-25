@@ -6,7 +6,6 @@ site_url: https://deukpack.app/
 
 extra:
   generator: false
-  # 배너 문구 정본: DeukPack 루트 release-notice.json → npm run release-notice:apply
   announce: >-
     <strong>득팩 코어 1.2.6</strong> — 스키마 표준 문자열·C# 코드젠·C++ CI·<code>npm run verify</code> —
     <a href="https://github.com/joygram/DeukPack/releases/latest">GitHub Releases</a>
@@ -14,6 +13,15 @@ extra:
     · <a href="https://deukpack.app/en/releases/">EN</a>
 
 markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+      permalink: true
+  - pymdownx.details
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -62,10 +70,10 @@ nav:
 
 theme:
   name: material
+  custom_dir: overrides
   language: ko
   logo: assets/deukpack-icon-crop.png
   palette:
-    # 기본: 다크 테마 (세련된 톤)
     - scheme: slate
       primary: cyan
       accent: amber

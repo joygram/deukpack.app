@@ -136,6 +136,15 @@
 .dp-card--highlight h3 {
   color: var(--md-primary-fg-color, #7cb8ff);
 }
+/* 탭·로고: Material 기본 1220px → 960px로 낮춤 (개발자 창 폭 대응) */
+@media screen and (min-width: 60em) {
+  .md-tabs {
+    display: block !important;
+  }
+  .md-header__button.md-logo {
+    display: inline-block !important;
+  }
+}
 @media screen and (max-width: 960px) {
   .dp-value-grid {
     grid-template-columns: 1fr;
