@@ -73,7 +73,7 @@ npm ci
 npm run build
 
 # CLI 대신 스크립트 직접 호출
-node scripts/build_deukpack.js ./examples/sample_idl/sample.thrift ./examples/out --csharp --cpp --js
+node scripts/build_deukpack.js ./examples/sample_idl/sample.thrift ./examples/generated --csharp --cpp --js
 ```
 
 - **상세**: [GitHub — 소스·서브모듈 가이드](https://github.com/joygram/DeukPack/blob/main/docs/README.md) — 클론, 빌드, 서브모듈은 저장소 docs 참고

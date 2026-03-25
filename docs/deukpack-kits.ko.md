@@ -135,7 +135,7 @@ npm run check-env -- --versions
 
 ```bash
 cd StarterKit/csharp/prologue
-npx deukpack _deuk_define/csharp.deuk out -I _deuk_define --csharp
+npx deukpack _deuk_define/csharp.deuk generated -I _deuk_define --csharp
 ```
 
 - **스타터만 복사**해 독립 프로젝트로 쓸 때는 그 루트에서:

@@ -135,7 +135,7 @@ npm run check-env -- --versions
 
 ```bash
 cd StarterKit/csharp/prologue
-npx deukpack _deuk_define/csharp.deuk out -I _deuk_define --csharp
+npx deukpack _deuk_define/csharp.deuk generated -I _deuk_define --csharp
 ```
 
 - **Copying one starter** into its own repo — from **that** project root:

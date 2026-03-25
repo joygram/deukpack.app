@@ -61,7 +61,7 @@ npm run build
       "name": "main",
       "defineScope": "all",
       "exclude": [],
-      "outputDir": "_deuk_define",
+      "outputDir": "generated",
       "csharp": true,
       "cpp": false,
       "ts": true,

@@ -67,7 +67,7 @@ git clone https://github.com/joygram/DeukPack.git
 cd DeukPack
 npm ci
 npm run build
-node scripts/build_deukpack.js ./examples/sample_idl/sample.thrift ./examples/out --csharp --cpp --js
+node scripts/build_deukpack.js ./examples/sample_idl/sample.thrift ./examples/generated --csharp --cpp --js
 ```
 
 - **Details**: [GitHub — source and submodule](https://github.com/joygram/DeukPack/blob/main/docs/README.md) — clone, build, submodule in repo docs
