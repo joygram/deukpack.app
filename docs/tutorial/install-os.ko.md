@@ -91,7 +91,7 @@ npx deukpack init
 
 ## 다음
 
-- [빠른 시작](quickstart.md) — init·run·단발 생성
-- [파이프라인 가이드](pipeline-guide.md) — `deukpack.pipeline.json`, `defineScope: "all"`
-- [코어·엔진](../products/core-engine.md) — npm·GitHub 링크
+- [빠른 시작](quickstart.ko.md) — init·run·단발 생성
+- [파이프라인 가이드](pipeline-guide.ko.md) — `deukpack.pipeline.json`, `defineScope: "all"`
+- [코어·엔진](../products/core-engine.ko.md) — npm·GitHub 링크
 - 저장소 및 소스 빌드: [GitHub DeukPack](https://github.com/joygram/DeukPack). 설치·튜토리얼 문서는 이 사이트에만 보관됩니다.

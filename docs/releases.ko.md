@@ -6,7 +6,7 @@ GitHub에 **새 태그·릴리스**가 올라오면 이 페이지와 사이트 �
 |------|------|
 | **npm** | [deukpack](https://www.npmjs.com/package/deukpack) |
 | **GitHub Releases** | [joygram/DeukPack — Releases](https://github.com/joygram/DeukPack/releases) |
-| **변경 이력 (정본)** | [CHANGELOG.ko.md](https://github.com/joygram/DeukPack/blob/main/CHANGELOG.ko.md) · [CHANGELOG.md](https://github.com/joygram/DeukPack/blob/main/CHANGELOG.md) |
+| **변경 이력 (정본)** | [CHANGELOG.ko.md](https://github.com/joygram/DeukPack/blob/main/CHANGELOG.ko.md) · [CHANGELOG.ko.md](https://github.com/joygram/DeukPack/blob/main/CHANGELOG.ko.md) |
 
 ---
 

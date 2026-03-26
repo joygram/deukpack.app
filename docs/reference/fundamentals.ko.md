@@ -44,13 +44,13 @@
 - **득팩 전용 (`deuk`):** `pack`, `json`, `yaml` — npm **JS** `WireSerializer`·`serialize()` 기본(`pack`)이 여기.
 - **호환 (`interop`, Thrift):** **`tbinary`**, **`tcompact`**, **`tjson`** — **C#·C++** 중심, **JS** 는 **`interopRootStruct`** 로 동일 와이어 지원.
 
-표·npm 단순 API: [와이어 프로토콜 계열](wire-protocols.md). 스펙 문서: [호환 vs 네이티브 와이어](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WIRE_INTEROP_VS_NATIVE.md).
+표·npm 단순 API: [와이어 프로토콜 계열](wire-protocols.ko.md). 스펙 문서: [호환 vs 네이티브 와이어](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WIRE_INTEROP_VS_NATIVE.md).
 
 ---
 
 ## 타입·상속
 
-**확장 타입·Protobuf/Thrift 대조**는 [API·타입 참조 — Extended types](api.md#extended-types)에 표로 정리했습니다. **`extends`**(다단 상속)는 [튜토리얼: 통합 Write](../tutorial/write-with-overrides.md)와 [메시지·와이어](messages.md)에서 이어집니다.
+**확장 타입·Protobuf/Thrift 대조**는 [API·타입 참조 — Extended types](api.md#extended-types)에 표로 정리했습니다. **`extends`**(다단 상속)는 [튜토리얼: 통합 Write](../tutorial/write-with-overrides.ko.md)와 [메시지·와이어](messages.ko.md)에서 이어집니다.
 
 ---
 
@@ -59,4 +59,4 @@
 - [제1장 · 입구의 십자로](https://kits.deukpack.app/journey/part-01-threshold/) — 한 줄기 정의가 갈라지는 지도.
 - [와이어·직렬화 개요](https://kits.deukpack.app/topics/serialization/) — 표·메시지·스택을 짧은 글로 잇기.
 
-다음: [테이블](tables.md) · [메시지·와이어](messages.md) · [DB·엔티티](database.md).
+다음: [테이블](tables.ko.md) · [메시지·와이어](messages.ko.md) · [DB·엔티티](database.ko.md).

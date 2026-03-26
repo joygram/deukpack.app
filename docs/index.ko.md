@@ -34,7 +34,7 @@ hide:
 !!! tip "언어 전환 (한국어 ↔ English)"
     - **영문:** 페이지 **우측 상단** → **언어** 메뉴.
     - **URL:** 한국어는 사이트 루트, English는 **`/en/…`**.
-    - **GitHub README:** [README.md](https://github.com/joygram/DeukPack/blob/main/README.md) · [README.ko.md](https://github.com/joygram/DeukPack/blob/main/README.ko.md).
+    - **GitHub README:** [README.ko.md](https://github.com/joygram/DeukPack/blob/main/README.ko.md) · [README.ko.md](https://github.com/joygram/DeukPack/blob/main/README.ko.md).
 
 ---
 
@@ -49,7 +49,7 @@ hide:
 | **DeukNavigation** | Unity·서버 공용 Deuk 와이어(.dpk) 기반 Recast/Detour NavMesh. DeukNavRuntime·CrowdContext·DeukNavAgent·베이킹·DeukNaviTool. |
 | **확장 제품군** | Deuk UI·에디터 도구, EF, DB 마이그레이터, Google Sheets, Unreal/Elixir 등 부가 제품. |
 
-→ [제품 관계도](architecture.md)에서 제품 간 데이터·스키마 흐름을 다이어그램으로 볼 수 있습니다. 자세한 내용은 [제품군 개요](products/index.md)와 각 제품 페이지를 참고하세요. **스택별 바로 적용 예시**는 [득팩 키트 라인업](deukpack-kits.md)에서 안내합니다.
+→ [제품 관계도](architecture.ko.md)에서 제품 간 데이터·스키마 흐름을 다이어그램으로 볼 수 있습니다. 자세한 내용은 [제품군 개요](products/index.ko.md)와 각 제품 페이지를 참고하세요. **스택별 바로 적용 예시**는 [득팩 키트 라인업](deukpack-kits.ko.md)에서 안내합니다.
 
 ---
 
@@ -59,9 +59,9 @@ hide:
 
 **무료·오픈소스 코어**는 npm과 [**GitHub(joygram/DeukPack)**](https://github.com/joygram/DeukPack)에서 바로 적용할 수 있습니다.
 
-**손으로 따라 하며 검증**하거나 **《시작의 폐허》·서사 저니**를 읽으려면 **[kits.deukpack.app](https://kits.deukpack.app/)** 로 가면 됩니다. 저장소 README · 이 사이트 · 키트 사이트는 **같은 제품을 다른 깊이**로 보여 줍니다. 관계 표는 [문서 안내](documentation-index.md)를 보세요.
+**손으로 따라 하며 검증**하거나 **《시작의 폐허》·서사 저니**를 읽으려면 **[kits.deukpack.app](https://kits.deukpack.app/)** 로 가면 됩니다. 저장소 README · 이 사이트 · 키트 사이트는 **같은 제품을 다른 깊이**로 보여 줍니다. 관계 표는 [문서 안내](documentation-index.ko.md)를 보세요.
 
-**득팩 코어를 바로 쓰려면** 위 **「득팩 코어 바로 사용하기」** 또는 [코어·엔진](products/core-engine.md)으로 이동하세요. 그 페이지에 **설치·CLI**, 이 사이트의 **설치·빠른 시작·IDL·C#·C++·파이프라인·키트 라인업**, **GitHub**(README·릴리스 문서) 링크가 모여 있습니다.
+**득팩 코어를 바로 쓰려면** 위 **「득팩 코어 바로 사용하기」** 또는 [코어·엔진](products/core-engine.ko.md)으로 이동하세요. 그 페이지에 **설치·CLI**, 이 사이트의 **설치·빠른 시작·IDL·C#·C++·파이프라인·키트 라인업**, **GitHub**(README·릴리스 문서) 링크가 모여 있습니다.
 
 소스·이슈·기여는 [GitHub 저장소](https://github.com/joygram/DeukPack)에서 확인하세요. 링크·인용은 상업·비상업 모두 자유롭습니다.
 
@@ -130,17 +130,17 @@ hide:
 - **연동 포인트**: 에이전트가 만든 **`.deuk`, `.proto`, `.thrift`, OpenAPI** 를 **득팩 입력**으로 넘기고 CLI로 코드·타입·직렬화를 생성. 에이전트는 “이 타입을 쓰는 로직”만 만들면 됩니다.
 - 에이전트가 스키마를 **생성·수정**해도, **“실행 가능한 타입·직렬화·다언어 코드”**로 바꿔 주는 건 **전문 도구(득팩)**가 담당하는 편이 안전하다. 에이전트는 그 도구를 **도구로 호출**하면 된다.
 
-→ 상세: [에이전트가 할 수 없는 일 · AI 파이프라인 연동 정리](ai-pipeline-integration.md)
+→ 상세: [에이전트가 할 수 없는 일 · AI 파이프라인 연동 정리](ai-pipeline-integration.ko.md)
 
 ---
 
 ## 다음 단계
 
 - [**코어 라이브러리 사용하기**](products/core-engine/#use-core) — npm·GitHub 링크, 설치·CLI·튜토리얼로 바로 사용
-- [**득팩 키트 라인업**](deukpack-kits.md) — 스택별 샘플·저장소 링크·바로 적용 예시
-- [제품군 개요](products/index.md) — 제품별 역할·포함 범위
-- [제품 관계도](architecture.md) — 제품 간 관계·데이터 흐름 다이어그램
-- [튜토리얼](tutorial/index.md) — 빠른 시작·단계별 가이드
-- [레퍼런스 가이드](reference/index.md) — API·타입 참조
-- [포지셔닝](positioning.md) — 타깃·포지션
-- [라이선스·비용·후원](license.md) — 이용 조건·비용·개발 후원(PayPal, Ko-fi) 안내
+- [**득팩 키트 라인업**](deukpack-kits.ko.md) — 스택별 샘플·저장소 링크·바로 적용 예시
+- [제품군 개요](products/index.ko.md) — 제품별 역할·포함 범위
+- [제품 관계도](architecture.ko.md) — 제품 간 관계·데이터 흐름 다이어그램
+- [튜토리얼](tutorial/index.ko.md) — 빠른 시작·단계별 가이드
+- [레퍼런스 가이드](reference/index.ko.md) — API·타입 참조
+- [포지셔닝](positioning.ko.md) — 타깃·포지션
+- [라이선스·비용·후원](license.ko.md) — 이용 조건·비용·개발 후원(PayPal, Ko-fi) 안내

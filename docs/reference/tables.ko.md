@@ -24,8 +24,8 @@
 
 ## 다른 절과의 경계
 
-- **와이어로 테이블 바이트를 보내는 이야기**는 [메시지·와이어](messages.md) 및 [와이어·직렬화 — 테이블](https://kits.deukpack.app/topics/serialization/tables-on-wire/)와 겹칩니다.
-- **DB에 붙는 행 스키마**는 `entity` 중심으로 [DB·엔티티](database.md)를 보세요.
+- **와이어로 테이블 바이트를 보내는 이야기**는 [메시지·와이어](messages.ko.md) 및 [와이어·직렬화 — 테이블](https://kits.deukpack.app/topics/serialization/tables-on-wire/)와 겹칩니다.
+- **DB에 붙는 행 스키마**는 `entity` 중심으로 [DB·엔티티](database.ko.md)를 보세요.
 
 ---
 
@@ -35,4 +35,4 @@
 - [테이블 온 와이어](https://kits.deukpack.app/topics/serialization/tables-on-wire/) — 짧은 기술 메모.
 - 스타터 방: [《지하 실록》 편람](https://kits.deukpack.app/starter-course/outline/)에서 테이블·시즌1 방 README로 이동.
 
-법전: [API·타입 참조](api.md) · [IDL 가이드](../tutorial/idl-guide.md).
+법전: [API·타입 참조](api.ko.md) · [IDL 가이드](../tutorial/idl-guide.ko.md).

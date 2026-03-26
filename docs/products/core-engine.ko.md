@@ -39,20 +39,20 @@ npx deukpack ./idl/root.deuk ./gen --csharp --cpp --js -I ./idl
 
 | 문서 | 내용 |
 |------|------|
-| [설치 (Windows·Linux)](../tutorial/install-os.md) | Node 설치, 배포본(npm)·.tgz 설치 |
-| [빠른 시작](../tutorial/quickstart.md) | IDL 하나로 C#, C++, TS 생성까지 단계별 |
-| [IDL 가이드](../tutorial/idl-guide.md) | .deuk·.thrift 문법·네임스페이스 |
-| [C# 가이드](../tutorial/csharp-guide.md) | C# 생성물·프로토콜·참조 |
-| [C++ 가이드](../tutorial/cpp-guide.md) | C++ 빌드·include·실행 |
-| [파이프라인 만들기](../tutorial/pipeline-guide.md) | 여러 잡·설정 JSON |
-| [득팩 키트 라인업](../deukpack-kits.md) | Unity·C++·Console·EF·TS 등 샘플 |
-| [문서 안내](../documentation-index.md) | 한글·영문 문서 위치 |
+| [설치 (Windows·Linux)](../tutorial/install-os.ko.md) | Node 설치, 배포본(npm)·.tgz 설치 |
+| [빠른 시작](../tutorial/quickstart.ko.md) | IDL 하나로 C#, C++, TS 생성까지 단계별 |
+| [IDL 가이드](../tutorial/idl-guide.ko.md) | .deuk·.thrift 문법·네임스페이스 |
+| [C# 가이드](../tutorial/csharp-guide.ko.md) | C# 생성물·프로토콜·참조 |
+| [C++ 가이드](../tutorial/cpp-guide.ko.md) | C++ 빌드·include·실행 |
+| [파이프라인 만들기](../tutorial/pipeline-guide.ko.md) | 여러 잡·설정 JSON |
+| [득팩 키트 라인업](../deukpack-kits.ko.md) | Unity·C++·Console·EF·TS 등 샘플 |
+| [문서 안내](../documentation-index.ko.md) | 한글·영문 문서 위치 |
 
 ### GitHub 저장소
 
 | 문서 | 내용 |
 |------|------|
-| [배포본 vs 소스본](../tutorial/distribution-vs-source.md) | npm 사용 vs 클론·빌드 (이 사이트) |
+| [배포본 vs 소스본](../tutorial/distribution-vs-source.ko.md) | npm 사용 vs 클론·빌드 (이 사이트) |
 | [README (한글)](https://github.com/joygram/DeukPack/blob/main/README.ko.md) | 저장소 진입·요약 |
 | [릴리스용 문서 목록](https://github.com/joygram/DeukPack/blob/main/docs/RELEASE_DOCS_INDEX.md) | 배포·사용자용 문서 인덱스 |
 
@@ -61,7 +61,7 @@ npx deukpack ./idl/root.deuk ./gen --csharp --cpp --js -I ./idl
 ## 코어 라이브러리 요약
 
 - **공식 OSS**: [github.com/joygram/DeukPack](https://github.com/joygram/DeukPack) — 소스, README, 이슈, 기여, 릴리스. 클론·로컬 빌드·기여는 저장소의 README·RELEASING을 참고하세요.
-- **C#·Unity**: npm 패키지의 `dist/csharp` 런타임 참조 또는 [키트 라인업](../deukpack-kits.md) 샘플.
+- **C#·Unity**: npm 패키지의 `dist/csharp` 런타임 참조 또는 [키트 라인업](../deukpack-kits.ko.md) 샘플.
 
 ---
 

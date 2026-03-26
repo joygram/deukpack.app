@@ -22,4 +22,4 @@
 | **검증** | 스키마·CSV/JSON 검증으로 데이터 일관성 확인. |
 | **로드** | 생성된 C# 타입으로 런타임에 메타·테이블 로드. |
 
-코어 언어 설계·Excel 편집 UI·프로토콜 정책 전체는 각각 [코어·엔진](core-engine.md), [Excel 애드인](excel-addin.md), [프로토콜](protocol.md)에서 다룹니다.
+코어 언어 설계·Excel 편집 UI·프로토콜 정책 전체는 각각 [코어·엔진](core-engine.ko.md), [Excel 애드인](excel-addin.ko.md), [프로토콜](protocol.ko.md)에서 다룹니다.

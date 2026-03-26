@@ -146,7 +146,7 @@ npm install deukpack
 
 이어서 해당 키트 README에 적힌 `npx deukpack …` 한 줄을 복사해 실행합니다.
 
-상세: [DeukPackKits README](https://github.com/joygram/DeukPackKits/blob/main/README.md).
+상세: [DeukPackKits README](https://github.com/joygram/DeukPackKits/blob/main/README.ko.md).
 
 ---
 
@@ -169,7 +169,7 @@ npm install deukpack
 |--|--|
 | **저장소 (HTTPS)** | `TBD` — 공개 시 `https://github.com/joygram/DeukPack.git` 기준 또는 스타터 전용 저장소로 갱신 |
 | **클론** | `git clone TBD_URL` |
-| **문서** | 저장소 루트 `README.md` → 선행 조건 → Generate → Unity에서 열기 |
+| **문서** | 저장소 루트 `README.ko.md` → 선행 조건 → Generate → Unity에서 열기 |
 
 ---
 
@@ -190,7 +190,7 @@ npm install deukpack
 |--|--|
 | **저장소** | `TBD` |
 | **클론** | `git clone TBD_URL` |
-| **문서** | `README.md` → 코드젠 → `cmake --build` |
+| **문서** | `README.ko.md` → 코드젠 → `cmake --build` |
 
 ---
 
@@ -211,7 +211,7 @@ npm install deukpack
 |--|--|
 | **저장소** | `TBD` |
 | **클론** | `git clone TBD_URL` |
-| **문서** | `README.md` — 포트·프로토콜(binary/compact)·실행 순서 |
+| **문서** | `README.ko.md` — 포트·프로토콜(binary/compact)·실행 순서 |
 
 ---
 
@@ -221,7 +221,7 @@ npm install deukpack
 
 **코드젠에 포함** (IDL 변경 없음):
 
-- **C#**: 모든 struct에 `Write(oprot, fieldIds, overrides?)` — [통합 Write 튜토리얼](tutorial/write-with-overrides.md), [API·타입 참조](reference/api.md).
+- **C#**: 모든 struct에 `Write(oprot, fieldIds, overrides?)` — [통합 Write 튜토리얼](tutorial/write-with-overrides.ko.md), [API·타입 참조](reference/api.ko.md).
 - **JavaScript** (`--js`): `generated_deuk.js` struct 헬퍼의 `toJson` / `toBinary`(및 pack) — 인자 `(obj, fieldIds, overrides)`.
 - **C++**: **`kFieldId_*`** 상수와 타입 옆 생성된 pack/바이너리 쓰기 경로(C#/JS와 동일 필드 ID 모델).
 
@@ -247,7 +247,7 @@ npm install deukpack
 |--|--|
 | **저장소** | `TBD` |
 | **클론** | `git clone TBD_URL` |
-| **문서** | `README.md` → `npm install` → `npm run codegen` |
+| **문서** | `README.ko.md` → `npm install` → `npm run codegen` |
 
 ---
 
@@ -312,7 +312,7 @@ npm install deukpack
 |--|--|
 | **저장소** | `TBD` |
 | **클론** | `git clone TBD_URL` |
-| **문서** | `README.md` — 득팩으로 생성한 타입과 **바이트 호환**을 맞추는 절차 |
+| **문서** | `README.ko.md` — 득팩으로 생성한 타입과 **바이트 호환**을 맞추는 절차 |
 
 ---
 
@@ -339,5 +339,5 @@ npm install deukpack
 
 ## 관련
 
-- [튜토리얼 · 빠른 시작](tutorial/quickstart.md)
-- [제품군 개요](products/index.md)
+- [튜토리얼 · 빠른 시작](tutorial/quickstart.ko.md)
+- [제품군 개요](products/index.ko.md)

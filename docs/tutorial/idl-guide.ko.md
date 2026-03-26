@@ -124,12 +124,12 @@ npx deukpack ./api.thrift ./gen -I ./idl --csharp --cpp
 | **혼합** | 한 빌드에서 .deuk + .thrift + .proto include 가능 | | |
 | **문법** | Thrift와 유사 + table 등 확장 | Thrift 표준 | Protobuf 표준 |
 
-기존 .thrift·.proto 파일은 **그대로** include 하고, 새로 작성할 때는 .deuk 를 쓰면 확장 문법(테이블·메타 등)을 쓸 수 있습니다. 상세는 [코어·엔진](../products/core-engine.md)과 [GitHub docs](https://github.com/joygram/DeukPack/tree/main/docs)를 참고하세요.
+기존 .thrift·.proto 파일은 **그대로** include 하고, 새로 작성할 때는 .deuk 를 쓰면 확장 문법(테이블·메타 등)을 쓸 수 있습니다. 상세는 [코어·엔진](../products/core-engine.ko.md)과 [GitHub docs](https://github.com/joygram/DeukPack/tree/main/docs)를 참고하세요.
 
 ---
 
 ## 8. 다음 단계
 
-- [빠른 시작](quickstart.md) — 이 문법으로 파일을 만들고 코드 생성하기
-- [프로토콜·직렬화](protocol-serialization.md) — Binary/Compact/JSON 선택과 직렬화
-- [C# 가이드](csharp-guide.md) / [C++ 가이드](cpp-guide.md) — 생성 코드 사용
+- [빠른 시작](quickstart.ko.md) — 이 문법으로 파일을 만들고 코드 생성하기
+- [프로토콜·직렬화](protocol-serialization.ko.md) — Binary/Compact/JSON 선택과 직렬화
+- [C# 가이드](csharp-guide.ko.md) / [C++ 가이드](cpp-guide.ko.md) — 생성 코드 사용

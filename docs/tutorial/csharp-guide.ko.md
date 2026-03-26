@@ -79,7 +79,7 @@ var schema = DemoUser.GetSchema();
 **ProtocolRegistry**는 메시지 타입 ↔ 식별자(msgId 등) 매핑을 제공합니다. 서버·클라이언트에서 패킷 타입에 따라 다른 핸들러를 호출할 때 사용합니다.
 
 - 생성 코드에 등록된 타입과 ID 목록을 확인하고, 수신 바이트에서 msgId를 읽은 뒤 **ProtocolRegistry**로 해당 타입을 찾아 **Read** 호출하는 패턴을 사용합니다.
-- 상세: [프로토콜](../products/protocol.md) 문서와 코어 저장소 [docs](https://github.com/joygram/DeukPack/tree/main/docs) 참고.
+- 상세: [프로토콜](../products/protocol.ko.md) 문서와 코어 저장소 [docs](https://github.com/joygram/DeukPack/tree/main/docs) 참고.
 
 ---
 
@@ -91,7 +91,7 @@ var schema = DemoUser.GetSchema();
 - **`FieldId` nested class** — `StructName.FieldId.PropertyName`으로 필드 ID 참조. 매직 넘버 제거.
 - **struct extends** — IDL에서 부모 필드를 자식에 자동 병합.
 
-튜토리얼·비교표: [통합 Write](write-with-overrides.md). API 표: [API·타입 참조](../reference/api.md). 코어 명세: [DEUKPACK_WRITE_WITH_OVERRIDES_API.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
+튜토리얼·비교표: [통합 Write](write-with-overrides.ko.md). API 표: [API·타입 참조](../reference/api.ko.md). 코어 명세: [DEUKPACK_WRITE_WITH_OVERRIDES_API.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
 
 ---
 
@@ -99,13 +99,13 @@ var schema = DemoUser.GetSchema();
 
 - 생성 C# + **DeukPack.Protocol** (또는 Unity용 런타임)을 Unity 프로젝트에 포함합니다.
 - asmdef가 있다면 생성 코드·런타임을 같은 어셈블리 또는 참조 관계로 두면 됩니다.
-- **키트 라인업**: [deukpack.app 득팩 키트 라인업](../deukpack-kits.md)의 Unity·Web App 항목에서 샘플·경로 안내를 확인할 수 있습니다.
+- **키트 라인업**: [deukpack.app 득팩 키트 라인업](../deukpack-kits.ko.md)의 Unity·Web App 항목에서 샘플·경로 안내를 확인할 수 있습니다.
 
 ---
 
 ## 8. 다음 단계
 
-- [프로토콜·직렬화](protocol-serialization.md) — Binary/Compact/JSON 차이와 선택
-- [API·타입 참조](../reference/api.md) — CLI·통합 Write·FieldId·GetSchema·ProtocolRegistry
-- [통합 Write](write-with-overrides.md) — 오버라이드·필드 선택·extends
+- [프로토콜·직렬화](protocol-serialization.ko.md) — Binary/Compact/JSON 차이와 선택
+- [API·타입 참조](../reference/api.ko.md) — CLI·통합 Write·FieldId·GetSchema·ProtocolRegistry
+- [통합 Write](write-with-overrides.ko.md) — 오버라이드·필드 선택·extends
 - [코어 examples/consumer-csharp](https://github.com/joygram/DeukPack/tree/main/examples/consumer-csharp) — 실행 가능한 C# 샘플

@@ -100,5 +100,5 @@ flowchart LR
 
 ## 다음 단계
 
-- [제품군 개요](products/index.md) — 제품별 역할·포함 범위
-- [포지셔닝](positioning.md) — 타깃·포지션
+- [제품군 개요](products/index.ko.md) — 제품별 역할·포함 범위
+- [포지셔닝](positioning.ko.md) — 타깃·포지션

@@ -32,13 +32,13 @@
 | *(REST API)* **기존 REST API의 DTO 구조를 최소 변경으로 최적화·유연성 확장하고 싶은 팀** | OpenAPI·JSON Schema 임포트 또는 IDL로 핵심만 재정의 후, 기존 계약(JSON·경로)은 유지한 채 점진 전환·REST 전용 DTO 생성으로 리스크 최소화. *(검토: 가능)* |
 | *(메신저)* **채팅·메신저·실시간 메시징 서비스를 다루는 팀** | 패킷·메시지 스키마를 IDL로 정의하고, Binary/Compact/JSON 직렬화·msgId·ProtocolRegistry로 구현·리스크를 줄이고 싶은 경우. |
 
-상세 타깃·시장 구분은 [제품군 개요](products/index.md)를 참고하세요.
+상세 타깃·시장 구분은 [제품군 개요](products/index.ko.md)를 참고하세요.
 
 ---
 
 ## 다음 단계
 
-- [제품군 개요](products/index.md) — 제품별 역할·포함 범위
-- [튜토리얼](tutorial/index.md) — 빠른 시작
-- [레퍼런스 가이드](reference/index.md) — API·타입 참조
-- [라이선스·비용](license.md) — 이용 조건·비용 안내
+- [제품군 개요](products/index.ko.md) — 제품별 역할·포함 범위
+- [튜토리얼](tutorial/index.ko.md) — 빠른 시작
+- [레퍼런스 가이드](reference/index.ko.md) — API·타입 참조
+- [라이선스·비용](license.ko.md) — 이용 조건·비용 안내

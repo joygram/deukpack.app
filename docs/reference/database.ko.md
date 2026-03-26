@@ -33,4 +33,4 @@ SQL·ORM·행 저장에 붙는 **엔티티 행**, **`tablelink`**, **EF Core** �
 - [제5장 · C# 성채](https://kits.deukpack.app/journey/part-05-dungeon-csharp/) — .NET·EF 지하실 쪽 서사.
 - [레코드와 DTO](https://kits.deukpack.app/topics/serialization/records-and-dto/) — 행·전송 객체 경계 짧은 글.
 
-제품: [코어·엔진](../products/core-engine.md) · [파이프라인·Unity](../products/pipeline-unity.md).
+제품: [코어·엔진](../products/core-engine.ko.md) · [파이프라인·Unity](../products/pipeline-unity.ko.md).

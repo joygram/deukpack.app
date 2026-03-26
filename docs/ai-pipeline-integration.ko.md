@@ -82,8 +82,8 @@ AI·에이전트가 **코드·스펙을 생성**하는 흐름에서, **득팩이
 
 ## 6. 관련 안내
 
-- [AI 코딩 도구 연동 가이드](ai-ide-tools-guide.md) — Antigravity · Cursor · GitHub Copilot · ChatGPT(Codex) + GitHub
-- [코어·엔진](products/core-engine.md) — 엔진·코드 생성 개요
-- [포지셔닝](positioning.md) — 타깃·포지션
-- [튜토리얼 · 빠른 시작](tutorial/quickstart.md)
+- [AI 코딩 도구 연동 가이드](ai-ide-tools-guide.ko.md) — Antigravity · Cursor · GitHub Copilot · ChatGPT(Codex) + GitHub
+- [코어·엔진](products/core-engine.ko.md) — 엔진·코드 생성 개요
+- [포지셔닝](positioning.ko.md) — 타깃·포지션
+- [튜토리얼 · 빠른 시작](tutorial/quickstart.ko.md)
 - npm 패키지: [deukpack](https://www.npmjs.com/package/deukpack)

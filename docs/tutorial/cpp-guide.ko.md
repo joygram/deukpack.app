@@ -70,7 +70,7 @@ user.home.y = 20;
 - **생성된 pack/바이너리(또는 Thrift 호환) 쓰기 헬퍼** — C#/JS와 동일한 필드 ID 모델; 팬아웃·부분 전송 시 타입 옆 헬퍼 사용(별도 `apply_overrides` 단계 없음).
 - **struct extends** — IDL에서 `extends`로 부모 필드를 자식에 자동 병합. 코드젠 시 플랫 구조로 생성.
 
-튜토리얼·비교표: [통합 Write](write-with-overrides.md) · [API·타입 참조](../reference/api.md).
+튜토리얼·비교표: [통합 Write](write-with-overrides.ko.md) · [API·타입 참조](../reference/api.ko.md).
 
 ---
 
@@ -81,13 +81,13 @@ user.home.y = 20;
 - **compact**: 공간 효율이 좋은 바이너리.  
 - **json**: 디버깅·REST 연동 시 유용.
 
-자세한 선택 기준은 [프로토콜·직렬화](protocol-serialization.md)를 참고하세요.
+자세한 선택 기준은 [프로토콜·직렬화](protocol-serialization.ko.md)를 참고하세요.
 
 ---
 
 ## 6. 다음 단계
 
-- [통합 Write](write-with-overrides.md) — 오버라이드·필드 선택·extends
-- [프로토콜·직렬화](protocol-serialization.md) — 프로토콜별 차이와 사용 흐름
-- [API·타입 참조](../reference/api.md) — CLI 옵션·생성물 개요
+- [통합 Write](write-with-overrides.ko.md) — 오버라이드·필드 선택·extends
+- [프로토콜·직렬화](protocol-serialization.ko.md) — 프로토콜별 차이와 사용 흐름
+- [API·타입 참조](../reference/api.ko.md) — CLI 옵션·생성물 개요
 - [코어 examples/consumer-cpp](https://github.com/joygram/DeukPack/tree/main/examples/consumer-cpp) — CMake + 실행 가능한 C++ 샘플

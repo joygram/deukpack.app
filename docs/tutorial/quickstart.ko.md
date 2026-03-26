@@ -59,23 +59,23 @@ struct HelloResponse {
 
 `deukpack.pipeline.json`에서 IDL 루트를 지정하고 `npx deukpack run`을 다시 실행합니다.
 
-`.deuk` 문법은 [레퍼런스](../reference/index.md)와 코어 저장소 [docs](https://github.com/joygram/DeukPack/tree/main/docs)를 참고하세요.
+`.deuk` 문법은 [레퍼런스](../reference/index.ko.md)와 코어 저장소 [docs](https://github.com/joygram/DeukPack/tree/main/docs)를 참고하세요.
 
 ---
 
 ## 5. 생성 결과 확인
 
-- **C#**: 생성된 `*.cs`를 추가하고 **DeukPack.Protocol** (또는 `node_modules/deukpack/dist/csharp`)을 참조합니다. [API 참조](../reference/api.md) 참고.
+- **C#**: 생성된 `*.cs`를 추가하고 **DeukPack.Protocol** (또는 `node_modules/deukpack/dist/csharp`)을 참조합니다. [API 참조](../reference/api.ko.md) 참고.
 - **C++**: 생성된 헤더/소스를 빌드 include 경로에 추가합니다.
 
 ---
 
 ## 6. 다음 단계
 
-- **C#·Unity**: [프로토콜](../products/protocol.md), npm `dist/csharp` 또는 [득팩 키트](../deukpack-kits.md).
-- **파이프라인**: [파이프라인 가이드](pipeline-guide.md) — `defineScope: "all"`, `defineRoot`, `exclude`.
-- **직렬화**: 필드 선택·덮어쓰기는 통합 **`Write`** API — [튜토리얼: overrides·필드 선택·extends](write-with-overrides.md).
-- **Excel·Unity**: [Excel 애드인](../products/excel-addin.md), [파이프라인·Unity](../products/pipeline-unity.md).
+- **C#·Unity**: [프로토콜](../products/protocol.ko.md), npm `dist/csharp` 또는 [득팩 키트](../deukpack-kits.ko.md).
+- **파이프라인**: [파이프라인 가이드](pipeline-guide.ko.md) — `defineScope: "all"`, `defineRoot`, `exclude`.
+- **직렬화**: 필드 선택·덮어쓰기는 통합 **`Write`** API — [튜토리얼: overrides·필드 선택·extends](write-with-overrides.ko.md).
+- **Excel·Unity**: [Excel 애드인](../products/excel-addin.ko.md), [파이프라인·Unity](../products/pipeline-unity.ko.md).
 
 ---
 
@@ -100,4 +100,4 @@ npx deukpack ./schema.deuk ./out --csharp --ts --js
 npx deukpack ./schema.deuk ./out --csharp --protocol tbinary
 ```
 
-*CLI 전체: `npx deukpack --help` 또는 [API·타입 참조](../reference/api.md). 와이어 표: [와이어 프로토콜 계열](../reference/wire-protocols.md).*
+*CLI 전체: `npx deukpack --help` 또는 [API·타입 참조](../reference/api.ko.md). 와이어 표: [와이어 프로토콜 계열](../reference/wire-protocols.ko.md).*

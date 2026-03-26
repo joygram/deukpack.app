@@ -26,4 +26,4 @@
 | **Apply** | 스키마 변경 사항을 시트에 반영. |
 | **시트 기반 메타 편집** | 시트 단위로 메타 데이터 편집·저장. |
 
-코어 코드젠·서버 패킷 처리·Unity 런타임 로드는 각각 [코어·엔진](core-engine.md), [프로토콜](protocol.md), [파이프라인·Unity](pipeline-unity.md) 제품에서 다룹니다.
+코어 코드젠·서버 패킷 처리·Unity 런타임 로드는 각각 [코어·엔진](core-engine.ko.md), [프로토콜](protocol.ko.md), [파이프라인·Unity](pipeline-unity.ko.md) 제품에서 다룹니다.

@@ -37,7 +37,7 @@
 
     **2026-03-23** — 1.2.0 — 동봉 VSIX·npm 와이어·Unity 연동 문서
 
-    - **VS Code 확장**: npm tarball에 **`bundled/deuk-idl.vsix`** 동봉; postinstall·bootstrap 연동(`bundled/README.md`).
+    - **VS Code 확장**: npm tarball에 **`bundled/deuk-idl.vsix`** 동봉; postinstall·bootstrap 연동(`bundled/README.ko.md`).
     - **npm**: `serialize` / `deserialize` 를 `WireExtras`·`WireDeserializeExtras` 중심으로 정리(구 시그니처 제거).
     - **TypeScript 와이어**: `BinaryReader`, `wireTags`, `SerializationWarnings` 등 보강; `pack`·`json`·`yaml`·인터롭 와이어 짝 유지.
     - **문서**: Unity UPM 연동은 **deukpack.app** 안내.

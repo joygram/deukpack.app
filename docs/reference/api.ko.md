@@ -12,7 +12,7 @@
 - [IDL declaration kinds](#idl-declaration-kinds) — `record` / `message` / `table` / `entity`
 - [Tables](#tables) — 테이블 축 요약
 - [Messages and wire](#messages-and-wire) — 메시지·프로토콜 축 요약
-- [와이어 프로토콜 계열](wire-protocols.md) — 호환 vs 득팩 전용 표(별 페이지)
+- [와이어 프로토콜 계열](wire-protocols.ko.md) — 호환 vs 득팩 전용 표(별 페이지)
 - [Database and entities](#database-and-entities) — DB·엔티티 축 요약
 - [Schema import and export](#schema-import-and-export) — OpenAPI·CSV·JSON·Excel
 - [Generated C# APIs](#generated-c-apis)
@@ -23,7 +23,7 @@
 - [JavaScript (`--js`)](#javascript-js)
 - [Related product docs](#related-product-docs)
 
-분류별 짧은 안내: [레퍼런스 개요](index.md) · [기본 구성](fundamentals.md) · [테이블](tables.md) · [메시지·와이어](messages.md) · [DB·엔티티](database.md).
+분류별 짧은 안내: [레퍼런스 개요](index.ko.md) · [기본 구성](fundamentals.ko.md) · [테이블](tables.ko.md) · [메시지·와이어](messages.ko.md) · [DB·엔티티](database.ko.md).
 
 ---
 
@@ -70,7 +70,7 @@ init 후 한 줄 안내: 업데이트 시 **`npx deukpack init`** 재실행; **`
 | `--ts` | TypeScript 1차 산출 (앱은 tsc/번들로 이어짐) |
 | `--js` | JavaScript 직접 생성 (Node·도구용 경로) |
 | `--ef` | EF Core: `DbContext`·Fluent 등 엔티티/메타 정합 경로 활성 |
-| `--protocol <name>` | 와이어 힌트. **득팩 전용:** `pack`(기본값), `json`, `yaml` — **호환(Thrift):** **`tbinary`**, **`tcompact`**, **`tjson`**. 표·JS: [와이어 프로토콜 계열](wire-protocols.md) · [interop vs native](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WIRE_INTEROP_VS_NATIVE.md) |
+| `--protocol <name>` | 와이어 힌트. **득팩 전용:** `pack`(기본값), `json`, `yaml` — **호환(Thrift):** **`tbinary`**, **`tcompact`**, **`tjson`**. 표·JS: [와이어 프로토콜 계열](wire-protocols.ko.md) · [interop vs native](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WIRE_INTEROP_VS_NATIVE.md) |
 | `--endianness little\|big` | 엔디안 |
 | `--wire-profile <name>` | 프로파일 이름 반복 또는 쉼표 구분. [와이어 프로파일](https://github.com/joygram/DeukPack/blob/main/docs/internal/DEUKPACK_WIRE_PROFILE_SUBSET.md) |
 | `--convert-to-deuk [subdir]` | 파싱된 `.thrift` 등에서 `.deuk` 추가 출력 (하위 폴더 기본 `deuk`) |
@@ -104,19 +104,19 @@ npx deukpack run
 
 ## Tables
 
-- **`MetaTableRegistry`**, 행 struct의 키·예약 필드 ID 규칙, `GetSchema()` 요약은 [테이블 가이드](tables.md)를 보세요.
+- **`MetaTableRegistry`**, 행 struct의 키·예약 필드 ID 규칙, `GetSchema()` 요약은 [테이블 가이드](tables.ko.md)를 보세요.
 
 ---
 
 ## Messages and wire
 
-- **`ProtocolRegistry`**, `--protocol`, `IDeukPackReader` / `IDeukPackWriter`, 통합 **Write** 요약은 [메시지·와이어](messages.md)를 보세요. **호환 vs 전용 프로토콜 표**는 [와이어 프로토콜 계열](wire-protocols.md).
+- **`ProtocolRegistry`**, `--protocol`, `IDeukPackReader` / `IDeukPackWriter`, 통합 **Write** 요약은 [메시지·와이어](messages.ko.md)를 보세요. **호환 vs 전용 프로토콜 표**는 [와이어 프로토콜 계열](wire-protocols.ko.md).
 
 ---
 
 ## Database and entities
 
-- **`entity`**, `--ef`, `tablelink` 요약은 [DB·엔티티](database.md)를 보세요.
+- **`entity`**, `--ef`, `tablelink` 요약은 [DB·엔티티](database.ko.md)를 보세요.
 
 ---
 
@@ -146,7 +146,7 @@ Node에서 **파싱·AST**까지 쓰려면 `DeukPackEngine`(또는 동일 진입
 | **MetaTableRegistry** | 테이블·메타 타입 등록. |
 | **IDeukPackReader / IDeukPackWriter** | Binary/Compact/JSON 등 프로토콜별 읽기·쓰기. |
 
-**struct extends:** IDL `extends` — 다단 상속·필드 ID 충돌 검사. 튜토리얼: [통합 Write·필드 선택·extends](../tutorial/write-with-overrides.md). 상세: [DEUKPACK_WRITE_WITH_OVERRIDES_API](https://github.com/joygram/DeukPack/blob/main/docs/internal/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
+**struct extends:** IDL `extends` — 다단 상속·필드 ID 충돌 검사. 튜토리얼: [통합 Write·필드 선택·extends](../tutorial/write-with-overrides.ko.md). 상세: [DEUKPACK_WRITE_WITH_OVERRIDES_API](https://github.com/joygram/DeukPack/blob/main/docs/internal/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
 
 ---
 
@@ -196,7 +196,7 @@ Node에서 **파싱·AST**까지 쓰려면 `DeukPackEngine`(또는 동일 진입
 
 구버전 별도 API (**`WriteWithOverrides`**, **`WriteFields`**, **`applyOverrides`**, **`toJsonWithFields`** 등)는 **제거**됨; 안 쓰는 인자는 **`null`** 로 통일.
 
-튜토리얼: [../tutorial/write-with-overrides.md](../tutorial/write-with-overrides.md)
+튜토리얼: [../tutorial/write-with-overrides.md](../tutorial/write-with-overrides.ko.md)
 
 ---
 
@@ -216,6 +216,6 @@ Node에서 **파싱·AST**까지 쓰려면 `DeukPackEngine`(또는 동일 진입
 
 | 구분 | 문서 |
 |------|------|
-| **코어·엔진** | [코어·엔진](../products/core-engine.md) |
-| **프로토콜** | [프로토콜](../products/protocol.md) |
-| **Excel·Unity** | [Excel 애드인](../products/excel-addin.md), [파이프라인·Unity](../products/pipeline-unity.md) |
+| **코어·엔진** | [코어·엔진](../products/core-engine.ko.md) |
+| **프로토콜** | [프로토콜](../products/protocol.ko.md) |
+| **Excel·Unity** | [Excel 애드인](../products/excel-addin.ko.md), [파이프라인·Unity](../products/pipeline-unity.ko.md) |

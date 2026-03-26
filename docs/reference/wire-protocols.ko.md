@@ -82,9 +82,9 @@ JS에서 Thrift 호환 바이트가 필요하면 **`interopRootStruct`**(및 필
 
 ## 6. 더 읽을 곳
 
-- [프로토콜](../products/protocol.md) — 제품 관점 요약
-- [튜토리얼 · 프로토콜·직렬화](../tutorial/protocol-serialization.md) — 선택 가이드
-- [메시지·와이어](messages.md) — msgId·Registry·필드 부분 전송
+- [프로토콜](../products/protocol.ko.md) — 제품 관점 요약
+- [튜토리얼 · 프로토콜·직렬화](../tutorial/protocol-serialization.ko.md) — 선택 가이드
+- [메시지·와이어](messages.ko.md) — msgId·Registry·필드 부분 전송
 - [API·타입 참조 — CLI](api.md#cli) — 전체 플래그
 
 ---

@@ -2,7 +2,7 @@
 
 패킷·RPC·게이트웨이에서 쓰는 **메시지 타입**, **msgId**, **직렬화**, **필드 일부만 보내기 / 덮어쓰기**까지 묶어서 봅니다.
 
-**프로토콜 문자열이 호환인지 득팩 전용인지**는 [와이어 프로토콜 계열](wire-protocols.md)에서 먼저 구분합니다.
+**프로토콜 문자열이 호환인지 득팩 전용인지**는 [와이어 프로토콜 계열](wire-protocols.ko.md)에서 먼저 구분합니다.
 
 ---
 
@@ -16,7 +16,7 @@
 ## 프로토콜·레지스트리
 
 - **`ProtocolRegistry`:** 메시지 타입 ↔ **msgId**(및 관련 식별자) 매핑. 디스패치·직렬화 라우팅에 사용.
-- **CLI `--protocol`·`wireFamily`:** [와이어 프로토콜 계열](wire-protocols.md) 표 참고. Thrift 호환(`tbinary` 등)은 **생성 C#·C++** 중심이며, **JS** 는 **`interopRootStruct`** 로 동일 와이어를 쓰거나 스키마 없이 **`pack`·`json`·`yaml`** 을 씁니다.
+- **CLI `--protocol`·`wireFamily`:** [와이어 프로토콜 계열](wire-protocols.ko.md) 표 참고. Thrift 호환(`tbinary` 등)은 **생성 C#·C++** 중심이며, **JS** 는 **`interopRootStruct`** 로 동일 와이어를 쓰거나 스키마 없이 **`pack`·`json`·`yaml`** 을 씁니다.
 - **C#:** `IDeukPackReader` / `IDeukPackWriter` 로 프로토콜별 읽기·쓰기.
 - **`--wire-profile`:** 필드 서브셋·DTO 노출용 생성물. [와이어 프로파일](https://github.com/joygram/DeukPack/blob/main/docs/internal/DEUKPACK_WIRE_PROFILE_SUBSET.md).
 
@@ -27,9 +27,9 @@
 - **C#:** `Write(oprot, fieldIds, overrides?)` — `fieldIds`가 null이 아니면 해당 필드만; `overrides`로 필드 ID별 치환; 안 쓰는 인자는 **`null`**.
 - **JavaScript:** 동일하게 **`(obj, fieldIds, overrides)`** 형태의 `toJson` / `toBinary`(및 pack 헬퍼).
 
-튜토리얼: [통합 Write](../tutorial/write-with-overrides.md)  
+튜토리얼: [통합 Write](../tutorial/write-with-overrides.ko.md)  
 상세 API: [DEUKPACK_WRITE_WITH_OVERRIDES_API](https://github.com/joygram/DeukPack/blob/main/docs/internal/DEUKPACK_WRITE_WITH_OVERRIDES_API.md)  
-표 형식 요약: [API·타입 참조 — 통합 Write](api.md) (문서 내 «통합 Write» 절).
+표 형식 요약: [API·타입 참조 — 통합 Write](api.ko.md) (문서 내 «통합 Write» 절).
 
 ---
 
@@ -38,4 +38,4 @@
 - [제4장 · 네트워크 터널](https://kits.deukpack.app/journey/part-04-network/) — msgId와 복도.
 - [메시지 온 와이어](https://kits.deukpack.app/topics/serialization/messages-on-wire/) · [크로스 스택](https://kits.deukpack.app/topics/serialization/cross-stack/).
 
-제품 설명: [프로토콜](../products/protocol.md).
+제품 설명: [프로토콜](../products/protocol.ko.md).

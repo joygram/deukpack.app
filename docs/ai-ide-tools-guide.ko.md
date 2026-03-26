@@ -87,9 +87,9 @@ Google의 **에이전트 중심 IDE**(Gemini 계열). “GitHub 연결”은 보
 1. **한 번 클론** 후 선호하는 도구(Antigravity / Cursor / VS Code+Copilot)로 **같은 폴더**를 엽니다.
 2. **코드젠·빌드**는 AI 대신 **결정론적으로** 실행:  
    `npm ci` → `npm run build` → `npx deukpack ...` 또는 `node scripts/build_deukpack.js --pipeline ...`  
-   ([빠른 시작](tutorial/quickstart.md), [파이프라인](tutorial/pipeline-guide.md) 참고)
+   ([빠른 시작](tutorial/quickstart.ko.md), [파이프라인](tutorial/pipeline-guide.ko.md) 참고)
 3. **AI에게 맡기기 좋은 것**: IDL 초안, 테스트, 문서, 리팩터링 제안.  
-   **직렬화·필드 ID·다언어 동기화**는 [AI·에이전트 파이프라인](ai-pipeline-integration.md) 에서 설명한 대로 **득팩 파이프라인**으로 고정하는 편이 안전합니다.
+   **직렬화·필드 ID·다언어 동기화**는 [AI·에이전트 파이프라인](ai-pipeline-integration.ko.md) 에서 설명한 대로 **득팩 파이프라인**으로 고정하는 편이 안전합니다.
 
 ---
 
@@ -106,8 +106,8 @@ Google의 **에이전트 중심 IDE**(Gemini 계열). “GitHub 연결”은 보
 
 ## 관련 문서
 
-- [AI·에이전트 파이프라인](ai-pipeline-integration.md) — 역할 분리·득팩 연동
-- [튜토리얼 · 빠른 시작](tutorial/quickstart.md)
-- 빠른 시작: [이 사이트 튜토리얼](tutorial/quickstart.md) · OSS: [GitHub DeukPack](https://github.com/joygram/DeukPack)
+- [AI·에이전트 파이프라인](ai-pipeline-integration.ko.md) — 역할 분리·득팩 연동
+- [튜토리얼 · 빠른 시작](tutorial/quickstart.ko.md)
+- 빠른 시작: [이 사이트 튜토리얼](tutorial/quickstart.ko.md) · OSS: [GitHub DeukPack](https://github.com/joygram/DeukPack)
 
 **English**: Use the language switcher (top right).

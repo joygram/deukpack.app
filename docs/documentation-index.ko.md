@@ -18,17 +18,17 @@
 
 | 구분 | 한글 | English |
 |------|------|---------|
-| **튜토리얼 개요** | [튜토리얼](tutorial/index.md) | 같은 페이지에서 **언어 전환(우측 상단)** → English |
-| **빠른 시작** | [빠른 시작](tutorial/quickstart.md) | 위와 동일 |
-| **IDL 가이드** | [IDL 가이드](tutorial/idl-guide.md) | *(한글 문서 참고)* |
-| **프로토콜·직렬화** | [프로토콜·직렬화](tutorial/protocol-serialization.md) | *(한글 문서 참고)* |
-| **C# / C++ 가이드** | [C# 가이드](tutorial/csharp-guide.md), [C++ 가이드](tutorial/cpp-guide.md) | *(한글 문서 참고)* |
-| **통합 Write·extends** | [튜토리얼](tutorial/write-with-overrides.md) | 오버라이드·필드 선택·상속, C#·JS·C++, 비교표 |
-| **API·레퍼런스** | [API·타입 참조](reference/api.md) | 같은 페이지에서 **언어 전환** → English |
-| **와이어·프로토콜 계열** | [와이어 프로토콜 계열](reference/wire-protocols.md) | 호환 vs 득팩 전용·JS 제한 |
-| **제품·키트 라인업** | [제품군](products/index.md), [득팩 키트 라인업](deukpack-kits.md) | *(동일 경로, 한글)* |
-| **릴리스·뉴스** | [릴리스 · 뉴스](releases.md) | 언어 전환 → English (`/en/releases/`) |
-| **AI 도구 연동** | [Antigravity·Cursor·Copilot·Codex](ai-ide-tools-guide.md) | 언어 전환 → English |
+| **튜토리얼 개요** | [튜토리얼](tutorial/index.ko.md) | 같은 페이지에서 **언어 전환(우측 상단)** → English |
+| **빠른 시작** | [빠른 시작](tutorial/quickstart.ko.md) | 위와 동일 |
+| **IDL 가이드** | [IDL 가이드](tutorial/idl-guide.ko.md) | *(한글 문서 참고)* |
+| **프로토콜·직렬화** | [프로토콜·직렬화](tutorial/protocol-serialization.ko.md) | *(한글 문서 참고)* |
+| **C# / C++ 가이드** | [C# 가이드](tutorial/csharp-guide.ko.md), [C++ 가이드](tutorial/cpp-guide.ko.md) | *(한글 문서 참고)* |
+| **통합 Write·extends** | [튜토리얼](tutorial/write-with-overrides.ko.md) | 오버라이드·필드 선택·상속, C#·JS·C++, 비교표 |
+| **API·레퍼런스** | [API·타입 참조](reference/api.ko.md) | 같은 페이지에서 **언어 전환** → English |
+| **와이어·프로토콜 계열** | [와이어 프로토콜 계열](reference/wire-protocols.ko.md) | 호환 vs 득팩 전용·JS 제한 |
+| **제품·키트 라인업** | [제품군](products/index.ko.md), [득팩 키트 라인업](deukpack-kits.ko.md) | *(동일 경로, 한글)* |
+| **릴리스·뉴스** | [릴리스 · 뉴스](releases.ko.md) | 언어 전환 → English (`/en/releases/`) |
+| **AI 도구 연동** | [Antigravity·Cursor·Copilot·Codex](ai-ide-tools-guide.ko.md) | 언어 전환 → English |
 
 ---
 
@@ -36,10 +36,10 @@
 
 | 문서 | 영문 | 한글 |
 |------|------|------|
-| **배포본 vs 소스본** | [이 사이트: 배포본 vs 소스본](tutorial/distribution-vs-source.md) | 동일 페이지에서 **언어 전환** |
-| **README** | [README.md](https://github.com/joygram/DeukPack/blob/main/README.md) | [README.ko.md](https://github.com/joygram/DeukPack/blob/main/README.ko.md) |
-| **빠른 시작 (언어별)** | [빠른 시작 (이 사이트)](tutorial/quickstart.md) | 동일 페이지에서 **언어 전환** |
-| **전체 문서 트리** | [docs/README.md](https://github.com/joygram/DeukPack/blob/main/docs/README.md) | *(동일)* |
+| **배포본 vs 소스본** | [이 사이트: 배포본 vs 소스본](tutorial/distribution-vs-source.ko.md) | 동일 페이지에서 **언어 전환** |
+| **README** | [README.ko.md](https://github.com/joygram/DeukPack/blob/main/README.ko.md) | [README.ko.md](https://github.com/joygram/DeukPack/blob/main/README.ko.md) |
+| **빠른 시작 (언어별)** | [빠른 시작 (이 사이트)](tutorial/quickstart.ko.md) | 동일 페이지에서 **언어 전환** |
+| **전체 문서 트리** | [docs/README.ko.md](https://github.com/joygram/DeukPack/blob/main/docs/README.ko.md) | *(동일)* |
 
 ---
 
@@ -48,9 +48,9 @@
 **한글**
 
 - 튜토리얼·레퍼런스·제품: 이 사이트(기본 경로).
-- 저장소: README.ko.md, docs/README.md.
+- 저장소: README.ko.md, docs/README.ko.md.
 
 **English**
 
 - Quick start, Tutorial index, API reference: 페이지 **우측 상단** 언어 전환.
-- 저장소: README.md, docs/README.md.
+- 저장소: README.ko.md, docs/README.ko.md.

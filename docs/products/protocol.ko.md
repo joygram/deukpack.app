@@ -2,7 +2,7 @@
 
 **한 줄**: **두 가지 와이어 계열** — (1) Thrift **호환(interop)** **`tbinary` / `tcompact` / `tjson`**, (2) **득팩 전용(deuk)** `pack` / `json` / `yaml`. **msgId·ProtocolRegistry**, C#·C++·JS 직렬화(JS 호환은 **`interopRootStruct`** 메타 필요). **Protobuf 바이트 와이어**(`protv2` / `protv3` 프로파일)는 **예정**이며 현재 미포함.
 
-**레퍼런스 표(호환 vs 전용·언어별 구현):** [와이어 프로토콜 계열](../reference/wire-protocols.md) — CLI·npm `serialize` 기본값·JS 제한을 한눈에.
+**레퍼런스 표(호환 vs 전용·언어별 구현):** [와이어 프로토콜 계열](../reference/wire-protocols.ko.md) — CLI·npm `serialize` 기본값·JS 제한을 한눈에.
 
 --8<-- "_includes/product-notices-landing-protocol.ko.md"
 
@@ -43,6 +43,6 @@
 
 ## 다음에 읽을 문서
 
-- [와이어 프로토콜 계열 (레퍼런스)](../reference/wire-protocols.md)
-- [튜토리얼 · 프로토콜·직렬화](../tutorial/protocol-serialization.md)
+- [와이어 프로토콜 계열 (레퍼런스)](../reference/wire-protocols.ko.md)
+- [튜토리얼 · 프로토콜·직렬화](../tutorial/protocol-serialization.ko.md)
 - [코어 프로토콜 정책](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_PROTOCOL_POLICY.md)

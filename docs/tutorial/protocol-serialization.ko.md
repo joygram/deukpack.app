@@ -1,6 +1,6 @@
 # 프로토콜·직렬화
 
-득팩은 와이어를 **두 계열**로 나눕니다. **호환(interop)** 과 **득팩 전용(deuk)** 을 먼저 고른 뒤, 그 안에서 `protocol` 문자열을 고릅니다. 표와 CLI 기본값은 [와이어 프로토콜 계열](../reference/wire-protocols.md)을 보면 한눈에 정리됩니다.
+득팩은 와이어를 **두 계열**로 나눕니다. **호환(interop)** 과 **득팩 전용(deuk)** 을 먼저 고른 뒤, 그 안에서 `protocol` 문자열을 고릅니다. 표와 CLI 기본값은 [와이어 프로토콜 계열](../reference/wire-protocols.ko.md)을 보면 한눈에 정리됩니다.
 
 ---
 
@@ -43,7 +43,7 @@
 - **기존 Thrift Binary/Compact 서비스와 바이트 호환:** **`tbinary`** 또는 **`tcompact`** — 생성 **C#·C++**(또는 스키마 옵션을 쓴 JS).
 - **HTTP/REST, 사람이 읽는 로그 (득팩 네이티브 JSON):** **`json`** (deuk) — Thrift JSON이 필요하면 **`tjson`**.
 
-상세·필드 인코딩: [프로토콜](../products/protocol.md), [호환 vs 네이티브 와이어](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WIRE_INTEROP_VS_NATIVE.md), [코어 프로토콜 정책](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_PROTOCOL_POLICY.md).
+상세·필드 인코딩: [프로토콜](../products/protocol.ko.md), [호환 vs 네이티브 와이어](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WIRE_INTEROP_VS_NATIVE.md), [코어 프로토콜 정책](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_PROTOCOL_POLICY.md).
 
 ---
 
@@ -67,20 +67,20 @@ const bytes = serialize(obj);       // 기본 = pack
 const again = deserialize(bytes);
 ```
 
-호환 바이너리는 이 API만으로는 낳지 않습니다. [와이어 프로토콜 계열](../reference/wire-protocols.md) 참고.
+호환 바이너리는 이 API만으로는 낳지 않습니다. [와이어 프로토콜 계열](../reference/wire-protocols.ko.md) 참고.
 
 ---
 
 ## 6. msgId·ProtocolRegistry (C#)
 
 메시지 종류별로 **msgId**를 붙여 디스패치할 때는 생성 코드의 **ProtocolRegistry**와 쌍을 이룹니다. 수신 버퍼에서 msgId를 읽은 뒤, Registry에서 해당 타입을 찾아 **Read**로 역직렬화하는 패턴을 사용합니다.  
-자세한 사용법은 [C# 가이드](csharp-guide.md)와 [프로토콜](../products/protocol.md) 문서를 참고하세요.
+자세한 사용법은 [C# 가이드](csharp-guide.ko.md)와 [프로토콜](../products/protocol.ko.md) 문서를 참고하세요.
 
 ---
 
 ## 7. 다음 단계
 
-- [와이어 프로토콜 계열](../reference/wire-protocols.md) — 표·JS 제한
-- [C# 가이드](csharp-guide.md) — C#에서 Read/Write 사용
-- [C++ 가이드](cpp-guide.md) — C++에서 직렬화
-- [API·타입 참조](../reference/api.md) — CLI·생성 API 요약
+- [와이어 프로토콜 계열](../reference/wire-protocols.ko.md) — 표·JS 제한
+- [C# 가이드](csharp-guide.ko.md) — C#에서 Read/Write 사용
+- [C++ 가이드](cpp-guide.ko.md) — C++에서 직렬화
+- [API·타입 참조](../reference/api.ko.md) — CLI·생성 API 요약
