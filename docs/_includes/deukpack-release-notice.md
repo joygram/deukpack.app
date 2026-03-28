@@ -1,2 +1,0 @@
-!!! info "DeukPack core update — 1.2.8"
-    **DeukPack core 1.2.6** — embedded schema **`type`** strings use **DeukPack** spelling; **JSON compatibility wire** keys unchanged. C# codegen defaults for nullable builds, **C++** wire tests in **CI**, **`npm run verify`** mirrors the pipeline. [GitHub Releases](https://github.com/joygram/DeukPack/releases/latest) · [Release summary](https://deukpack.app/en/releases/)

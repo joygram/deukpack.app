@@ -41,6 +41,7 @@ nav:
     - Protocol: products/protocol.md
     - Excel add-in: products/excel-addin.md
     - Pipeline · Unity: products/pipeline-unity.md
+    - DeukNavigation: products/navigation.md
     - Extension: products/extension.md
     - Architecture: architecture.md
   - Reference:
@@ -129,6 +130,7 @@ plugins:
             Protocol: 프로토콜
             Excel add-in: Excel 애드인
             Pipeline · Unity: 파이프라인·Unity
+            DeukNavigation: DeukNavigation
             Extension: 확장 제품군
             Architecture: 제품 관계도
             Reference: 레퍼런스 가이드

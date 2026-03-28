@@ -22,7 +22,7 @@ hide:
       <span class="dp-pill">MCP-based AI Guardrail</span>
     </div>
     <div class="dp-actions">
-      <a href="products/core-engine/#use-core" class="md-button md-button--primary">Use the core now</a>
+      <a href="products/core-engine.md" class="md-button md-button--primary">Use the core now</a>
       <a href="products/" class="md-button">Products overview</a>
       <a href="deukpack-kits/" class="md-button">DeukPack kits lineup</a>
     </div>
@@ -43,7 +43,7 @@ hide:
 | **DeukPack Core · Engine** | **Mixed-IDL Hybrid Serializer**: Next-gen engine that accepts any IDL and extracts both AI semantic meta and multi-lang code. | [CORE_ENGINE →](products/core-engine.md) |
 | **DeukPack Protocol** | **Messaging Runtime**: Real-time communication engine providing high-performance serialization and AI guardrails. | [PROTOCOL →](products/protocol.md) |
 | **DeukPack Excel Add-in** | **Schema-Driven Editor**: Excel tool for validating and syncing planning data based on schemas. | [EXCEL_ADDIN →](products/excel-addin.md) |
-| **DeukPack Pipeline** | **AI-Native Pipeline**: Automated toolchain from builds to MCP server integration in one command. | [PIPELINE →](products/pipeline.md) |
+| **DeukPack Pipeline** | **AI-Native Pipeline**: Automated toolchain from builds to MCP server integration in one command. | [PIPELINE →](products/pipeline-unity.md) |
 | **DeukNavigation** | Unity/server shared Deuk wire (.dpk) based Recast/Detour NavMesh solution. | [NAVIGATION →](products/navigation.md) |
 | **Extension products** | DB migrator, EF support, Google Sheets, Unreal/Elixir, and more. | [EXTENSIONS →](products/index.md) |
 
@@ -134,7 +134,7 @@ Agents are strong at spec drafts and business logic, but the following are **har
 
 ## Next steps
 
-- [**Use the core library**](products/core-engine/#use-core) — npm/GitHub links, install/CLI/tutorials for immediate use
+- [**Use the core library**](products/core-engine.md) — npm/GitHub links, install/CLI/tutorials for immediate use
 - [**DeukPack kits lineup**](deukpack-kits.md) — stack-specific samples, repo links, ready-to-use examples
 - [Products overview](products/index.md) — roles and scope of each product
 - [Architecture diagram](architecture.md) — product relationships and data flow

@@ -20,7 +20,7 @@
 - [Extended types](#extended-types)
 - [Cross-cutting features](#cross-cutting-features)
 - [통합 Write (필드 선택·오버라이드)](#통합-write-필드-선택오버라이드)
-- [JavaScript (`--js`)](#javascript--js)
+- [JavaScript (`--js`)](#javascript-js)
 - [Related product docs](#related-product-docs)
 
 분류별 짧은 안내: [레퍼런스 개요](index.ko.md) · [기본 구성](fundamentals.ko.md) · [테이블](tables.ko.md) · [메시지·와이어](messages.ko.md) · [DB·엔티티](database.ko.md).

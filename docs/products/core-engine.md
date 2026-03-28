@@ -41,7 +41,7 @@ Transforms interface definitions into a deterministic knowledge base that AI age
 
 - [DeukPack Protocol (Runtime)](protocol.md)
 - [Excel Meta Tool](excel-addin.md)
-- [AI Breakthrough Strategy](../DEUKPACK_AI_BREAKTHROUGH.ko.md)
+- [AI Breakthrough Strategy](../ai-pipeline-integration.md)
 
 ### Install & run (one-liner)
 

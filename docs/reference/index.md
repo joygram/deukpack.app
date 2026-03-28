@@ -15,7 +15,7 @@ Use this section for **names, CLI flags, and generated APIs**. For **what the pr
 | **Database & entities** | `entity`, `--ef`, `tablelink`, ORM attributes | [Database & entities](database.md) |
 | **Full digest** | Full CLI table, C#/C++/JS API tables, type comparison | [API & type reference](api.md) |
 
-**Schema I/O** (OpenAPI, CSV, JSON, Excel merge / emit) lives under [API reference — Schema import & export](api.md#schema-import-export).
+**Schema import and export**(OpenAPI, CSV, JSON, Excel merge/export) are collected in [API & type reference — Schema I/O](api.md#schema-import-and-export).
 
 ---
 
