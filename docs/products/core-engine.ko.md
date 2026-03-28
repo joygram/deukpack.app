@@ -2,7 +2,7 @@
 
 **득팩 코어 엔진**은 Thrift, Protobuf, OpenAPI 등 파편화된 인터페이스 규격을 단일한 **득팩 AST(Superset AST)**로 통합하고, 서로 다른 프로토콜 진영 간의 완벽한 상호 운용성(Interop)을 보장하는 **Universal IDL Gateway**입니다.
 
---8<-- "_includes/product-notices-landing-core-engine.ko.md"
+<div class="dp-dynamic-notice-product" data-product="core-engine"></div>
 
 ---
 

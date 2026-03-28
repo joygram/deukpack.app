@@ -2,7 +2,7 @@
 
 **DeukPack Excel Meta Tool** is a **productivity tool for Excel** designed to help game designers and balance designers manage complex data safely and quickly based on schemas.
 
---8<-- "_includes/product-notices-landing-excel-addin.md"
+<div class="dp-dynamic-notice-product" data-product="excel-addin"></div>
 
 ---
 

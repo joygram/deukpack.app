@@ -2,7 +2,7 @@
 
 **DeukPack Protocol** is a **high-performance binary serialization and intelligent message handling engine** designed for communication between game servers, clients, and AI agents.
 
---8<-- "_includes/product-notices-landing-protocol.md"
+<div class="dp-dynamic-notice-product" data-product="protocol"></div>
 
 ---
 

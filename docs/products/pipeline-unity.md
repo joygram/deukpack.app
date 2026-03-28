@@ -2,7 +2,7 @@
 
 **DeukPack Pipeline** is an **AI-Native build chain** that connects everything from interface definitions (IDL) to multi-language code, game metadata, and the semantic information required by AI agents in a single flow.
 
---8<-- "_includes/product-notices-landing-pipeline-unity.md"
+<div class="dp-dynamic-notice-product" data-product="pipeline-unity"></div>
 
 ---
 

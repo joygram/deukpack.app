@@ -2,7 +2,7 @@
 
 **득팩 프로토콜**은 게임 서버, 클라이언트, 그리고 AI 에이전트 간의 통신을 위해 설계된 **고성능 이진 직렬화 및 지능형 메시지 핸들링 엔진**입니다.
 
---8<-- "_includes/product-notices-landing-protocol.ko.md"
+<div class="dp-dynamic-notice-product" data-product="protocol"></div>
 
 ---
 

@@ -2,7 +2,7 @@
 
 **득팩 Excel 메타툴**은 게임 기획자와 밸런스 디자이너가 복잡한 데이터를 스키마 기반으로 안전하고 빠르게 관리할 수 있게 돕는 **Excel 전용 생산성 도구**입니다.
 
---8<-- "_includes/product-notices-landing-excel-addin.ko.md"
+<div class="dp-dynamic-notice-product" data-product="excel-addin"></div>
 
 ---
 

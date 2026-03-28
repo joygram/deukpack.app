@@ -2,7 +2,7 @@
 
 Add-on products that **build on top of the DeukPack core**. These extend the main products (Core · engine, Protocol, Excel add-in, Pipeline · Unity, **DeukNavigation**) with additional capabilities.
 
---8<-- "_includes/product-notices-landing-extension.md"
+<div class="dp-dynamic-notice-product" data-product="extension"></div>
 
 ---
 

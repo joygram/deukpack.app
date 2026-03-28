@@ -4,7 +4,7 @@
 
 **웹·블로그 (예정):** **deukpack.app** 에서 **도메인 오버로딩**으로 이 제품 전용 허브를 둘 예정입니다. 후보: **deuknavigation.deukpack.app** · **navigation.deukpack.app** (운영에서 하나 또는 병행 선택).
 
---8<-- "_includes/product-notices-landing-navigation.ko.md"
+<div class="dp-dynamic-notice-product" data-product="navigation"></div>
 
 ---
 

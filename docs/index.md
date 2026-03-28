@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
---8<-- "_includes/deukpack-release-notice.md"
+<div id="dp-dynamic-notice-landing"></div>
 
 
 <div class="dp-hero">

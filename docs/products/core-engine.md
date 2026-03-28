@@ -2,7 +2,7 @@
 
 **DeukPack Core Engine** is a **next-generation hybrid serializer** that unifies fragmented interface definitions (Thrift, Protobuf, OpenAPI) into a single binary spec and transforms them into code that both AI agents and engineers can understand simultaneously.
 
---8<-- "_includes/product-notices-landing-core-engine.md"
+<div class="dp-dynamic-notice-product" data-product="core-engine"></div>
 
 ---
 

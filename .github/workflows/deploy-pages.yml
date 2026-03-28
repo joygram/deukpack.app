@@ -30,17 +30,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Inject release notice
-        run: |
-          curl -fsSL -o /tmp/release-notice.json \
-            "https://raw.githubusercontent.com/joygram/DeukPack/main/release-notice.json"
-          curl -fsSL -o /tmp/apply-release-notice.js \
-            "https://raw.githubusercontent.com/joygram/DeukPack/main/scripts/apply-release-notice.js"
-          node /tmp/apply-release-notice.js \
-            --json /tmp/release-notice.json \
-            --mkdocs mkdocs.yml \
-            --write-includes docs/_includes \
-            --product-notices
 
       - name: Build MkDocs
         run: mkdocs build --strict

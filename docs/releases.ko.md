@@ -14,6 +14,6 @@ GitHub에 **새 태그·릴리스**가 올라오면 이 페이지와 사이트 �
 
 정본은 저장소 루트 **`release-notice.json`** 의 `product_notices` 배열입니다. `npm run release-notice:apply`(또는 CI)로 아래 블록이 갱신됩니다. **날짜 역순**이며, 한 노티가 여러 제품군에 동시에 태그될 수 있습니다. 각 제품군 **랜딩**에는 해당 제품만 필터한 노티가 표시됩니다.
 
---8<-- "_includes/product-notices-aggregate.ko.md"
+<div id="dp-dynamic-notice-aggregate"></div>
 
 세부 변경·호환성은 위 **changelog** 정본을 보세요.

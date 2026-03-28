@@ -7,10 +7,7 @@ site_url: https://deukpack.app/
 extra:
   generator: false
   announce: >-
-    <strong>득팩 코어 1.2.6</strong> — 스키마 표준 문자열·C# 코드젠·C++ CI·<code>npm run verify</code> —
-    <a href="https://github.com/joygram/DeukPack/releases/latest">GitHub Releases</a>
-    · <a href="https://deukpack.app/releases/">릴리스 요약</a>
-    · <a href="https://deukpack.app/en/releases/">EN</a>
+    <div id="dp-dynamic-banner-placeholder"></div>
 
 markdown_extensions:
   - admonition
@@ -102,6 +99,9 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/dynamic-release-notice.js
 
 plugins:
   - i18n:
