@@ -11,23 +11,21 @@ hide:
     <img src="/assets/deukpack-brand-concept-01.png" alt="DeukPack 대표 브랜드 시안 - 데이터 팩을 메고 달리는 강아지 컨셉" loading="eager" decoding="async" />
   </div>
   <div class="dp-hero-copy">
-    <p class="dp-eyebrow">DeukPack — 브랜드 컨셉</p>
-    <h1>이득을 묶어 전달하는<br>개발자용 제품 팩</h1>
-    <p class="dp-tagline">무료 · 자유롭게 · 바로 사용 가능한 코어</p>
-    <p class="dp-lead"><strong>무료로</strong>, <strong>자유롭게</strong>, <strong>바로</strong> 쓸 수 있는 코어가 있습니다.<br><br><strong>득팩(DeukPack)</strong>은 <strong>네이티브 IDL(.deuk)</strong>과 <strong>코드 생성·직렬화·프로토콜·스키마 메타</strong>를 한 엔진에서 다루는 <strong>독립 제품</strong>입니다.<br><br>Protobuf·OpenAPI·CSV·DB·레거시 .thrift 등은 <strong>같은 파이프라인에 넣을 입력</strong>일 뿐입니다. “Thrift 대체품”으로만 보지 않아도 됩니다.<br><br>서버·실시간 게임·내부 툴까지 <strong>같은 계약</strong>으로 이어질 수 있습니다.</p>
+    <p class="dp-eyebrow">DeukPack — AI 에이전트를 위한 핵심 인프라</p>
+    <h1>AI-Ready<br>인터페이스 허브</h1>
+    <p class="dp-tagline">Mixed-IDL Hybrid Serializer · Deterministic Pipeline</p>
+    <p class="dp-lead"><strong>무료로</strong>, <strong>자유롭게</strong>, <strong>바로</strong> 쓸 수 있는 인터페이스 허브가 있습니다.<br><br><strong>득팩(DeukPack)</strong>은 <strong>네이티브 IDL(.deuk)</strong>과 <strong>코드 생성·직렬화·프로토콜·AI 시맨틱 메타</strong>를 한 엔진에서 다루는 <strong>독립 제품</strong>입니다.<br><br>Protobuf·OpenAPI·CSV·DB·레거시 .thrift 등은 <strong>하나의 하이브리드 파이프라인</strong>에 넣을 입력일 뿐입니다.<br><br>AI 에이전트와 엔지니어가 <strong>동일한 데이터 계약</strong>으로 소통하고 검증받는 시대를 득팩이 엽니다.</p>
     <div class="dp-pills">
-      <span class="dp-pill">무료 · Apache-2.0 · 바로 적용 가능</span>
-      <span class="dp-pill">IDL + Schema</span>
-      <span class="dp-pill">Protocol + Runtime</span>
-      <span class="dp-pill">스키마·메타 파이프라인</span>
-      <span class="dp-pill">AI·에이전트 파이프라인 연동</span>
+      <span class="dp-pill">AI-Ready Interface Hub</span>
+      <span class="dp-pill">Mixed-IDL Hybrid Serializer</span>
+      <span class="dp-pill">IDL-to-AI Semantic Mapping</span>
+      <span class="dp-pill">MCP 기반 AI 가드레일</span>
     </div>
-    <p class="dp-actions">
+    <div class="dp-actions">
       <a href="products/core-engine/#use-core" class="md-button md-button--primary">득팩 코어 바로 사용하기</a>
       <a href="products/" class="md-button">제품군 개요</a>
       <a href="deukpack-kits/" class="md-button">득팩 키트 라인업</a>
-      <a href="positioning/" class="md-button">포지셔닝</a>
-    </p>
+    </div>
   </div>
 </div>
 
@@ -40,14 +38,14 @@ hide:
 
 ## 제품군 요약
 
-| 제품 | 핵심 역할 |
-|------|-----------|
-| **득팩 코어·엔진** | **Apache-2.0**, **바로 사용 가능**. .deuk 중심 IDL, AST, 코드 생성, 스키마·메타. **차별화:** 구조체 상속(extends), 다양한 타입(float·DB 모델·tablelink). Protobuf·OpenAPI·CSV·JSON·DB·.thrift 등 **다중 입력**. |
-| **득팩 프로토콜** | Binary/Compact/JSON 직렬화, msgId·ProtocolRegistry, 제로카피 옵션. |
-| **득팩 Excel 애드인** | 스키마 기반 메타 작업(헤더·검증·비교) — Excel 등 스프레드시트에서 제공. |
-| **득팩 파이프라인·Unity** | 정의·메타 → 코드·스키마·테이블 → Unity·서버 검증·로드. 서버 연동·실시간 게임 연동까지 동일 스키마로 연결. |
-| **DeukNavigation** | Unity·서버 공용 Deuk 와이어(.dpk) 기반 Recast/Detour NavMesh. DeukNavRuntime·CrowdContext·DeukNavAgent·베이킹·DeukNaviTool. |
-| **확장 제품군** | Deuk UI·에디터 도구, EF, DB 마이그레이터, Google Sheets, Unreal/Elixir 등 부가 제품. |
+| 제품 | 한 줄 정의 | 소개 문서 |
+|------|-----------|-----------|
+| **득팩 코어·엔진** | **Mixed-IDL Hybrid Serializer**: 어떤 IDL이든 받아 AI 시맨틱 메타와 다언어 코드를 동시에 추출하는 차세대 엔진 | [CORE_ENGINE →](products/core-engine.ko.md) |
+| **득팩 프로토콜** | **Messaging Runtime**: 고성능 직렬화 및 AI 가드레일을 제공하는 실시간 통신 엔진 | [PROTOCOL →](products/protocol.ko.md) |
+| **득팩 Excel 애드인** | **Schema-Driven Editor**: 기획 데이터를 스키마 기반으로 검증·동기화하는 Excel 도구 | [EXCEL_ADDIN →](products/excel-addin.ko.md) |
+| **득팩 파이프라인** | **AI-Native Pipeline**: 빌드부터 MCP 서버 연동까지 한 명령으로 이어주는 자동화 툴체인 | [PIPELINE →](products/pipeline.ko.md) |
+| **DeukNavigation** | Unity·서버 공용 Deuk 와이어(.dpk) 기반 Recast/Detour NavMesh 솔루션 | [NAVIGATION →](products/navigation.ko.md) |
+| **확장 제품군** | DB 마이그레이터, EF 지원, Google Sheets, Unreal/Elixir 등 선택적 확장 | [EXTENSIONS →](products/index.ko.md) |
 
 → [제품 관계도](architecture.ko.md)에서 제품 간 데이터·스키마 흐름을 다이어그램으로 볼 수 있습니다. 자세한 내용은 [제품군 개요](products/index.ko.md)와 각 제품 페이지를 참고하세요. **스택별 바로 적용 예시**는 [득팩 키트 라인업](deukpack-kits.ko.md)에서 안내합니다.
 
@@ -95,9 +93,9 @@ hide:
     <p><strong>tablelink</strong>·datetime·decimal 등 DB 모델까지 한 타입 시스템. <a href="tutorial/write-with-overrides/">튜토리얼 →</a></p>
   </div>
   <div class="dp-card dp-card--highlight dp-card--ai">
-    <h3>AI 시대에서도 필요한 이유</h3>
-    <p>에이전트는 <strong>스펙 초안·로직</strong>에는 강하지만, <strong>결정론적 출력·와이어 호환·다언어 동시 정합성·빌드 재현성</strong>은 보장하기 어렵습니다. 득팩은 그 부분을 담당합니다. 스키마를 단일 소스로 두고 <strong>동일 입력 → 동일 코드·직렬화</strong>를 내주므로, 에이전트는 스펙·로직만 만들고 득팩이 “실행 가능한 타입·파이프라인”으로 바꿔 줍니다.</p>
-    <p><a href="ai-pipeline-integration.md">에이전트가 할 수 없는 일 · 연동 정리 →</a></p>
+    <h3>AI 시대의 돌파구</h3>
+    <p>에이전트는 <strong>스펙 설계·로직</strong>에는 강하지만, <strong>결정론적 바이너리 정합성·다언어 동시 동기화·MCP 가드레일</strong>은 득팩이 더 잘합니다. 득팩은 에이전트에게 <strong>'실행 가능한 타입'</strong>과 <strong>'보호막'</strong>을 제공하여, AI가 가장 신뢰할 수 있는 개발 파트너가 되도록 돕습니다.</p>
+    <p><a href="ai-pipeline-integration.ko.md">AI 시맨틱 매핑 및 가드레일 전략 →</a></p>
   </div>
 </div>
 

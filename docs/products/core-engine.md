@@ -1,24 +1,47 @@
-# DeukPack Core · Engine
+# DeukPack Core Engine (Mixed-IDL Hybrid Serializer)
 
-**One-liner**: Centered on the **DeukPack native IDL (.deuk)**, provides **parsing, AST, code generation, schema, and meta** in a single engine. Outputs C#, C++, TS, JS; Protobuf, OpenAPI, CSV, and legacy .thrift are **inputs to the same pipeline**.
+**DeukPack Core Engine** is a **next-generation hybrid serializer** that unifies fragmented interface definitions (Thrift, Protobuf, OpenAPI) into a single binary spec and transforms them into code that both AI agents and engineers can understand simultaneously.
 
 --8<-- "_includes/product-notices-landing-core-engine.md"
 
 ---
 
-## Core differentiators
+## Core Differentiators
 
-| Area | What DeukPack offers |
-|------|----------------------|
-| **Inheritance** | **Struct extends** — multi-level inheritance, parent fields merged at codegen; wire-compatible, no duplicate field IDs. |
-| **Data types** | **Primitives**: bool, byte, int8–int64, float, double, string, binary; **containers**: list, set, map; **tablelink** (DB/table row reference); datetime, decimal. Same type set across C#, C++, TS, JS. |
-| **DB model** | SQLite DDL from AST; EF-ready attributes and codegen; table/container in IDL for meta and row types. |
+### 1. Mixed-IDL Hybrid Integration
+Manage various interface definition languages within a single pipeline.
+- **Multi-Input Support**: `.deuk` (Native), `.thrift` (Legacy), `.proto` (Protobuf), OpenAPI, CSV/JSON, and DB schemas.
+- **Incremental Migration**: Maintain existing IDLs while progressively applying DeukPack's advanced features like inheritance and overrides.
+
+### 2. Advanced Type System (IDL Architecture)
+Provides rich linguistic features for representing complex business entities beyond simple data transfer.
+- **Struct Inheritance (`extends`)**: An object-oriented design where common fields are defined in a parent struct and inherited/extended by children.
+- **Data Projection (`Write Overrides`)**: Selectively serialize specific fields or replace values for different recipients while maintaining the same memory instance.
+- **Rich Built-in Types**: Built-in support for `tablelink` (table reference), `datetime`, `decimal`, and more, optimized for games and planning tools.
+
+### 3. AI-Ready Semantic Mapping
+Transforms interface definitions into a deterministic knowledge base that AI agents can trust.
+- **Semantic Export**: Extracts comment-based intents and business constraints into a context that AI can understand.
+- **Deterministic Codegen**: Realizes variable AI outputs into precise, predictable multi-language code via the DeukPack engine.
 
 ---
 
-## Use the core now { #use-core }
+## Feature Summary
 
-The DeukPack **core** is **free (Apache-2.0)** and **ready to install**. CLI, codegen, and C# runtime are available from a single npm package.
+| Category | Content |
+|----------|---------|
+| **Core Library** | AST builder, high-performance parser, multi-language code generators (C#, C++, TS, JS). |
+| **Code Generation** | Structs, enums, service interfaces, field constants, and schema metadata. |
+| **CLI Tool** | `deukpack init`, `run`, `build`, `export:ai-context`. |
+| **AI Integration** | AI semantic exporter and support for MCP-based runtime guardrails. |
+
+---
+
+## Next Steps
+
+- [DeukPack Protocol (Runtime)](protocol.md)
+- [Excel Meta Tool](excel-addin.md)
+- [AI Breakthrough Strategy](../DEUKPACK_AI_BREAKTHROUGH.ko.md)
 
 ### Install & run (one-liner)
 

@@ -7,10 +7,10 @@ site_url: https://deukpack.app/
 extra:
   generator: false
   announce: >-
-    <strong>DeukPack Core 1.2.6</strong> — Schema standard strings · C# codegen · C++ CI · <code>npm run verify</code> —
+    <strong>득팩 코어 1.2.6</strong> — 스키마 표준 문자열·C# 코드젠·C++ CI·<code>npm run verify</code> —
     <a href="https://github.com/joygram/DeukPack/releases/latest">GitHub Releases</a>
-    · <a href="https://deukpack.app/releases/">Release notes</a>
-    · <a href="https://deukpack.app/ko/releases/">KO</a>
+    · <a href="https://deukpack.app/releases/">릴리스 요약</a>
+    · <a href="https://deukpack.app/en/releases/">EN</a>
 
 markdown_extensions:
   - admonition

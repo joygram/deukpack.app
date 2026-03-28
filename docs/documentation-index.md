@@ -18,15 +18,14 @@ An overview of **Korean / English** documentation on this site and in the DeukPa
 
 | Category | 한국어 | English |
 |----------|--------|---------|
-| **Tutorial overview** | [튜토리얼](tutorial/index.md) | Same page — use the **language switcher** (top right) → English |
-| **Quick start** | [빠른 시작](tutorial/quickstart.md) | Same as above |
-| **IDL guide** | [IDL 가이드](tutorial/idl-guide.md) | Use the **language switcher** → English |
-| **Protocol & serialization** | [프로토콜·직렬화](tutorial/protocol-serialization.md) | Use the **language switcher** → English |
-| **C# / C++ guide** | [C# 가이드](tutorial/csharp-guide.md), [C++ 가이드](tutorial/cpp-guide.md) | Use the **language switcher** → English |
-| **Unified Write · extends** | [Tutorial](tutorial/write-with-overrides.md) | Overrides · field selection · inherit, C#·JS·C++, comparison table |
-| **API reference** | [API·타입 참조](reference/api.md) | Same page — **language switcher** → English |
-| **Wire protocol families** | [Wire protocol families](reference/wire-protocols.md) | Interop vs Deuk native, JS limits |
-| **Products & kits lineup** | [제품군](products/index.md), [득팩 키트 라인업](deukpack-kits.md) | Same path — **language switcher** → English |
+| **Tutorial overview** | [Tutorial](tutorial/index.md) | [Tutorial](tutorial/index.md) |
+| **Quick start** | [Quick Start](tutorial/quickstart.md) | [Quick Start](tutorial/quickstart.md) |
+| **Core Engine** | [Core Engine](products/core-engine.md) | [Core Engine](products/core-engine.md) |
+| **Protocol** | [Protocol](products/protocol.md) | [Protocol](products/protocol.md) |
+| **Excel Meta Tool** | [Excel Add-in](products/excel-addin.md) | [Excel Add-in](products/excel-addin.md) |
+| **Pipeline** | [Pipeline](products/pipeline-unity.md) | [Pipeline](products/pipeline-unity.md) |
+| **API Reference** | [API Reference](reference/api.md) | [API Reference](reference/api.md) |
+| **Products & Kits** | [Products](products/index.md), [Kits](deukpack-kits.md) | [Products](products/index.md), [Kits](deukpack-kits.md) |
 | **Releases · news** | [릴리스 · 뉴스](releases.md) | This page — **language switcher** → English |
 | **AI tools integration** | [Antigravity·Cursor·Copilot·Codex](ai-ide-tools-guide.md) | **Language switcher** → English |
 

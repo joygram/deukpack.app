@@ -18,15 +18,14 @@
 
 | 구분 | 한글 | English |
 |------|------|---------|
-| **튜토리얼 개요** | [튜토리얼](tutorial/index.ko.md) | 같은 페이지에서 **언어 전환(우측 상단)** → English |
-| **빠른 시작** | [빠른 시작](tutorial/quickstart.ko.md) | 위와 동일 |
-| **IDL 가이드** | [IDL 가이드](tutorial/idl-guide.ko.md) | *(한글 문서 참고)* |
-| **프로토콜·직렬화** | [프로토콜·직렬화](tutorial/protocol-serialization.ko.md) | *(한글 문서 참고)* |
-| **C# / C++ 가이드** | [C# 가이드](tutorial/csharp-guide.ko.md), [C++ 가이드](tutorial/cpp-guide.ko.md) | *(한글 문서 참고)* |
-| **통합 Write·extends** | [튜토리얼](tutorial/write-with-overrides.ko.md) | 오버라이드·필드 선택·상속, C#·JS·C++, 비교표 |
-| **API·레퍼런스** | [API·타입 참조](reference/api.ko.md) | 같은 페이지에서 **언어 전환** → English |
-| **와이어·프로토콜 계열** | [와이어 프로토콜 계열](reference/wire-protocols.ko.md) | 호환 vs 득팩 전용·JS 제한 |
-| **제품·키트 라인업** | [제품군](products/index.ko.md), [득팩 키트 라인업](deukpack-kits.ko.md) | *(동일 경로, 한글)* |
+| **튜토리얼 개요** | [튜토리얼](tutorial/index.ko.md) | [Tutorial](tutorial/index.md) |
+| **빠른 시작** | [빠른 시작](tutorial/quickstart.ko.md) | [Quick Start](tutorial/quickstart.md) |
+| **코어 엔진** | [코어 엔진](products/core-engine.ko.md) | [Core Engine](products/core-engine.md) |
+| **프로토콜** | [프로토콜·직렬화](products/protocol.ko.md) | [Protocol](products/protocol.md) |
+| **엑셀 메타툴** | [Excel 애드인](products/excel-addin.ko.md) | [Excel Add-in](products/excel-addin.md) |
+| **파이프라인** | [파이프라인·Unity](products/pipeline-unity.ko.md) | [Pipeline](products/pipeline-unity.md) |
+| **API 레퍼런스** | [API·타입 참조](reference/api.ko.md) | [API Reference](reference/api.md) |
+| **제품·키트 라인업** | [제품군](products/index.ko.md), [득팩 키트 라인업](deukpack-kits.ko.md) | [Products](products/index.md), [Kits](deukpack-kits.md) |
 | **릴리스·뉴스** | [릴리스 · 뉴스](releases.ko.md) | 언어 전환 → English (`/en/releases/`) |
 | **AI 도구 연동** | [Antigravity·Cursor·Copilot·Codex](ai-ide-tools-guide.ko.md) | 언어 전환 → English |
 

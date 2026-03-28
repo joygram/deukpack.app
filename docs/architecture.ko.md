@@ -9,7 +9,7 @@
 ``` mermaid
 flowchart TB
   subgraph 입력["정의·데이터 소스"]
-    IDL[".deuk / Protobuf / Thrift"]
+    IDL[".deuk / Protobuf / Thrift<br/>(Universal Gateway)"]
     OAS["OpenAPI / JSON Schema"]
     CSV["CSV / JSON"]
     DB["DB·메타"]
@@ -63,7 +63,7 @@ flowchart TB
   PIPE --> RT
 ```
 
-- **정의·데이터 소스**: 득팩 IDL(.deuk)·Protobuf·Thrift·OpenAPI·CSV·JSON·DB·스프레드시트 등이 **코어·엔진**으로 들어갑니다.
+- **정의·데이터 소스**: 득팩 IDL(.deuk)·Protobuf·Thrift·OpenAPI·CSV·JSON·DB·스프레드시트 등이 **Universal IDL Gateway**인 코어 엔진으로 들어갑니다.
 - **코어·엔진**: 파싱·AST를 바탕으로 **코드 생성**과 **스키마·메타**를 만듭니다.
 - **생성·산출물**: C#/C++/TS/JS 코드, SQLite, 스키마 JSON이 나와 **프로토콜·파이프라인·Excel 애드인·확장 제품**에서 사용됩니다.
 - **런타임·툴**: 프로토콜(직렬화·메시지), Excel 애드인(헤더·검증), 파이프라인·Unity(검증·로드), 확장 제품군이 코어 산출물을 공유합니다.

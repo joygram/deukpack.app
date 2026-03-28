@@ -1,24 +1,48 @@
-# 득팩 코어·엔진
+# 득팩 코어 엔진 (Universal IDL Gateway)
 
-**한 줄**: **득팩 네이티브 IDL(.deuk)** 을 중심으로 **파싱·AST·코드 생성·스키마·메타**를 한 엔진에서 제공합니다. C#·C++·TS·JS 출력; Protobuf·OpenAPI·CSV·레거시 .thrift 는 **같은 파이프라인 입력**입니다.
+**득팩 코어 엔진**은 Thrift, Protobuf, OpenAPI 등 파편화된 인터페이스 규격을 단일한 **득팩 AST(Superset AST)**로 통합하고, 서로 다른 프로토콜 진영 간의 완벽한 상호 운용성(Interop)을 보장하는 **Universal IDL Gateway**입니다.
 
 --8<-- "_includes/product-notices-landing-core-engine.ko.md"
 
 ---
 
-## 코어 차별화
+## 핵심 차별점
 
-| 영역 | 득팩 코어에서 제공하는 것 |
-|------|---------------------------|
-| **상속** | **구조체 extends** — 다단계 상속, 부모 필드 코드 생성 시 병합; 와이어 호환, 필드 ID 중복 없음. |
-| **데이터 타입** | **기본형**: bool, byte, int8–int64, float, double, string, binary; **컨테이너**: list, set, map; **tablelink**(DB·테이블 행 참조); datetime, decimal. C#·C++·TS·JS 동일 타입 세트. |
-| **DB 모델** | AST → SQLite DDL; EF 연동 속성·코드 생성; 메타·행 타입용 IDL table/container. |
+### 1. Universal IDL Gateway & Interop
+다양한 인터페이스 정의 언어를 하나의 파이프라인에서 통합 관리하고, 진영 간 경계를 허뭅니다.
+- **다중 입력 지원**: `.deuk`(네이티브), `.thrift`(레거시), `.proto`(Protobuf), OpenAPI, JSON Schema, CSV.
+- **Cross-Protocol Interop**: Thrift로 정의된 데이터를 Protobuf 와이어로 전송하거나 그 반대로 변환하는 **무손실 라운드트립** 지원.
+- **점진적 마이그레이션**: 기존 IDL을 유지하면서 득팩의 고도화된 기능(상속, 오버라이드)을 결합하여 현대적인 스택으로 자연스럽게 전환 가능합니다.
+
+### 2. 고도화된 타임 시스템 (IDL Architecture)
+단순한 데이터 전송을 넘어, 복잡한 비즈니스 엔티티를 표현할 수 있는 풍부한 언어적 기능을 제공합니다.
+- **구조체 상속 (`extends`)**: 공통 필드를 부모 구조체에 정의하고 자식이 이를 상속받아 확장하는 객체 지향적 설계.
+- **데이터 프로젝션 (`Write Overrides`)**: 동일한 메모리 인스턴스를 유지하면서 수신자별로 특정 필드만 선택하여 직렬화하거나 값을 교체.
+- **풍부한 내장 타입**: `tablelink`(테이블 참조), `datetime`, `decimal` 등 게임 및 기획 도구에 최적화된 타입 기본 제공.
+
+### 3. AI 시맨틱 매핑 (AI-Ready Mapping)
+인터페이스 정의를 AI 에이전트가 신뢰할 수 있는 결정론적 지식 베이스로 변환합니다.
+- **시맨틱 익스포트**: 주석 기반의 의도(Intent)와 비즈니스 제약 조건을 AI가 이해할 수 있는 컨텍스트로 추출.
+- **결정론적 코드젠**: AI의 가변적인 출력을 득팩 엔진이 정교하고 예측 가능한 다언어 코드로 실체화.
 
 ---
 
-## 득팩 코어 바로 사용하기 { #use-core }
+## 제공 기능 요약
 
-득팩 **코어**는 **무료·Apache-2.0**으로 **바로** 설치해 쓸 수 있습니다. CLI·코드 생성·C# 런타임까지 npm 하나로 사용할 수 있습니다.
+| 구분 | 내용 |
+|------|------|
+| **코어 라이브러리** | AST 빌더, 고성능 파서, 다언어 코드 제너레이터 (C#, C++, TS, JS) |
+| **코드 생성** | 구조체, 열거형, 서비스 인터페이스, 필드 상수 및 스키마 메타데이터 |
+| **CLI 도구** | `deukpack init`, `run`, `build`, `export:ai-context` |
+| **AI 연동** | AI 시맨틱 익스포터, MCP 기반 런타임 가드레일 지원 |
+
+---
+
+## 다음에 읽을 문서
+
+- [득팩 프로토콜 (런타임)](protocol.ko.md)
+- [Excel 메타툴](excel-addin.ko.md)
+- [AI 시대의 돌파구 전략](../DEUKPACK_AI_BREAKTHROUGH.ko.md)
 
 ### 설치·실행 (한 줄)
 
@@ -78,7 +102,7 @@ npx deukpack ./idl/root.deuk ./gen --csharp --cpp --js -I ./idl
 
 - **.deuk** 우선; **Protobuf·.thrift** 를 한 AST에서 혼합할 수 있습니다.
 - **OpenAPI 3.x·JSON Schema·CSV** 임포트로 기존 스펙을 AST로 불러와 코드·메타·테이블을 한 툴체인에서 다룹니다.
-- .proto·.thrift 파일을 그대로 가져와 점진적으로 통합할 수 있습니다.
+- **Universal Gateway:** .proto·.thrift 파일을 그대로 가져와 단일 AST에서 혼합하고, 진영에 구애받지 않는 통합 핸들러를 구성할 수 있습니다.
 
 ---
 

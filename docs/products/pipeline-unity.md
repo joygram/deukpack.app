@@ -1,25 +1,43 @@
-# DeukPack Pipeline · Unity
+# DeukPack Pipeline · Unity (AI-Native Pipeline)
 
-**One-liner**: The product family that **connects definition and meta artifacts** to real projects, Unity, and servers. Builds, copies, and applies code, schemas, and tables so Unity and servers can validate and load them — extending to **server integration and real-time game networking** with the same schema and protocol.
+**DeukPack Pipeline** is an **AI-Native build chain** that connects everything from interface definitions (IDL) to multi-language code, game metadata, and the semantic information required by AI agents in a single flow.
 
 --8<-- "_includes/product-notices-landing-pipeline-unity.md"
 
 ---
 
-## What you get
+## Core Values
 
-- **End-to-end integration**: Definition/meta change → DeukPack codegen → artifacts reflected in Unity/server → assets reference both schema and C# in a single pipeline. The same generated types and schemas can be used for **server and real-time game integration**.
-- **Validation & load**: Generated C# types and schema JSON validate CSV/JSON data and load tables/meta at runtime.
+### 1. Intelligent Pipeline (`deukpack.pipeline.json`)
+Controls the entire build process with a single configuration file.
+- **Unified Jobs**: Automatically detects all `.deuk`, `.thrift`, and `.proto` files in a directory and integrates them into a single build unit.
+- **Multi-Language Simultaneous Output**: Deploys C#, C++, TypeScript, and JavaScript artifacts to their respective platform paths with a single build command.
+
+### 2. Optimized Unity Integration
+Provides optimized integration for the Unity editor and runtime.
+- **Automatic Table Loader**: Automatically generates registry code to load Excel data into Unity with optimal performance as soon as it's built.
+- **EF Core Support**: Manages DB entity information in IDL to maintain perfect data model consistency between Unity and the server.
+
+### 3. AI Semantic Metadata Scaling (Exporter)
+Builds an environment where AI agents can accurately understand the system architecture.
+- **Automatic AI Guide Generation**: Extracts IDL comment information to generate an AI-only knowledge base (Markdown/JSON) at the pipeline stage.
+- **Data Lineage**: Helps AI track the flow of data from definition to code and database.
 
 ---
 
-## Features
+## Feature Summary
 
 | Category | Content |
 |----------|---------|
-| **Build & copy** | IDL/Excel → codegen artifacts (code, schema, tables) built and copied to target paths. |
-| **Unity integration** | Artifacts reflected in Unity project paths. Asset and script references updated. |
-| **Validation** | Schema and CSV/JSON validation for data consistency. |
-| **Load** | Load meta and tables at runtime using generated C# types. |
+| **Build Automation** | Batch generation of code, schemas, and binaries via `deukpack build`. |
+| **Unity Integration** | C# code generation and table handling runtime libraries for Unity. |
+| **Multi-IDL Integration** | Unifies Thrift, Protobuf, and OpenAPI definitions into a single pipeline. |
+| **AI Context** | Semantic export for AI agents and support for MCP server integration. |
 
-Core language design, Excel editing UI, and full protocol policy are covered by [Core · engine](core-engine.md), [Excel add-in](excel-addin.md), and [Protocol](protocol.md) respectively.
+---
+
+## Next Steps
+
+- [Core Engine Introduction](core-engine.md)
+- [DeukPack Kits Lineup](../deukpack-kits.md)
+- [Positioning Strategy](../positioning.md)

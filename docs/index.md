@@ -11,23 +11,21 @@ hide:
     <img src="/assets/deukpack-brand-concept-01.png" alt="DeukPack brand concept - a dog carrying data packs" loading="eager" decoding="async" />
   </div>
   <div class="dp-hero-copy">
-    <p class="dp-eyebrow">DeukPack — Brand Concept</p>
-    <h1>Pack the gains,<br>ship the code</h1>
-    <p class="dp-tagline">Free · Open · Ready-to-use core</p>
-    <p class="dp-lead"><strong>Free</strong>, <strong>open</strong>, and <strong>ready to use</strong> — the core is available now.<br><br><strong>DeukPack</strong> is a <strong>standalone product</strong> that handles <strong>native IDL (.deuk)</strong>, <strong>code generation, serialization, protocol, and schema metadata</strong> in a single engine.<br><br>Protobuf, OpenAPI, CSV, DB, legacy .thrift, etc. are just <strong>inputs to the same pipeline</strong>. It's more than a "Thrift replacement."<br><br>Servers, real-time games, and internal tools can all share the <strong>same contract</strong>.</p>
+    <p class="dp-eyebrow">DeukPack — Essential Infrastructure for AI Agents</p>
+    <h1>AI-Ready<br>Interface Hub</h1>
+    <p class="dp-tagline">Mixed-IDL Hybrid Serializer · Deterministic Pipeline</p>
+    <p class="dp-lead"><strong>Free</strong>, <strong>open</strong>, and <strong>ready-to-use</strong> — the ultimate interface hub is here.<br><br><strong>DeukPack</strong> is a <strong>standalone product</strong> that handles <strong>native IDL (.deuk)</strong>, <strong>code generation, serialization, protocol, and AI semantic metadata</strong> in a single engine.<br><br>Protobuf, OpenAPI, CSV, DB, and legacy .thrift are just <strong>inputs to a single hybrid pipeline</strong>.<br><br>DeukPack opens an era where AI agents and engineers communicate and validate through the <strong>same data contract</strong>.</p>
     <div class="dp-pills">
-      <span class="dp-pill">Free · Apache-2.0 · Ready to use</span>
-      <span class="dp-pill">IDL + Schema</span>
-      <span class="dp-pill">Protocol + Runtime</span>
-      <span class="dp-pill">Schema · Metadata pipeline</span>
-      <span class="dp-pill">AI · Agent pipeline integration</span>
+      <span class="dp-pill">AI-Ready Interface Hub</span>
+      <span class="dp-pill">Mixed-IDL Hybrid Serializer</span>
+      <span class="dp-pill">IDL-to-AI Semantic Mapping</span>
+      <span class="dp-pill">MCP-based AI Guardrail</span>
     </div>
-    <p class="dp-actions">
+    <div class="dp-actions">
       <a href="products/core-engine/#use-core" class="md-button md-button--primary">Use the core now</a>
       <a href="products/" class="md-button">Products overview</a>
       <a href="deukpack-kits/" class="md-button">DeukPack kits lineup</a>
-      <a href="positioning/" class="md-button">Positioning</a>
-    </p>
+    </div>
   </div>
 </div>
 
@@ -40,14 +38,14 @@ hide:
 
 ## Product lineup
 
-| Product | Core role |
-|---------|-----------|
-| **DeukPack Core · Engine** | **Apache-2.0**, **ready to use**. .deuk-centric IDL, AST, codegen, schema · metadata. **Differentiators:** struct inheritance (extends), rich types (float, DB model, tablelink). Multi-input: Protobuf, OpenAPI, CSV, JSON, DB, .thrift, etc. |
-| **DeukPack Protocol** | Binary/Compact/JSON serialization, msgId · ProtocolRegistry, zero-copy option. |
-| **DeukPack Excel Add-in** | Schema-based metadata editing (headers, validation, diff) in Excel and spreadsheets. |
-| **DeukPack Pipeline · Unity** | Definition · metadata → code · schema · tables → Unity/server validation · loading. Same schema for server and real-time game integration. |
-| **DeukNavigation** | Unity/server shared Deuk wire (.dpk) based Recast/Detour NavMesh. DeukNavRuntime, CrowdContext, DeukNavAgent, baking, DeukNaviTool. |
-| **Extension products** | Deuk UI, editor tools, EF, DB migrator, Google Sheets, Unreal/Elixir, etc. |
+| Product | One-line Definition | Intro Doc |
+|---------|----------------------|-----------|
+| **DeukPack Core · Engine** | **Mixed-IDL Hybrid Serializer**: Next-gen engine that accepts any IDL and extracts both AI semantic meta and multi-lang code. | [CORE_ENGINE →](products/core-engine.md) |
+| **DeukPack Protocol** | **Messaging Runtime**: Real-time communication engine providing high-performance serialization and AI guardrails. | [PROTOCOL →](products/protocol.md) |
+| **DeukPack Excel Add-in** | **Schema-Driven Editor**: Excel tool for validating and syncing planning data based on schemas. | [EXCEL_ADDIN →](products/excel-addin.md) |
+| **DeukPack Pipeline** | **AI-Native Pipeline**: Automated toolchain from builds to MCP server integration in one command. | [PIPELINE →](products/pipeline.md) |
+| **DeukNavigation** | Unity/server shared Deuk wire (.dpk) based Recast/Detour NavMesh solution. | [NAVIGATION →](products/navigation.md) |
+| **Extension products** | DB migrator, EF support, Google Sheets, Unreal/Elixir, and more. | [EXTENSIONS →](products/index.md) |
 
 → See the [Architecture diagram](architecture.md) for data/schema flow between products. Details in [Products overview](products/index.md) and each product page. **Stack-specific ready-to-use examples** in [DeukPack kits lineup](deukpack-kits.md).
 
@@ -95,9 +93,9 @@ Source, issues, and contributions: [GitHub repository](https://github.com/joygra
     <p><strong>tablelink</strong>, datetime, decimal, and more — one type system from DB models to metadata. <a href="tutorial/write-with-overrides/">Tutorial →</a></p>
   </div>
   <div class="dp-card dp-card--highlight dp-card--ai">
-    <h3>Why it matters in the AI era</h3>
-    <p>Agents are strong at <strong>spec drafts and logic</strong>, but <strong>deterministic output, wire compatibility, multi-language consistency, and build reproducibility</strong> are hard to guarantee. DeukPack handles that. With the schema as a single source, <strong>same input → same code/serialization</strong> — agents create specs and logic; DeukPack turns them into "executable types and pipelines."</p>
-    <p><a href="ai-pipeline-integration.md">What agents can't do · Integration summary →</a></p>
+    <h3>Breakthrough in the AI Era</h3>
+    <p>Agents are strong at <strong>spec design and logic</strong>, but DeukPack excels at <strong>deterministic binary consistency, multi-lang synchronization, and MCP guardrails</strong>. DeukPack provides <strong>'executable types'</strong> and <strong>'shields'</strong> to agents, helping AI become your most trusted development partner.</p>
+    <p><a href="ai-pipeline-integration.md">AI Semantic Mapping & Guardrail Strategy →</a></p>
   </div>
 </div>
 
