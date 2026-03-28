@@ -22,9 +22,9 @@ hide:
       <span class="dp-pill">MCP 기반 AI 가드레일</span>
     </div>
     <div class="dp-actions">
-      [득팩 코어 바로 사용하기](products/core-engine.ko.md){: .md-button .md-button--primary }
-      [제품군 개요](products/){: .md-button }
-      [득팩 키트 라인업](deukpack-kits/){: .md-button }
+      <a href="products/core-engine/" class="md-button md-button--primary">득팩 코어 바로 사용하기</a>
+      <a href="products/" class="md-button">제품군 개요</a>
+      <a href="deukpack-kits/" class="md-button">득팩 키트 라인업</a>
     </div>
   </div>
 </div>

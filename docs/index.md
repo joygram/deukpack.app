@@ -22,9 +22,9 @@ hide:
       <span class="dp-pill">MCP-based AI Guardrail</span>
     </div>
     <div class="dp-actions">
-      [Use the core now](products/core-engine.md){: .md-button .md-button--primary }
-      [Products overview](products/){: .md-button }
-      [DeukPack kits lineup](deukpack-kits/){: .md-button }
+      <a href="products/core-engine/" class="md-button md-button--primary">Use the core now</a>
+      <a href="products/" class="md-button">Products overview</a>
+      <a href="deukpack-kits/" class="md-button">DeukPack kits lineup</a>
     </div>
   </div>
 </div>
