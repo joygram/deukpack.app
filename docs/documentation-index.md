@@ -18,16 +18,16 @@ An overview of **Korean / English** documentation on this site and in the DeukPa
 
 | Category | 한국어 | English |
 |----------|--------|---------|
-| **Tutorial overview** | [Tutorial](tutorial/index.ko.md) | [Tutorial](tutorial/index.md) |
-| **Quick start** | [Quick Start](tutorial/quickstart.ko.md) | [Quick Start](tutorial/quickstart.md) |
-| **Core Engine** | [Core Engine](products/core-engine.ko.md) | [Core Engine](products/core-engine.md) |
-| **Protocol** | [Protocol](products/protocol.ko.md) | [Protocol](products/protocol.md) |
-| **Excel Meta Tool** | [Excel Add-in](products/excel-addin.ko.md) | [Excel Add-in](products/excel-addin.md) |
-| **Pipeline** | [Pipeline](products/pipeline-unity.ko.md) | [Pipeline](products/pipeline-unity.md) |
-| **API Reference** | [API Reference](reference/api.ko.md) | [API Reference](reference/api.md) |
-| **Products & Kits** | [Products](products/index.ko.md), [Kits](deukpack-kits.ko.md) | [Products](products/index.md), [Kits](deukpack-kits.md) |
-| **Releases · news** | [릴리스 · 뉴스](releases.ko.md) | This page — **language switcher** → English |
-| **AI tools integration** | [Antigravity·Cursor·Copilot·Codex](ai-ide-tools-guide.ko.md) | **Language switcher** → English |
+| **Tutorial overview** | [Tutorial](tutorial/index.md) | [Tutorial](tutorial/index.md) |
+| **Quick start** | [Quick Start](tutorial/quickstart.md) | [Quick Start](tutorial/quickstart.md) |
+| **Core Engine** | [Core Engine](products/core-engine.md) | [Core Engine](products/core-engine.md) |
+| **Protocol** | [Protocol](products/protocol.md) | [Protocol](products/protocol.md) |
+| **Excel Meta Tool** | [Excel Add-in](products/excel-addin.md) | [Excel Add-in](products/excel-addin.md) |
+| **Pipeline** | [Pipeline](products/pipeline-unity.md) | [Pipeline](products/pipeline-unity.md) |
+| **API Reference** | [API Reference](reference/api.md) | [API Reference](reference/api.md) |
+| **Products & Kits** | [Products](products/index.md), [Kits](deukpack-kits.md) | [Products](products/index.md), [Kits](deukpack-kits.md) |
+| **Releases · news** | [릴리스 · 뉴스](releases.md) | This page — **language switcher** → English |
+| **AI tools integration** | [Antigravity·Cursor·Copilot·Codex](ai-ide-tools-guide.md) | **Language switcher** → English |
 
 ---
 
