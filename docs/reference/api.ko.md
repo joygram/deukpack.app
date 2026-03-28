@@ -200,7 +200,7 @@ Node에서 **파싱·AST**까지 쓰려면 `DeukPackEngine`(또는 동일 진입
 
 ---
 
-## JavaScript (`--js`)
+## JavaScript (--js) {: #javascript-js }
 
 생성 JS(예: `js/generated_deuk.js`) struct 헬퍼:
 

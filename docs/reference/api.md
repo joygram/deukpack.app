@@ -200,7 +200,7 @@ Tutorial: [../tutorial/write-with-overrides.md](../tutorial/write-with-overrides
 
 ---
 
-## JavaScript (`--js`)
+## JavaScript (--js) {: #javascript-js }
 
 Helpers in generated JS (e.g. `js/generated_deuk.js`):
 
