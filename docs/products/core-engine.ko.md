@@ -42,7 +42,7 @@
 
 - [득팩 프로토콜 (런타임)](protocol.ko.md)
 - [Excel 메타툴](excel-addin.ko.md)
-- [AI 시대의 돌파구 전략](../DEUKPACK_AI_BREAKTHROUGH.ko.md)
+- [AI 시대의 돌파구 전략](../ai-pipeline-integration.ko.md)
 
 ### 설치·실행 (한 줄)
 

@@ -15,7 +15,7 @@
 | **DB·엔티티** | `entity`, `--ef`, `tablelink`, ORM 어노테이션 | [DB·엔티티](database.ko.md) |
 | **통합 참조** | CLI 전 옵션표, C#/C++/JS API 표, 타입 대조표 | [API·타입 참조](api.ko.md) |
 
-**스키마 입출력**(OpenAPI·CSV·JSON·Excel 머지/보내기)은 [API·타입 참조 — Schema I/O](api.md#schema-import-export)에 모았습니다.
+**스키마 입출력**(OpenAPI·CSV·JSON·Excel 머지/보내기)은 [API·타입 참조 — Schema I/O](api.md#schema-import-and-export)에 모았습니다.
 
 ---
 

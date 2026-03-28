@@ -22,7 +22,7 @@ hide:
       <span class="dp-pill">MCP 기반 AI 가드레일</span>
     </div>
     <div class="dp-actions">
-      <a href="products/core-engine/#use-core" class="md-button md-button--primary">득팩 코어 바로 사용하기</a>
+      <a href="products/core-engine.md" class="md-button md-button--primary">득팩 코어 바로 사용하기</a>
       <a href="products/" class="md-button">제품군 개요</a>
       <a href="deukpack-kits/" class="md-button">득팩 키트 라인업</a>
     </div>
@@ -43,7 +43,7 @@ hide:
 | **득팩 코어·엔진** | **Mixed-IDL Hybrid Serializer**: 어떤 IDL이든 받아 AI 시맨틱 메타와 다언어 코드를 동시에 추출하는 차세대 엔진 | [CORE_ENGINE →](products/core-engine.ko.md) |
 | **득팩 프로토콜** | **Messaging Runtime**: 고성능 직렬화 및 AI 가드레일을 제공하는 실시간 통신 엔진 | [PROTOCOL →](products/protocol.ko.md) |
 | **득팩 Excel 애드인** | **Schema-Driven Editor**: 기획 데이터를 스키마 기반으로 검증·동기화하는 Excel 도구 | [EXCEL_ADDIN →](products/excel-addin.ko.md) |
-| **득팩 파이프라인** | **AI-Native Pipeline**: 빌드부터 MCP 서버 연동까지 한 명령으로 이어주는 자동화 툴체인 | [PIPELINE →](products/pipeline.ko.md) |
+| **득팩 파이프라인** | **AI-Native Pipeline**: 빌드부터 MCP 서버 연동까지 한 명령으로 이어주는 자동화 툴체인 | [PIPELINE →](products/pipeline-unity.ko.md) |
 | **DeukNavigation** | Unity·서버 공용 Deuk 와이어(.dpk) 기반 Recast/Detour NavMesh 솔루션 | [NAVIGATION →](products/navigation.ko.md) |
 | **확장 제품군** | DB 마이그레이터, EF 지원, Google Sheets, Unreal/Elixir 등 선택적 확장 | [EXTENSIONS →](products/index.ko.md) |
 
@@ -134,7 +134,7 @@ hide:
 
 ## 다음 단계
 
-- [**코어 라이브러리 사용하기**](products/core-engine/#use-core) — npm·GitHub 링크, 설치·CLI·튜토리얼로 바로 사용
+- [**코어 라이브러리 사용하기**](products/core-engine.md) — npm·GitHub 링크, 설치·CLI·튜토리얼로 바로 사용
 - [**득팩 키트 라인업**](deukpack-kits.ko.md) — 스택별 샘플·저장소 링크·바로 적용 예시
 - [제품군 개요](products/index.ko.md) — 제품별 역할·포함 범위
 - [제품 관계도](architecture.ko.md) — 제품 간 관계·데이터 흐름 다이어그램
