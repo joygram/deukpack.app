@@ -7,7 +7,10 @@ site_url: https://deukpack.app/
 extra:
   generator: false
   announce: >-
-    <div id="dp-dynamic-banner-placeholder"></div>
+    <strong>득팩 코어 1.3.0</strong> — 동적 릴리스 공지·마크다운 링크 수정·OSS 싱크 강화 —
+    <a href="https://github.com/joygram/DeukPack/releases/latest">GitHub Releases</a>
+    · <a href="https://deukpack.app/releases/">릴리스 요약</a>
+    · <a href="https://deukpack.app/en/releases/">EN</a>
 
 markdown_extensions:
   - admonition
