@@ -22,9 +22,9 @@ hide:
       <span class="dp-pill">MCP-based AI Guardrail</span>
     </div>
     <div class="dp-actions">
-      <a href="products/core-engine.md" class="md-button md-button--primary">Use the core now</a>
-      <a href="products/" class="md-button">Products overview</a>
-      <a href="deukpack-kits/" class="md-button">DeukPack kits lineup</a>
+      [Use the core now](products/core-engine.md){: .md-button .md-button--primary }
+      [Products overview](products/){: .md-button }
+      [DeukPack kits lineup](deukpack-kits/){: .md-button }
     </div>
   </div>
 </div>
@@ -95,7 +95,7 @@ Source, issues, and contributions: [GitHub repository](https://github.com/joygra
   <div class="dp-card dp-card--highlight dp-card--ai">
     <h3>Breakthrough in the AI Era</h3>
     <p>Agents are strong at <strong>spec design and logic</strong>, but DeukPack excels at <strong>deterministic binary consistency, multi-lang synchronization, and MCP guardrails</strong>. DeukPack provides <strong>'executable types'</strong> and <strong>'shields'</strong> to agents, helping AI become your most trusted development partner.</p>
-    <p><a href="ai-pipeline-integration.md">AI Semantic Mapping & Guardrail Strategy →</a></p>
+    <p>[AI Semantic Mapping & Guardrail Strategy →](ai-pipeline-integration.md)</p>
   </div>
 </div>
 

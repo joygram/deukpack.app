@@ -22,9 +22,9 @@ hide:
       <span class="dp-pill">MCP 기반 AI 가드레일</span>
     </div>
     <div class="dp-actions">
-      <a href="products/core-engine.md" class="md-button md-button--primary">득팩 코어 바로 사용하기</a>
-      <a href="products/" class="md-button">제품군 개요</a>
-      <a href="deukpack-kits/" class="md-button">득팩 키트 라인업</a>
+      [득팩 코어 바로 사용하기](products/core-engine.ko.md){: .md-button .md-button--primary }
+      [제품군 개요](products/){: .md-button }
+      [득팩 키트 라인업](deukpack-kits/){: .md-button }
     </div>
   </div>
 </div>
@@ -95,7 +95,7 @@ hide:
   <div class="dp-card dp-card--highlight dp-card--ai">
     <h3>AI 시대의 돌파구</h3>
     <p>에이전트는 <strong>스펙 설계·로직</strong>에는 강하지만, <strong>결정론적 바이너리 정합성·다언어 동시 동기화·MCP 가드레일</strong>은 득팩이 더 잘합니다. 득팩은 에이전트에게 <strong>'실행 가능한 타입'</strong>과 <strong>'보호막'</strong>을 제공하여, AI가 가장 신뢰할 수 있는 개발 파트너가 되도록 돕습니다.</p>
-    <p><a href="ai-pipeline-integration.ko.md">AI 시맨틱 매핑 및 가드레일 전략 →</a></p>
+    <p>[AI 시맨틱 매핑 및 가드레일 전략 →](ai-pipeline-integration.ko.md)</p>
   </div>
 </div>
 
@@ -134,7 +134,7 @@ hide:
 
 ## 다음 단계
 
-- [**코어 라이브러리 사용하기**](products/core-engine.md) — npm·GitHub 링크, 설치·CLI·튜토리얼로 바로 사용
+- [**코어 라이브러리 사용하기**](products/core-engine.ko.md) — npm·GitHub 링크, 설치·CLI·튜토리얼로 바로 사용
 - [**득팩 키트 라인업**](deukpack-kits.ko.md) — 스택별 샘플·저장소 링크·바로 적용 예시
 - [제품군 개요](products/index.ko.md) — 제품별 역할·포함 범위
 - [제품 관계도](architecture.ko.md) — 제품 간 관계·데이터 흐름 다이어그램
