@@ -15,6 +15,7 @@ DeukPack covers **IDL, schema, code generation, serialization, meta, and pipelin
 | **DeukPack Protocol** | Serialization runtime and messaging protocol | Binary/Compact/JSON, msgId, ProtocolRegistry, zero-copy option, packet body serialization | [Protocol](protocol.md) |
 | **DeukPack Excel add-in** | Schema-based meta editing in Excel | Header generation, validation, schema diff, Apply, sheet-based meta editing | [Excel add-in](excel-addin.md) |
 | **DeukPack Pipeline · Unity** | Connect artifacts to projects/Unity/servers | IDL/Excel → code/schema/tables → Unity/server validation & load. Server integration, real-time game networking | [Pipeline · Unity](pipeline-unity.md) |
+| **DeukPackMcp 🚧** | **Universal AI Gateway** | Bridge all DeukPack assets and external specs (.proto/OpenAPI) as AI skills. | [MCP Hub (Coming Soon)](mcp-hub.md) |
 | **DeukNavigation** | Recast/Detour NavMesh with shared Deuk wire (.dpk) for Unity and server | DeukNavRuntime, CrowdContext, DeukNavAgent, baking, DeukNaviTool. Client–server same mesh & API | [DeukNavigation](navigation.md) |
 | **Extensions** | Add-on products on top of core | Deuk UI & editor tooling, EF, DB migrator, Google Sheets, Unreal/Elixir, plugins | [Extensions](extension.md) |
 

@@ -1,119 +1,117 @@
-# DeukPack Core Engine (Mixed-IDL Hybrid Serializer)
+# DeukPack: AI-Native Universal Schema Multi-hub
 
-**DeukPack Core Engine** is a **next-generation hybrid serializer** that unifies fragmented interface definitions (Thrift, Protobuf, OpenAPI) into a single binary spec and transforms them into code that both AI agents and engineers can understand simultaneously.
+**DeukPack Core Engine** is a **High-Performance Universal Schema Multi-hub** that unifies fragmented interface specifications such as Protobuf, Thrift, and OpenAPI, optimized for real-time AI Knowledge extraction and interoperability.
 
 <div class="dp-dynamic-notice-product" data-product="core-engine"></div>
 
 ---
 
-## Core Differentiators
+## 🚀 Release Roadmap
 
-### 1. Mixed-IDL Hybrid Integration
-Manage various interface definition languages within a single pipeline.
-- **Multi-Input Support**: `.deuk` (Native), `.thrift` (Legacy), `.proto` (Protobuf), OpenAPI, CSV/JSON, and DB schemas.
-- **Incremental Migration**: Maintain existing IDLs while progressively applying DeukPack's advanced features like inheritance and overrides.
+DeukPack increments the **Minor** version for each new language or platform support. We are currently expanding the ecosystem through the **v1.5.x series**.
 
-### 2. Advanced Type System (IDL Architecture)
-Provides rich linguistic features for representing complex business entities beyond simple data transfer.
-- **Struct Inheritance (`extends`)**: An object-oriented design where common fields are defined in a parent struct and inherited/extended by children.
-- **Data Projection (`Write Overrides`)**: Selectively serialize specific fields or replace values for different recipients while maintaining the same memory instance.
-- **Rich Built-in Types**: Built-in support for `tablelink` (table reference), `datetime`, `decimal`, and more, optimized for games and planning tools.
-
-### 3. AI-Ready Semantic Mapping
-Transforms interface definitions into a deterministic knowledge base that AI agents can trust.
-- **Semantic Export**: Extracts comment-based intents and business constraints into a context that AI can understand.
-- **Deterministic Codegen**: Realizes variable AI outputs into precise, predictable multi-language code via the DeukPack engine.
+| Version | Key Milestones | Status |
+| :--- | :--- | :--- |
+| **v1.4.0** | MCP Protobuf expansion, C#/C++/JS core runtime stabilization | **DONE** |
+| **v1.5.0** | **Java & Core Parity**: Inheritance support, Compact/TJSON protocols, Universal security guards, and **MCP Core Decoupling** | **Current** |
+| **v1.5.1** | C++ Low-latency (Zero-Alloc) optimization & DDL generator | In Progress |
+| **v1.6.0** | **Elixir Expansion Pilot**: BEAM-based distributed backend support | **Teaser** |
 
 ---
 
-## Feature Summary
+## ⚡ Performance: The Zero-Bottleneck Foundation
 
-| Category | Content |
-|----------|---------|
-| **Core Library** | AST builder, high-performance parser, multi-language code generators (C#, C++, TS, JS). |
-| **Code Generation** | Structs, enums, service interfaces, field constants, and schema metadata. |
-| **CLI Tool** | `deukpack init`, `run`, `build`, `export:ai-context`. |
-| **AI Integration** | AI semantic exporter and support for MCP-based runtime guardrails. |
+DeukPack goes beyond simple speed; it aims to be a **"No-Latency Intelligent Core"** that doesn't bottleneck even when an AI agent processes tens of thousands of lines of IDL knowledge in real-time.
+
+| Workload | Legacy Industry Flow | **DeukPack (v1.5.0)** | Key Advantage |
+| :--- | :---: | :---: | :--- |
+| **IDL Tree Parsing** | Seconds (Multi-step) | **Milliseconds (ms)** | **Real-time AI Integration** |
+| **Runtime Overhead** | GC & Allocations | **Zero-Allocation** | **High-Frequency (HFT) Support** |
+| **Memory Footprint** | Heavy CLI Processes | **Lightweight AST** | **Low-overhead Knowledge Export** |
+
+> [!TIP]
+> Figures are based on typical observations in large-scale environments (500+ IDL files). Actual results may vary depending on IDL complexity and Node.js runtime. For detailed methodology, see [Benchmarking Docs](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_BENCHMARKING.md).
 
 ---
 
-## Next Steps
+## Feature Matrix
 
-- [DeukPack Protocol (Runtime)](protocol.md)
-- [Excel Meta Tool](excel-addin.md)
-- [AI Breakthrough Strategy](../ai-pipeline-integration.md)
+Current support status and plans for each target platform.
 
-### Install & run (one-liner)
+| Category | Feature | TS / JS | C# / Unity | C++ | Java | Elixir |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
+| **IDL Core** | Basic Types / Aliases | ✅ | ✅ | ✅ | ✅ | 🚧 (v1.6) |
+| **Inheritance** | `extends` support | ✅ | ✅ | ✅ | ✅ (v1.5) | 🚧 (v1.6) |
+| **Protocols** | Native Pack (.dpk) | ✅ | ✅ | ✅ | ✅ | 🚧 (v1.6) |
+| | Protobuf Compatible | ✅ | ✅ | 🚧 (v1.4) | ✅ | - |
+| | Thrift Compatible (T-Series) | ✅ | ✅ | ✅ (v1.5) | ✅ (v1.5) | - |
+| | JSON (Tagged / POJO) | ✅ | ✅ | ✅ (v1.5) | ✅ | - |
+| | YAML / CSV | ✅ | ✅ (v1.2.7) | 🚧 | 🚧 | - |
+| **Optimizations**| Zero-Alloc Parsing | ⚠️ | ✅ | ✅ (v1.4.2) | 🚧 | 🚧 (BEAM) |
+| | `Write` Logic Overrides | ✅ | ✅ | ✅ (v1.5) | ✅ (v1.5) | - |
+| **Data/Meta** | `tablelink` / MetaTable | ✅ | ✅ | ✅ (v1.5) | ✅ | - |
+| | DB Interop (EF / SQL) | ⚠️ (1) | ⚠️ (2) | ⚠️ (3) | 🚧 (v1.5) | - |
+| **AI Agent & IDE Integration** | Tool Auto-Generation (Skill) | ✅ (v1.5 MCP Decoupling) | 🚧 | - | - | - |
+| | Intelligent Context (Knowledge) | ✅ (Core Ready) | ✅ | ✅ | ✅ | ✅ |
+| | IDE Encoder/Intelligentsense | ✅ | ✅ | ✅ | ✅ | ✅ |
 
-| Channel | Link | Use case |
-|---------|------|----------|
-| **npm** | [deukpack](https://www.npmjs.com/package/deukpack) | `npm install deukpack` / `npx deukpack` — distribution only |
-| **GitHub** | [joygram/DeukPack](https://github.com/joygram/DeukPack) | Source, issues, contributions, releases. Clone & local build |
+- ✅: Full Support / Production Ready
+- ⚠️: Preview / Partial Support or Constraints
+- 🚧: Pilot / Development in Progress
+- -: Not Currently Supported
+
+> [!CAUTION]
+> **Database Integration (⚠️) 상세 제약 사항:**
+> 1. **TS / JS**: JSON/Binary 직렬화 기반 저장 위주. 관계형 매핑은 제한적(Blob 중심).
+> 2. **C# (EF Core)**: `entity` 키워드를 통한 테이블 생성 지원. 단, **중첩 컬렉션(List/Map/Set)** 필드는 SQL 컬럼 자동 매핑 미지원 (Blob 저장 또는 수동 Converter 필요).
+> 3. **C++**: DDL(SQL) 생성 위주. 런타임 ORM 연동은 지원되지 않음.
+> 4. **공통**: 스키마 구조 변경에 따른 DB Migration(변경 관리) 로직은 제공되지 않음.
+
+---
+
+## Key Highlights
+
+### 1. Universal IDL Gateway & Interop
+Unify multiple interface definitions into one pipeline.
+- **Multi-Input**: `.deuk`, `.thrift`, `.proto`, OpenAPI, JSON Schema, CSV.
+- **Cross-Protocol Interop**: Lossless round-trips between Thrift data and Protobuf wires.
+
+### 2. Advanced Type System
+Rich linguistic features to express complex business entities.
+- **Structural Inheritance (`extends`)**: Object-oriented design with shared parent fields.
+- **Data Projection**: Dynamic field selection or value replacement per receiver.
+
+### 3. AI Semantic Mapping
+Transform interface definitions into deterministic knowledge bases for AI agents.
+- **Semantic Export**: Extract intent and constraints for AI context.
+- **Deterministic Codegen**: Realize AI outputs into predictable multi-language code.
+
+---
+
+### Language Specific Features
+
+*   **C# (.NET / Unity)**: **Zero-Allocation** parser for games, **EF Core** support (with constraints), **MetaTable Registry**, and **YAML protocol**(v1.2.7).
+*   **TypeScript / JSON**: **MCP (Model Context Protocol)** plugin support and intelligent context extraction, **POJO**-based flexible mapping, and tool execution environment through **DeukPackMcp** (decoupled in v1.5.0).
+*   **C++**: Optimized for **Low-latency** and **Embedded** systems, focusing on **Binary/Compact** and **JSON** protocol compatibility stabilized in v1.5.0.
+*   **Java**: Ensures cross-platform interoperability with full **Thrift-compatible** TBinary/TJSON support and **inheritance (extends)** added in v1.5.0.
+
+---
+
+## What You Get
+
+- **Low Memory**: No need to load everything into memory. 
+- **High Performance**: 10x faster serialization target.
+- **Developer Experience**: Define once, build once for Code/Meta/DB.
+- **Scalability**: Multi-file, multi-namespace, multi-output (C#, C++, TS, JS).
+
+---
+
+### Installation & Quick Start
 
 ```bash
-# Add to project
+# Add to your project
 npm install deukpack
 
-# Run CLI codegen (without installing)
+# Generate code from IDL
 npx deukpack ./idl/root.deuk ./gen --csharp --cpp --js -I ./idl
 ```
-
-### More on this site
-
-| Document | Content |
-|----------|---------|
-| [Install (Windows · Linux)](../tutorial/install-os.md) | Node install, distribution (npm) / .tgz install |
-| [Quick start](../tutorial/quickstart.md) | Step-by-step: one IDL → C#, C++, TS generation |
-| [IDL guide](../tutorial/idl-guide.md) | .deuk / .thrift syntax, namespaces |
-| [C# guide](../tutorial/csharp-guide.md) | C# generated code, protocol, references |
-| [C++ guide](../tutorial/cpp-guide.md) | C++ build, include, execution |
-| [Pipeline guide](../tutorial/pipeline-guide.md) | Multiple jobs, config JSON |
-| [Kits lineup](../deukpack-kits.md) | Unity, C++, Console, EF, TS, etc. |
-| [Documentation](../documentation-index.md) | Korean / English document locations |
-
-### GitHub repository
-
-| Document | Content |
-|----------|---------|
-| [Distribution vs source](../tutorial/distribution-vs-source.md) | npm usage vs clone & build (this site) |
-| [README (Korean)](https://github.com/joygram/DeukPack/blob/main/README.ko.md) | Repo entry / summary |
-| [Release docs index](https://github.com/joygram/DeukPack/blob/main/docs/RELEASE_DOCS_INDEX.md) | Distribution / user doc index |
-
----
-
-## Core library summary
-
-- **Official OSS**: [github.com/joygram/DeukPack](https://github.com/joygram/DeukPack) — source, README, issues, contributions, releases. See the repo README and RELEASING for clone, local build, and contribution.
-- **C# / Unity**: Reference the npm package's `dist/csharp` runtime or see the [kits lineup](../deukpack-kits.md) samples.
-
----
-
-## What you get
-
-- **Memory**: No need to load everything into memory — SQLite, streaming, and (optional) zero-copy enable large-scale, low-memory configurations. Buffer reuse and minimal reflection keep runtime allocations small.
-- **Performance**: Parsing and code generation are orders of magnitude faster even for large IDL sets. Runtime serialization/deserialization targets ~10× faster throughput.
-- **Convenience**: One definition, one build aligns code, meta, DB, and validation. Absorb existing .proto, OpenAPI, CSV, .thrift **into DeukPack**.
-- **Extensibility**: Multiple files and namespaces, simultaneous C# / C++ / TS / JS generation. Extend schema, code, DB, and Excel from a single source.
-
----
-
-## Alongside existing definitions & specs
-
-- **.deuk** first; **Protobuf and .thrift** can be mixed in the same AST.
-- **OpenAPI 3.x, JSON Schema, and CSV** import bring existing specs into the AST, handling code, meta, and tables in one toolchain.
-- Import .proto and .thrift files as-is for gradual integration.
-
----
-
-## Features
-
-| Category | Content |
-|----------|---------|
-| **IDL input** | **Deuk (.deuk)**, Protobuf (.proto), .thrift parsing. Mixable in one build. |
-| **Schema import** | OpenAPI 3.x → AST, JSON Schema → AST, CSV → AST (schema inference). |
-| **Code generation** | C#, C++, TypeScript, JavaScript. GetSchema(), ProtocolRegistry, MetaTableRegistry, etc. |
-| **Database** | SQLite: AST → DDL + C# access code. EF-ready codegen. |
-| **Inheritance** | Struct `extends` — multi-level, wire-compatible; parent fields merged into child at codegen. |
-| **Type system** | float, double, int8–int64, bool, string, binary, list/set/map, tablelink, datetime, decimal — consistent across languages. |
-
-One definition yields multi-language, multi-output simultaneous generation with fast builds, and existing definitions can be reused as-is.

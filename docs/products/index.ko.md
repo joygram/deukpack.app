@@ -14,7 +14,8 @@
 | **득팩 코어·엔진** | **Universal IDL Gateway**: Thrift, Protobuf, OpenAPI 등 파편화된 규격을 단일 AST로 통합하여 AI 시맨틱 메타와 다언어 코드를 동시에 추출하는 차세대 하이브리드 엔진 | .deuk/.proto/.thrift, OpenAPI/JSON Schema, C#/C++/TS/JS 코드 생성, SQLite DDL | [코어·엔진](core-engine.ko.md) |
 | **득팩 프로토콜** | 직렬화 런타임과 메시지 처리 규약 | Binary/Compact/JSON, msgId, ProtocolRegistry, 제로카피 옵션, 패킷 바디 직렬화 | [프로토콜](protocol.ko.md) |
 | **득팩 Excel 애드인** | Excel에서 스키마 기반 메타 작업 | 헤더 생성, 검증, 스키마 비교, Apply, 시트 기반 메타 편집 | [Excel 애드인](excel-addin.ko.md) |
-| **득팩 파이프라인·Unity** | 산출물을 프로젝트/Unity·서버에 연결 | IDL/Excel → 코드·스키마·테이블 → Unity·서버 검증·로드. 서버 연동·실시간 게임 연동 | [파이프라인·Unity](pipeline-unity.ko.md) |
+| **득팩 파이프라인·Unity** | 산출물을 프로젝트/Unity·서버에 연결 | IDL/Excel → 코드·스키마·테이블 → Unity·서버 검증·로드 | [파이프라인·Unity](pipeline-unity.ko.md) |
+| **DeukPackMcp 🚧** | **범용 AI 게이트웨이** | 모든 득팩 자산 및 외부 규격(.proto/OpenAPI)을 AI 스킬로 정수화하여 브리징 | [MCP 허브 (준비 중)](mcp-hub.ko.md) |
 | **DeukNavigation** | Unity·서버 공용 Deuk 와이어(.dpk) 기반 Recast/Detour NavMesh | DeukNavRuntime, CrowdContext, DeukNavAgent, 베이킹, DeukNaviTool. 클라이언트·서버 동일 메시·API | [DeukNavigation](navigation.ko.md) |
 | **확장 제품군** | 코어 위 부가 제품 | Deuk UI·에디터 도구, EF, DB 마이그레이터, Google Sheets, Unreal/Elixir, 플러그인 | [확장 제품군](extension.ko.md) |
 

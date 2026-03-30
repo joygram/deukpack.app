@@ -11,14 +11,14 @@ hide:
     <img src="/assets/deukpack-brand-concept-01.png" alt="DeukPack 대표 브랜드 시안 - 데이터 팩을 메고 달리는 강아지 컨셉" loading="eager" decoding="async" />
   </div>
   <div class="dp-hero-copy">
-    <p class="dp-eyebrow">DeukPack — AI 에이전트를 위한 핵심 인프라</p>
-    <h1>AI-Ready<br>인터페이스 허브</h1>
-    <p class="dp-tagline">Mixed-IDL Hybrid Serializer · Deterministic Pipeline</p>
-    <p class="dp-lead"><strong>무료로</strong>, <strong>자유롭게</strong>, <strong>바로</strong> 쓸 수 있는 인터페이스 허브가 있습니다.<br><br><strong>득팩(DeukPack)</strong>은 <strong>네이티브 IDL(.deuk)</strong>과 <strong>코드 생성·직렬화·프로토콜·AI 시맨틱 메타</strong>를 한 엔진에서 다루는 <strong>독립 제품</strong>입니다.<br><br>Protobuf·OpenAPI·CSV·DB·레거시 .thrift 등은 <strong>하나의 하이브리드 파이프라인</strong>에 넣을 입력일 뿐입니다.<br><br>AI 에이전트와 엔지니어가 <strong>동일한 데이터 계약</strong>으로 소통하고 검증받는 시대를 득팩이 엽니다.</p>
+    <p class="dp-eyebrow">DeukPack — AI 에이전트와 Unity를 잇는 가장 완벽한 약속</p>
+    <h1>서버의 무한한 유연성<br>클라이언트의 극한 성능</h1>
+    <p class="dp-tagline">Dynamic JS/AI 유연성 × Zero-Allocation C# 성능</p>
+    <p class="dp-lead"><strong>AI 에이전트 자동화의 한계를 돌파하는 하이브리드 스키마 엔진.</strong><br><br>AI가 데이터 주권을 쥐는 시대, 득팩은 파편화된 IDL을 하나의 '시맨틱 척추(Spine)'로 통합합니다. Node.js 서버에서는 JSON 객체를 자유롭게 자르고 붙이십시오. 득팩이 스키마(.deuk)를 필터 삼아 필요한 필드만 가장 얇고 강력한 바이너리로 압축합니다.<br><br>Unity 클라이언트에서는 단 1바이트의 쓰레기(가비지)도 남기지 않는 <strong>Zero-Allocation C#</strong>으로 즉시 조립됩니다. 유연함과 성능의 완벽한 비대칭 타협, 그것이 득팩 대서사시의 시작입니다.</p>
     <div class="dp-pills">
-      <span class="dp-pill">AI-Ready Interface Hub</span>
-      <span class="dp-pill">Mixed-IDL Hybrid Serializer</span>
-      <span class="dp-pill">IDL-to-AI Semantic Mapping</span>
+      <span class="dp-pill">Zero-Alloc C# 파서</span>
+      <span class="dp-pill">Dynamic JS/TS 마스킹</span>
+      <span class="dp-pill">AI-Native JSON Wire</span>
       <span class="dp-pill">MCP 기반 AI 가드레일</span>
     </div>
     <div class="dp-actions">
@@ -43,7 +43,10 @@ hide:
 | **득팩 코어·엔진** | **Mixed-IDL Hybrid Serializer**: 어떤 IDL이든 받아 AI 시맨틱 메타와 다언어 코드를 동시에 추출하는 차세대 엔진 | [CORE_ENGINE →](products/core-engine.ko.md) |
 | **득팩 프로토콜** | **Messaging Runtime**: 고성능 직렬화 및 AI 가드레일을 제공하는 실시간 통신 엔진 | [PROTOCOL →](products/protocol.ko.md) |
 | **득팩 Excel 애드인** | **Schema-Driven Editor**: 기획 데이터를 스키마 기반으로 검증·동기화하는 Excel 도구 | [EXCEL_ADDIN →](products/excel-addin.ko.md) |
-| **득팩 파이프라인** | **AI-Native Pipeline**: 빌드부터 MCP 서버 연동까지 한 명령으로 이어주는 자동화 툴체인 | [PIPELINE →](products/pipeline-unity.ko.md) |
+| **득팩 파이프라인** | **AI-Native Pipeline**: 빌드부터 전용 코드 생성까지 한 명령으로 이어주는 자동화 툴체인 | [PIPELINE →](products/pipeline-unity.ko.md) |
+| **DeukPackMcp** | **Universal AI Hub (준비 중)**: .proto, .deuk, OpenAPI 등 모든 설계를 AI 스킬로 통합 브리징 | [MCP_HUB →](products/mcp-hub.ko.md) |
+| **DeukPackMcp** | **Universal AI Hub (준비 중)**: .proto, .deuk, OpenAPI 등 모든 설계를 AI 스킬로 통합 브리징 | [MCP_HUB →](products/mcp-hub.ko.md) |
+| **DeukPackMcp** | **Universal AI Hub (준비 중)**: .proto, .deuk, OpenAPI 등 모든 설계를 AI 스킬로 통합 브리징 | [MCP_HUB →](products/mcp-hub.ko.md) |
 | **DeukNavigation** | Unity·서버 공용 Deuk 와이어(.dpk) 기반 Recast/Detour NavMesh 솔루션 | [NAVIGATION →](products/navigation.ko.md) |
 | **확장 제품군** | DB 마이그레이터, EF 지원, Google Sheets, Unreal/Elixir 등 선택적 확장 | [EXTENSIONS →](products/index.ko.md) |
 
@@ -51,17 +54,19 @@ hide:
 
 ---
 
-## 이 페이지 소개
+## 🚀 기존 기술과 무엇이 다른가요? (Key Features)
 
-**deukpack.app**은 득팩 **브랜드·제품·튜토리얼·레퍼런스**의 **코어 정본**입니다.
+Protobuf, FlatBuffers, JSON과 비교되는 **득팩(DeukPack)만의 대체 불가능한 3대 무기**입니다.
 
-**무료·오픈소스 코어**는 npm과 [**GitHub(joygram/DeukPack)**](https://github.com/joygram/DeukPack)에서 바로 적용할 수 있습니다.
-
-**손으로 따라 하며 검증**하거나 **《시작의 폐허》·서사 저니**를 읽으려면 **[kits.deukpack.app](https://kits.deukpack.app/)** 로 가면 됩니다. 저장소 README · 이 사이트 · 키트 사이트는 **같은 제품을 다른 깊이**로 보여 줍니다. 관계 표는 [문서 안내](documentation-index.ko.md)를 보세요.
-
-**득팩 코어를 바로 쓰려면** 위 **「득팩 코어 바로 사용하기」** 또는 [코어·엔진](products/core-engine.ko.md)으로 이동하세요. 그 페이지에 **설치·CLI**, 이 사이트의 **설치·빠른 시작·IDL·C#·C++·파이프라인·키트 라인업**, **GitHub**(README·릴리스 문서) 링크가 모여 있습니다.
-
-소스·이슈·기여는 [GitHub 저장소](https://github.com/joygram/DeukPack)에서 확인하세요. 링크·인용은 상업·비상업 모두 자유롭습니다.
+1. **할당(Allocation) 없는 오버라이드 (Zero-Copy Override)**
+   - **기존 한계:** Protobuf나 Thrift는 유저별로 일부 필드를 가리거나 덮어씌워서 전송할 때, 매번 거대한 별도의 DTO 클래스를 메모리에 새로 할당(`new`)해야 합니다.
+   - **득팩의 차별점:** 생성된 C# 객체 단 한 개만 가지고, `Write(oprot, overrides)` 함수 하나로 100가지의 변형 본을 가비지(GC) 없이 찍어냅니다.
+2. **클래스 없는 순수 JSON(POJO) 직접 처리**
+   - **기존 한계:** JS 환경에서도 `new Message()` 처럼 무거운 클래스 래퍼를 강제하거나, FlatBuffers처럼 복잡한 오프셋 빌더(Builder) 패턴을 써야 합니다.
+   - **득팩의 차별점:** AI가 던지는 단순한 자바스크립트 객체(`{ id: 1 }`)를 곧바로 바이트 배열로 찍어 누릅니다. **AI 환경에서는 무한히 유연하면서도, 클라이언트에서는 예외 없이 엄격한 바이트로 꽂힙니다.**
+3. **단순 명세서를 뛰어넘은 'AI 시맨틱 척추'**
+   - **기존 한계:** 기존 IDL 규약들은 그저 통신을 위한 1차원적 바이트 변환 껍데기일 뿐입니다.
+   - **득팩의 차별점:** `.deuk` 파일에는 `extends`(다단 상속)와 `tablelink`(DB/메타 테이블 구조 참조)가 내장되어 있어, AI(LLM)가 프로젝트 전체의 ERD 관계성을 한눈에 파악할 수 있는 가장 압축된 **지식 그래프(RAG 컨텍스트)**로 작동합니다.
 
 ---
 
@@ -92,10 +97,21 @@ hide:
     <h3>풍부한 타입</h3>
     <p><strong>tablelink</strong>·datetime·decimal 등 DB 모델까지 한 타입 시스템. <a href="tutorial/write-with-overrides/">튜토리얼 →</a></p>
   </div>
+  <div class="dp-card dp-card--highlight dp-card--mcp">
+    <h3>DeukPackMcp: Universal AI Hub 🚧</h3>
+    <p><strong>.proto, .deuk, OpenAPI</strong> 및 득팩의 <strong>모든 제품군</strong>(Core, Excel, Nav 등)을 AI 에이전트의 실시간 도구로 즉시 통합합니다. 당신의 모든 자산을 AI의 '스킬'로 바꾸는 차세대 게이트웨이.</p>
+    <p><strong>🚧 현재 준비 중:</strong> 유니티 엔진 제어부터 기업용 슬랙/깃허브 설계도 통합까지 한 번에 브리징.</p>
+    <p>[AI MCP 허브 실전 구축 가이드 →](products/mcp-hub.ko.md)</p>
+  </div>
   <div class="dp-card dp-card--highlight dp-card--ai">
-    <h3>AI 시대의 돌파구</h3>
-    <p>에이전트는 <strong>스펙 설계·로직</strong>에는 강하지만, <strong>결정론적 바이너리 정합성·다언어 동시 동기화·MCP 가드레일</strong>은 득팩이 더 잘합니다. 득팩은 에이전트에게 <strong>'실행 가능한 타입'</strong>과 <strong>'보호막'</strong>을 제공하여, AI가 가장 신뢰할 수 있는 개발 파트너가 되도록 돕습니다.</p>
-    <p>[AI 시맨틱 매핑 및 가드레일 전략 →](ai-pipeline-integration.ko.md)</p>
+    <h3>비대칭 아키텍처의 승리</h3>
+    <p>에이전트와 서버가 수십 개의 필드를 <strong>동적(Dynamic)</strong>으로 엮어 빈 캔버스를 채우고, 그 결과물은 <strong>Zero-Allocation C#</strong>이라는 가장 강력한 바이트로 압축되어 Unity에 가비지(GC) 없이 전달됩니다. <strong>유연함과 성능의 완벽한 비대칭 타협</strong>입니다.</p>
+    <ul style="font-size: 0.9em; margin-top: 10px; opacity: 0.9;">
+      <li><strong>할당 없는 오버라이드:</strong> <code>Write(oprot, overrides)</code> 단 하나로 클론(Clone) 방식의 메모리 쓰레기를 완벽하게 제거.</li>
+      <li><strong>순수 JSON 호환:</strong> JS/TS 파이프라인에서 무거운 래퍼 클래스 없이 POJO를 유연하게 직접 조립.</li>
+      <li><strong>AI 지식 그래프:</strong> <code>tablelink</code> 등 단순 프로토콜을 넘어 전체 프로젝트 ERD 컨텍스트를 품은 <code>.deuk</code> IDL.</li>
+    </ul>
+    <p>[AI 가이드레일 실전 전략 →](ai-pipeline-integration.ko.md) &nbsp; | &nbsp; [타사 직렬화 대체 불가 비교 →](positioning.ko.md#대체-불가능한-아키텍처-why-deukpack)</p>
   </div>
 </div>
 
@@ -129,6 +145,22 @@ hide:
 - 에이전트가 스키마를 **생성·수정**해도, **“실행 가능한 타입·직렬화·다언어 코드”**로 바꿔 주는 건 **전문 도구(득팩)**가 담당하는 편이 안전하다. 에이전트는 그 도구를 **도구로 호출**하면 된다.
 
 → 상세: [에이전트가 할 수 없는 일 · AI 파이프라인 연동 정리](ai-pipeline-integration.ko.md)
+
+---
+
+## 지원 프로토콜 및 언어 (v1.5.0)
+
+| 언어 / 플랫폼 | Pack (.dpk) | TBinary | TCompact | TJSON | JSON (Wire) | Protobuf | OpenAPI | MCP |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **TypeScript / JS** | ✅ | ✅ | ✅ | ✅ | ✅ | 🚧 (v1.4) | ✅ | ✅ (v1.5) |
+| **C# (.NET)** | ✅ | ✅ | ✅ | ✅ | ✅ | 🚧 (v1.4) | ✅ | - |
+| **C++** | ✅ | ✅ | ✅ (v1.5) | - | ✅ (v1.5) | 🚧 (v1.4) | - | - |
+| **Java** | ✅ | ✅ | ✅ (v1.5) | ✅ (v1.5) | ✅ | - | - | - |
+| **Excel (Add-in)** | ✅ | - | - | - | - | - | - | - |
+
+- ✅: 정식 지원 / Production Ready
+- ⚠️: 프리뷰 / 일부 기능 지원
+- -: 현재 미지원
 
 ---
 

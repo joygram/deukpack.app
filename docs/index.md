@@ -43,7 +43,10 @@ hide:
 | **DeukPack Core · Engine** | **Mixed-IDL Hybrid Serializer**: Next-gen engine that accepts any IDL and extracts both AI semantic meta and multi-lang code. | [CORE_ENGINE →](products/core-engine.md) |
 | **DeukPack Protocol** | **Messaging Runtime**: Real-time communication engine providing high-performance serialization and AI guardrails. | [PROTOCOL →](products/protocol.md) |
 | **DeukPack Excel Add-in** | **Schema-Driven Editor**: Excel tool for validating and syncing planning data based on schemas. | [EXCEL_ADDIN →](products/excel-addin.md) |
-| **DeukPack Pipeline** | **AI-Native Pipeline**: Automated toolchain from builds to MCP server integration in one command. | [PIPELINE →](products/pipeline-unity.md) |
+| **DeukPack Pipeline** | **AI-Native Pipeline**: Automated toolchain from builds to custom code generation in one command. | [PIPELINE →](products/pipeline-unity.md) |
+| **DeukPackMcp** | **Universal AI Hub (Coming Soon)**: Unified bridging of .proto, .deuk, OpenAPI and more as AI skills. | [MCP_HUB →](products/mcp-hub.md) |
+| **DeukPackMcp** | **Universal AI Hub (Coming Soon)**: Unified bridging of .proto, .deuk, OpenAPI and more as AI skills. | [MCP_HUB →](products/mcp-hub.md) |
+| **DeukPackMcp** | **Universal AI Hub (Coming Soon)**: Unified bridging of .proto, .deuk, OpenAPI and more as AI skills. | [MCP_HUB →](products/mcp-hub.md) |
 | **DeukNavigation** | Unity/server shared Deuk wire (.dpk) based Recast/Detour NavMesh solution. | [NAVIGATION →](products/navigation.md) |
 | **Extension products** | DB migrator, EF support, Google Sheets, Unreal/Elixir, and more. | [EXTENSIONS →](products/index.md) |
 
@@ -92,10 +95,21 @@ Source, issues, and contributions: [GitHub repository](https://github.com/joygra
     <h3>Rich types</h3>
     <p><strong>tablelink</strong>, datetime, decimal, and more — one type system from DB models to metadata. <a href="tutorial/write-with-overrides/">Tutorial →</a></p>
   </div>
+  <div class="dp-card dp-card--highlight dp-card--mcp">
+    <h3>DeukPackMcp: Universal AI Hub 🚧</h3>
+    <p>Seamlessly integrate <strong>.proto, .deuk, OpenAPI</strong> and <strong>ALL DeukPack products</strong> (Core, Excel, Nav, etc.) as real-time skills for AI agents. The next-gen gateway to transform your assets into AI skills.</p>
+    <p><strong>🚧 COMING SOON:</strong> From Unity engine control to enterprise tool integration, all in one bridge.</p>
+    <p>[Deep dive into AI Hub Strategy →](products/mcp-hub.md)</p>
+  </div>
   <div class="dp-card dp-card--highlight dp-card--ai">
     <h3>Breakthrough in the AI Era</h3>
-    <p>Agents are strong at <strong>spec design and logic</strong>, but DeukPack excels at <strong>deterministic binary consistency, multi-lang synchronization, and MCP guardrails</strong>. DeukPack provides <strong>'executable types'</strong> and <strong>'shields'</strong> to agents, helping AI become your most trusted development partner.</p>
+    <p>Agents are strong at <strong>spec design and logic</strong>, but DeukPack excels at <strong>deterministic binary consistency</strong>. DeukPack provides <strong>'executable types'</strong> and <strong>'shields'</strong> to agents, helping AI become your most trusted development partner.</p>
     <p>[AI Semantic Mapping & Guardrail Strategy →](ai-pipeline-integration.md)</p>
+  </div>
+  <div class="dp-card dp-card--highlight dp-card--mcp">
+    <h3>DeukPackMcp: Universal AI Hub 🚧</h3>
+    <p>Seamlessly integrate <strong>.proto, .deuk, OpenAPI</strong> and <strong>ALL DeukPack products</strong> (Core, Excel, Nav, etc.) as real-time skills for AI agents. The next-gen gateway to transform your assets into AI skills.</p>
+    <p><strong>🚧 COMING SOON:</strong> From Unity engine control to enterprise tool integration, all in one bridge.</p>
   </div>
 </div>
 
@@ -105,6 +119,22 @@ Source, issues, and contributions: [GitHub repository](https://github.com/joygra
 - **Selection · Override · Projection**: **`Write(oprot, fieldIds, overrides?)`** (per-recipient value override, field subset serialization from the same instance), **Wire Profile** (build-time subset types by profile). Combine for fan-out, partial transfer, DTO separation.
 - **Tables · Metadata**: Schema-based metadata editing, validation, diff (Excel add-in). Single key, composite key. `MetaTableRegistry` for runtime table loading and validation.
 - **Pipeline · Integration**: Definition · metadata → code · schema · tables → Unity/server validation · loading. Same schema and protocol for server and real-time game integration.
+
+---
+
+## Supported Protocols & Languages (v1.5.0)
+
+| Language / Platform | Pack (.dpk) | TBinary | TCompact | TJSON | JSON (Wire) | Protobuf | OpenAPI | MCP |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **TypeScript / JS** | ✅ | ✅ | ✅ | ✅ | ✅ | 🚧 (v1.4) | ✅ | ✅ (v1.5) |
+| **C# (.NET)** | ✅ | ✅ | ✅ | ✅ | ✅ | 🚧 (v1.4) | ✅ | - |
+| **C++** | ✅ | ✅ | ✅ (v1.5) | - | ✅ (v1.5) | 🚧 (v1.4) | - | - |
+| **Java** | ✅ | ✅ | ✅ (v1.5) | ✅ (v1.5) | ✅ | - | - | - |
+| **Excel (Add-in)** | ✅ | - | - | - | - | - | - | - |
+
+- ✅: Full Support / Production Ready
+- ⚠️: Preview / Partial Support
+- -: Not Currently Supported
 
 ---
 

@@ -7,10 +7,10 @@ site_url: https://deukpack.app/
 extra:
   generator: false
   announce: >-
-    <strong>득팩 코어 1.3.0</strong> — 동적 릴리스 공지·마크다운 링크 수정·OSS 싱크 강화 —
+    <strong>득팩 코어 1.5.0</strong> — Java 패리티·MCP 코어 분리·전수 보안 가드 도입 —
     <a href="https://github.com/joygram/DeukPack/releases/latest">GitHub Releases</a>
     · <a href="https://deukpack.app/releases/">릴리스 요약</a>
-    · <a href="https://deukpack.app/en/releases/">EN</a>
+    · <a href="https://deukpack.app/releases/">EN</a>
 
 markdown_extensions:
   - admonition
@@ -45,6 +45,8 @@ nav:
     - Excel add-in: products/excel-addin.md
     - Pipeline · Unity: products/pipeline-unity.md
     - DeukNavigation: products/navigation.md
+    - DeukPackMcp (Universal Hub): products/mcp-hub.md
+    - DeukPackMcp (Universal AI Hub) 🚧: products/mcp-hub.md
     - Extension: products/extension.md
     - Architecture: architecture.md
   - Reference:
@@ -134,6 +136,8 @@ plugins:
             Excel add-in: Excel 애드인
             Pipeline · Unity: 파이프라인·Unity
             DeukNavigation: DeukNavigation
+            DeukPackMcp (Universal Hub): DeukPackMcp (범용 Hub)
+            DeukPackMcp (Universal AI Hub) 🚧: DeukPackMcp (범용 Hub) 🚧 준비 중
             Extension: 확장 제품군
             Architecture: 제품 관계도
             Reference: 레퍼런스 가이드
