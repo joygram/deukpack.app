@@ -101,7 +101,7 @@ Protobuf, FlatBuffers, JSON과 비교되는 **득팩(DeukPack)만의 대체 불�
     <h3>DeukPackMcp: Universal AI Hub 🚧</h3>
     <p><strong>.proto, .deuk, OpenAPI</strong> 및 득팩의 <strong>모든 제품군</strong>(Core, Excel, Nav 등)을 AI 에이전트의 실시간 도구로 즉시 통합합니다. 당신의 모든 자산을 AI의 '스킬'로 바꾸는 차세대 게이트웨이.</p>
     <p><strong>🚧 현재 준비 중:</strong> 유니티 엔진 제어부터 기업용 슬랙/깃허브 설계도 통합까지 한 번에 브리징.</p>
-    <p>[AI MCP 허브 실전 구축 가이드 →](products/mcp-hub.ko.md)</p>
+    <p><a href="products/mcp-hub.ko.md">AI MCP 허브 실전 구축 가이드 →</a></p>
   </div>
   <div class="dp-card dp-card--highlight dp-card--ai">
     <h3>비대칭 아키텍처의 승리</h3>
@@ -111,7 +111,7 @@ Protobuf, FlatBuffers, JSON과 비교되는 **득팩(DeukPack)만의 대체 불�
       <li><strong>순수 JSON 호환:</strong> JS/TS 파이프라인에서 무거운 래퍼 클래스 없이 POJO를 유연하게 직접 조립.</li>
       <li><strong>AI 지식 그래프:</strong> <code>tablelink</code> 등 단순 프로토콜을 넘어 전체 프로젝트 ERD 컨텍스트를 품은 <code>.deuk</code> IDL.</li>
     </ul>
-    <p>[AI 가이드레일 실전 전략 →](ai-pipeline-integration.ko.md) &nbsp; | &nbsp; [타사 직렬화 대체 불가 비교 →](positioning.ko.md#대체-불가능한-아키텍처-why-deukpack)</p>
+    <p><a href="ai-pipeline-integration.ko.md">AI 가이드레일 실전 전략 →</a> &nbsp; | &nbsp; <a href="positioning.ko.md#대체-불가능한-아키텍처-why-deukpack">타사 직렬화 대체 불가 비교 →</a></p>
   </div>
 </div>
 
