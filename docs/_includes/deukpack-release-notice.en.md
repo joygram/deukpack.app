@@ -1,2 +1,2 @@
-!!! info "DeukPack core update — 1.4.0"
-    **DeukPack core 1.3.0** — dynamic client-side release notice; fixed broken markdown links and anchors; enhanced OSS sync with global exclusion rules for build artifacts (`obj`, `bin`, etc.). [GitHub Releases](https://github.com/joygram/DeukPack/releases/latest) · [Release summary](https://deukpack.app/releases/)
+!!! info "DeukPack core update — 1.5.0"
+    **DeukPack core 1.5.0** — achieved Java parity with support for `extends` (inheritance), `TCompact`, and `TJSON` protocols. Decoupled MCP server generation into a separate plugin (`DeukPackMcp`) for a leaner core engine. Enhanced security across all languages with global guards (MAX_SAFE_LENGTH, MAX_RECURSION_DEPTH) in binary readers/writers. [GitHub Releases](https://github.com/joygram/DeukPack/releases/latest) · [Release summary](https://deukpack.app/releases/)

@@ -7,7 +7,7 @@ site_url: https://deukpack.app/
 extra:
   generator: false
   announce: >-
-    <strong>득팩 코어 1.5.0</strong> — Java 패리티·MCP 코어 분리·전수 보안 가드 도입 —
+    <strong>득팩 코어 1.5.0</strong> — Java 패리티(상속, Compact/TJSON 추가) · MCP 코어 분리 · 전수 보안 가드 도입 —
     <a href="https://github.com/joygram/DeukPack/releases/latest">GitHub Releases</a>
     · <a href="https://deukpack.app/releases/">릴리스 요약</a>
     · <a href="https://deukpack.app/releases/">EN</a>
@@ -104,10 +104,10 @@ theme:
     repo: fontawesome/brands/github
 
 extra_css:
-  - stylesheets/extra.css
+  - stylesheets/extra-v2.css
 
 extra_javascript:
-  - javascripts/dynamic-release-notice.js
+  - javascripts/dynamic-release-notice-v2.js
   - javascripts/table-scroll-indicator.js
 
 plugins:

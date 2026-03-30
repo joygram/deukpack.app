@@ -18,9 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (!wrap.querySelector(".dp-table-indicator")) {
             const indicator = document.createElement("div");
             indicator.className = "dp-table-indicator";
-            // Check for Korean path to localize text
-            const isKo = window.location.pathname.includes("/ko/");
-            indicator.innerHTML = `<span>${isKo ? "스크롤" : "Scroll"}</span><span class="dp-arrow">→</span>`;
+            indicator.innerHTML = `<span class="dp-arrow">→</span>`;
             
             // Positioning the indicator inside the relative wrap
             wrap.style.position = "relative";
@@ -29,16 +27,15 @@ document.addEventListener("DOMContentLoaded", function () {
             // Mark as having indicator
             wrap.dataset.hasIndicator = "true";
 
-            // Fade out on scroll
+            // Fade out on scroll with a more elegant transition
             const fadeOut = () => {
               indicator.style.opacity = "0";
-              indicator.style.transition = "opacity 0.4s ease, transform 0.4s ease";
-              indicator.style.transform = "translateX(10px)";
+              indicator.style.transform = "translateY(-50%) scale(0.8) translateX(10px)";
               setTimeout(() => {
                 if (indicator.parentNode) {
                   indicator.parentNode.removeChild(indicator);
                 }
-              }, 400);
+              }, 500);
               wrap.removeEventListener("scroll", fadeOut);
               wrap.removeEventListener("mousedown", fadeOut);
               wrap.removeEventListener("touchstart", fadeOut);

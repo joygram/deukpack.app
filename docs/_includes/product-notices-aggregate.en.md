@@ -1,5 +1,16 @@
 ## Product-line notices (newest first)
 
+### 2026-03-30 — Core · engine · Protocol · Pipeline · Unity
+
+**1.5.0 — Java parity, MCP decoupling, security guards**
+
+- **Java**: Added support for `extends` (inheritance), `TCompact`, and `TJSON` protocols.
+- **Architecture**: Decoupled MCP server logic into a standalone `DeukPackMcp` plugin.
+- **Security**: Implemented `MAX_SAFE_LENGTH` and `MAX_RECURSION_DEPTH` guards across all language runtimes.
+- **Docs**: Synchronized deukpack.app and repository READMEs with v1.5.0 status.
+
+---
+
 ### 2026-03-28 — Core · engine · Extension · Pipeline · Unity
 
 **1.3.0 — dynamic notices, link fixes, OSS sync**

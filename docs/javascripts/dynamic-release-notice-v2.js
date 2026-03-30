@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const url = "https://raw.githubusercontent.com/joygram/DeukPackOSS/main/release-notice.json";
+  const url = `https://raw.githubusercontent.com/joygram/DeukPack/main/release-notice.json?nocache=${Date.now()}`;
   
   try {
     const response = await fetch(url);

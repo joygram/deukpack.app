@@ -28,6 +28,7 @@ The `protocol` string must **match** the family. Use `WireProtocolOption`, `deuk
 | **`tbinary`** | Thrift Binary | **Implemented** when you pass **`interopRootStruct`** (+ optional **`interopStructDefs`** for nested types) | `DpBinaryProtocol`, etc. |
 | **`tcompact`** | Thrift Compact | Same | `DpCompactProtocol`, etc. |
 | **`tjson`** | Thrift JSON wrapper (`DpJsonProtocol`) | Same | C# and other runtimes |
+{: .dp-matrix-table }
 
 Without a root struct schema, JS **throws a clear error** (the engine cannot infer field ids). Use **`serializeInteropStruct` / `deserializeInteropStruct`** or **`WireSerializer`** with **`SerializationOptions`** filled from parse/schema. **Generated C# / C++** remains the main path for app-sized stacks.
 
@@ -42,6 +43,7 @@ Without a root struct schema, JS **throws a clear error** (the engine cannot inf
 | `pack` | Tagged binary (Deuk native) | **Implemented** | Reader/Writer for that family |
 | `json` | UTF-8 JSON (values only) | **Implemented** | Same family |
 | `yaml` | UTF-8 YAML (values only) | **Implemented** | Same family |
+{: .dp-matrix-table }
 
 **CLI `--protocol` default (codegen hint):** **`pack`**. Interop CLI values are **`tbinary` / `tcompact` / `tjson`**; legacy `binary` is normalized to **`tbinary`**.
 

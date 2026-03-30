@@ -168,47 +168,52 @@
    ------------------------------------------------------------------------- */
 
 /* Table wrap with side-fade shadows */
-.md-typeset__scrollwrap {
-  position: relative;
-  overflow-x: auto;
-  border-radius: 0.8rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.5rem;
-  /* Scroll shadows using multiple backgrounds */
-  background: 
-    linear-gradient(to right, #0c1430 30%, rgba(12, 20, 48, 0)),
-    linear-gradient(to right, rgba(12, 20, 48, 0), #0c1430 70%) 0 100%,
-    radial-gradient(farthest-corner at 0 50%, rgba(126, 220, 255, 0.15), rgba(126, 220, 255, 0)),
-    radial-gradient(farthest-corner at 100% 50%, rgba(126, 220, 255, 0.15), rgba(126, 220, 255, 0)) 0 100%;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
-  background-attachment: local, local, scroll, scroll;
+/* Table wrap - Flat & Simple Layout (Eliminating theme-default shadows) */
+.md-typeset__scrollwrap,
+.md-typeset__scrollwrap::before,
+.md-typeset__scrollwrap::after {
+  box-shadow: none !important;
+  background-image: none !important; /* Material theme uses radial-gradient here */
+  background-color: transparent !important;
+  display: block; /* Essential for the wrapper itself */
 }
 
-/* Floating Scroll Indicator Badge */
+/* Explicitly kill the theme's default shadow pseudo-elements */
+.md-typeset__scrollwrap::before,
+.md-typeset__scrollwrap::after {
+  display: none !important;
+}
+
+.md-typeset__table {
+  background: transparent !important;
+}
+
+/* 3. 새로운 원형 인디케이터 단추 스펙 (Glassmorphism) */
 .dp-table-indicator {
   position: absolute;
-  right: 1.2rem;
+  right: 1.25rem;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background: rgba(126, 220, 255, 0.1);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(126, 220, 255, 0.35);
-  border-radius: 999px;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  background: rgba(126, 220, 255, 0.12); /* 원경 배경색 */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(126, 220, 255, 0.5); /* 선명한 보더 */
+  border-radius: 50%;
   color: #7ee8fa;
-  font-size: 0.8rem;
-  font-weight: 700;
   pointer-events: none;
-  z-index: 10;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  animation: dp-indicator-bounce 2s infinite ease-in-out;
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 999; /* 다른 요소보다 확실히 위에 표시 */
+  
+  /* 인디케이터 전용 그림자 - 테마 그림자와 혼동되지 않도록 명시적으로 설정 */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 
+              inset 0 1px 1px rgba(255, 255, 255, 0.2) !important;
+  
+  animation: dp-indicator-bounce-centered 2.5s infinite ease-in-out;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .dp-table-indicator .dp-arrow {
@@ -216,20 +221,14 @@
   margin-left: 0.2rem;
 }
 
-@keyframes dp-indicator-bounce {
-  0%, 100% { transform: translateY(-50%) translateX(0); }
-  50% { transform: translateY(-50%) translateX(-6px); }
+@keyframes dp-indicator-bounce-centered {
+  0%, 100% { transform: translateY(-50%) translateX(0); opacity: 0.9; }
+  50% { transform: translateY(-50%) translateX(-8px); opacity: 1; box-shadow: 0 0 20px rgba(126, 220, 255, 0.4); }
 }
 
 [data-md-color-scheme="default"] .md-typeset__scrollwrap {
-  background: 
-    linear-gradient(to right, white 30%, rgba(255, 255, 255, 0)),
-    linear-gradient(to right, rgba(255, 255, 255, 0), white 70%) 0 100%,
-    radial-gradient(farthest-corner at 0 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)),
-    radial-gradient(farthest-corner at 100% 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)) 0 100%;
-  background-repeat: no-repeat;
-  background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
-  background-attachment: local, local, scroll, scroll;
+  background-color: transparent !important;
+  box-shadow: none !important;
 }
 
 @media screen and (max-width: 960px) {
@@ -237,3 +236,19 @@
     margin-bottom: 0 !important;
   }
 }
+
+/* 4. Matrix Table (속성 표) 좌측 열 고정 */
+.dp-matrix-table th:first-child,
+.dp-matrix-table td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background-color: var(--md-default-bg-color) !important;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+[data-md-color-scheme="slate"] .dp-matrix-table th:first-child,
+[data-md-color-scheme="slate"] .dp-matrix-table td:first-child {
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.3);
+}
+

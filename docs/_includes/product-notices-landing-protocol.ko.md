@@ -1,4 +1,11 @@
 !!! tip "이 제품군 최근 노티"
+    **2026-03-30** — 1.5.0 — Java 패리티·MCP 분리·보안 강화
+
+    - **Java**: `extends`(상속), `TCompact`, `TJSON` 프로토콜 정식 지원.
+    - **아키텍처**: MCP 서버 생성 로직을 독립 플러그인(`DeukPackMcp`)으로 분리.
+    - **보안**: 전 언어 바이너리 입출력에 `MAX_SAFE_LENGTH`, `MAX_RECURSION_DEPTH` 보안 가드 적용.
+    - **문서**: 공식 사이트(deukpack.app) 및 README 최신화.
+
     **2026-03-23** — 1.2.0 — 동봉 VSIX·npm 와이어·Unity 연동 문서
 
     - **VS Code 확장**: npm tarball에 **`bundled/deuk-idl.vsix`** 동봉; postinstall·bootstrap 연동(`bundled/README.md`).

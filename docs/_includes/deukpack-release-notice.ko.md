@@ -1,2 +1,2 @@
-!!! info "득팩 코어 업데이트 — 1.4.0"
-    **득팩 코어 1.3.0** — 득팩앱 빌드 타임 의존성 제거 및 브라우저 실시간 공지 렌더링 도입; 마크다운 내 깨진 링크 및 앵커 일괄 수정; OSS 미러링 시 불필요한 빌드 아티팩트 전역 제외 규칙 강화. [GitHub Releases](https://github.com/joygram/DeukPack/releases/latest) · [릴리스 요약](https://deukpack.app/releases/)
+!!! info "득팩 코어 업데이트 — 1.5.0"
+    **득팩 코어 1.5.0** — Java 파이프라인에서 `extends`(상속), `TCompact`, `TJSON` 프로토콜을 정식 지원하며 C#/TS와 동등한 수준의 기능을 달성했습니다. 또한 MCP 서버 생성 로직을 독립 플러그인(`DeukPackMcp`)으로 완전히 분리하여 코어 엔진의 경량화를 실현하고, 모든 언어의 바이너리 리더/라이터에 전역 보안 가드(MAX_SAFE_LENGTH, MAX_RECURSION_DEPTH)를 적용하여 안정성을 강화했습니다. [GitHub Releases](https://github.com/joygram/DeukPack/releases/latest) · [릴리스 요약](https://deukpack.app/releases/)
