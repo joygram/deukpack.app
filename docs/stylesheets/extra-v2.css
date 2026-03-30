@@ -252,3 +252,100 @@
   box-shadow: 2px 0 6px rgba(0, 0, 0, 0.3);
 }
 
+/* -------------------------------------------------------------------------
+   Release Notices: Featured & Rolling Ticker
+   ------------------------------------------------------------------------- */
+
+.dp-notice-featured {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1.5px solid rgba(126, 220, 255, 0.3);
+  border-radius: 1rem;
+  background: rgba(126, 220, 255, 0.05);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.dp-notice-featured h3 {
+  margin-top: 0;
+  color: #7ee8fa;
+  font-size: 1.25rem;
+}
+
+.dp-rolling-ticker-container {
+  margin: 1.5rem 0;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  background: rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.dp-rolling-ticker {
+  height: 2.2rem; /* 싱글 라인 높이 */
+  overflow: hidden;
+  position: relative;
+}
+
+.dp-ticker-item {
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  animation: dp-ticker-slide v2.5s infinite; /* JS에서 개수에 따라 조절 가능 */
+}
+
+.dp-ticker-label {
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  background: rgba(255, 213, 79, 0.15);
+  color: #ffd54f;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.dp-history-section {
+  margin-top: 2rem;
+}
+
+.dp-history-content {
+  display: none;
+  border-top: 1px dashed rgba(255, 255, 255, 0.15);
+  padding-top: 1rem;
+}
+
+.dp-history-content.is-visible {
+  display: block;
+}
+
+.dp-history-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: var(--md-primary-fg-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+
+.dp-history-btn:hover {
+  opacity: 0.8;
+}
+
+@keyframes dp-ticker-slide {
+  0% { transform: translateY(0); }
+  20% { transform: translateY(0); }
+  25% { transform: translateY(-100%); }
+  45% { transform: translateY(-100%); }
+  50% { transform: translateY(-200%); }
+  70% { transform: translateY(-200%); }
+  75% { transform: translateY(-300%); }
+  95% { transform: translateY(-300%); }
+  100% { transform: translateY(-400%); }
+}
+

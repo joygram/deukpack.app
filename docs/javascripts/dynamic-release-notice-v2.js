@@ -119,21 +119,89 @@ document.addEventListener("DOMContentLoaded", async () => {
       const labels = isKo ? productLabelsKo : productLabelsEn;
       const sep = ' · ';
       
-      const h2Title = isKo ? '제품군 노티 (날짜 역순)' : 'Product-line notices (newest first)';
+      const h2Title = isKo ? '최신 제품 소식' : 'Latest Product News';
       
       if (notices.length === 0) {
         aggregatePlaceholder.innerHTML = `<h2>${h2Title}</h2><p><em>${isKo ? '등록된 제품군 노티가 없습니다.' : 'No product-line notices yet.'}</em></p>`;
       } else {
-        const itemsHtml = notices.map(n => {
+        // A. Featured Latest (First item)
+        const latest = notices[0];
+        const latestProdLine = Array.isArray(latest.products) ? latest.products.map(p => labels[p] || p).join(sep) : '';
+        const featuredHtml = `
+          <div class="dp-notice-featured">
+            <h3>${latest.date} — ${latestProdLine}</h3>
+            <p><strong>${latest[titleKey] || ''}</strong></p>
+            ${simpleMdToHtml(latest[bodyKey] || '')}
+          </div>
+        `;
+
+        // B. Rolling Ticker (Next 4 items)
+        let tickerHtml = '';
+        const tickerItems = notices.slice(1, 5);
+        if (tickerItems.length > 0) {
+          const tickerItemsInner = tickerItems.map(n => {
+            const prodShort = Array.isArray(n.products) ? (labels[n.products[0]] || n.products[0]) : '';
+            return `
+              <div class="dp-ticker-item">
+                <span class="dp-ticker-label">${prodShort}</span>
+                <span><strong>${n.date}</strong> — ${n[titleKey]}</span>
+              </div>
+            `;
+          }).join('');
+          
+          tickerHtml = `
+            <div class="dp-rolling-ticker-container">
+              <div class="dp-rolling-ticker">
+                ${tickerItemsInner}
+                ${tickerItemsInner /* Infinite loop effect duplicate */}
+              </div>
+            </div>
+          `;
+        }
+
+        // C. History (Everything else)
+        const historyItems = notices.slice(1);
+        const historyTitle = isKo ? '전체 업데이트 이력 보기' : 'View Full Release History';
+        const historyItemsHtml = historyItems.map(n => {
           const prodLine = Array.isArray(n.products) ? n.products.map(p => labels[p] || p).join(sep) : '';
           return `
-            <h3>${n.date} — ${prodLine}</h3>
-            <p><strong>${n[titleKey] || ''}</strong></p>
-            ${simpleMdToHtml(n[bodyKey] || '')}
-            <hr>
+            <div class="dp-history-item">
+              <h4>${n.date} — ${prodLine}</h4>
+              <p><strong>${n[titleKey] || ''}</strong></p>
+              ${simpleMdToHtml(n[bodyKey] || '')}
+              <hr>
+            </div>
           `;
         }).join('');
-        aggregatePlaceholder.innerHTML = `<h2>${h2Title}</h2>${itemsHtml}`;
+
+        const historyHtml = `
+          <div class="dp-history-section">
+            <div id="dp-history-toggle" class="dp-history-btn">
+              <span>▶ ${historyTitle}</span>
+            </div>
+            <div id="dp-history-content" class="dp-history-content">
+              ${historyItemsHtml}
+            </div>
+          </div>
+        `;
+
+        aggregatePlaceholder.innerHTML = `<h2>${h2Title}</h2>${featuredHtml}${tickerHtml}${historyHtml}`;
+
+        // Add Toggle Event
+        const toggleBtn = document.getElementById("dp-history-toggle");
+        const historyContent = document.getElementById("dp-history-content");
+        if (toggleBtn && historyContent) {
+          toggleBtn.addEventListener("click", () => {
+            const isVisible = historyContent.classList.toggle("is-visible");
+            toggleBtn.querySelector("span").textContent = (isVisible ? "▼ " : "▶ ") + historyTitle;
+          });
+        }
+
+        // Adjust Ticker Animation
+        const ticker = aggregatePlaceholder.querySelector(".dp-rolling-ticker");
+        if (ticker && tickerItems.length > 0) {
+          ticker.style.animationDuration = `${tickerItems.length * 3}s`;
+        }
       }
     }
     
