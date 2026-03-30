@@ -12,8 +12,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     // 1. Announce Banner
     const bannerPlaceholder = document.getElementById("dp-dynamic-banner-placeholder");
     if (bannerPlaceholder) {
-      if (data.announce) {
-        bannerPlaceholder.innerHTML = data.announce;
+      const announceText = isKo ? data.announce_ko : data.announce_en;
+      if (announceText) {
+        bannerPlaceholder.innerHTML = announceText;
       }
     }
     
