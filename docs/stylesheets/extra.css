@@ -160,6 +160,80 @@
   }
   .dp-hero-visual img {
     min-height: 220px;
-    max-height: min(70vw, 320px);
+  }
+}
+
+/* -------------------------------------------------------------------------
+   Tables: Responsive Scroll Guidance
+   ------------------------------------------------------------------------- */
+
+/* Table wrap with side-fade shadows */
+.md-typeset__scrollwrap {
+  position: relative;
+  overflow-x: auto;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  /* Scroll shadows using multiple backgrounds */
+  background: 
+    linear-gradient(to right, #0c1430 30%, rgba(12, 20, 48, 0)),
+    linear-gradient(to right, rgba(12, 20, 48, 0), #0c1430 70%) 0 100%,
+    radial-gradient(farthest-corner at 0 50%, rgba(126, 220, 255, 0.15), rgba(126, 220, 255, 0)),
+    radial-gradient(farthest-corner at 100% 50%, rgba(126, 220, 255, 0.15), rgba(126, 220, 255, 0)) 0 100%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+  background-attachment: local, local, scroll, scroll;
+}
+
+/* Floating Scroll Indicator Badge */
+.dp-table-indicator {
+  position: absolute;
+  right: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(126, 220, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(126, 220, 255, 0.35);
+  border-radius: 999px;
+  color: #7ee8fa;
+  font-size: 0.8rem;
+  font-weight: 700;
+  pointer-events: none;
+  z-index: 10;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  animation: dp-indicator-bounce 2s infinite ease-in-out;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.dp-table-indicator .dp-arrow {
+  font-size: 1rem;
+  margin-left: 0.2rem;
+}
+
+@keyframes dp-indicator-bounce {
+  0%, 100% { transform: translateY(-50%) translateX(0); }
+  50% { transform: translateY(-50%) translateX(-6px); }
+}
+
+[data-md-color-scheme="default"] .md-typeset__scrollwrap {
+  background: 
+    linear-gradient(to right, white 30%, rgba(255, 255, 255, 0)),
+    linear-gradient(to right, rgba(255, 255, 255, 0), white 70%) 0 100%,
+    radial-gradient(farthest-corner at 0 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)),
+    radial-gradient(farthest-corner at 100% 50%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)) 0 100%;
+  background-repeat: no-repeat;
+  background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+  background-attachment: local, local, scroll, scroll;
+}
+
+@media screen and (max-width: 960px) {
+  .md-typeset__table {
+    margin-bottom: 0 !important;
   }
 }

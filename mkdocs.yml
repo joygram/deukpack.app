@@ -108,6 +108,7 @@ extra_css:
 
 extra_javascript:
   - javascripts/dynamic-release-notice.js
+  - javascripts/table-scroll-indicator.js
 
 plugins:
   - i18n:
