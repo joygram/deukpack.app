@@ -1,134 +1,87 @@
-# From Frustration to Language: The Birth of the DeukPack IDL
+# AI Agents and MCP: Does Your Data Have an 'Identity Card'?
 
-![DeukPack Brand Image](https://deukpack.app/assets/deukpack-brand-concept-01.png)
+![AI MCP and Semantic Data](https://deukpack.app/assets/deukpack-brand-concept-01.png)
 
-"Why not just use Thrift? What about Protobuf?"
+"Will all our data problems be solved once MCP (Model Context Protocol) is here?"
 
-These are the first questions we hear whenever we introduce DeukPack. And they're fair questions. Thrift and Protobuf are proven, battle-tested tools. We used them successfully for years. The problem was what started **becoming visible only after we'd used them well**.
+Lately, the hottest topic among engineers is undoubtedly MCP and AI Agents. Anthropic’s release of MCP—a protocol for standardized AI access to local data and external tools—sent shockwaves through the industry. Yet, at the threshold of this new era, one fundamental challenge remains unsolved.
 
-This is not an article about introducing a new IDL tool. It's an engineering story about **how the friction we accumulated fighting with legacy tools solidified into a design philosophy—and how that philosophy was eventually realized in code**.
+That challenge is the **'Reliability of Context.'**
 
-## 1. Where the Problem Started: "Nobody Knows What This `message` Is"
-
-As our systems grew, we started to feel the limits of what the word `message` could communicate.
-
-```protobuf
-// Legacy Protobuf IDL — Is this a DB table? A network packet? Excel data?
-message Item {
-  int64 item_id = 1;
-  string name = 2;
-  int32 quantity = 3;
-}
-```
-
-In production, this single `Item` was being used in three different places simultaneously:
-
-- **Server**: As an inventory query response payload sent to the client
-- **Designer Tools**: As a row in the item master data that designers managed in Excel
-- **Database**: As a row in a table storing per-user inventory state
-
-But the `.proto` file makes zero distinction between these three contexts. When you ask an AI coding assistant to "write code that handles this `Item`," the AI guesses which of the three contexts you mean—and **that guess is often wrong**.
-
-The deeper problem: it takes time to realize the guess was wrong.
-
-## 2. Searching for a Solution: "Should We Just Abandon Legacy Tools?"
-
-At first, the fix seemed simple. "What if we used a more expressive IDL? Or differentiated contexts with comments?"
-
-Two realities shut that down quickly.
-
-1. **The Weight of Legacy**: Tens of thousands of lines of `.proto` or `.thrift` files had accumulated. Telling the team "let's throw it all away and migrate to a new IDL" was simply not a realistic option.
-2. **Comments Don't Enforce Anything**: Expressing intent through comments provides no enforcement. The AI, the compiler, and your colleagues can all ignore them freely.
-
-This is where the design direction crystallized:
-
-> **"We don't discard legacy. Instead, we layer what legacy cannot express on top of it."**
-
-## 3. Design Philosophy: Embedding a 'Data Identity Card' into IDL Syntax
-
-This philosophy led to DeukPack's **Declaration Kinds** design.
-
-Where legacy IDLs lumped everything into `struct`, DeukPack distinguishes data by its **purpose** at the syntax level.
-
-```
-namespace game
-
-// Item master data — read from files, managed in Excel.
-record ItemMaster {
-  1> int64 itemId
-  2> string name
-  3> int32 maxStack
-}
-table<ItemMaster> = { key: "itemId" }
-
-// Inventory DB row — manages per-user persistent state.
-entity UserInventory {
-  1> [key] int64 userId
-  2> int64 itemId
-  3> int32 quantity
-}
-
-// Item query response packet — a one-way transient payload.
-keyword message_scope 10000
-message<10001> ItemQueryResponse {
-  1> list<ItemInfo> items
-  2> int32 totalCount
-}
-```
-
-This distinction produces tangible changes in three directions at once:
-
-- **The Compiler**: Generates Excel serialization code for `table`, DB mapping code for `entity`, and optimized binary serialization for `message<N>`—each one correct and different.
-- **AI Coding Tools**: The declaration keyword alone tells the AI what context this data lives in. The surface area for generating wrong-context code shrinks dramatically.
-- **Developers**: Someone reading the code for the first time doesn't waste time guessing what this `struct` is for.
-
-## 4. "What About Legacy?" — The Mixed Architecture Answer
-
-Once the philosophy was set, the next question was unavoidable:
-
-> "What do we do with existing `.proto` or `.thrift` files that are already running in production?"
-
-The DeukPack engine was designed to read `.proto`, `.thrift`, and `.deuk` files **simultaneously**. Existing files are imported with `include` and DeukPack features are layered on top—no modifications required.
-
-```
-// Include the existing Protobuf file as-is — zero file modifications
-include "legacy/item_base.proto"
-
-// Use the legacy record directly, just register it as a table
-table<item_base.Item> = { key: "item_id" }
-```
-
-The legacy files are untouched—not a single line changed. The DeukPack engine parses both files together, merges them into a single **Unified AST**, and generates code in the target language (C#, TypeScript, C++, and more) from that shared representation.
-
-## 5. "How Is This Even Possible?" — The Technical Foundation of the Unified AST
-
-The reason all of this works is that inside the DeukPack engine, every IDL—regardless of origin—is transformed into **a single, common AST structure**.
-
-```
-   [Input Sources]                 [Unified AST Hub]          [Output Code]
-           
-   legacy.proto (Protobuf)  ----+
-                                |
-   legacy.thrift (Thrift)   ----+--> [ DeukPack Engine ] --> C# / TS / C++
-                                |           (AST)
-   new_logic.deuk (Deuk)    ----+
-```
-
-There's a dedicated parser for `.thrift` files and a separate one for `.deuk` files—but both parsers produce the same `DeukPackAST` as output. The code generators look only at the AST; they don't care what the source format was.
-
-The AST carries more than type information. It embeds `declarationKind` (`record`, `entity`, `message`, `table`), bracket attributes (`[key]`, `[split]`, etc.), and doc comments—all preserved. Generators read this rich metadata to produce code that precisely matches each declaration's Intent.
-
-## Conclusion: Accumulated Frustration Becomes Design, Which Becomes Language
-
-The reason DeukPack IDL looks superficially similar to Thrift or Protobuf—while carrying a fundamentally different philosophy inside—is that **it was designed to precisely target the problems legacy tools left unsolved**.
-
-Throwing everything out and starting fresh is easy. Preserving what works, while carefully filling in what was always missing on top of it—that's harder, and in practice, far more valuable.
+Giving an AI 'access' to data is entirely different from the AI truly 'understanding' the 'intent' behind that data. This article explores why structural modeling like Protobuf or Thrift is no longer enough in the age of MCP, and how giving data an **'Identity Card'** can complete the intelligence of AI agents.
 
 ---
 
-### 🔗 DeukPack Ecosystem
+## 1. The Limit of MCP: "Able to Read, Unable to Know"
 
-* **Official Website**: [deukpack.app](https://deukpack.app)
-* **GitHub (OSS)**: [DeukPack](https://github.com/deukpack/DeukPack) — Open source engine for everyone.
+Suppose an AI agent has gained access to your database or codebase via MCP. It will encounter a sea of `struct` and `message` definitions.
 
-**DeukPack** aims for a technical ecosystem where AI and human developers grow together, preventing fragmentation in complex systems.
+```protobuf
+// A message the AI agent might see through MCP
+message UserState {
+  int64 id = 1;
+  string status = 2;
+  int32 access_level = 3;
+}
+```
+
+To the AI, this data is merely a collection of integers and strings.
+- "Is this a network packet? (Does it need transient processing?)"
+- "Is this a database row? (Does it require persistence management?)"
+- "Is this configuration set by a designer? (Is it the basis for business logic?)"
+
+**Though the AI has reached the data via the MCP 'highway,' it often falls into hallucinations because it doesn't know the 'role' the data plays within the system.** Structure has been delivered, but **Intent** has not.
+
+## 2. 'Intentional Modeling': Presenting Data's 'Identity Card' to AI
+
+We believe that data should be perceived by machines as a **'Context for Intelligent Action,'** not just a generic payload.
+
+To achieve this, we replaced the single abstraction of `struct` with **'Declarative Keywords'** that clarify the data's purpose at the syntax level.
+
+*   **`record`**: Pure data transfer object (DTO)
+*   **`entity`**: Core system state (DB Row)
+*   **`table`**: Reference knowledge for business logic (Master Data)
+
+```deuk
+// A declaration that allows AI to instantly recognize 'Knowledge'
+table<ItemMaster> = { key: "id" } // "Ah, this is searchable reference data!"
+
+entity PlayerAccount {
+  1> [key] int64 accountId
+} // "Ah, this is core data that requires state management!"
+```
+
+The moment data is given an **'Identity Card,'** an AI agent reading it via MCP stops guessing. Just by looking at the keyword, it can independently decide, "This is an `entity`, so I must consider concurrency control and transactions," or "This is a `table`, so I should design a caching strategy." **This is where the designer's intent is directly mapped to the AI's intelligence through syntax.**
+
+## 3. Unified AST: A Bridge Between Legacy and the AI Era
+
+The global data infrastructure is already built on billions of lines of Protobuf and Thrift. Replacing this massive legacy all at once is impossible.
+
+We solved this through the **'Unified AST (Abstract Syntax Tree)'** hub. It allows you to maintain existing legacy systems as-is, while layering a 'Semantic Layer' on top that the AI can understand.
+
+```deuk
+// Use existing Protobuf files without modification
+include "legacy/inventory.proto"
+
+// Simply tell the AI agent the 'Identity' of this data
+table<inventory.Item> = { key: "item_id" }
+```
+
+Thanks to this architecture—where legacy and modern philosophies coexist—we can provide the richest and most accurate context to AI agents using MCP, without any breaking changes.
+
+---
+
+## Conclusion: Data in the AI Era Must Be a 'Blueprint of Design'
+
+In an era where AI agents autonomously judge and act, data modeling is no longer just a 'means of moving data.' It must be a **'Blueprint of Design'** that prevents machines from getting lost.
+
+Revealing the intent hidden within the structure and 부여ing a clear identity to data are the keys to unlocking the true performance of AI agents on the MCP highway.
+
+> [!NOTE]
+> **Project DeukPack**
+>
+> A project born to restore 'Data Semantics' for the era of MCP and AI agents.
+> DeukPack aims for a technical infrastructure where data's reason for existence is declared, allowing AI agents to operate as a perfect reflection of human design.
+>
+> *   **Official Website**: [deukpack.app](https://deukpack.app)
+> *   **GitHub**: [DeukPack OSS](https://github.com/deukpack/DeukPack)

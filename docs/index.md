@@ -45,8 +45,6 @@ hide:
 | **DeukPack Excel Add-in** | **Schema-Driven Editor**: Excel tool for validating and syncing planning data based on schemas. | [EXCEL_ADDIN →](products/excel-addin.md) |
 | **DeukPack Pipeline** | **AI-Native Pipeline**: Automated toolchain from builds to custom code generation in one command. | [PIPELINE →](products/pipeline-unity.md) |
 | **DeukPackMcp** | **Universal AI Hub (Coming Soon)**: Unified bridging of .proto, .deuk, OpenAPI and more as AI skills. | [MCP_HUB →](products/mcp-hub.md) |
-| **DeukPackMcp** | **Universal AI Hub (Coming Soon)**: Unified bridging of .proto, .deuk, OpenAPI and more as AI skills. | [MCP_HUB →](products/mcp-hub.md) |
-| **DeukPackMcp** | **Universal AI Hub (Coming Soon)**: Unified bridging of .proto, .deuk, OpenAPI and more as AI skills. | [MCP_HUB →](products/mcp-hub.md) |
 | **DeukNavigation** | Unity/server shared Deuk wire (.dpk) based Recast/Detour NavMesh solution. | [NAVIGATION →](products/navigation.md) |
 | **Extension products** | DB migrator, EF support, Google Sheets, Unreal/Elixir, and more. | [EXTENSIONS →](products/index.md) |
 
@@ -105,11 +103,6 @@ Source, issues, and contributions: [GitHub repository](https://github.com/joygra
     <h3>Breakthrough in the AI Era</h3>
     <p>Agents are strong at <strong>spec design and logic</strong>, but DeukPack excels at <strong>deterministic binary consistency</strong>. DeukPack provides <strong>'executable types'</strong> and <strong>'shields'</strong> to agents, helping AI become your most trusted development partner.</p>
     <p><a href="ai-pipeline-integration.md">AI Semantic Mapping &amp; Guardrail Strategy →</a></p>
-  </div>
-  <div class="dp-card dp-card--highlight dp-card--mcp">
-    <h3>DeukPackMcp: Universal AI Hub 🚧</h3>
-    <p>Seamlessly integrate <strong>.proto, .deuk, OpenAPI</strong> and <strong>ALL DeukPack products</strong> (Core, Excel, Nav, etc.) as real-time skills for AI agents. The next-gen gateway to transform your assets into AI skills.</p>
-    <p><strong>🚧 COMING SOON:</strong> From Unity engine control to enterprise tool integration, all in one bridge.</p>
   </div>
 </div>
 

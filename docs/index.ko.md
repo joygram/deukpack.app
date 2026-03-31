@@ -45,8 +45,6 @@ hide:
 | **득팩 Excel 애드인** | **Schema-Driven Editor**: 기획 데이터를 스키마 기반으로 검증·동기화하는 Excel 도구 | [EXCEL_ADDIN →](products/excel-addin.ko.md) |
 | **득팩 파이프라인** | **AI-Native Pipeline**: 빌드부터 전용 코드 생성까지 한 명령으로 이어주는 자동화 툴체인 | [PIPELINE →](products/pipeline-unity.ko.md) |
 | **DeukPackMcp** | **Universal AI Hub (준비 중)**: .proto, .deuk, OpenAPI 등 모든 설계를 AI 스킬로 통합 브리징 | [MCP_HUB →](products/mcp-hub.ko.md) |
-| **DeukPackMcp** | **Universal AI Hub (준비 중)**: .proto, .deuk, OpenAPI 등 모든 설계를 AI 스킬로 통합 브리징 | [MCP_HUB →](products/mcp-hub.ko.md) |
-| **DeukPackMcp** | **Universal AI Hub (준비 중)**: .proto, .deuk, OpenAPI 등 모든 설계를 AI 스킬로 통합 브리징 | [MCP_HUB →](products/mcp-hub.ko.md) |
 | **DeukNavigation** | Unity·서버 공용 Deuk 와이어(.dpk) 기반 Recast/Detour NavMesh 솔루션 | [NAVIGATION →](products/navigation.ko.md) |
 | **확장 제품군** | DB 마이그레이터, EF 지원, Google Sheets, Unreal/Elixir 등 선택적 확장 | [EXTENSIONS →](products/index.ko.md) |
 
