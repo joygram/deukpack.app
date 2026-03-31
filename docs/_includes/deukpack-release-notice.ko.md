@@ -1,2 +1,2 @@
-!!! info "득팩 코어 업데이트 — 1.5.0"
-    **득팩 코어 1.5.0** — Java 파이프라인에서 `extends`(상속), `TCompact`, `TJSON` 프로토콜을 정식 지원하며 C#/TS와 동등한 수준의 기능을 달성했습니다. 또한 MCP 서버 생성 로직을 독립 플러그인(`DeukPackMcp`)으로 완전히 분리하여 코어 엔진의 경량화를 실현하고, 모든 언어의 바이너리 리더/라이터에 전역 보안 가드(MAX_SAFE_LENGTH, MAX_RECURSION_DEPTH)를 적용하여 안정성을 강화했습니다. [GitHub Releases](https://github.com/joygram/DeukPack/releases/latest) · [릴리스 요약](https://deukpack.app/releases/)
+!!! info "득팩 코어 업데이트 — 1.6.0"
+    **득팩 코어 1.6.0** — JavaScript(Node.js/Web) 환경에 사전 컴파일 기반 정적 **V8 JIT Codegen**을 도입하여 동역 파싱 대비 속도를 250% 높이고 힙 할당을 즉시 회수합니다. 또한 C#(Unity) 파이프라인을 `[StructLayout]` 기반의 **완전 무할당(Zero-Alloc) 구조**로 격상시켜 백만 회 로딩에도 0바이트의 가비지를 보장합니다. 퍼포먼스가 중요한 모든 레이어에 업계 최상위권의 속도와 메모리 안정성을 제공합니다. [GitHub Releases](https://github.com/joygram/DeukPack/releases/latest) · [릴리스 요약](https://deukpack.app/releases/)

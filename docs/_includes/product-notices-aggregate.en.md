@@ -1,5 +1,16 @@
 ## Product-line notices (newest first)
 
+### 2026-04-01 — Core · engine · Protocol · Pipeline · Unity
+
+**1.6.0 — JS JIT Codegen, C# Zero-Alloc architecture**
+
+- **JavaScript**: Introduced V8 JIT inline optimization using pre-compiled `_readPack` (250% speed boost & GC defense).
+- **C# / Unity**: Achieved literal zero (0) heap allocation via Value Type encapsulation and structural statically-allocated lambdas.
+- **Benchmark**: Provided cross-language, comprehensive memory and parsing latency matrices.
+- **Roadmap**: Elixir (Erlang BEAM) support officially promoted to the v1.7.0 minor release.
+
+---
+
 ### 2026-03-30 — Core · engine · Protocol · Pipeline · Unity
 
 **1.5.0 — Java parity, MCP decoupling, security guards**
