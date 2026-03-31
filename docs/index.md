@@ -124,16 +124,18 @@ Source, issues, and contributions: [GitHub repository](https://github.com/joygra
 
 ## Supported Protocols & Languages (v1.6.0)
 
-| Language / Platform | Pack (.dpk) | TBinary | TCompact | TJSON | JSON (Wire) | Protobuf | OpenAPI | MCP |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **TypeScript / JS** | ✅ | ✅ | ✅ | ✅ | ✅ | 🚧 (v1.4) | ✅ | ✅ (v1.5) |
-| **C# (.NET)** | ✅ | ✅ | ✅ | ✅ | ✅ | 🚧 (v1.4) | ✅ | - |
-| **C++** | ✅ | ✅ | ✅ (v1.5) | - | ✅ (v1.5) | 🚧 (v1.4) | - | - |
-| **Java** | ✅ | ✅ | ✅ (v1.5) | ✅ (v1.5) | ✅ | - | - | - |
-| **Excel (Add-in)** | ✅ | - | - | - | - | - | - | - |
+| Language / Platform | Pack (.dpk) | TBinary | TCompact | TJSON | JSON (Wire) | YAML / CSV | Protobuf | OpenAPI | MCP | Zero-Alloc / JIT |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **TypeScript / JS** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 🚧 (v1.4) | ✅ | ✅ (v1.5) | ✅ (v1.6) |
+| **C# (.NET / Unity)** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ (v1.2.7) | 🚧 (v1.4) | ✅ | - | ✅ |
+| **C++** | ✅ | ✅ | ✅ (v1.5) | - | ✅ (v1.5) | 🚧 | 🚧 (v1.4) | - | - | ✅ (v1.4.2) |
+| **Java** | ✅ | ✅ | ✅ (v1.5) | ✅ (v1.5) | ✅ | 🚧 | - | - | - | 🚧 |
+| **Elixir (BEAM)** | 🚧 (v1.7) | - | - | - | - | - | - | - | - | 🚧 (BEAM) |
+| **Excel (Add-in)** | ✅ | - | - | - | - | - | - | - | - | - |
 
 - ✅: Full Support / Production Ready
 - ⚠️: Preview / Partial Support
+- 🚧: Pilot / Development in Progress
 - -: Not Currently Supported
 
 ---
