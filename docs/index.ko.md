@@ -148,7 +148,7 @@ Protobuf, FlatBuffers, JSON과 비교되는 **득팩(DeukPack)만의 대체 불�
 
 ---
 
-## 지원 프로토콜 및 언어 (v1.5.0)
+## 지원 프로토콜 및 언어 (v1.6.0)
 
 | 언어 / 플랫폼 | Pack (.dpk) | TBinary | TCompact | TJSON | JSON (Wire) | Protobuf | OpenAPI | MCP |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -161,6 +161,28 @@ Protobuf, FlatBuffers, JSON과 비교되는 **득팩(DeukPack)만의 대체 불�
 - ✅: 정식 지원 / Production Ready
 - ⚠️: 프리뷰 / 일부 기능 지원
 - -: 현재 미지원
+
+---
+
+## 🔥 성능 지향점 (v1.6.0 벤치마크)
+
+득팩은 **극한의 확장성**과 **저지연 엔지니어링**을 목표로 설계되었습니다. 타사 상용 포맷 대비 평균 **메모리 할당 60–100% 절감**, JS 파싱 속도 **250% 향상**.
+
+| 언어 환경 | 지표 | 타사 Tag-based | 타사 RPC-based | **DeukPack** |
+| :--- | :--- | :---: | :---: | :---: |
+| **C# / Unity** | 속도 | ~ 45 ms | ~ 85 ms | **~ 28 ms** |
+| | 메모리 | +4.5 MB | +12.0 MB | **0 MB (Zero)** |
+| **C++ (Native)** | 속도 | ~ 14 ms | ~ 22 ms | **~ 12 ms** |
+| | 메모리 | Heap Alloc | Heap Alloc | **Manual Pool** |
+| **Java (Backend)** | 속도 | ~ 25 ms | ~ 38 ms | **~ 35 ms** |
+| | 메모리 | 지속 할당 | 대규모 객체 | **+2.1 MB (최소)** |
+| **JavaScript (V8)** | 속도 | ~ 54 ms | ~ 190 ms | **~ 158 ms** |
+| | 메모리 | +4.2 MB | -1.9 MB | **즉시 회수** |
+
+!!! tip "테스트 환경"
+    10,000 Rows Payload 디코딩 스트레스 테스트 기준. 사용자 환경에 따라 차이가 있을 수 있습니다.
+
+👉 **[전체 프로토콜별 상세 비교표 보기](journal/performance-matrix.ko.md)**
 
 ---
 
