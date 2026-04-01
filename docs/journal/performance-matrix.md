@@ -6,7 +6,7 @@ hide:
 
 # Cross-Language Benchmark Matrix: DeukPack vs Commercial Protocols
 
-![Performance Matrix Cover](/assets/performance-matrix-cover.png)
+![Performance Matrix Cover](/assets/performance-matrix-cover.png){: width="700" style="margin-bottom: 1.5rem;"}
 
 This report provides a comprehensive evaluation of performance and memory characteristics across various platforms and languages (C#, C++, Java, Node.js, Elixir), comparing DeukPack against industry-standard structures (Tag-based & RPC-based formats). It demonstrates how the new **Static Inline Compiler (JIT Codegen)** and **Zero-Allocation Philosophy** introduced in **DeukPack 1.6.0** distinguish themselves from legacy formats.
 
