@@ -11,14 +11,14 @@ hide:
     <img src="/assets/deukpack-brand-concept-01.png" alt="DeukPack brand concept - a dog carrying data packs" loading="eager" decoding="async" />
   </div>
   <div class="dp-hero-copy">
-    <p class="dp-eyebrow">DeukPack — Essential Infrastructure for AI Agents</p>
-    <h1>AI-Ready<br>Interface Hub</h1>
-    <p class="dp-tagline">Mixed-IDL Hybrid Serializer · Deterministic Pipeline</p>
-    <p class="dp-lead"><strong>Free</strong>, <strong>open</strong>, and <strong>ready-to-use</strong> — the ultimate interface hub is here.<br><br><strong>DeukPack</strong> is a <strong>standalone product</strong> that handles <strong>native IDL (.deuk)</strong>, <strong>code generation, serialization, protocol, and AI semantic metadata</strong> in a single engine.<br><br>Protobuf, OpenAPI, CSV, DB, and legacy .thrift are just <strong>inputs to a single hybrid pipeline</strong>.<br><br>DeukPack opens an era where AI agents and engineers communicate and validate through the <strong>same data contract</strong>.</p>
+    <p class="dp-eyebrow">DeukPack — The perfect contract between AI Agents and Unity</p>
+    <h1>Infinite server flexibility<br>Extreme client performance</h1>
+    <p class="dp-tagline">Dynamic JS/AI Flexibility × Zero-Allocation C# Performance</p>
+    <p class="dp-lead"><strong>A hybrid schema engine breaking the limits of AI agent automation.</strong><br><br>In an era where AI holds data sovereignty, DeukPack consolidates fragmented IDLs into a single 'semantic spine'. In Node.js servers, slice and dice JSON objects freely. DeukPack uses schemas (.deuk) as filters to pack only the necessary fields into the leanest, most powerful binary.<br><br>On the Unity client, this binary is instantly reassembled via <strong>Zero-Allocation C#</strong>, leaving not a single byte of garbage behind. The ultimate asymmetric compromise of flexibility and performance—this is where the DeukPack saga begins.</p>
     <div class="dp-pills">
-      <span class="dp-pill">AI-Ready Interface Hub</span>
-      <span class="dp-pill">Mixed-IDL Hybrid Serializer</span>
-      <span class="dp-pill">IDL-to-AI Semantic Mapping</span>
+      <span class="dp-pill">Zero-Alloc C# Parser</span>
+      <span class="dp-pill">Dynamic JS/TS Masking</span>
+      <span class="dp-pill">AI-Native JSON Wire</span>
       <span class="dp-pill">MCP-based AI Guardrail</span>
     </div>
     <div class="dp-actions">
@@ -66,6 +66,22 @@ Source, issues, and contributions: [GitHub repository](https://github.com/joygra
 
 ---
 
+## 🚀 How is it different from existing tech? (Key Features)
+
+These are the **three irreplaceable weapons of DeukPack** compared to Protobuf, FlatBuffers, and JSON.
+
+1. **Zero-Copy Override without Allocation**
+   - **Legacy limits:** Protobuf or Thrift forces you to allocate (`new`) a completely separate DTO class every time you want to mask or override specific fields for different users.
+   - **DeukPack advantage:** With just ONE generated C# object, a single `Write(oprot, overrides)` function emits 100 different payload variations without generating any garbage (GC).
+2. **Direct POJO Processing without Classes**
+   - **Legacy limits:** Even in JS environments, they force heavy class wrappers like `new Message()` or complex offset Builder patterns like FlatBuffers.
+   - **DeukPack advantage:** Simple JavaScript objects (`{ id: 1 }`) thrown by AI are immediately packed into byte arrays. **Infinitely flexible in the AI environment, flawlessly strict on the client.**
+3. **'AI Semantic Spine' beyond a simple spec sheet**
+   - **Legacy limits:** Traditional IDLs are merely 1-dimensional byte conversion shells for communication.
+   - **DeukPack advantage:** The `.deuk` file natively supports `extends` (multi-level inheritance) and `tablelink` (DB/Meta table references). It acts as the most condensed **Knowledge Graph (RAG context)** that allows AI (LLMs) to grasp the ERD relationship of an entire project at a glance.
+
+---
+
 ## Why DeukPack
 
 <div class="dp-value-grid">
@@ -100,9 +116,14 @@ Source, issues, and contributions: [GitHub repository](https://github.com/joygra
     <p><a href="products/mcp-hub.md">Deep dive into AI Hub Strategy →</a></p>
   </div>
   <div class="dp-card dp-card--highlight dp-card--ai">
-    <h3>Breakthrough in the AI Era</h3>
-    <p>Agents are strong at <strong>spec design and logic</strong>, but DeukPack excels at <strong>deterministic binary consistency</strong>. DeukPack provides <strong>'executable types'</strong> and <strong>'shields'</strong> to agents, helping AI become your most trusted development partner.</p>
-    <p><a href="ai-pipeline-integration.md">AI Semantic Mapping &amp; Guardrail Strategy →</a></p>
+    <h3>The Victory of Asymmetric Architecture</h3>
+    <p>Agents and servers dynamically weave dozens of fields to fill a blank canvas, and the result is packed into the most powerful binary—<strong>Zero-Allocation C#</strong>—delivered to Unity without any garbage (GC). It is the <strong>perfect asymmetric compromise of flexibility and raw performance</strong>.</p>
+    <ul style="font-size: 0.9em; margin-top: 10px; opacity: 0.9;">
+      <li><strong>Zero-alloc Override:</strong> Completely eliminate clone-based memory garbage with a single <code>Write(oprot, overrides)</code>.</li>
+      <li><strong>Pure JSON Compatibility:</strong> Flexibly assemble POJOs directly without heavy wrapper classes in JS/TS pipelines.</li>
+      <li><strong>AI Knowledge Graph:</strong> The <code>.deuk</code> IDL embraces the full project ERD context via <code>tablelink</code>, transcending simple protocols.</li>
+    </ul>
+    <p><a href="ai-pipeline-integration.md">AI Guardrail Practical Strategy →</a> &nbsp; | &nbsp; <a href="positioning.md#irreplaceable-architecture-why-deukpack">Irreplaceable Serialization Comparison →</a></p>
   </div>
 </div>
 
