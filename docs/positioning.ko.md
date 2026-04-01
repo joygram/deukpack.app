@@ -1,5 +1,8 @@
 # 포지셔닝·타깃
 
+![docs/positioning Cover](/assets/positioning-cover.png){: width="700" style="margin-bottom: 2rem;"}
+
+
 득팩(DeukPack)의 **제품 포지션**과 **타깃**을 요약합니다. 이 사이트(deukpack.app)는 **브랜드 컨셉** 목적으로 제품을 소개하며, **무료·바로 적용 가능한 코어 라이브러리**를 npm·GitHub에서 제공합니다.
 
 ---

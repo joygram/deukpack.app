@@ -1,5 +1,8 @@
 # AI 코딩 도구 연동 가이드
 
+![docs/ai-ide-tools-guide Cover](/assets/ai-ide-tools-cover.png){: width="700" style="margin-bottom: 2rem;"}
+
+
 **Antigravity · Cursor · GitHub Copilot · ChatGPT(Codex)** 를 쓰면서 **GitHub 저장소(예: [DeukPack](https://github.com/joygram/DeukPack))** 와 함께 개발할 때의 **연결·로그인·추천 워크플로**를 정리합니다.  
 제품 UI·메뉴 이름은 업데이트될 수 있으므로, 아래 **공식 문서**를 함께 확인하세요.
 

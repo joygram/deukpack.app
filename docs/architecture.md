@@ -1,5 +1,8 @@
 # Architecture
 
+![docs/architecture Cover](/assets/architecture-cover.png){: width="700" style="margin-bottom: 2rem;"}
+
+
 A relationship map showing **data / schema flow** and **dependencies** across the DeukPack product family at a glance.
 
 ---

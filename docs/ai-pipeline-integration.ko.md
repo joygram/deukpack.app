@@ -1,5 +1,8 @@
 # AI·에이전트 파이프라인 연동
 
+![docs/ai-pipeline-integration Cover](/assets/ai-pipeline-cover.png){: width="700" style="margin-bottom: 2rem;"}
+
+
 AI·에이전트가 **코드·스펙을 생성**하는 흐름에서, **득팩이 어디에 끼워질 수 있는지** 정리한 문서입니다.  
 에이전트와 역할을 나누고, **스키마·계약**은 득팩이 담당하게 할 때의 **연동 포인트**를 소개합니다.
 

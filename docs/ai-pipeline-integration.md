@@ -1,5 +1,8 @@
 # AI & Agent Pipeline Integration
 
+![docs/ai-pipeline-integration Cover](/assets/ai-pipeline-cover.png){: width="700" style="margin-bottom: 2rem;"}
+
+
 This document describes **where DeukPack fits** in a workflow where AI agents **generate code and specs**.  
 When dividing responsibilities with an agent, it shows the **integration points** for letting DeukPack handle **schemas and contracts**.
 

@@ -1,5 +1,8 @@
 # DeukPack kits lineup
 
+![docs/deukpack-kits Cover](/assets/kits-lineup-cover.png){: width="700" style="margin-bottom: 2rem;"}
+
+
 **Lineup & portal (overview):** stack introductions, **clone URLs**, and **shared prerequisites**—what each kit is and where it lives. (URL: `/deukpack-kits/`)
 
 !!! info "Overview vs kits documentation site"

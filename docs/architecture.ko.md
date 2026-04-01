@@ -1,5 +1,8 @@
 # 제품 관계도
 
+![docs/architecture Cover](/assets/architecture-cover.png){: width="700" style="margin-bottom: 2rem;"}
+
+
 득팩 제품군 간 **데이터·스키마 흐름**과 **관계**를 한눈에 볼 수 있는 관계망입니다.
 
 ---
