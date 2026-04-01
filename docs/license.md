@@ -18,17 +18,13 @@ Terms and pricing for the DeukPack product family.
 
 ---
 
-## Support development
+## ☕ Support & Contact
 
-DeukPack core is **free and Apache-2.0**. If it helps you, consider supporting the project.
+DeukPack core is completely open-source (**Apache-2.0**). You can ship production code on it without any license fees.
 
-- **PayPal**: **Send** → **`joygram@gmail.com`**
-- **Ko-fi**: [Support via Ko-fi](https://ko-fi.com/joygram) (card, Apple Pay, Google Pay, etc.)
+If DeukPack is saving your team weeks of development, or if you're planning to adopt it for a production environment and need architectural advice on safely integrating it, feel free to reach out.
 
-Not in a position to donate? **Star the repo**, **open issues**, **send PRs**, or **spread the word** — that helps too.
+- 📩 **Contact / Technical Inquiries**: joygram@gmail.com
+- ☕ **Support the Project**: [Sponsor via Ko-fi](https://ko-fi.com/joygram) (or PayPal: `joygram@gmail.com`)
 
----
-
-## Contact
-
-For license, pricing, or adoption inquiries, reach out at **contact@deukpack.app** or see the contact information on [deukpack.app](https://deukpack.app/).
+Even if you aren't in a position to support financially, **starring the repo** or sharing it with your team helps immensely.

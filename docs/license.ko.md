@@ -18,17 +18,13 @@
 
 ---
 
-## 개발 후원
+## ☕ 기술 교류 및 후원 (Support)
 
-득팩 코어는 **무료·Apache-2.0**입니다. 도움이 되셨다면 후원으로 응원해 주세요.
+득팩(DeukPack) 코어는 **Apache-2.0** 라이선스로 누구나 무료로 상업적 이용이 가능합니다. 
 
-- **PayPal**: 앱/웹에서 **송금(Send)** → 수신자 **`joygram@gmail.com`**
-- **Ko-fi**: [Ko-fi로 후원하기](https://ko-fi.com/joygram) (카드·Apple Pay·Google Pay 등)
+만약 귀사의 프로젝트에 득팩을 도입하며 서버 아키텍처 설계나 이식(Integration)에 대한 기술적 조언이 필요하시다면, 언제든 아래 이메일로 편하게 문의해 주십시오. 
 
-후원이 어렵다면 **저장소 Star**, **이슈**, **PR**, **소개**만으로도 큰 힘이 됩니다.
+- 📩 **기술 자문 및 문의**: joygram@gmail.com
+- ☕ **오픈소스 유지보수 후원**: [Ko-fi로 지원하기](https://ko-fi.com/joygram) (또는 PayPal: `joygram@gmail.com`)
 
----
-
-## 문의
-
-라이선스·비용·도입 문의는 **contact@deukpack.app** 또는 [deukpack.app](https://deukpack.app/) 문의 안내를 이용해 주세요.
+재정적 후원이 어렵더라도 **GitHub Star**를 눌러주시거나 프로젝트를 팀에 소개해 주시는 것만으로도 생태계 유지에 큰 힘이 됩니다.
