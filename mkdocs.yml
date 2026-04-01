@@ -69,8 +69,8 @@ nav:
     - Unified Write · field selection · extends: tutorial/write-with-overrides.md
   - Positioning: positioning.md
   - Journal:
-    - "Episode 1. Birth of DeukPack IDL": journal/ai-control-plane-design.md
-    - "Cross-Language Performance Matrix": journal/performance-matrix.md
+    - "Episode 1. AI Agents & Semantic Identity": journal/ai-control-plane-design.md
+    - "Episode 2. Asymmetric Architecture & Benchmark": journal/performance-matrix.md
   - License: license.md
 
 theme:
@@ -162,8 +162,8 @@ plugins:
             Pipeline guide: 파이프라인 만들기
             Unified Write · field selection · extends: 통합 Write·필드 선택·extends
             Positioning: 포지셔닝
-            Journal: 기술 연재
-            "Episode 1. Birth of DeukPack IDL": "1편. 득팩 IDL의 탄생"
-            "Cross-Language Performance Matrix": "전 언어 통합 벤치마크 매트릭스"
+            Journal: 기술 연재 (Journal)
+            "Episode 1. AI Agents & Semantic Identity": "1편. AI 에이전트와 데이터의 신분증"
+            "Episode 2. Asymmetric Architecture & Benchmark": "2편. 비대칭 아키텍처 성능 매트릭스"
             License: 라이선스·비용
   - search
