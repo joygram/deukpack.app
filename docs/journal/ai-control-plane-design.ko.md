@@ -1,6 +1,6 @@
 # AI 에이전트와 MCP: 당신의 데이터에는 '신분증'이 있습니까?
 
-![AI MCP and Semantic Data](https://deukpack.app/assets/deukpack-brand-concept-01.png)
+![AI MCP and Semantic Data](/assets/ai-control-plane-cover.png)
 
 "MCP(Model Context Protocol)가 나오면 모든 데이터 문제가 해결될까요?"
 

@@ -1,6 +1,6 @@
 # AI Agents and MCP: Does Your Data Have an 'Identity Card'?
 
-![AI MCP and Semantic Data](https://deukpack.app/assets/deukpack-brand-concept-01.png)
+![AI MCP and Semantic Data](/assets/ai-control-plane-cover.png)
 
 "Will all our data problems be solved once MCP (Model Context Protocol) is here?"
 

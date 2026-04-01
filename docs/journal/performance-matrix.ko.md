@@ -6,6 +6,8 @@ hide:
 
 # DeukPack vs 타사 상용 포맷 전 언어 통합 벤치마크
 
+![Performance Matrix Cover](/assets/performance-matrix-cover.png)
+
 이 리포트는 각 플랫폼 및 언어(C#, C++, Java, Node.js, Elixir)별로 업계 표준 구조(Tag-based & RPC-based)와의 성능 및 메모리 특성 차이를 비교한 종합 평가 매트릭스입니다. **DeukPack 1.6.0**에서 새롭게 선보인 정적 인라인 컴파일러(JIT Codegen)와 Zero-Allocation 철학이 기존 포맷 대비 어떠한 차이를 가져오는지 증명합니다.
 
 > **테스트 환경**: 10,000 Rows Payload (`BenchIsoRow`) 디코딩 반복 스트레스 테스트  
