@@ -1,6 +1,6 @@
 # AI 에이전트와 MCP: 당신의 데이터에는 '신분증'이 있습니까?
 
-![AI Semantic Identity Cover](/assets/ai-control-plane-cover.png){: width="700" style="margin-bottom: 2rem;"}
+![AI Semantic Identity Cover](/assets/ai-control-plane-cover.png){: style="display: block; margin: 0 auto 2rem auto; max-width: 500px;"}
 
 "MCP(Model Context Protocol)가 나오면 모든 데이터 문제가 해결될까요?"
 

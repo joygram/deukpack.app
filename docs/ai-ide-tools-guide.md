@@ -1,6 +1,6 @@
 # AI coding tools setup (Antigravity · Cursor · GitHub Copilot · ChatGPT / Codex)
 
-![docs/ai-ide-tools-guide Cover](/assets/ai-ide-tools-cover.png){: width="700" style="margin-bottom: 2rem;"}
+![docs/ai-ide-tools-guide Cover](/assets/ai-ide-tools-cover.png){: style="display: block; margin: 0 auto 2rem auto; max-width: 500px;"}
 
 
 How to **sign in**, **connect GitHub**, and work with repos like **[DeukPack](https://github.com/joygram/DeukPack)**. UIs change—check each product’s official docs.

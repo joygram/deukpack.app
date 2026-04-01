@@ -1,6 +1,6 @@
 # Positioning & Target
 
-![docs/positioning Cover](/assets/positioning-cover.png){: width="700" style="margin-bottom: 2rem;"}
+![docs/positioning Cover](/assets/positioning-cover.png){: style="display: block; margin: 0 auto 2rem auto; max-width: 500px;"}
 
 
 A summary of DeukPack's **product position** and **target audience**. This site (deukpack.app) introduces the product as a **brand concept**, providing a **free, ready-to-use core library** via npm and GitHub.

@@ -1,6 +1,6 @@
 # AI Agents and MCP: Does Your Data Have an 'Identity Card'?
 
-![AI Semantic Identity Cover](/assets/ai-control-plane-cover.png){: width="700" style="margin-bottom: 2rem;"}
+![AI Semantic Identity Cover](/assets/ai-control-plane-cover.png){: style="display: block; margin: 0 auto 2rem auto; max-width: 500px;"}
 
 "Will all our data problems be solved once MCP (Model Context Protocol) is here?"
 

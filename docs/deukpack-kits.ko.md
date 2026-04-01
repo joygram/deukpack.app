@@ -1,6 +1,6 @@
 # 득팩 키트 라인업
 
-![docs/deukpack-kits Cover](/assets/kits-lineup-cover.png){: width="700" style="margin-bottom: 2rem;"}
+![docs/deukpack-kits Cover](/assets/kits-lineup-cover.png){: style="display: block; margin: 0 auto 2rem auto; max-width: 500px;"}
 
 
 스택별 **상세 소개 · 저장소 링크(클론) · 공통 전제**를 아래에 모은 **키트 라인업·포털(개요)** 페이지입니다. (URL `/deukpack-kits/`)
