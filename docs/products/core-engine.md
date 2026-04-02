@@ -13,9 +13,10 @@ DeukPack increments the **Minor** version for each new language or platform supp
 | Version | Key Milestones | Status |
 | :--- | :--- | :--- |
 | **v1.4.0** | MCP Protobuf expansion, C#/C++/JS core runtime stabilization | **DONE** |
-| **v1.5.0** | **Java & Core Parity**: Inheritance support, Compact/TJSON protocols, Universal security guards, and **MCP Core Decoupling** | **Current** |
-| **v1.5.1** | C++ Low-latency (Zero-Alloc) optimization & DDL generator | In Progress |
-| **v1.6.0** | **Elixir Expansion Pilot**: BEAM-based distributed backend support | **Teaser** |
+| **v1.5.0** | **Java & Core Parity**: Inheritance support, Compact/TJSON protocols, Universal security guards, and **MCP Core Decoupling** | **DONE** |
+| **v1.6.0** | **Data Parser Shift**: JS JIT Codegen / C# Zero-Alloc & C++ DDL | **DONE** |
+| **v1.7.0** | **Elixir Engine Support**: Native Erlang BEAM pattern matching & **Universal Protocol Security Shield** | **Current** |
+| **v1.8.0** | Unreal Engine 5 C++ Native Support & Blueprint Bridges | **Teaser** |
 
 ---
 
@@ -40,14 +41,14 @@ Current support status and plans for each target platform.
 
 | Category | Feature | TS / JS | C# / Unity | C++ | Java | Elixir |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| **IDL Core** | Basic Types / Aliases | ✅ | ✅ | ✅ | ✅ | 🚧 (v1.6) |
-| **Inheritance** | `extends` support | ✅ | ✅ | ✅ | ✅ (v1.5) | 🚧 (v1.6) |
-| **Protocols** | Native Pack (.dpk) | ✅ | ✅ | ✅ | ✅ | 🚧 (v1.6) |
+| **IDL Core** | Basic Types / Aliases | ✅ | ✅ | ✅ | ✅ | ✅ (v1.7) |
+| **Inheritance** | `extends` support | ✅ | ✅ | ✅ | ✅ (v1.5) | ✅ (v1.7) |
+| **Protocols** | Native Pack (.dpk) | ✅ | ✅ | ✅ | ✅ | ✅ (v1.7) |
 | | Protobuf Compatible | ✅ | ✅ | 🚧 (v1.4) | ✅ | - |
 | | Thrift Compatible (T-Series) | ✅ | ✅ | ✅ (v1.5) | ✅ (v1.5) | - |
 | | JSON (Tagged / POJO) | ✅ | ✅ | ✅ (v1.5) | ✅ | - |
 | | YAML / CSV | ✅ | ✅ (v1.2.7) | 🚧 | 🚧 | - |
-| **Optimizations**| Zero-Alloc Parsing | ⚠️ | ✅ | ✅ (v1.4.2) | 🚧 | 🚧 (BEAM) |
+| **Optimizations**| Zero-Alloc Parsing | ✅ (JIT) | ✅ | ✅ | 🚧 | ✅ (BEAM) |
 | | `Write` Logic Overrides | ✅ | ✅ | ✅ (v1.5) | ✅ (v1.5) | - |
 | **Data/Meta** | `tablelink` / MetaTable | ✅ | ✅ | ✅ (v1.5) | ✅ | - |
 | | DB Interop (EF / SQL) | ⚠️ (1) | ⚠️ (2) | ⚠️ (3) | 🚧 (v1.5) | - |

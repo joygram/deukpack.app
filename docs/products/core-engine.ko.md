@@ -12,10 +12,10 @@
 
 | 버전 | 주요 목표 (Milestones) | 상태 |
 | :--- | :--- | :--- |
-| **v1.4.0** | MCP Protobuf 확장, C#/C++/JS 코어 런타임 안정화 | **DONE** |
-| **v1.5.0** | **Java & Core Parity**: 상속 지원, Compact/TJSON 추가, 전수 보안 가드 및 **MCP 코어 분리** | **Current** |
-| **v1.5.1** | C++ 저지연(Zero-Alloc) 최적화 및 DDL 생성기 보강 | In Progress |
-| **v1.6.0** | **Elixir Expansion Pilot**: BEAM 기반 초고성능 분산 백엔드 지원 | **Teaser** |
+| **v1.5.0** | **Java & Core Parity**: 상속 지원, Compact/TJSON 추가, 전수 보안 가드 및 **MCP 코어 분리** | **DONE** |
+| **v1.6.0** | **Data Parser Shift**: JS JIT Codegen / C# Zero-Alloc 파서 및 C++ DDL | **DONE** |
+| **v1.7.0** | **Elixir Engine Support**: 네이티브 Erlang BEAM 패턴 매칭 및 **유니버설 OOM 보안망 구축** | **Current** |
+| **v1.8.0** | Unreal Engine 5 C++ 네이티브 지원 및 Blueprint 연동 | **Teaser** |
 
 ---
 
@@ -39,16 +39,16 @@
 
 각 타겟 플랫폼별 지원 현황 및 계획입니다.
 
-| 카테고리 | 기능 | TS / JS | C# / Unity | C++ | Java | Elixir |
+| Category | Feature | TS / JS | C# / Unity | C++ | Java | Elixir |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| **IDL 코어** | 기본 타입 / 타입 별칭 | ✅ | ✅ | ✅ | ✅ | 🚧 (v1.6) |
-| **상속** | `extends` 지원 | ✅ | ✅ | ✅ | ✅ (v1.5) | 🚧 (v1.6) |
-| **프로토콜** | Native Pack (.dpk) | ✅ | ✅ | ✅ | ✅ | 🚧 (v1.6) |
+| **IDL 코어** | 기본 타입 / 타입 별칭 | ✅ | ✅ | ✅ | ✅ | ✅ (v1.7) |
+| **상속** | `extends` 지원 | ✅ | ✅ | ✅ | ✅ (v1.5) | ✅ (v1.7) |
+| **프로토콜** | Native Pack (.dpk) | ✅ | ✅ | ✅ | ✅ | ✅ (v1.7) |
 | | Protobuf Compatible | ✅ | ✅ | 🚧 (v1.4) | ✅ | - |
 | | Thrift Compatible (T-Series) | ✅ | ✅ | ✅ (v1.5) | ✅ (v1.5) | - |
 | | JSON (Tagged / POJO) | ✅ | ✅ | ✅ (v1.5) | ✅ | - |
 | | YAML / CSV | ✅ | ✅ (v1.2.7) | 🚧 | 🚧 | - |
-| **최적화**| Zero-Alloc 파싱 | ⚠️ | ✅ | ✅ (v1.4.2) | 🚧 | 🚧 (BEAM) |
+| **최적화**| Zero-Alloc 파싱 | ✅ (JIT) | ✅ | ✅ | 🚧 | ✅ (BEAM) |
 | | `Write` 로직 오버라이드 | ✅ | ✅ | ✅ (v1.5) | ✅ (v1.5) | - |
 | **데이터/메타** | `tablelink` / MetaTable | ✅ | ✅ | ✅ (v1.5) | ✅ | - |
 | | DB 연동 (EF / SQL) | ⚠️ (1) | ⚠️ (2) | ⚠️ (3) | 🚧 (v1.5) | - |
