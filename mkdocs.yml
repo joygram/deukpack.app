@@ -68,6 +68,7 @@ nav:
     - Protocol & serialization: tutorial/protocol-serialization.md
     - C# guide: tutorial/csharp-guide.md
     - C++ guide: tutorial/cpp-guide.md
+    - Elixir guide: tutorial/elixir-guide.md
     - Pipeline guide: tutorial/pipeline-guide.md
     - Unified Write · field selection · extends: tutorial/write-with-overrides.md
   - Positioning: positioning.md
@@ -163,6 +164,7 @@ plugins:
             Protocol & serialization: 프로토콜·직렬화
             C# guide: C# 가이드
             C++ guide: C++ 가이드
+            Elixir guide: Elixir 가이드
             Pipeline guide: 파이프라인 만들기
             Unified Write · field selection · extends: 통합 Write·필드 선택·extends
             Positioning: 포지셔닝
