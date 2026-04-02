@@ -74,6 +74,7 @@ nav:
   - Journal:
     - "Episode 1. AI Agents & Semantic Identity": journal/ai-control-plane-design.md
     - "Episode 2. Asymmetric Architecture & Benchmark": journal/performance-matrix.md
+    - "Episode 3. Protocol Security & Large Payload": journal/security-oom-large-payload.md
   - License: license.md
 
 theme:
@@ -168,5 +169,6 @@ plugins:
             Journal: 기술 연재 (Journal)
             "Episode 1. AI Agents & Semantic Identity": "1편. AI 에이전트와 데이터의 신분증"
             "Episode 2. Asymmetric Architecture & Benchmark": "2편. 비대칭 아키텍처 성능 매트릭스"
+            "Episode 3. Protocol Security & Large Payload": "3편. 프로토콜 보안 쉴드(OOM 방어) 및 대용량 통신 처리"
             License: 라이선스·비용
   - search
