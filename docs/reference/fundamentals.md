@@ -52,6 +52,11 @@ Matrix & simple npm API: [Wire protocol families](wire-protocols.md). Spec: [Int
 
 **Extended types vs Protobuf/Thrift:** [API reference — Extended types](api.md#extended-types). **`extends`:** [Unified Write tutorial](../tutorial/write-with-overrides.md) and [Messages & wire](messages.md).
 
+> [!IMPORTANT]
+> **Dynamic vs Native (Structural Null & Initialization Semantics)**
+> - When a dynamically typed language (e.g., **JavaScript**) transmits `null` for a nested struct field, native backends strictly mapping memory structures (e.g., **C#**, **Java**) deserialize and initialize this empty payload into the language's **default structural instance** (which cascades to default nested fields like `""` or `0`).
+> - **In-memory routing (Multi-Pass):** When you pass the deserialized objects through hundreds of handlers internally, always utilize generated functions like `.clone()` (C# / Java) or immutable structural upgrades (`%{obj | ...}` in Elixir) to safely map values without mutating caller scope references.
+
 ---
 
 ## Hands-on (DeukPack Kits)

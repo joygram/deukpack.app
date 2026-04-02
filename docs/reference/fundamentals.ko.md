@@ -52,6 +52,11 @@
 
 **확장 타입·Protobuf/Thrift 대조**는 [API·타입 참조 — Extended types](api.md#extended-types)에 표로 정리했습니다. **`extends`**(다단 상속)는 [튜토리얼: 통합 Write](../tutorial/write-with-overrides.ko.md)와 [메시지·와이어](messages.ko.md)에서 이어집니다.
 
+> [!IMPORTANT]
+> **동적 언어 vs 정적 언어 간 구조체 데이터 시맨틱 (Null 맵핑 특이점)**
+> - 크로스 언어 구성에서 동적 런타임 언어(**JavaScript**)가 중첩 구조체 데이터를 `null` 로 내려보낼 때, 메모리 맵핑을 엄격히 준수하는 네이티브 백엔드(**C#, Java**)는 이를 파싱하여 해당 언어의 **기본 구조체 인스턴스(Default Instantiation)** 로 치환하여 메모리에 할당합니다. (즉, 내부의 빈 필드들은 `""`나 `0`으로 일괄 초기화됨).
+> - **인메모리 다중 순회(Multi-Pass):** 객체를 변형하여 수 많은 핸들러로 전달할 때는 반드시 C#/Java는 `.clone()` 이나 C++스마트포인터 Detach를, Elixir는 불변형 구조체 업데이트 레이아웃(`%{obj | ...}`)을 활용해 Caller 의 메모리를 오염시키지 않도록 권장합니다.
+
 ---
 
 ## 손으로 익히기

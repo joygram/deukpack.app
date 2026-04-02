@@ -17,6 +17,8 @@
 - [Schema import and export](#schema-import-and-export) — OpenAPI, CSV, JSON, Excel
 - [Generated C# APIs](#generated-c-apis)
 - [Generated C++ APIs](#generated-c-apis)
+- [Generated Java APIs](#generated-java-apis)
+- [Generated Elixir APIs](#generated-elixir-apis)
 - [Extended types](#extended-types)
 - [Cross-cutting features](#cross-cutting-features)
 - [Unified Write (field selection & overrides)](#unified-write-field-selection--overrides)
@@ -155,7 +157,27 @@ Use **DeukPackEngine** (or the same entry) in Node for **parse / AST**. For **mu
 | Item | Purpose |
 |------|---------|
 | **kFieldId_\*** | `static constexpr int` — `StructName::kFieldId_PropertyName`. |
-| **Binary / pack emit** | Generated sources follow the same **field-ID** model as C#/JS; use the emitted pack/binary helpers next to your types (no separate `apply_overrides` step). |
+| **Binary / pack emit** | Generated sources follow the same **field-ID** model as C#/JS; Detached allocation (via smart pointer `std::shared_ptr`) ensures structural deep separation during multi-pass routing without memory side effects. |
+
+---
+
+## Generated Java APIs
+
+| Item | Purpose |
+|------|---------|
+| **Getters/Setters** | Standard Java Bean property accessors. |
+| **clone()** | Built-in support for **safe Deep Copy**, including multi-dimensional arrays and collections. Demonstrates immutable purity over 1-million multi-pass routing frames sequentially traversing GC layers without latency overhead. |
+| **Binary / pack emit** | 100% Native struct initialization ensuring explicit instantiation, natively defeating invalid or null-nested network access behaviors. |
+
+---
+
+## Generated Elixir APIs
+
+| Item | Purpose |
+|------|---------|
+| **defstruct** | Generates highly performant, macro-level fixed offset `Map` structs (`%Struct{}`) for Elixir natively. |
+| **encode/decode** | Fast evaluation using Erlang VM (BEAM) **native Bitstring pattern-matching** directly transforming raw packet streams. |
+| **Security Guard Bounds** | Built-in network attack prevention. Rejects arrays, maps, and binaries longer than `MAX_SAFE_LENGTH`, and inherently bounds `MAX_RECURSION_DEPTH` (OOM raise validation). |
 
 ---
 

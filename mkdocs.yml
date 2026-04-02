@@ -4,6 +4,9 @@ site_name: DeukPack
 site_description: DeukPack — Free, ready-to-use core library. Brand concept. Core · engine, protocol, pipeline · Unity, extensions. Excel protocol add-in distributed separately.
 site_url: https://deukpack.app/
 
+repo_name: deukpack/DeukPack
+repo_url: https://github.com/deukpack/DeukPack
+
 extra:
   generator: false
   announce: >-

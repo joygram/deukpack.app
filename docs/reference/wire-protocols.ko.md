@@ -23,11 +23,11 @@ CLI `--protocol`, npm 패키지 `serialize` / `deserialize`, 생성 **C#·C++** 
 
 **허용 문자열만:** **`tbinary`**, **`tcompact`**, **`tjson`**. 예전 `binary` / `compact` / `thrift_json` 등은 CLI·타입에서 **받지 않습니다**.
 
-| `protocol` | 설명 | **JS** `WireSerializer` | **C# / C++** 생성 코드 |
-|------------|------|-------------------------|-------------------------|
-| **`tbinary`** | Thrift Binary | **`interopRootStruct`**(+ 중첩 시 **`interopStructDefs`**) 주면 **구현** | `DpBinaryProtocol` 등 |
-| **`tcompact`** | Thrift Compact | 동일 | `DpCompactProtocol` 등 |
-| **`tjson`** | Thrift JSON (`DpJsonProtocol`) | 동일 | C# 등 |
+| `protocol` | 설명 | **JS** `WireSerializer` | **Native (C# / C++ / Java)** | **Elixir** |
+|------------|------|---------------------------|-------------------------|------------|
+| **`tbinary`** | Thrift Binary | **`interopRootStruct`** 전달 시 **구현** | `DpBinaryProtocol` | Native BEAM Pattern Matching |
+| **`tcompact`** | Thrift Compact | 동일 | `DpCompactProtocol` | N/A |
+| **`tjson`** | Thrift JSON wrapper | 동일 | C# 및 각종 Native 런타임 | N/A |
 
 루트 struct 스키마 없이 호환 프로토콜만 지정하면 **필드 id를 알 수 없어** 명시적 오류가 납니다. 파싱·스키마에서 채운 옵션으로 `WireSerializer` 또는 `serializeInteropStruct` / `deserializeInteropStruct` 를 쓰면 됩니다. 앱 규모에서는 **생성 C#·C++** 이 여전히 중심입니다.
 
@@ -37,11 +37,11 @@ Google Protobuf 스타일 **바이트** 인코딩(`protv2` / `protv3` 프로파�
 
 ### 득팩 전용 계열 (`deuk`)
 
-| `protocol` | 설명 | **JS** `WireSerializer` | **C# / C++** 생성 코드 |
-|------------|------|-------------------------|-------------------------|
-| `pack` | 태그 기반 바이너리(득팩 네이티브) | **구현됨** | 생성 Reader/Writer와 조합 |
-| `json` | 값만 UTF-8 JSON | **구현됨** | 동일 계열 |
-| `yaml` | 값만 UTF-8 YAML | **구현됨** | 동일 계열 |
+| `protocol` | 설명 | **JS** `WireSerializer` | **Native (C# / C++ / Java)** | **Elixir** |
+|------------|------|---------------------------|-------------------------|------------|
+| `pack` | 태그 기반 바이너리(득팩 네이티브) | **구현됨** | 생성 Reader/Writer와 조합 | **구현됨** |
+| `json` | 값만 UTF-8 JSON | **구현됨** | 동일 계열 | **Passthrough** |
+| `yaml` | 값만 UTF-8 YAML | **구현됨** | 동일 계열 | N/A |
 
 **CLI 기본 `--protocol`:** **`pack`**. 호환은 **`tbinary` / `tcompact` / `tjson`** 만.
 
@@ -70,6 +70,12 @@ JS에서 Thrift 호환 바이트가 필요하면 **`interopRootStruct`**(및 필
 | **`tbinary`**, **`tcompact`**, **`tjson`** | `interop` | Thrift 호환 |
 
 한 번에 **한 값**을 코드젠 힌트로 넣습니다. 여러 와이어가 필요하면 출력 폴더를 나누거나 `--pipeline`으로 잡을 여러 개를 둡니다.
+
+### 🛡️ 핵심 보안 한계 규약 (모든 와이어 프로토콜 공통 적용)
+
+**디폴트로 모든 패킷 디코더(Java, C#, JS, Elixir 공통)** 는 악의적인 메모리 폭탄 및 비정상적 구조체 중첩을 선제적으로 감지하고 방어합니다:
+- **`MAX_SAFE_LENGTH (10MB)`**: Array/list 개수 및 문자열 길이가 10MB를 초과하는 패킷이 감지되는 즉시 VM 메모리 할당 이전에 파서가 `[DeukPack] pack read overflow` 등으로 거부합니다.
+- **`MAX_RECURSION_DEPTH (64)`**: 네트워크 공격으로 인해 구조체가 64단계를 초과하여 재귀 중첩된 파라미터는 즉각적으로 추적되어 스택 오버플로우를 차단합니다.
 
 ---
 

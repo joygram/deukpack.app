@@ -1,6 +1,6 @@
 # AI 에이전트와 MCP: 당신의 데이터에는 '신분증'이 있습니까?
 
-![AI Semantic Identity Cover](/assets/ai-control-plane-cover.png){: style="display: block; margin: 0 auto 2rem auto; max-width: 500px;"}
+![AI Semantic Identity Cover](/assets/journal/ai-control-plane-cover.png){: style="float: right; margin: 0 0 2rem 2rem; max-width: 280px;"}
 
 "MCP(Model Context Protocol)가 나오면 모든 데이터 문제가 해결될까요?"
 
@@ -77,11 +77,10 @@ AI 에이전트가 스스로 판단하고 행동하는 시대에, 데이터 모�
 
 구조 속에 숨겨진 의도를 드러내고, 데이터에 명확한 신분을 부여하는 것. 그것이 MCP라는 고속도로 위에서 AI 에이전트가 진정한 성능을 발휘하게 만드는 열쇠입니다.
 
-> [!NOTE]
 > **Project DeukPack (득팩)**
 >
 > MCP와 AI 에이전트 시대를 대비하여 '데이터의 시맨틱'을 회복하기 위해 탄생한 프로젝트입니다. 
 > DeukPack은 파편화된 시스템 속에서 데이터의 존재 이유를 선언하고, AI 에이전트가 인간의 설계를 완벽히 투영하여 동작할 수 있는 인프라를 지향합니다.
 >
-> *   **Official Website**: [deukpack.app](https://deukpack.app)
 > *   **GitHub**: [DeukPack OSS](https://github.com/deukpack/DeukPack)
+> *   **Tech Blog**: [dev.to/joygram](https://dev.to/joygram)

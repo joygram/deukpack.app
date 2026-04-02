@@ -17,6 +17,8 @@
 - [Schema import and export](#schema-import-and-export) — OpenAPI·CSV·JSON·Excel
 - [Generated C# APIs](#generated-c-apis)
 - [Generated C++ APIs](#generated-c-apis)
+- [Generated Java APIs](#generated-java-apis)
+- [Generated Elixir APIs](#generated-elixir-apis)
 - [Extended types](#extended-types)
 - [Cross-cutting features](#cross-cutting-features)
 - [통합 Write (필드 선택·오버라이드)](#통합-write-필드-선택오버라이드)
@@ -67,6 +69,8 @@ init 후 한 줄 안내: 업데이트 시 **`npx deukpack init`** 재실행; **`
 | `--allow-multi-namespace` | 단일 `.deuk` 파일에 namespace 블록 여러 개 허용 |
 | `--brace-less-namespace` | 단일 namespace일 때 출력에서 `namespace { }` 중괄호 생략(들여쓰기) |
 | `--cpp` | C++ 생성 |
+| `--java` | Java 생성 (패키지 구조체, DpProtocol 포함) |
+| `--elixir` | Elixir 생성 (BEAM 패턴매칭, 불변성 구조체 포함) |
 | `--ts` | TypeScript 1차 산출 (앱은 tsc/번들로 이어짐) |
 | `--js` | JavaScript 직접 생성 (Node·도구용 경로) |
 | `--ef` | EF Core: `DbContext`·Fluent 등 엔티티/메타 정합 경로 활성 |
@@ -155,7 +159,27 @@ Node에서 **파싱·AST**까지 쓰려면 `DeukPackEngine`(또는 동일 진입
 | 항목 | 용도 |
 |------|------|
 | **kFieldId_\*** | `static constexpr int` — `StructName::kFieldId_PropertyName`. |
-| **Binary / pack 출력** | 생성 소스가 C#/JS와 동일한 **필드 ID** 모델을 따름; 타입 옆에 나오는 pack/바이너리 헬퍼 사용(별도 `apply_overrides` 단계 없음). |
+| **Binary / pack 출력** | 생성 소스가 C#/JS와 동일한 **필드 ID** 모델을 따름; 스마트 포인터(`std::shared_ptr`)를 지원하여 얕은 복사본 수정 시 사이드 이펙트를 차단하는 분리 접근(detach) 메커니즘을 지원합니다. |
+
+---
+
+## Generated Java APIs
+
+| 항목 | 용도 |
+|------|------|
+| **Getters/Setters** | Java Bean 패턴 규격의 필드 접근자. |
+| **clone()** | 배열(List) 및 컬렉션을 아우르는 **안전한 깊은 복사(Deep Copy)** 기본 지원. 100만 회 이상의 Multi-pass 메모리 라우팅에서 GC 오버헤드 없이 원본 객체의 불변성을 입증합니다. |
+| **Binary / pack 출력** | C#과 1:1 완벽 호환되는 프로토콜 클래스를 지니며, 엄격한 Struct 객체 생성을 통해 빈 구조체 접근을 네이티브하게 방어합니다. |
+
+---
+
+## Generated Elixir APIs
+
+| 항목 | 용도 |
+|------|------|
+| **defstruct** | 컴파일 타임에 필드 오프셋이 고정된 Elixir 고성능 불변 `Map` 생성(`%Struct{}`). |
+| **encode/decode** | BEAM VM의 네이티브 **Bitstring 바이너리 패턴 매칭**을 사용하여 JSON 파싱 없이 수백만 번의 이진 패킷을 초단위로 해석합니다. |
+| **무결성 보안 (Security Guard)** | 최대 깊이 초과(`MAX_RECURSION_DEPTH`) 및 배열/문자열 초과 길이(`MAX_SAFE_LENGTH`)를 선제적으로 Block(OOM Raise)하는 방어 로직이 내장되어 있습니다. |
 
 ---
 

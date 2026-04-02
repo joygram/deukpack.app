@@ -6,7 +6,7 @@ hide:
 
 # DeukPack vs 타사 상용 포맷 전 언어 통합 벤치마크
 
-![Performance Matrix Cover](/assets/performance-matrix-cover.png){: style="display: block; margin: 0 auto 2rem auto; max-width: 500px;"}
+![Performance Matrix Cover](/assets/journal/performance-matrix-cover.png){: style="float: right; margin: 0 0 2rem 2rem; max-width: 280px;"}
 
 이 리포트는 각 플랫폼 및 언어(C#, C++, Java, Node.js, Elixir)별로 업계 표준 구조(Tag-based & RPC-based)와의 성능 및 메모리 특성 차이를 비교한 종합 평가 매트릭스입니다. **DeukPack 1.6.0**에서 새롭게 선보인 정적 인라인 컴파일러(JIT Codegen)와 Zero-Allocation 철학이 기존 포맷 대비 어떠한 차이를 가져오는지 증명합니다.
 
@@ -72,3 +72,10 @@ hide:
 ### 결론
 단일한 IDL을 사용하는 DeukPack 1.6.0의 아키텍처는 실행되는 **"언어 환경에 가장 적합한" 최적의 파싱 및 메모리 조작 코드**를 생성합니다.  
 Node.js에서는 **V8 JIT 인라인 최적화**를, Unity 환경에서는 **Zero-GC 스택 순환** 방식을 채택함으로써, 기존의 상용 직렬화 스택과 동급의 속도 우위를 지키며 **메모리 안정성의 극한(Zero-Allocation)**을 제공해 시스템 인프라 구축의 든든한 기반이 되어 줍니다.
+
+> **Project DeukPack (득팩)**
+>
+> Unity에서의 완전한 가비지 타임 제로(Zero-Alloc)와 서버 생태계의 고성능 최적화를 위해 탄생한 엔진입니다. 차세대 시스템 아키텍처를 위한 가장 견고한 기반을 지향합니다.
+>
+> *   **GitHub**: [DeukPack OSS](https://github.com/deukpack/DeukPack)
+> *   **Tech Blog**: [dev.to/joygram](https://dev.to/joygram)

@@ -23,11 +23,11 @@ The `protocol` string must **match** the family. Use `WireProtocolOption`, `deuk
 
 **Only** these `protocol` strings are valid: **`tbinary`**, **`tcompact`**, **`tjson`**. Older spellings such as `binary` / `compact` / `thrift_json` are **not** accepted by the CLI or types.
 
-| `protocol` | Role | **JS** `WireSerializer` | **Generated C# / C++** |
-|------------|------|---------------------------|-------------------------|
-| **`tbinary`** | Thrift Binary | **Implemented** when you pass **`interopRootStruct`** (+ optional **`interopStructDefs`** for nested types) | `DpBinaryProtocol`, etc. |
-| **`tcompact`** | Thrift Compact | Same | `DpCompactProtocol`, etc. |
-| **`tjson`** | Thrift JSON wrapper (`DpJsonProtocol`) | Same | C# and other runtimes |
+| `protocol` | Role | **JS** `WireSerializer` | **Native (C# / C++ / Java)** | **Elixir** |
+|------------|------|---------------------------|-------------------------|------------|
+| **`tbinary`** | Thrift Binary | **Implemented** when you pass **`interopRootStruct`** | `DpBinaryProtocol` | Native BEAM Pattern Matching |
+| **`tcompact`** | Thrift Compact | Same | `DpCompactProtocol` | N/A |
+| **`tjson`** | Thrift JSON wrapper | Same | C# and other runtimes | N/A |
 {: .dp-matrix-table }
 
 Without a root struct schema, JS **throws a clear error** (the engine cannot infer field ids). Use **`serializeInteropStruct` / `deserializeInteropStruct`** or **`WireSerializer`** with **`SerializationOptions`** filled from parse/schema. **Generated C# / C++** remains the main path for app-sized stacks.
@@ -38,11 +38,11 @@ Without a root struct schema, JS **throws a clear error** (the engine cannot inf
 
 ### Deuk native family (`deuk`)
 
-| `protocol` | Role | **JS** `WireSerializer` | **Generated C# / C++** |
-|------------|------|---------------------------|-------------------------|
-| `pack` | Tagged binary (Deuk native) | **Implemented** | Reader/Writer for that family |
-| `json` | UTF-8 JSON (values only) | **Implemented** | Same family |
-| `yaml` | UTF-8 YAML (values only) | **Implemented** | Same family |
+| `protocol` | Role | **JS** `WireSerializer` | **Native (C# / C++ / Java)** | **Elixir** |
+|------------|------|---------------------------|-------------------------|------------|
+| `pack` | Tagged binary (Deuk native) | **Implemented** | Reader/Writer for that family | **Implemented** |
+| `json` | UTF-8 JSON (values only) | **Implemented** | Same family | **Passthrough** |
+| `yaml` | UTF-8 YAML (values only) | **Implemented** | Same family | N/A |
 {: .dp-matrix-table }
 
 **CLI `--protocol` default (codegen hint):** **`pack`**. Interop CLI values are **`tbinary` / `tcompact` / `tjson`**; legacy `binary` is normalized to **`tbinary`**.
@@ -72,6 +72,12 @@ For Thrift **Binary/Compact/JSON** from **JS**, supply **`interopRootStruct`** (
 | **`tbinary`**, **`tcompact`**, **`tjson`** | `interop` | Thrift compatible |
 
 One value per codegen pass; split output dirs or use `--pipeline` for multiple wires.
+
+### 🛡️ Core Security Constraints (Applies to all Wire Protocols)
+
+By default, **all interop and native DeukPack decoders** (across Java, C#, JS, and Elixir) proactively enforce limits against memory bombs and malicious payload traversals without runtime reflection overhead:
+- **`MAX_SAFE_LENGTH (10MB)`**: Array/list item counts and string byte-length allocation attempts exceeding 10MB are strictly aborted via `[DeukPack] pack read overflow` or Native Exceptions prior to VM allocation.
+- **`MAX_RECURSION_DEPTH (64)`**: A deeply nested class parameter passing sequence natively terminates after crossing a depth of 64 object layers to defeat stack overflow algorithmic attacks.
 
 ---
 

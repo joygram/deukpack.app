@@ -6,7 +6,7 @@ hide:
 
 # Cross-Language Benchmark Matrix: DeukPack vs Commercial Protocols
 
-![Performance Matrix Cover](/assets/performance-matrix-cover.png){: style="display: block; margin: 0 auto 2rem auto; max-width: 500px;"}
+![Performance Matrix Cover](/assets/journal/performance-matrix-cover.png){: style="float: right; margin: 0 0 2rem 2rem; max-width: 280px;"}
 
 This report provides a comprehensive evaluation of performance and memory characteristics across various platforms and languages (C#, C++, Java, Node.js, Elixir), comparing DeukPack against industry-standard structures (Tag-based & RPC-based formats). It demonstrates how the new **Static Inline Compiler (JIT Codegen)** and **Zero-Allocation Philosophy** introduced in **DeukPack 1.6.0** distinguish themselves from legacy formats.
 
@@ -72,3 +72,10 @@ Provides parser benchmarking optimized to drive Node.js and the end-user browser
 ### Conclusion
 By leveraging a single central IDL blueprint, the DeukPack 1.6.0 architecture produces **the absolute optimal memory and parsing operation code explicitly suited to its execution environment**.  
 By deploying **V8 JIT inline optimizations** in Node.js ecosystems and pure **Zero-GC Stack flows** in Unity, DeukPack defends its speed leadership among traditional serialization stacks while supplying the **maximum limits of memory stability (Zero-Allocation)**, serving as the robust foundation for modern operational infrastructures.
+
+> **Project DeukPack**
+>
+> A high-performance, cross-language engine with absolute zero-allocation in Unity. Built for next-generation system infrastructure.
+>
+> *   **GitHub**: [DeukPack OSS](https://github.com/deukpack/DeukPack)
+> *   **Tech Blog**: [dev.to/joygram](https://dev.to/joygram)

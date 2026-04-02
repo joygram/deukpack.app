@@ -1,6 +1,6 @@
 # AI Agents and MCP: Does Your Data Have an 'Identity Card'?
 
-![AI Semantic Identity Cover](/assets/ai-control-plane-cover.png){: style="display: block; margin: 0 auto 2rem auto; max-width: 500px;"}
+![AI Semantic Identity Cover](/assets/journal/ai-control-plane-cover.png){: style="float: right; margin: 0 0 2rem 2rem; max-width: 280px;"}
 
 "Will all our data problems be solved once MCP (Model Context Protocol) is here?"
 
@@ -77,11 +77,10 @@ In an era where AI agents autonomously judge and act, data modeling is no longer
 
 Revealing the intent hidden within the structure and 부여ing a clear identity to data are the keys to unlocking the true performance of AI agents on the MCP highway.
 
-> [!NOTE]
 > **Project DeukPack**
 >
 > A project born to restore 'Data Semantics' for the era of MCP and AI agents.
 > DeukPack aims for a technical infrastructure where data's reason for existence is declared, allowing AI agents to operate as a perfect reflection of human design.
 >
-> *   **Official Website**: [deukpack.app](https://deukpack.app)
 > *   **GitHub**: [DeukPack OSS](https://github.com/deukpack/DeukPack)
+> *   **Tech Blog**: [dev.to/joygram](https://dev.to/joygram)
