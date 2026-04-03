@@ -1,0 +1,2627 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="DeukPack — Free, ready-to-use core library. Brand concept. Core · engine, protocol, pipeline · Unity, extensions. Excel protocol add-in distributed separately.">
+      
+      
+      
+        <link rel="canonical" href="https://deukpack.app/ko/">
+      
+      
+      
+        <link rel="next" href="documentation-index/">
+      
+      
+        
+          <link rel="alternate" href="/" hreflang="en">
+        
+          <link rel="alternate" href="/ko/" hreflang="ko">
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>홈 - DeukPack</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans KR";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra-v2.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#제품군-요약" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <span id="dp-dynamic-banner-placeholder"><strong>득팩 코어 1.6.0</strong> — JavaScript V8 JIT Codegen · C# 무할당(Zero-Alloc) 아키텍처 — <a href="https://github.com/joygram/DeukPack/releases/latest">GitHub Releases</a> · <a href="https://deukpack.app/releases/">릴리스 요약 (KO/EN)</a></span>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href="./" title="DeukPack" class="md-header__button md-logo" aria-label="DeukPack" data-md-component="logo">
+      
+  <img src="../assets/deukpack-icon-crop.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DeukPack
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              홈
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="언어설정">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/ko/" hreflang="ko" class="md-select__link">
+              한국어
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/deukpack/DeukPack" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    deukpack/DeukPack
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  홈
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="documentation-index/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  문서 안내
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="releases/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  릴리스·뉴스
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="deukpack-kits/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  득팩 키트 라인업
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="products/" class="md-tabs__link">
+          
+  
+  
+  제품
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="reference/" class="md-tabs__link">
+          
+  
+  
+  레퍼런스 가이드
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="tutorial/" class="md-tabs__link">
+          
+  
+  
+  튜토리얼
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="positioning/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  포지셔닝
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="journal/ai-control-plane-design/" class="md-tabs__link">
+          
+  
+  
+  기술 연재 (Journal)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="license/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  라이선스·비용
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./" title="DeukPack" class="md-nav__button md-logo" aria-label="DeukPack" data-md-component="logo">
+      
+  <img src="../assets/deukpack-icon-crop.png" alt="logo">
+
+    </a>
+    DeukPack
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/deukpack/DeukPack" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    deukpack/DeukPack
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    홈
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    홈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#제품군-요약" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        제품군 요약
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-기존-기술과-무엇이-다른가요-key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 기존 기술과 무엇이 다른가요? (Key Features)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#왜-deukpack인가" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        왜 DeukPack인가
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-시대에서도-필요한-이유" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI 시대에서도 필요한 이유
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI 시대에서도 필요한 이유">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#에이전트가-할-수-없는-일또는-잘-못하는-일" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        에이전트가 할 수 없는 일(또는 잘 못하는 일)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#그래서-득팩이-필요한-이유" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        그래서 득팩이 필요한 이유
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#지원-프로토콜-및-언어-v160" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        지원 프로토콜 및 언어 (v1.6.0)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-성능-지향점-v160-벤치마크" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔥 성능 지향점 (v1.6.0 벤치마크)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#다음-단계" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        다음 단계
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="documentation-index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    문서 안내
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="releases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    릴리스·뉴스
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="deukpack-kits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    득팩 키트 라인업
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    제품
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    제품
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="products/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    제품군 개요
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ai-pipeline-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI·에이전트 파이프라인
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ai-ide-tools-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI 도구 연동(Antigravity·Cursor 등)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="products/core-engine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    코어·엔진
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="products/protocol/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    프로토콜
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="products/excel-addin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Excel 애드인
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="products/pipeline-unity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    파이프라인·Unity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="products/navigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DeukNavigation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="products/mcp-hub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DeukPackMcp (범용 Hub)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="products/mcp-hub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DeukPackMcp (범용 Hub)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="products/extension/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    확장 제품군
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    제품 관계도
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    레퍼런스 가이드
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    레퍼런스 가이드
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    개요
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    기본 구성
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/tables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    테이블
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/messages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    메시지·와이어
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/wire-protocols/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    와이어·프로토콜 계열
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DB·엔티티
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API·타입 참조
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    튜토리얼
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    튜토리얼
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    개요
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorial/distribution-vs-source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    배포본 vs 소스본
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorial/install-os/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    설치 (Windows·Linux)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorial/quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    빠른 시작
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorial/idl-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IDL 가이드
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorial/protocol-serialization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    프로토콜·직렬화
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorial/csharp-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C# 가이드
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorial/cpp-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++ 가이드
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorial/elixir-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elixir 가이드
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorial/pipeline-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    파이프라인 만들기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorial/write-with-overrides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    통합 Write·필드 선택·extends
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="positioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    포지셔닝
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    기술 연재 (Journal)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    기술 연재 (Journal)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="journal/ai-control-plane-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1편. AI 에이전트와 데이터의 신분증
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="journal/performance-matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2편. 비대칭 아키텍처 성능 매트릭스
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="journal/security-oom-large-payload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3편. 프로토콜 보안 쉴드(OOM 방어) 및 대용량 통신 처리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    라이선스·비용
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#제품군-요약" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        제품군 요약
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-기존-기술과-무엇이-다른가요-key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 기존 기술과 무엇이 다른가요? (Key Features)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#왜-deukpack인가" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        왜 DeukPack인가
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-시대에서도-필요한-이유" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI 시대에서도 필요한 이유
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI 시대에서도 필요한 이유">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#에이전트가-할-수-없는-일또는-잘-못하는-일" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        에이전트가 할 수 없는 일(또는 잘 못하는 일)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#그래서-득팩이-필요한-이유" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        그래서 득팩이 필요한 이유
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#지원-프로토콜-및-언어-v160" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        지원 프로토콜 및 언어 (v1.6.0)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-성능-지향점-v160-벤치마크" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔥 성능 지향점 (v1.6.0 벤치마크)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#다음-단계" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        다음 단계
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  
+  
+
+
+<div id="dp-dynamic-notice-landing"></div>
+
+<div class="dp-hero">
+  <div class="dp-hero-visual">
+    <img src="/assets/deukpack-brand-concept-01.png" alt="DeukPack 대표 브랜드 시안 - 데이터 팩을 메고 달리는 강아지 컨셉" loading="eager" decoding="async" />
+  </div>
+  <div class="dp-hero-copy">
+    <p class="dp-eyebrow">DeukPack — AI 에이전트와 Unity를 잇는 가장 완벽한 약속</p>
+    <h1>서버의 무한한 유연성<br>클라이언트의 극한 성능</h1>
+    <p class="dp-tagline">Dynamic JS/AI 유연성 × Zero-Allocation C# 성능</p>
+    <p class="dp-lead"><strong>AI 에이전트 자동화의 한계를 돌파하는 하이브리드 스키마 엔진.</strong><br><br>AI가 데이터 주권을 쥐는 시대, 득팩은 파편화된 IDL을 하나의 '시맨틱 척추(Spine)'로 통합합니다. Node.js 서버에서는 JSON 객체를 자유롭게 자르고 붙이십시오. 득팩이 스키마(.deuk)를 필터 삼아 필요한 필드만 가장 얇고 강력한 바이너리로 압축합니다.<br><br>Unity 클라이언트에서는 단 1바이트의 쓰레기(가비지)도 남기지 않는 <strong>Zero-Allocation C#</strong>으로 즉시 조립됩니다. 유연함과 성능의 완벽한 비대칭 타협, 그것이 득팩 대서사시의 시작입니다.</p>
+    <div class="dp-pills">
+      <span class="dp-pill">Zero-Alloc C# 파서</span>
+      <span class="dp-pill">Dynamic JS/TS 마스킹</span>
+      <span class="dp-pill">AI-Native JSON Wire</span>
+      <span class="dp-pill">MCP 기반 AI 가드레일</span>
+    </div>
+    <div class="dp-actions">
+      <a href="products/core-engine/" class="md-button md-button--primary">득팩 코어 바로 사용하기</a>
+      <a href="products/" class="md-button">제품군 개요</a>
+      <a href="deukpack-kits/" class="md-button">득팩 키트 라인업</a>
+    </div>
+  </div>
+</div>
+
+<div class="admonition tip">
+<p class="admonition-title">언어 전환 (한국어 ↔ English)</p>
+<ul>
+<li><strong>영문:</strong> 페이지 <strong>우측 상단</strong> → <strong>언어</strong> 메뉴.</li>
+<li><strong>URL:</strong> 한국어는 사이트 루트, English는 <strong><code>/en/…</code></strong>.</li>
+<li><strong>GitHub README:</strong> <a href="https://github.com/joygram/DeukPack/blob/main/README.ko.md">README.ko.md</a> · <a href="https://github.com/joygram/DeukPack/blob/main/README.ko.md">README.ko.md</a>.</li>
+</ul>
+</div>
+<hr />
+<h2 id="제품군-요약">제품군 요약<a class="headerlink" href="#제품군-요약" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>제품</th>
+<th>한 줄 정의</th>
+<th>소개 문서</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>득팩 코어·엔진</strong></td>
+<td><strong>Mixed-IDL Hybrid Serializer</strong>: 어떤 IDL이든 받아 AI 시맨틱 메타와 다언어 코드를 동시에 추출하는 차세대 엔진</td>
+<td><a href="products/core-engine/">CORE_ENGINE →</a></td>
+</tr>
+<tr>
+<td><strong>득팩 프로토콜</strong></td>
+<td><strong>Messaging Runtime</strong>: 고성능 직렬화 및 AI 가드레일을 제공하는 실시간 통신 엔진</td>
+<td><a href="products/protocol/">PROTOCOL →</a></td>
+</tr>
+<tr>
+<td><strong>득팩 Excel 애드인</strong></td>
+<td><strong>Schema-Driven Editor</strong>: 기획 데이터를 스키마 기반으로 검증·동기화하는 Excel 도구</td>
+<td><a href="products/excel-addin/">EXCEL_ADDIN →</a></td>
+</tr>
+<tr>
+<td><strong>득팩 파이프라인</strong></td>
+<td><strong>AI-Native Pipeline</strong>: 빌드부터 전용 코드 생성까지 한 명령으로 이어주는 자동화 툴체인</td>
+<td><a href="products/pipeline-unity/">PIPELINE →</a></td>
+</tr>
+<tr>
+<td><strong>DeukPackMcp</strong></td>
+<td><strong>Universal AI Hub (준비 중)</strong>: .proto, .deuk, OpenAPI 등 모든 설계를 AI 스킬로 통합 브리징</td>
+<td><a href="products/mcp-hub/">MCP_HUB →</a></td>
+</tr>
+<tr>
+<td><strong>DeukNavigation</strong></td>
+<td>Unity·서버 공용 Deuk 와이어(.dpk) 기반 Recast/Detour NavMesh 솔루션</td>
+<td><a href="products/navigation/">NAVIGATION →</a></td>
+</tr>
+<tr>
+<td><strong>확장 제품군</strong></td>
+<td>DB 마이그레이터, EF 지원, Google Sheets, Unreal/Elixir 등 선택적 확장</td>
+<td><a href="products/">EXTENSIONS →</a></td>
+</tr>
+</tbody>
+</table>
+<p>→ <a href="architecture/">제품 관계도</a>에서 제품 간 데이터·스키마 흐름을 다이어그램으로 볼 수 있습니다. 자세한 내용은 <a href="products/">제품군 개요</a>와 각 제품 페이지를 참고하세요. <strong>스택별 바로 적용 예시</strong>는 <a href="deukpack-kits/">득팩 키트 라인업</a>에서 안내합니다.</p>
+<hr />
+<h2 id="-기존-기술과-무엇이-다른가요-key-features">🚀 기존 기술과 무엇이 다른가요? (Key Features)<a class="headerlink" href="#-기존-기술과-무엇이-다른가요-key-features" title="Permanent link">&para;</a></h2>
+<p>Protobuf, FlatBuffers, JSON과 비교되는 <strong>득팩(DeukPack)만의 대체 불가능한 3대 무기</strong>입니다.</p>
+<ol>
+<li><strong>할당(Allocation) 없는 오버라이드 (Zero-Copy Override)</strong></li>
+<li><strong>기존 한계:</strong> Protobuf나 Thrift는 유저별로 일부 필드를 가리거나 덮어씌워서 전송할 때, 매번 거대한 별도의 DTO 클래스를 메모리에 새로 할당(<code>new</code>)해야 합니다.</li>
+<li><strong>득팩의 차별점:</strong> 생성된 C# 객체 단 한 개만 가지고, <code>Write(oprot, overrides)</code> 함수 하나로 100가지의 변형 본을 가비지(GC) 없이 찍어냅니다.</li>
+<li><strong>클래스 없는 순수 JSON(POJO) 직접 처리</strong></li>
+<li><strong>기존 한계:</strong> JS 환경에서도 <code>new Message()</code> 처럼 무거운 클래스 래퍼를 강제하거나, FlatBuffers처럼 복잡한 오프셋 빌더(Builder) 패턴을 써야 합니다.</li>
+<li><strong>득팩의 차별점:</strong> AI가 던지는 단순한 자바스크립트 객체(<code>{ id: 1 }</code>)를 곧바로 바이트 배열로 찍어 누릅니다. <strong>AI 환경에서는 무한히 유연하면서도, 클라이언트에서는 예외 없이 엄격한 바이트로 꽂힙니다.</strong></li>
+<li><strong>단순 명세서를 뛰어넘은 'AI 시맨틱 척추'</strong></li>
+<li><strong>기존 한계:</strong> 기존 IDL 규약들은 그저 통신을 위한 1차원적 바이트 변환 껍데기일 뿐입니다.</li>
+<li><strong>득팩의 차별점:</strong> <code>.deuk</code> 파일에는 <code>extends</code>(다단 상속)와 <code>tablelink</code>(DB/메타 테이블 구조 참조)가 내장되어 있어, AI(LLM)가 프로젝트 전체의 ERD 관계성을 한눈에 파악할 수 있는 가장 압축된 <strong>지식 그래프(RAG 컨텍스트)</strong>로 작동합니다.</li>
+</ol>
+<hr />
+<h2 id="왜-deukpack인가">왜 DeukPack인가<a class="headerlink" href="#왜-deukpack인가" title="Permanent link">&para;</a></h2>
+<div class="dp-value-grid">
+  <div class="dp-card">
+    <h3>정의를 한 번에</h3>
+    <p>한 번 정의한 스키마로 코드·직렬화·메타·검증이 맞춰지고, 기존 .proto·OpenAPI·CSV 등을 그대로 끌어와 <strong>득팩 파이프라인 안에서</strong> 점진적으로 통합할 수 있습니다.</p>
+  </div>
+  <div class="dp-card">
+    <h3>런타임·서버·실시간 게임 연동</h3>
+    <p>Binary, Compact, JSON 직렬화와 <code>msgId</code>, <code>ProtocolRegistry</code> 기반 메시지 처리. 서버 연동·실시간 게임에서 동일 타입·스키마로 패킷·메타를 주고받을 수 있습니다.</p>
+  </div>
+  <div class="dp-card">
+    <h3>메타 작업을 더 빠르게</h3>
+    <p>스키마 기반 메타 편집·검증부터 Unity·서버 로드 파이프라인까지 이어지는 실제 작업 흐름 중심 구성입니다.</p>
+  </div>
+  <div class="dp-card">
+    <h3>테이블 · 네이티브 메시지</h3>
+    <p>스키마 기반 <code>MetaTableRegistry</code>로 메타 검증·로드. <code>msgId</code>·<code>ProtocolRegistry</code> IDL 자동 생성.</p>
+  </div>
+  <div class="dp-card">
+    <h3>상속 · 선택 · 교체</h3>
+    <p><code>extends</code>로 필드 병합, <code>Write</code> 하나로 필드 선택·오버라이드. Clone 없이 수신자별 직렬화.</p>
+  </div>
+  <div class="dp-card">
+    <h3>풍부한 타입</h3>
+    <p><strong>tablelink</strong>·datetime·decimal 등 DB 모델까지 한 타입 시스템. <a href="tutorial/write-with-overrides/">튜토리얼 →</a></p>
+  </div>
+  <div class="dp-card dp-card--highlight dp-card--mcp">
+    <h3>DeukPackMcp: Universal AI Hub 🚧</h3>
+    <p><strong>.proto, .deuk, OpenAPI</strong> 및 득팩의 <strong>모든 제품군</strong>(Core, Excel, Nav 등)을 AI 에이전트의 실시간 도구로 즉시 통합합니다. 당신의 모든 자산을 AI의 '스킬'로 바꾸는 차세대 게이트웨이.</p>
+    <p><strong>🚧 현재 준비 중:</strong> 유니티 엔진 제어부터 기업용 슬랙/깃허브 설계도 통합까지 한 번에 브리징.</p>
+    <p><a href="products/mcp-hub.ko.md">AI MCP 허브 실전 구축 가이드 →</a></p>
+  </div>
+  <div class="dp-card dp-card--highlight dp-card--ai">
+    <h3>비대칭 아키텍처의 승리</h3>
+    <p>에이전트와 서버가 수십 개의 필드를 <strong>동적(Dynamic)</strong>으로 엮어 빈 캔버스를 채우고, 그 결과물은 <strong>Zero-Allocation C#</strong>이라는 가장 강력한 바이트로 압축되어 Unity에 가비지(GC) 없이 전달됩니다. <strong>유연함과 성능의 완벽한 비대칭 타협</strong>입니다.</p>
+    <ul style="font-size: 0.9em; margin-top: 10px; opacity: 0.9;">
+      <li><strong>할당 없는 오버라이드:</strong> <code>Write(oprot, overrides)</code> 단 하나로 클론(Clone) 방식의 메모리 쓰레기를 완벽하게 제거.</li>
+      <li><strong>순수 JSON 호환:</strong> JS/TS 파이프라인에서 무거운 래퍼 클래스 없이 POJO를 유연하게 직접 조립.</li>
+      <li><strong>AI 지식 그래프:</strong> <code>tablelink</code> 등 단순 프로토콜을 넘어 전체 프로젝트 ERD 컨텍스트를 품은 <code>.deuk</code> IDL.</li>
+    </ul>
+    <p><a href="ai-pipeline-integration.ko.md">AI 가이드레일 실전 전략 →</a> &nbsp; | &nbsp; <a href="positioning.ko.md#대체-불가능한-아키텍처-why-deukpack">타사 직렬화 대체 불가 비교 →</a></p>
+  </div>
+</div>
+
+<ul>
+<li><strong>IDL·정의</strong>: <strong>.deuk</strong> 네이티브; Protobuf·레거시 .thrift 파싱. OpenAPI·JSON Schema·CSV·DB 임포트로 한 빌드에 혼합. <strong>struct extends</strong>: 공통 필드를 부모에 한 번 정의, 자식은 고유 필드만 추가 (다단 상속·필드 ID 충돌 검사).</li>
+<li><strong>프로토콜·직렬화</strong>: Binary, Compact, JSON. 제로카피(선택). <code>msgId</code>·<code>ProtocolRegistry</code> <strong>네이티브 메시지 핸들링</strong> — 메시지 ID·디스패치가 IDL 선언만으로 자동 생성.</li>
+<li><strong>코드 생성</strong>: C#, C++, TypeScript, JavaScript. SQLite DDL·접근 코드. 모든 struct에 <strong>FieldId 상수</strong> 자동 생성 (매직 넘버 제거, 컴파일 타임 안전).</li>
+<li><strong>선택·교체·프로젝션</strong>: <strong><code>Write(oprot, fieldIds, overrides?)</code></strong> (동일 인스턴스로 수신자별 값 교체·필드 서브셋 직렬화), <strong>Wire Profile</strong> (빌드 타임에 프로파일별 서브셋 타입 생성). 조합해 팬아웃·부분 전송·DTO 분리를 해결.</li>
+<li><strong>테이블·메타</strong>: 스키마 기반 메타 편집·검증·비교(Excel 애드인). 단일 키·복합키. <code>MetaTableRegistry</code>로 런타임 테이블 로드·검증.</li>
+<li><strong>파이프라인·연동</strong>: 정의·메타 → 코드·스키마·테이블 → Unity·서버 검증·로드. 서버 연동·실시간 게임 연동에서 동일 스키마·프로토콜 사용.</li>
+</ul>
+<hr />
+<h2 id="ai-시대에서도-필요한-이유">AI 시대에서도 필요한 이유<a class="headerlink" href="#ai-시대에서도-필요한-이유" title="Permanent link">&para;</a></h2>
+<h3 id="에이전트가-할-수-없는-일또는-잘-못하는-일">에이전트가 할 수 없는 일(또는 잘 못하는 일)<a class="headerlink" href="#에이전트가-할-수-없는-일또는-잘-못하는-일" title="Permanent link">&para;</a></h3>
+<p>에이전트는 스펙 초안·비즈니스 로직에는 강하지만, 아래는 <strong>보장하기 어렵거나 한 번에 맞추기 어렵습니다</strong>. 이 부분은 <strong>득팩</strong>이 담당하는 편이 안전합니다.</p>
+<table>
+<thead>
+<tr>
+<th>에이전트가 하기 어려운 것</th>
+<th>이유</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>결정론적 출력</strong></td>
+<td>같은 스키마에 대해 실행마다 <strong>동일한 코드·바이트 레이아웃</strong>을 보장하기 어렵다.</td>
+</tr>
+<tr>
+<td><strong>와이어·프로토콜</strong></td>
+<td><strong>득팩이 정한 스펙</strong>으로 바이트를 고정해야 할 때, 에이전트가 매번 다른 인코딩을 내기 쉽다.</td>
+</tr>
+<tr>
+<td><strong>다언어·다플랫폼 동시 정합성</strong></td>
+<td>C#·C++·TS·Unity·서버가 <strong>같은 스키마에서 나온 타입</strong>을 쓰려면 한 번의 정의에서 다언어를 내는 파이프라인이 낫다.</td>
+</tr>
+<tr>
+<td><strong>빌드·CI 재현성</strong></td>
+<td><strong>동일 IDL → 동일 산출물</strong>이어야 빌드 캐시·CI가 안정적이다. 에이전트 출력은 재현이 보장되지 않음.</td>
+</tr>
+<tr>
+<td><strong>레거시·기존 스펙</strong></td>
+<td>이미 돌아가는 .proto·기존 와이어와 <strong>필드 ID·바이트</strong>를 맞추는 건 <strong>코드젠 도구(득팩)</strong> 가 담당하는 편이 낫다.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="그래서-득팩이-필요한-이유">그래서 득팩이 필요한 이유<a class="headerlink" href="#그래서-득팩이-필요한-이유" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>계약·스키마를 "한 번 정의 → 결정론적 다출력"으로 고정</strong>해 주면, 에이전트는 그 <strong>결과물(타입·스키마)</strong>을 전제로 <strong>로직만</strong> 생성하면 되어 불일치가 줄어든다.</li>
+<li><strong>연동 포인트</strong>: 에이전트가 만든 <strong><code>.deuk</code>, <code>.proto</code>, <code>.thrift</code>, OpenAPI</strong> 를 <strong>득팩 입력</strong>으로 넘기고 CLI로 코드·타입·직렬화를 생성. 에이전트는 “이 타입을 쓰는 로직”만 만들면 됩니다.</li>
+<li>에이전트가 스키마를 <strong>생성·수정</strong>해도, <strong>“실행 가능한 타입·직렬화·다언어 코드”</strong>로 바꿔 주는 건 <strong>전문 도구(득팩)</strong>가 담당하는 편이 안전하다. 에이전트는 그 도구를 <strong>도구로 호출</strong>하면 된다.</li>
+</ul>
+<p>→ 상세: <a href="ai-pipeline-integration/">에이전트가 할 수 없는 일 · AI 파이프라인 연동 정리</a></p>
+<hr />
+<h2 id="지원-프로토콜-및-언어-v160">지원 프로토콜 및 언어 (v1.6.0)<a class="headerlink" href="#지원-프로토콜-및-언어-v160" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">언어 / 플랫폼</th>
+<th style="text-align: center;">Pack (.dpk)</th>
+<th style="text-align: center;">TBinary</th>
+<th style="text-align: center;">TCompact</th>
+<th style="text-align: center;">TJSON</th>
+<th style="text-align: center;">JSON (Wire)</th>
+<th style="text-align: center;">YAML / CSV</th>
+<th style="text-align: center;">Protobuf</th>
+<th style="text-align: center;">OpenAPI</th>
+<th style="text-align: center;">MCP</th>
+<th style="text-align: center;">Zero-Alloc / JIT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>TypeScript / JS</strong></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">🚧 (v1.4)</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅ (v1.5)</td>
+<td style="text-align: center;">✅ (v1.6)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>C# (.NET / Unity)</strong></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅ (v1.2.7)</td>
+<td style="text-align: center;">🚧 (v1.4)</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>C++</strong></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅ (v1.5)</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">✅ (v1.5)</td>
+<td style="text-align: center;">🚧</td>
+<td style="text-align: center;">🚧 (v1.4)</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">✅ (v1.4.2)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Java</strong></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅ (v1.5)</td>
+<td style="text-align: center;">✅ (v1.5)</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">🚧</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">🚧</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Elixir (BEAM)</strong></td>
+<td style="text-align: center;">✅ (v1.7)</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">✅ (BEAM)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Excel (Add-in)</strong></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>✅: 정식 지원 / Production Ready</li>
+<li>⚠️: 프리뷰 / 일부 기능 지원</li>
+<li>🚧: 파일럿 / 개발 진행 중</li>
+<li>-: 현재 미지원</li>
+</ul>
+<hr />
+<h2 id="-성능-지향점-v160-벤치마크">🔥 성능 지향점 (v1.6.0 벤치마크)<a class="headerlink" href="#-성능-지향점-v160-벤치마크" title="Permanent link">&para;</a></h2>
+<p>득팩은 <strong>극한의 확장성</strong>과 <strong>저지연 엔지니어링</strong>을 목표로 설계되었습니다. 타사 상용 포맷 대비 평균 <strong>메모리 할당 60–100% 절감</strong>, JS 파싱 속도 <strong>250% 향상</strong>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">언어 환경</th>
+<th style="text-align: left;">지표</th>
+<th style="text-align: center;">타사 Tag-based</th>
+<th style="text-align: center;">타사 RPC-based</th>
+<th style="text-align: center;"><strong>DeukPack</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>C# / Unity</strong></td>
+<td style="text-align: left;">속도</td>
+<td style="text-align: center;">~ 45 ms</td>
+<td style="text-align: center;">~ 85 ms</td>
+<td style="text-align: center;"><strong>~ 28 ms</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">메모리</td>
+<td style="text-align: center;">+4.5 MB</td>
+<td style="text-align: center;">+12.0 MB</td>
+<td style="text-align: center;"><strong>0 MB (Zero)</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>C++ (Native)</strong></td>
+<td style="text-align: left;">속도</td>
+<td style="text-align: center;">~ 14 ms</td>
+<td style="text-align: center;">~ 22 ms</td>
+<td style="text-align: center;"><strong>~ 12 ms</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">메모리</td>
+<td style="text-align: center;">Heap Alloc</td>
+<td style="text-align: center;">Heap Alloc</td>
+<td style="text-align: center;"><strong>Manual Pool</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Java (Backend)</strong></td>
+<td style="text-align: left;">속도</td>
+<td style="text-align: center;">~ 25 ms</td>
+<td style="text-align: center;">~ 38 ms</td>
+<td style="text-align: center;"><strong>~ 35 ms</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">메모리</td>
+<td style="text-align: center;">지속 할당</td>
+<td style="text-align: center;">대규모 객체</td>
+<td style="text-align: center;"><strong>+2.1 MB (최소)</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>JavaScript (V8)</strong></td>
+<td style="text-align: left;">속도</td>
+<td style="text-align: center;">~ 54 ms</td>
+<td style="text-align: center;">~ 190 ms</td>
+<td style="text-align: center;"><strong>~ 158 ms</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">메모리</td>
+<td style="text-align: center;">+4.2 MB</td>
+<td style="text-align: center;">-1.9 MB</td>
+<td style="text-align: center;"><strong>즉시 회수</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Elixir (BEAM)</strong></td>
+<td style="text-align: left;">속도</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"><strong>~ 31 ms</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">메모리</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"><strong>0 MB (Native Match)</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">테스트 환경</p>
+<p>10,000 Rows Payload 디코딩 스트레스 테스트 기준. 사용자 환경에 따라 차이가 있을 수 있습니다.</p>
+</div>
+<p>👉 <strong><a href="journal/performance-matrix/">전체 프로토콜별 상세 비교표 보기</a></strong></p>
+<hr />
+<h2 id="다음-단계">다음 단계<a class="headerlink" href="#다음-단계" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="products/core-engine/"><strong>코어 라이브러리 사용하기</strong></a> — npm·GitHub 링크, 설치·CLI·튜토리얼로 바로 사용</li>
+<li><a href="deukpack-kits/"><strong>득팩 키트 라인업</strong></a> — 스택별 샘플·저장소 링크·바로 적용 예시</li>
+<li><a href="products/">제품군 개요</a> — 제품별 역할·포함 범위</li>
+<li><a href="architecture/">제품 관계도</a> — 제품 간 관계·데이터 흐름 다이어그램</li>
+<li><a href="tutorial/">튜토리얼</a> — 빠른 시작·단계별 가이드</li>
+<li><a href="reference/">레퍼런스 가이드</a> — API·타입 참조</li>
+<li><a href="positioning/">포지셔닝</a> — 타깃·포지션</li>
+<li><a href="license/">라이선스·비용·후원</a> — 이용 조건·비용·개발 후원(PayPal, Ko-fi) 안내</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.expand", "navigation.sections", "navigation.top", "content.tabs.link", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+  
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/dynamic-release-notice-v2.js"></script>
+      
+        <script src="../javascripts/table-scroll-indicator.js"></script>
+      
+    
+  <script>
+  (function() {
+    // Already on /ko/ path - skip
+    if (location.pathname.startsWith('/ko/')) return;
+    
+    // User manually chose a language - skip
+    if (localStorage.getItem('dp-lang-chosen')) return;
+    
+    // Korean browser → redirect to /ko/
+    var lang = navigator.language || navigator.userLanguage;
+    if (lang.startsWith('ko')) {
+      var newPath = '/ko' + location.pathname;
+      if (location.pathname === '/') newPath = '/ko/';
+      location.replace(newPath + location.search + location.hash);
+    }
+  })();
+  
+  // Remember language choice when switcher is clicked
+  document.addEventListener('DOMContentLoaded', function() {
+    var langLinks = document.querySelectorAll('.md-select__link[hreflang]');
+    langLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        localStorage.setItem('dp-lang-chosen', '1');
+      });
+    });
+  });
+  </script>
+
+  </body>
+</html>

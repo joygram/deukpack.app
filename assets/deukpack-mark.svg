@@ -1,0 +1,31 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dp-cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#6AF6FF"/>
+      <stop offset="1" stop-color="#1EB7FF"/>
+    </linearGradient>
+    <linearGradient id="dp-amber" x1="0.3" y1="0.2" x2="0.7" y2="0.9" gradientUnits="objectBoundingBox">
+      <stop stop-color="#FFE082"/>
+      <stop offset="0.5" stop-color="#FFD54F"/>
+      <stop offset="1" stop-color="#FFB74D"/>
+    </linearGradient>
+  </defs>
+  <!-- 배경 -->
+  <rect width="256" height="256" rx="48" fill="#0C1430"/>
+  <!-- 팩 = [ ] 브라켓 (개얼굴을 감싼 형태) -->
+  <path d="M58 72 L58 184 Q58 208 128 208 Q198 208 198 184 L198 72 Q198 48 128 48 Q58 48 58 72 Z" fill="none" stroke="url(#dp-cyan)" stroke-width="12" stroke-linejoin="round"/>
+  <!-- 노란색 개 얼굴 (메인 이미지 톤) -->
+  <ellipse cx="128" cy="128" rx="52" ry="56" fill="url(#dp-amber)"/>
+  <!-- 귀 -->
+  <path d="M82 88 L72 52 L92 82 Z" fill="url(#dp-amber)"/>
+  <path d="M174 88 L184 52 L164 82 Z" fill="url(#dp-amber)"/>
+  <!-- 눈 -->
+  <ellipse cx="108" cy="118" rx="8" ry="10" fill="#1C2740"/>
+  <ellipse cx="148" cy="118" rx="8" ry="10" fill="#1C2740"/>
+  <circle cx="110" cy="116" r="3" fill="#fff"/>
+  <circle cx="150" cy="116" r="3" fill="#fff"/>
+  <!-- 코 -->
+  <path d="M128 132 L122 148 L128 146 L134 148 Z" fill="#1C2740"/>
+  <!-- 입 (웃는 느낌) -->
+  <path d="M108 158 Q128 168 148 158" stroke="#1C2740" stroke-width="4" stroke-linecap="round" fill="none"/>
+</svg>

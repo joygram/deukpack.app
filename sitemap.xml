@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://deukpack.app/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ai-ide-tools-guide/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/ai-ide-tools-guide/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/ai-ide-tools-guide/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ai-pipeline-integration/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/ai-pipeline-integration/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/ai-pipeline-integration/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/architecture/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/architecture/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/architecture/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/deukpack-kits/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/deukpack-kits/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/deukpack-kits/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/documentation-index/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/documentation-index/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/documentation-index/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/license/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/license/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/license/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/positioning/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/positioning/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/positioning/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/releases/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/releases/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/releases/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/_includes/deukpack-release-notice/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/_includes/deukpack-release-notice/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/_includes/deukpack-release-notice/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/_includes/product-notices-aggregate/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/_includes/product-notices-aggregate/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/_includes/product-notices-aggregate/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/_includes/product-notices-landing-core-engine/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/_includes/product-notices-landing-core-engine/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/_includes/product-notices-landing-core-engine/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/_includes/product-notices-landing-excel-addin/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/_includes/product-notices-landing-excel-addin/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/_includes/product-notices-landing-excel-addin/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/_includes/product-notices-landing-extension/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/_includes/product-notices-landing-extension/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/_includes/product-notices-landing-extension/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/_includes/product-notices-landing-navigation/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/_includes/product-notices-landing-navigation/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/_includes/product-notices-landing-navigation/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/_includes/product-notices-landing-pipeline-unity/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/_includes/product-notices-landing-pipeline-unity/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/_includes/product-notices-landing-pipeline-unity/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/_includes/product-notices-landing-protocol/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/_includes/product-notices-landing-protocol/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/_includes/product-notices-landing-protocol/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/journal/ai-control-plane-design/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/journal/ai-control-plane-design/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/journal/ai-control-plane-design/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/journal/performance-matrix/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/journal/performance-matrix/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/journal/performance-matrix/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/journal/security-oom-large-payload/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/journal/security-oom-large-payload/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/journal/security-oom-large-payload/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/products/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/products/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/products/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/products/core-engine/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/products/core-engine/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/products/core-engine/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/products/excel-addin/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/products/excel-addin/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/products/excel-addin/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/products/extension/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/products/extension/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/products/extension/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/products/mcp-hub/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/products/mcp-hub/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/products/mcp-hub/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/products/navigation/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/products/navigation/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/products/navigation/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/products/pipeline-unity/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/products/pipeline-unity/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/products/pipeline-unity/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/products/protocol/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/products/protocol/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/products/protocol/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/reference/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/reference/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/reference/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/reference/api/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/reference/api/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/reference/api/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/reference/database/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/reference/database/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/reference/database/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/reference/fundamentals/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/reference/fundamentals/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/reference/fundamentals/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/reference/messages/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/reference/messages/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/reference/messages/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/reference/tables/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/reference/tables/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/reference/tables/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/reference/wire-protocols/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/reference/wire-protocols/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/reference/wire-protocols/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/tutorial/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/tutorial/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/tutorial/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/tutorial/cpp-guide/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/tutorial/cpp-guide/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/tutorial/cpp-guide/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/tutorial/csharp-guide/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/tutorial/csharp-guide/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/tutorial/csharp-guide/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/tutorial/distribution-vs-source/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/tutorial/distribution-vs-source/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/tutorial/distribution-vs-source/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/tutorial/elixir-guide/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/tutorial/elixir-guide/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/tutorial/elixir-guide/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/tutorial/idl-guide/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/tutorial/idl-guide/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/tutorial/idl-guide/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/tutorial/install-os/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/tutorial/install-os/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/tutorial/install-os/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/tutorial/pipeline-guide/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/tutorial/pipeline-guide/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/tutorial/pipeline-guide/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/tutorial/protocol-serialization/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/tutorial/protocol-serialization/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/tutorial/protocol-serialization/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/tutorial/quickstart/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/tutorial/quickstart/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/tutorial/quickstart/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/tutorial/write-with-overrides/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/tutorial/write-with-overrides/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/tutorial/write-with-overrides/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/ai-ide-tools-guide/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/ai-ide-tools-guide/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/ai-ide-tools-guide/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/ai-pipeline-integration/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/ai-pipeline-integration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/ai-pipeline-integration/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/architecture/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/architecture/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/architecture/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/deukpack-kits/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/deukpack-kits/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/deukpack-kits/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/documentation-index/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/documentation-index/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/documentation-index/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/license/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/license/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/license/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/positioning/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/positioning/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/positioning/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/releases/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/releases/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/releases/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/_includes/deukpack-release-notice/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/_includes/deukpack-release-notice/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/_includes/deukpack-release-notice/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/_includes/product-notices-aggregate/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/_includes/product-notices-aggregate/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/_includes/product-notices-aggregate/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/_includes/product-notices-landing-core-engine/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/_includes/product-notices-landing-core-engine/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/_includes/product-notices-landing-core-engine/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/_includes/product-notices-landing-excel-addin/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/_includes/product-notices-landing-excel-addin/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/_includes/product-notices-landing-excel-addin/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/_includes/product-notices-landing-extension/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/_includes/product-notices-landing-extension/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/_includes/product-notices-landing-extension/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/_includes/product-notices-landing-navigation/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/_includes/product-notices-landing-navigation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/_includes/product-notices-landing-navigation/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/_includes/product-notices-landing-pipeline-unity/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/_includes/product-notices-landing-pipeline-unity/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/_includes/product-notices-landing-pipeline-unity/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/_includes/product-notices-landing-protocol/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/_includes/product-notices-landing-protocol/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/_includes/product-notices-landing-protocol/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/journal/ai-control-plane-design/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/journal/ai-control-plane-design/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/journal/ai-control-plane-design/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/journal/performance-matrix/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/journal/performance-matrix/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/journal/performance-matrix/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/journal/security-oom-large-payload/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/journal/security-oom-large-payload/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/journal/security-oom-large-payload/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/products/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/products/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/products/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/products/core-engine/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/products/core-engine/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/products/core-engine/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/products/excel-addin/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/products/excel-addin/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/products/excel-addin/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/products/extension/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/products/extension/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/products/extension/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/products/mcp-hub/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/products/mcp-hub/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/products/mcp-hub/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/products/navigation/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/products/navigation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/products/navigation/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/products/pipeline-unity/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/products/pipeline-unity/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/products/pipeline-unity/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/products/protocol/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/products/protocol/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/products/protocol/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/reference/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/reference/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/reference/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/reference/api/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/reference/api/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/reference/api/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/reference/database/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/reference/database/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/reference/database/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/reference/fundamentals/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/reference/fundamentals/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/reference/fundamentals/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/reference/messages/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/reference/messages/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/reference/messages/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/reference/tables/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/reference/tables/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/reference/tables/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/reference/wire-protocols/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/reference/wire-protocols/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/reference/wire-protocols/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/tutorial/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/tutorial/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/tutorial/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/tutorial/cpp-guide/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/tutorial/cpp-guide/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/tutorial/cpp-guide/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/tutorial/csharp-guide/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/tutorial/csharp-guide/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/tutorial/csharp-guide/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/tutorial/distribution-vs-source/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/tutorial/distribution-vs-source/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/tutorial/distribution-vs-source/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/tutorial/elixir-guide/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/tutorial/elixir-guide/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/tutorial/elixir-guide/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/tutorial/idl-guide/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/tutorial/idl-guide/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/tutorial/idl-guide/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/tutorial/install-os/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/tutorial/install-os/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/tutorial/install-os/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/tutorial/pipeline-guide/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/tutorial/pipeline-guide/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/tutorial/pipeline-guide/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/tutorial/protocol-serialization/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/tutorial/protocol-serialization/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/tutorial/protocol-serialization/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/tutorial/quickstart/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/tutorial/quickstart/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/tutorial/quickstart/"/>
+    </url>
+    <url>
+        <loc>https://deukpack.app/ko/tutorial/write-with-overrides/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://deukpack.app/ko/tutorial/write-with-overrides/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://deukpack.app/tutorial/write-with-overrides/"/>
+    </url>
+</urlset>

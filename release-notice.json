@@ -1,0 +1,143 @@
+{
+  "version": "1.7.1",
+  "info_title_ko": "득팩 코어 업데이트",
+  "info_title_en": "DeukPack core update",
+  "announce": "<strong>득팩 코어 1.6.0</strong> — JavaScript V8 JIT Codegen · C# 무할당(Zero-Alloc) 아키텍처 —\n<a href=\"https://github.com/joygram/DeukPack/releases/latest\">GitHub Releases</a>\n· <a href=\"https://deukpack.app/releases/\">릴리스 요약 (KO/EN)</a>",
+  "announce_ko": "<strong>득팩 코어 1.6.0</strong> — JavaScript V8 JIT Codegen · C# 완전 무할당(Zero-Alloc) · 크로스 랭귀지 벤치마크 —\n<a href=\"https://github.com/joygram/DeukPack/releases/latest\">GitHub Releases</a>\n· <a href=\"https://deukpack.app/releases/\">릴리스 요약</a>",
+  "announce_en": "<strong>DeukPack Core 1.6.0</strong> — JavaScript V8 JIT Codegen · C# Zero-Alloc architecture · Cross-language benchmark —\n<a href=\"https://github.com/joygram/DeukPack/releases/latest\">GitHub Releases</a>\n· <a href=\"https://deukpack.app/releases/\">Release summary</a>",
+  "landing_ko": "**득팩 코어 1.6.0** — JavaScript(Node.js/Web) 환경에 사전 컴파일 기반 정적 **V8 JIT Codegen**을 도입하여 동역 파싱 대비 속도를 250% 높이고 힙 할당을 즉시 회수합니다. 또한 C#(Unity) 파이프라인을 `[StructLayout]` 기반의 **완전 무할당(Zero-Alloc) 구조**로 격상시켜 백만 회 로딩에도 0바이트의 가비지를 보장합니다. 퍼포먼스가 중요한 모든 레이어에 업계 최상위권의 속도와 메모리 안정성을 제공합니다. [GitHub Releases](https://github.com/joygram/DeukPack/releases/latest) · [릴리스 요약](https://deukpack.app/releases/)",
+  "landing_en": "**DeukPack core 1.6.0** — Introduced pre-compiled **V8 JIT Codegen** for JavaScript (Node.js/Web), achieving a 250% parsing speed boost and zero GC spikes. Upgraded the C# (Unity) pipeline to a strictly-sized `[StructLayout]` **Zero-Alloc architecture**, guaranteeing 0-byte heap allocation across over a million operations. Delivers industry-leading latency and absolute memory stability to all critical execution layers. [GitHub Releases](https://github.com/joygram/DeukPack/releases/latest) · [Release summary](https://deukpack.app/releases/)",
+  "product_notices": [
+    {
+      "date": "2026-04-01",
+      "products": [
+        "core-engine",
+        "protocol",
+        "pipeline-unity"
+      ],
+      "title_ko": "1.6.0 — JS JIT Codegen 및 C# Zero-Alloc 달성",
+      "title_en": "1.6.0 — JS JIT Codegen, C# Zero-Alloc architecture",
+      "body_ko": "- **JavaScript**: 사전 컴파일된 `_readPack` 기반 V8 JIT 인라인 최적화 도입 (250% 성능 향상 및 GC 방어).\n- **C# / Unity**: 값 타입 캡슐화와 구조체 정적 할당을 통한 메모리 할당 0(Zero) 달성.\n- **벤치마크**: 전 언어 통합 메모리 방어 및 레이턴시 벤치마크 제공.\n- **로드맵**: Elixir(Erlang BEAM) 지원이 1.7.0 마이너 릴리즈로 승격.",
+      "body_en": "- **JavaScript**: Introduced V8 JIT inline optimization using pre-compiled `_readPack` (250% speed boost & GC defense).\n- **C# / Unity**: Achieved literal zero (0) heap allocation via Value Type encapsulation and structural statically-allocated lambdas.\n- **Benchmark**: Provided cross-language, comprehensive memory and parsing latency matrices.\n- **Roadmap**: Elixir (Erlang BEAM) support officially promoted to the v1.7.0 minor release."
+    },
+    {
+      "date": "2026-03-30",
+      "products": [
+        "core-engine",
+        "protocol",
+        "pipeline-unity"
+      ],
+      "title_ko": "1.5.0 — Java 패리티·MCP 분리·보안 강화",
+      "title_en": "1.5.0 — Java parity, MCP decoupling, security guards",
+      "body_ko": "- **Java**: `extends`(상속), `TCompact`, `TJSON` 프로토콜 정식 지원.\n- **아키텍처**: MCP 서버 생성 로직을 독립 플러그인(`DeukPackMcp`)으로 분리.\n- **보안**: 전 언어 바이너리 입출력에 `MAX_SAFE_LENGTH`, `MAX_RECURSION_DEPTH` 보안 가드 적용.\n- **문서**: 공식 사이트(deukpack.app) 및 README 최신화.",
+      "body_en": "- **Java**: Added support for `extends` (inheritance), `TCompact`, and `TJSON` protocols.\n- **Architecture**: Decoupled MCP server logic into a standalone `DeukPackMcp` plugin.\n- **Security**: Implemented `MAX_SAFE_LENGTH` and `MAX_RECURSION_DEPTH` guards across all language runtimes.\n- **Docs**: Synchronized deukpack.app and repository READMEs with v1.5.0 status."
+    },
+    {
+      "date": "2026-03-28",
+      "products": [
+        "core-engine",
+        "extension",
+        "pipeline-unity"
+      ],
+      "title_ko": "1.3.0 — 동적 공지·링크 수정·OSS 싱크 강화",
+      "title_en": "1.3.0 — dynamic notices, link fixes, OSS sync",
+      "body_ko": "- **득팩앱**: 빌드 타임 의존성 제거 및 브라우저 실시간 공지 렌더링 도입.\n- **문서**: 마크다운 내 깨진 링크 및 앵커 일괄 수정.\n- **도구**: OSS 미러링 시 불필요한 빌드 아티팩트(obj, bin 등) 전역 제외 규칙 강화.",
+      "body_en": "- **deukpack.app**: Dynamic client-side release notice rendering (removed build-time deps).\n- **Docs**: Fixed broken markdown links and anchors across all product pages.\n- **Tooling**: Enhanced OSS sync with global exclusion rules for build artifacts (`obj`, `bin`, etc.)."
+    },
+    {
+      "date": "2026-03-28",
+      "products": [
+        "core-engine",
+        "extension",
+        "pipeline-unity"
+      ],
+      "title_ko": "1.2.6 — 스키마 표준·C# 코드젠·C++ CI·verify",
+      "title_en": "1.2.6 — schema strings, C# codegen, C++ CI, verify",
+      "body_ko": "- **스키마**: `struct`/`enum`/`int32` 등 득팩 표준; JSON 와이어 `{i32}` 등 키는 그대로.\n- **C#**: `DpSchemaType` `Int16`/`Int32`/`Int64`, 생성 타입 기본 초기화.\n- **CI**: Ubuntu·Windows에서 C++ `ctest`.\n- **도구**: `npm run verify`.",
+      "body_en": "- **Schema**: DeukPack **`type`** strings; **JSON wire** keys (`i32`, `tf`, …) unchanged.\n- **C#**: **`DpSchemaType`** **`Int16`/`Int32`/`Int64`**, codegen property defaults.\n- **CI**: C++ **`ctest`** on Ubuntu and Windows.\n- **Tooling**: **`npm run verify`**."
+    },
+    {
+      "date": "2026-03-27",
+      "products": [
+        "core-engine",
+        "extension",
+        "pipeline-unity"
+      ],
+      "title_ko": "1.2.5 — npm·GitHub index 정합·C# CS8767",
+      "title_en": "1.2.5 — npm/GitHub index alignment, C# CS8767",
+      "body_ko": "- **TypeScript 진입점**: npm과 GitHub에서 동일한 공개 API(`serialize`/`deserialize`, 인터롭, `packStructWire` 등). Excel 전용 프로토콜은 공개 소스 트리에 없음.\n- **C#**: `DpJsonProtocol`·`DpDeukJsonProtocol`·`DpExcelProtocol`·`TBinaryProtocol` 등 `WriteString`/`WriteBinary`를 `string?`/`byte[]?`로 정합; `DpMetaInfosWrapper.TryGetValue`에 `[MaybeNullWhen(false)]`.",
+      "body_en": "- **Package `index`**: same public API on **npm** and **GitHub** (`serialize`/`deserialize`, interop, `packStructWire`, etc.). Excel-only protocol not in the open-source tree.\n- **C#**: **`WriteString`/`WriteBinary`** nullable on protocol impls; **`DpMetaInfosWrapper.TryGetValue`** **`[MaybeNullWhen(false)]`** (CS8767)."
+    },
+    {
+      "date": "2026-03-26",
+      "products": [
+        "core-engine",
+        "extension",
+        "pipeline-unity"
+      ],
+      "title_ko": "1.2.4 — GitHub README 링크·의존성·Node 18·audit",
+      "title_en": "1.2.4 — GitHub README links, deps, Node 18, audit",
+      "body_ko": "- **README (GitHub)**: 문서 링크를 deukpack.app으로 안내.\n- **의존성**: Jest 30, protobufjs 8, node-addon-api 8, yaml/nan, rimraf 6, cmake-js 8, node-gyp 12 등.\n- **보안·환경**: `npm audit fix`(minimatch); `engines`·setup 최소 Node 18.",
+      "body_en": "- **README (GitHub)**: documentation links point to **deukpack.app**.\n- **Dependencies**: Jest 30, protobufjs 8, node-addon-api 8, yaml/nan, rimraf 6, cmake-js 8, node-gyp 12, etc.\n- **Security / runtime**: **`npm audit fix`** (minimatch); **`engines`** and setup minimum **Node 18**."
+    },
+    {
+      "date": "2026-03-25",
+      "products": [
+        "core-engine",
+        "extension",
+        "pipeline-unity"
+      ],
+      "title_ko": "1.2.3 — init·bootstrap·VSIX 순서·Antigravity",
+      "title_en": "1.2.3 — init flow, bootstrap, VSIX order, Antigravity",
+      "body_ko": "- **init**: 질문 정리; bootstrap 항상; `--skip-workspace` 제거.\n- **VSIX**: bootstrap 이후; 자동 설치 `code`→`cursor`→`antigravity`.\n- **문서**: `npx` vs `npm deukpack` 안내.",
+      "body_en": "- **init**: fewer prompts; bootstrap always; `--skip-workspace` removed.\n- **VSIX**: after bootstrap; auto-install `code`→`cursor`→`antigravity`.\n- **Docs**: `npx` vs `npm deukpack`."
+    },
+    {
+      "date": "2026-03-24",
+      "products": [
+        "core-engine",
+        "extension",
+        "pipeline-unity"
+      ],
+      "title_ko": "1.2.2 — 파이프라인 전체 스캔·출력 경로·ts/js",
+      "title_en": "1.2.2 — pipeline all-deuk scan, output paths, ts/js dirs",
+      "body_ko": "- **파이프라인**: `defineScope: all`(기본), `exclude`, 임시 번들 엔트리.\n- **출력**: `outputDir` 생략 시 `defineRoot`와 동일; 하위 폴더 기본 `csharp`/`cpp`/`ts`/`js`; `outputLangSubdirs`로 이름 변경.\n- **init·문서·예제**: 기본 파이프라인·경로 정합.",
+      "body_en": "- **Pipeline**: `defineScope: all` (default), `exclude`, short-lived bundle entry.\n- **Output**: omit `outputDir` → same as `defineRoot`; default subdirs `csharp`/`cpp`/`ts`/`js`; rename via `outputLangSubdirs`.\n- **init / docs / examples**: defaults and paths aligned."
+    },
+    {
+      "date": "2026-03-24",
+      "products": [
+        "core-engine",
+        "extension",
+        "pipeline-unity"
+      ],
+      "title_ko": "1.2.1 — README·파이프라인 경고·VSIX 자동 갱신",
+      "title_en": "1.2.1 — README, pipeline warning, VSIX auto on version bump",
+      "body_ko": "- **README**: 로컬 설치 절차 코드 블록·전역 `-g` 제거·키트 **득팩 테일** 표기.\n- **CLI**: `deukpack.pipeline.json` 없을 때 단발 실행 경고 → `npx deukpack init` 유도.\n- **init/bootstrap/VSIX**: 저장된 npm 버전과 불일치 시 VSIX 자동 설치 시도; Unity 근처 감지·비대화형 ensure.",
+      "body_en": "- **README**: local install code blocks; drop global `-g` from guide; **DeukPack Tale** label for kits.\n- **CLI**: warn on one-shot runs when default pipeline JSON is missing; nudge **`npx deukpack init`**.\n- **init/bootstrap/VSIX**: auto VSIX attempt on npm version mismatch; Unity-aware prompts; non-interactive ensure."
+    },
+    {
+      "date": "2026-03-23",
+      "products": [
+        "core-engine",
+        "protocol",
+        "pipeline-unity",
+        "extension"
+      ],
+      "title_ko": "1.2.0 — 동봉 VSIX·npm 와이어·Unity 연동 문서",
+      "title_en": "1.2.0 — bundled VSIX, npm wire, Unity integration docs",
+      "body_ko": "- **VS Code 확장**: npm tarball에 **`bundled/deuk-idl.vsix`** 동봉; postinstall·bootstrap 연동(`bundled/README.md`).\n- **npm**: `serialize` / `deserialize` 를 `WireExtras`·`WireDeserializeExtras` 중심으로 정리(구 시그니처 제거).\n- **TypeScript 와이어**: `BinaryReader`, `wireTags`, `SerializationWarnings` 등 보강; `pack`·`json`·`yaml`·인터롭 와이어 짝 유지.\n- **문서**: Unity UPM 연동은 **deukpack.app** 안내.\n- **생성·CI**: C++/TS/JS 템플릿·JS 스키마 표기 정리, C# 프로토콜 CI 안정화.",
+      "body_en": "- **VS Code extension**: npm tarball ships **`bundled/deuk-idl.vsix`**; **postinstall** and **bootstrap** wired (`bundled/README.md`).\n- **npm**: `serialize` / `deserialize` use `WireExtras` / `WireDeserializeExtras` (legacy overload removed).\n- **TypeScript wire**: `BinaryReader`, `wireTags`, `SerializationWarnings`; Deuk native and interop protocols stay paired.\n- **Docs**: Unity UPM integration documented on **deukpack.app**.\n- **Codegen & CI**: C++/TS/JS templates and schema labeling; C# protocol CI stabilized."
+    },
+    {
+      "date": "2026-03-20",
+      "products": [
+        "core-engine"
+      ],
+      "title_ko": "1.1.0 — C++ uint 타입·레거시 message·CLI",
+      "title_en": "1.1.0 — C++ uint types, legacy message block, CLI",
+      "body_ko": "- **C++ (`--cpp`)**: `uint8` 등 → `<cstdint>` 고정폭 타입.\n- **IDL**: Thrift 스타일 레거시 `message { }` 블록 파싱.\n- **CLI**: `deukpack` → `scripts/build_deukpack.js` 위임.",
+      "body_en": "- **C++ (`--cpp`)**: `uint8` … → `<cstdint>` aliases.\n- **IDL**: legacy Thrift-style `message { … }` blocks.\n- **CLI**: delegates to `scripts/build_deukpack.js`."
+    }
+  ]
+}

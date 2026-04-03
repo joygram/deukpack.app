@@ -1,0 +1,351 @@
+/* DeukPack — 다크 테마 보조 스타일 */
+.md-header,
+.md-tabs {
+  background: #0c1430 !important;
+}
+.md-header {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.24);
+}
+.md-tabs {
+  border-top: 1px solid rgba(126, 220, 255, 0.14);
+}
+[data-md-color-scheme="slate"] .md-typeset h1:first-child {
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--md-default-fg-color--lighter);
+  margin-bottom: 0.6rem;
+}
+.md-typeset .md-button {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.55rem;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+.md-main__inner {
+  margin-top: 0.4rem;
+}
+.dp-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0.6rem 0 1.2rem;
+}
+.dp-hero-copy h1 {
+  margin: 0 0 0.8rem;
+  border-bottom: 0;
+  padding-bottom: 0;
+  font-size: 2.4rem;
+  line-height: 1.15;
+}
+.dp-tagline {
+  margin: 0 0 0.6rem;
+  color: #80efff;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.dp-eyebrow {
+  display: inline-block;
+  margin: 0 0 0.85rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid rgba(95, 233, 255, 0.28);
+  border-radius: 999px;
+  background: rgba(44, 184, 255, 0.08);
+  color: #80efff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.dp-lead {
+  margin: 0 0 1rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+.dp-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0 0 1rem;
+}
+.dp-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.42rem 0.78rem;
+  border: 1px solid rgba(126, 220, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--md-default-fg-color--light);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.dp-actions {
+  margin: 0;
+}
+.dp-hero-visual {
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+.dp-hero-visual img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-height: 280px;
+  max-height: min(56vw, 420px);
+  object-fit: contain;
+  object-position: center top;
+  border: 1px solid rgba(107, 131, 188, 0.22);
+  border-radius: 1.25rem;
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.24);
+  background: linear-gradient(180deg, rgba(10, 18, 40, 0.95), rgba(19, 27, 57, 0.95));
+}
+.dp-value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 1.3rem;
+}
+.dp-card {
+  padding: 1.1rem 1rem;
+  border: 1px solid rgba(98, 124, 182, 0.18);
+  border-radius: 1rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+.dp-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.45rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+/* 열별 제목 색상: 1열 cyan, 2열 green, 3열 amber */
+.dp-value-grid > .dp-card:nth-child(3n+1) h3 { color: #7ee8fa; }
+.dp-value-grid > .dp-card:nth-child(3n+2) h3 { color: #a5d6a7; }
+.dp-value-grid > .dp-card:nth-child(3n) h3 { color: #ffd54f; }
+.dp-card p {
+  margin: 0;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+.dp-card--highlight {
+  border-color: rgba(98, 124, 182, 0.35);
+  background: linear-gradient(180deg, rgba(98, 124, 182, 0.08), rgba(98, 124, 182, 0.03));
+}
+.dp-card--highlight h3 {
+  color: var(--md-primary-fg-color, #7cb8ff);
+}
+.dp-card--ai {
+  grid-row: span 3;
+}
+/* 탭·로고: 폭과 무관하게 항상 표시 */
+.md-tabs {
+  display: block !important;
+}
+.md-header__button.md-logo {
+  display: inline-block !important;
+}
+@media screen and (max-width: 960px) {
+  .dp-value-grid {
+    grid-template-columns: 1fr;
+  }
+  .dp-hero-copy h1 {
+    font-size: 2rem;
+  }
+  .dp-hero-visual img {
+    min-height: 220px;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   Tables: Responsive Scroll Guidance
+   ------------------------------------------------------------------------- */
+
+/* Table wrap with side-fade shadows */
+/* Table wrap - Flat & Simple Layout (Eliminating theme-default shadows) */
+.md-typeset__scrollwrap,
+.md-typeset__scrollwrap::before,
+.md-typeset__scrollwrap::after {
+  box-shadow: none !important;
+  background-image: none !important; /* Material theme uses radial-gradient here */
+  background-color: transparent !important;
+  display: block; /* Essential for the wrapper itself */
+}
+
+/* Explicitly kill the theme's default shadow pseudo-elements */
+.md-typeset__scrollwrap::before,
+.md-typeset__scrollwrap::after {
+  display: none !important;
+}
+
+.md-typeset__table {
+  background: transparent !important;
+}
+
+/* 3. 새로운 원형 인디케이터 단추 스펙 (Glassmorphism) */
+.dp-table-indicator {
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  background: rgba(126, 220, 255, 0.12); /* 원경 배경색 */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(126, 220, 255, 0.5); /* 선명한 보더 */
+  border-radius: 50%;
+  color: #7ee8fa;
+  pointer-events: none;
+  z-index: 999; /* 다른 요소보다 확실히 위에 표시 */
+  
+  /* 인디케이터 전용 그림자 - 테마 그림자와 혼동되지 않도록 명시적으로 설정 */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 
+              inset 0 1px 1px rgba(255, 255, 255, 0.2) !important;
+  
+  animation: dp-indicator-bounce-centered 2.5s infinite ease-in-out;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.dp-table-indicator .dp-arrow {
+  font-size: 1rem;
+  margin-left: 0.2rem;
+}
+
+@keyframes dp-indicator-bounce-centered {
+  0%, 100% { transform: translateY(-50%) translateX(0); opacity: 0.9; }
+  50% { transform: translateY(-50%) translateX(-8px); opacity: 1; box-shadow: 0 0 20px rgba(126, 220, 255, 0.4); }
+}
+
+[data-md-color-scheme="default"] .md-typeset__scrollwrap {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+@media screen and (max-width: 960px) {
+  .md-typeset__table {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* 4. Matrix Table (속성 표) 좌측 열 고정 */
+.dp-matrix-table th:first-child,
+.dp-matrix-table td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background-color: var(--md-default-bg-color) !important;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+[data-md-color-scheme="slate"] .dp-matrix-table th:first-child,
+[data-md-color-scheme="slate"] .dp-matrix-table td:first-child {
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* -------------------------------------------------------------------------
+   Release Notices: Featured & Rolling Ticker
+   ------------------------------------------------------------------------- */
+
+.dp-notice-featured {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1.5px solid rgba(126, 220, 255, 0.3);
+  border-radius: 1rem;
+  background: rgba(126, 220, 255, 0.05);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.dp-notice-featured h3 {
+  margin-top: 0;
+  color: #7ee8fa;
+  font-size: 1.25rem;
+}
+
+.dp-rolling-ticker-container {
+  margin: 1.5rem 0;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  background: rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.dp-rolling-ticker {
+  height: 2.2rem; /* 싱글 라인 높이 */
+  overflow: hidden;
+  position: relative;
+}
+
+.dp-ticker-item {
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  animation: dp-ticker-slide v2.5s infinite; /* JS에서 개수에 따라 조절 가능 */
+}
+
+.dp-ticker-label {
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  background: rgba(255, 213, 79, 0.15);
+  color: #ffd54f;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.dp-history-section {
+  margin-top: 2rem;
+}
+
+.dp-history-content {
+  display: none;
+  border-top: 1px dashed rgba(255, 255, 255, 0.15);
+  padding-top: 1rem;
+}
+
+.dp-history-content.is-visible {
+  display: block;
+}
+
+.dp-history-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: var(--md-primary-fg-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+
+.dp-history-btn:hover {
+  opacity: 0.8;
+}
+
+@keyframes dp-ticker-slide {
+  0% { transform: translateY(0); }
+  20% { transform: translateY(0); }
+  25% { transform: translateY(-100%); }
+  45% { transform: translateY(-100%); }
+  50% { transform: translateY(-200%); }
+  70% { transform: translateY(-200%); }
+  75% { transform: translateY(-300%); }
+  95% { transform: translateY(-300%); }
+  100% { transform: translateY(-400%); }
+}
+
