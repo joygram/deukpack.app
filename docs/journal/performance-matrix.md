@@ -22,7 +22,7 @@ Focused on Zero-GC memory defense, which is strictly tied to securing frame rate
 | :--- | :--- | :--- | :--- |
 | **Industry Tag-based** | ~ 45 ms | + 4.5 MB | Variable-length decoding operations cause frequent object heap allocations resulting in GC load. |
 | **Industry RPC-based** | ~ 85 ms | + 12.0 MB | High memory footprint due to Generic collections and Value-Type boxing. |
-| **DeukPack (`pack`)** | **~ 28 ms** | **0 MB (Zero)** | Attains **absolute Zero-Alloc** via `[StructLayout]` stack memory circulation and static lambda code generation. |
+| **DeukPack (`pack`)** | ~ **28 ms** | **0 MB (Zero)** | Attains **absolute Zero-Alloc** via `[StructLayout]` stack memory circulation and static lambda code generation. |
 
 ---
 
@@ -33,7 +33,7 @@ Focused on CPU Cache-Hit rates and Zero-Copy memory manipulation in high-concurr
 | :--- | :--- | :--- | :--- |
 | **Industry Tag-based** | ~ 14 ms | Heap Allocation | Requires dynamic copy operations for string and nested scope mappings. |
 | **Industry RPC-based** | ~ 22 ms | Heap Allocation | Overhead triggered by dynamic length container resizing. |
-| **DeukPack (`bin`)** | **~ 12 ms** | **Manual Pooling** | Maximizes **Extreme Low Latency** through direct structural mapping and adjacent memory layout methodologies. |
+| **DeukPack (`bin`)** | ~ **12 ms** | **Manual Pooling** | Maximizes **Extreme Low Latency** through direct structural mapping and adjacent memory layout methodologies. |
 
 ---
 
@@ -44,7 +44,7 @@ Focused on securing massive traffic throughput and robust Old Gen GC controllabi
 | :--- | :--- | :--- | :--- |
 | **Industry Tag-based** | ~ 25 ms | Continuous Alloc | Results in a noticeable increase in background Minor GC invocation cycles. |
 | **Industry RPC-based** | ~ 38 ms | Extensive Objects | Multiple instantiations triggered, particularly for built-in collections and lists. |
-| **DeukPack (`pack`)** | **~ 35 ms** | **Minimal (+2.1MB)** | JIT Inlining optimizations ensure structural safety by drastically reducing redundant object creation past the Warm-up phase. |
+| **DeukPack (`pack`)** | ~ **35 ms** | **Minimal (+2.1MB)** | JIT Inlining optimizations ensure structural safety by drastically reducing redundant object creation past the Warm-up phase. |
 
 ---
 
@@ -53,7 +53,7 @@ Focused on Non-Pause ecosystem architectures, data structure decoding strategies
 
 | Protocol | Parsing Latency | Memory Allocation (10K Rows) | Architectural Characteristics |
 | :--- | :--- | :--- | :--- |
-| **DeukPack (`pack`)** | **~ 31 ms** | **0 MB (Native Match)** | Maximizes BEAM VM's unique `<<tag::integer, rest::binary>>` **byte-level Native Pattern Matching** to decode payloads without runtime garbage allocation. |
+| **DeukPack (`pack`)** | ~ **31 ms** | **0 MB (Native Match)** | Maximizes BEAM VM's unique `<<tag::integer, rest::binary>>` **byte-level Native Pattern Matching** to decode payloads without runtime garbage allocation. |
 
 ---
 
