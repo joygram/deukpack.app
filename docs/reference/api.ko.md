@@ -173,6 +173,8 @@ hero.Unpack(bin, DpFormat.Json);
 | **FieldId** | `public const int` — `StructName.FieldId.PropertyName`. |
 | **ProtocolRegistry** | 메시지 타입 ↔ msgId 등. |
 | **MetaTableRegistry** | 테이블·메타 타입 등록. |
+| **Hero.Unpack(hero, bin)** | 🌟 **Unity Hotpath용 (강제 권장 최적화)**: 미리 생성해둔 인스턴스의 값을 덮어씁니다. GC 스파이크와 프레임 드랍을 완벽히 방지하는 **Zero-Allocation** 방식입니다. |
+| **Hero.Unpack(bin)** | ⚠️ **Factory 메서드**: 새 인스턴스를 할당하여 반환합니다. 초기화/설정 파일 등에만 사용하고 인게임 핫패스 루프에서는 사용을 금지합니다. |
 
 **struct extends:** IDL `extends` — 상속·필드 ID 검사. 튜토리얼: [통합 Write·필드 선택·extends](../tutorial/write-with-overrides.ko.md).
 
@@ -184,6 +186,8 @@ hero.Unpack(bin, DpFormat.Json);
 |------|------|
 | **kFieldId_\*** | `static constexpr int` — `StructName::kFieldId_PropertyName`. |
 | **Binary / pack 출력** | 생성 소스가 C#/JS와 동일한 **필드 ID** 모델을 따름; 스마트 포인터(`std::shared_ptr`)를 지원하여 얕은 복사본 수정 시 사이드 이펙트를 차단하는 분리 접근(detach) 메커니즘을 지원합니다. |
+| **Hero::Unpack(hero, bin)** | 🌟 **동적 컨테이너 재사용 (성능 극대화)**: `std::vector` 등 내부 컬렉션의 예약된 용량(Capacity)을 파괴하지 않고 재활용하여 비용이 큰 OS 레벨 힙 메모리 할당 락(Lock)을 방지합니다. |
+| **Hero::Unpack(bin)** | ⚠️ **Factory 메서드**: 스택 메모리상에 객체를 복사 없이 RVO(반환값 최적화)로 던져줍니다. 빠르지만 내부의 벡터/앱 배열은 여전히 힙 할당을 일으키므로 핫패스 사용에 유의해야 합니다. |
 
 ---
 
@@ -193,7 +197,9 @@ hero.Unpack(bin, DpFormat.Json);
 |------|------|
 | **Getters/Setters** | Java Bean 패턴 규격의 필드 접근자. |
 | **clone()** | 배열(List) 및 컬렉션을 아우르는 **안전한 깊은 복사(Deep Copy)** 기본 지원. 100만 회 이상의 Multi-pass 메모리 라우팅에서 GC 오버헤드 없이 원본 객체의 불변성을 입증합니다. |
-| **Binary / pack 출력** | C#과 1:1 완벽 호환되는 프로토콜 클래스를 지니며, 엄격한 Struct 객체 생성을 통해 빈 구조체 접근을 네이티브하게 방어합니다. |
+| **Binary / pack 출력** | C#과 1> 1 완벽 호환되는 프로토콜 클래스를 지니며, 엄격한 Struct 객체 생성을 통해 빈 구조체 접근을 네이티브하게 방어합니다. |
+| **Hero.unpack(hero, bin)** | 🌟 **네트워크 Hotpath용 (Zero-Allocation)**: 사전 할당된 객체를 오버라이딩하여 Netty 등의 초고성능 NIO 서버에서 동시성 GC 부하를 차단합니다. |
+| **Hero.unpack(bin)** | ⚠️ **Factory 메서드**: 새로운 인스턴스를 할당하여 반환합니다. IO가 폭주하는 환경에서는 가비지 처리를 늦추므로 사용을 지양하세요. |
 
 ---
 
@@ -204,6 +210,8 @@ hero.Unpack(bin, DpFormat.Json);
 | **defstruct** | 컴파일 타임에 필드 오프셋이 고정된 Elixir 고성능 불변 `Map` 생성(`%Struct{}`). |
 | **encode/decode** | BEAM VM의 네이티브 **Bitstring 바이너리 패턴 매칭**을 사용하여 JSON 파싱 없이 수백만 번의 이진 패킷을 초단위로 해석합니다. |
 | **무결성 보안 (Security Guard)** | 최대 깊이 초과(`MAX_RECURSION_DEPTH`) 및 배열/문자열 초과 길이(`MAX_SAFE_LENGTH`)를 선제적으로 Block(OOM Raise)하는 방어 로직이 내장되어 있습니다. |
+| **unpack(bin)** | 🌟 **BEAM 최적화 표준 (Factory)**: Elixir는 순수 불변(Immutable) 객체이므로 매번 새로운 구조체를 반환하는 이 메서드가 가장 표준적이며 빠릅니다. |
+| **unpack(struct, bin)** | ⚠️ **깊은 병합 (Merge)**: 기존 객체의 일부 속성들을 덮어쓰기할 때 쓰이지만, BEAM 아키텍처 특성상 여전히 내부적으로는 새로운 메모리를 생성합니다. |
 
 ---
 
@@ -213,7 +221,7 @@ hero.Unpack(bin, DpFormat.Json);
 
 | 타입 / 기능 | 득팩 | Protobuf | Thrift |
 |-------------|------|----------|--------|
-| int8 / int16 / int32 / int64 | ✓ | int32/int64 (int8/int16 없음) | i8/i16/i32/i64 ✓ |
+| int8 / int16 / int32 / int64 | ✓ | int32/int64 (int8/int16 없음) | int8/int16/int32/int64 ✓ |
 | uint8 / uint16 / uint32 / uint64 | ✓ | uint32/uint64 (uint8/uint16 없음) | byte만(uint8) |
 | float / double | ✓ | ✓ | ✓ |
 | bool, string, binary | ✓ | ✓ (bytes) | ✓ |

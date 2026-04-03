@@ -8,8 +8,26 @@
 
 ## In IDL
 
-- **`message`** is a struct shaped for network naming conventions; field IDs and required rules follow Thrift/Deuk rules.
+## In IDL
+
+- **`message`** is the opinionated framework keyword for standard DeukPack network routing. Beyond basic field IDs and rules, the compiler implicitly **auto-injects a routing header (e.g., `MsgInfo`) at the top of the wire payload** for seamless runtime routing.
 - **Services:** Thrift-style `service` / methods stay in the AST as RPC definitions (bindings depend on generators/runtime).
+
+---
+
+## ⚠️ Architectural Guide: `message` vs `record` (Header Overhead)
+
+When adopting DeukPack, ensure you choose the correct keyword for your architectural needs.
+
+**1. Pure Data Serialization (0% Header Overhead) ➡️ Use `record` or `struct`**
+If your network stack (TCP/UDP) already utilizes a proprietary framing or routing standard and you simply want DeukPack to strictly parse payloads, use `record` or `struct`. DeukPack will generate pure serialization logic with absolutely **`0 bytes overhead`** (it does not inject any headers).
+
+**2. Utilizing DeukPack's Routing Backbone (Auto-Injected Header) ➡️ Use `message<ID>`**
+Assigning an ID to a message, like `message<1000>`, implies integration with DeukPack's official router. The engine will **automatically inject the header struct (`MsgInfo`)** into your wire transmission for out-of-the-box C#/Elixir router switch generation.
+> The injected header is set to `required: false` (Optional). If clients explicitly drop or nullify it at runtime, the byte allocation will still shrink to 0.
+
+**[Blueprint: Global Custom Headers (`message_header`)]**
+In an upcoming release, DeukPack will support global header substitution via a `message_header MyCustomHeader` declaration in any `.deuk` file (e.g., `deukpack_override.deuk`), seamlessly overriding the default `MsgInfo` structure to fit your proprietary framework protocols without changing your message architectures.
 
 ---
 
