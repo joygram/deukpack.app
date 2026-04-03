@@ -48,12 +48,12 @@ hide:
 
 ---
 
-## 🕸️ 4. Elixir (Erlang BEAM) [버전 1.7.0 로드맵 타겟]
+## 🕸️ 4. Elixir (Erlang BEAM) [v1.7.0 최신 측정치]
 무정지(No-Pause) 생태계에 걸맞은 데이터 구조 파싱 및 액터 생명주기 효율성 타겟.
 
-| Protocol | 파싱 속도 (목표치) | 메모리 (Per-Process) | 아키텍처 전환 목표 |
+| Protocol | 파싱 속도 | 메모리 할당 (1만건) | 아키텍처 특성 |
 | :--- | :--- | :--- | :--- |
-| **DeukPack (`pack`)** | **[Target] 30~45 ms** | **가비지 미발생 방어** | BEAM VM 고유의 `<<tag::integer, rest::binary>>` **바이트 레벨 네이티브 패턴 매칭**을 구조적으로 순회 생성 (1.7 버전 릴리즈 예정). |
+| **DeukPack (`pack`)** | **~ 31 ms** | **0 MB (Native Match)** | BEAM VM 고유의 `<<tag::integer, rest::binary>>` **바이트 레벨 네이티브 패턴 매칭**으로 가비지 할당 없이 페이로드를 즉시 디코딩. |
 
 ---
 

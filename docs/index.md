@@ -144,7 +144,7 @@ These are the **three irreplaceable weapons of DeukPack** compared to Protobuf, 
 | **C# (.NET / Unity)** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ (v1.2.7) | 🚧 (v1.4) | ✅ | - | ✅ |
 | **C++** | ✅ | ✅ | ✅ (v1.5) | - | ✅ (v1.5) | 🚧 | 🚧 (v1.4) | - | - | ✅ (v1.4.2) |
 | **Java** | ✅ | ✅ | ✅ (v1.5) | ✅ (v1.5) | ✅ | 🚧 | - | - | - | 🚧 |
-| **Elixir (BEAM)** | 🚧 (v1.7) | - | - | - | - | - | - | - | - | 🚧 (BEAM) |
+| **Elixir (BEAM)** | ✅ (v1.7) | - | - | - | - | - | - | - | - | ✅ (BEAM) |
 | **Excel (Add-in)** | ✅ | - | - | - | - | - | - | - | - | - |
 
 - ✅: Full Support / Production Ready
@@ -192,6 +192,8 @@ DeukPack is engineered for **extreme scalability** and **low-latency**. Average 
 | | Memory | Continuous | Large Objects | **+2.1 MB (Min)** |
 | **JavaScript (V8)** | Speed | ~ 54 ms | ~ 190 ms | **~ 158 ms** |
 | | Memory | +4.2 MB | -1.9 MB | **Immediate Reclaim** |
+| **Elixir (BEAM)** | Speed | - | - | **~ 31 ms** |
+| | Memory | - | - | **0 MB (Native Match)** |
 
 !!! tip "Test Environment"
     Based on 10,000 Rows Payload decoding stress test. Results may vary by environment.

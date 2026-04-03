@@ -1,2 +1,2 @@
-!!! info "DeukPack core update — 1.6.0"
+!!! info "DeukPack core update — 1.7.1"
     **DeukPack core 1.6.0** — Introduced pre-compiled **V8 JIT Codegen** for JavaScript (Node.js/Web), achieving a 250% parsing speed boost and zero GC spikes. Upgraded the C# (Unity) pipeline to a strictly-sized `[StructLayout]` **Zero-Alloc architecture**, guaranteeing 0-byte heap allocation across over a million operations. Delivers industry-leading latency and absolute memory stability to all critical execution layers. [GitHub Releases](https://github.com/joygram/DeukPack/releases/latest) · [Release summary](https://deukpack.app/releases/)
