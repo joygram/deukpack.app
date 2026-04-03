@@ -10,7 +10,7 @@ Use the **language switcher** for 한국어.
 
 You have **one large in-memory message** (chat, notification, state snapshot) and must send it to **many recipients**. Only a **few fields** differ per recipient (display name, read flag, locale-specific text). Cloning the whole object **N times** is expensive.
 
-DeukPack generates a single **`Write(oprot, fieldIds, overrides?)`** on every C# struct: pass **`null`** for `fieldIds` to send **all** fields, and an optional **`Dictionary<int, object>`** for per-field replacement values — **without** mutating or cloning the message.
+DeukPack generates a **`Pack(format, fieldIds, overrides?)`** method on every C# struct: pass **`null`** for `fieldIds` to send **all** fields, and an optional **`Dictionary<int, object>`** for per-field replacement values — **without** mutating or cloning the message.
 
 ---
 
@@ -41,14 +41,15 @@ var overrides = new Dictionary<int, object>
     { ChatMessage.FieldId.DisplayNameForRecipient, "Alice (you)" },
     { ChatMessage.FieldId.IsReadForRecipient, false }
 };
-msg.Write(oprot, null, overrides);
+byte[] bin = msg.Pack(DpFormat.Binary, null, overrides);
+network.Send(bin);
 ```
 
 Rules:
 
 - **Keys** = use `StructName.FieldId.PropertyName` (generated `const int`). Never hard-code numbers.
 - **Values** = same CLR types as the generated properties (wrong type → cast exception).
-- If `overrides` is **null** or **empty**, behavior matches **`Write(oprot)`** / **`Write(oprot, null, null)`**.
+- If `overrides` is **null** or **empty**, behavior matches standard **`Pack()`**.
 - For a field whose type is **another struct** or **list/map**, pass a **whole instance** of that type (or the whole collection). There is **no** nested path API to tweak inner members only. See core [DEUKPACK_WRITE_WITH_OVERRIDES_API.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WRITE_WITH_OVERRIDES_API.md) **§1.3**.
 
 Full API tables and C++/JS: [API reference](../reference/api.md) · core repo [DEUKPACK_WRITE_WITH_OVERRIDES_API.md](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
@@ -57,13 +58,18 @@ Full API tables and C++/JS: [API reference](../reference/api.md) · core repo [D
 
 ## 3. JavaScript (`--js`)
 
-Generated `js/generated_deuk.js` adds **`toJson`**, **`toBinary`**, and **`FieldId`** on each struct helper. Unused parameters are **`null`**:
+Generated `js/generated_deuk.js` adds **`pack`**, **`unpack`**, and **`FieldId`** on each struct helper (*v1.7.6+ standard; `toBinary`/`toJson` are deprecated aliases*):
 
 ```javascript
 var F = ChatMessage.FieldId;
-var json = ChatMessage.toJson(msg, null, {
+// pack to JSON with overrides
+var json = ChatMessage.pack(msg, 'json', null, {
   [F.DisplayNameForRecipient]: "Bob",
   [F.IsReadForRecipient]: true
+});
+// pack to binary
+var bin = ChatMessage.pack(msg, undefined, null, {
+  [F.DisplayNameForRecipient]: "Bob"
 });
 ```
 
@@ -77,23 +83,23 @@ See [API reference](../reference/api.md).
 
 ---
 
-## 5. Field selection — same `Write`
+## 5. Field selection
 
-**`Write(oprot, fieldIds, overrides?)`** serializes **only** the fields you list when `fieldIds` is non-null. No partial types or manual field copying.
+**`Pack(format, fieldIds, overrides?)`** serializes **only** the fields you list when `fieldIds` is non-null. No partial types or manual field copying.
 
 ```csharp
 var full = LoadFullUser();
-full.Write(oprot, new[] {
+byte[] bin = full.Pack(DpFormat.Binary, new[] {
     UserRecord.FieldId.DisplayName,
     UserRecord.FieldId.Level,
     UserRecord.FieldId.AvatarUrl
-}, null);
+});
 ```
 
 Combine selection with overrides:
 
 ```csharp
-full.Write(oprot, new[] {
+byte[] bin2 = full.Pack(DpFormat.Binary, new[] {
     UserRecord.FieldId.DisplayName,
     UserRecord.FieldId.Level
 }, new Dictionary<int, object> {
@@ -106,8 +112,8 @@ JavaScript — same signature shape:
 ```javascript
 var F = UserRecord.FieldId;
 var ids = [F.DisplayName, F.Level];
-var json = UserRecord.toJson(full, ids, null);
-var json2 = UserRecord.toJson(full, ids, { [F.DisplayName]: r.LocalizedName });
+var json = UserRecord.pack(full, 'json', ids, null);
+var json2 = UserRecord.pack(full, 'json', ids, { [F.DisplayName]: r.LocalizedName });
 ```
 
 ---

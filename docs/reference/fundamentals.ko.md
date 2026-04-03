@@ -34,7 +34,7 @@
 
 ## 프로그램 방식 (Node 라이브러리)
 
-- **파싱·AST:** `DeukPackEngine` 등으로 동일 규칙을 코드에서 호출 가능.
+- **파싱·AST:** `DeukPackCodec` 등으로 동일 규칙을 코드에서 호출 가능.
 - **다언어 emit:** v1에서는 **CLI 사용**을 권장합니다 ([v1 범위](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_V1_RELEASE_SCOPE.md)).
 
 ---

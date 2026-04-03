@@ -23,29 +23,41 @@ Output is generated as `DeukPack.*.ex` modules corresponding to your IDL namespa
 
 ---
 
-## 3. Serialization & deserialization
+## 3. Serialization & deserialization — 2-Method Standard (v1.7.6+)
 
-Generated Elixir types use Erlang's hardware-accelerated binary pattern matching (`<<tag::integer, rest::binary>>`) making it tremendously fast without the burden of memory allocation or Garbage Collection pauses. 
+Generated Elixir types use Erlang's hardware-accelerated binary pattern matching (`<<tag::integer, rest::binary>>`) for native BEAM-level speed.
 
-**Concept example**:
+| Function | Signature | Purpose |
+| :--- | :--- | :--- |
+| **pack/1** | `pack(struct)` | Serialize to binary (default) |
+| **pack/2** | `pack(struct, :json)` | Serialize to JSON string |
+| **unpack/1** | `unpack(bytes)` | Create new struct from binary |
+| **unpack/2** | `unpack(bytes, :json)` | Create new struct from JSON |
+| **unpack/2** | `unpack(struct, bytes)` | Merge bytes into existing struct |
 
 ```elixir
-# Create a struct instances based on your Deuk schema
+# Define your struct
 user = %DeukPack.DemoUser{
   id: 1,
   name: "Alice",
   home: %DeukPack.Vector2{x: 10.0, y: 20.0}
 }
 
-# Write (Serialize to Binary)
-encoded_binary = DeukPack.DemoUser.write(user)
-# encoded_binary is now a raw Erlang binary (e.g. <<...>>) ready for TCP send
+# Pack to binary (default)
+bin = DeukPack.DemoUser.pack(user)
 
-# Read (Deserialize from Binary)
-# The parser slices the binary utilizing fail-fast OOM memory guards (MAX_SAFE_LENGTH)
-{decoded_user, <<>>} = DeukPack.DemoUser.read(encoded_binary)
+# Pack to JSON
+json = DeukPack.DemoUser.pack(user, :json)
 
-IO.inspect(decoded_user.name) # "Alice"
+# Unpack → new struct from binary
+decoded = DeukPack.DemoUser.unpack(bin)
+IO.inspect(decoded.name)  # "Alice"
+
+# Unpack → new struct from JSON
+from_json = DeukPack.DemoUser.unpack(json, :json)
+
+# Unpack into existing struct (merge / zero-alloc pattern)
+cached = DeukPack.DemoUser.unpack(cached, bin)
 ```
 
 ---

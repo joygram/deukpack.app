@@ -32,7 +32,44 @@ hide:
 !!! tip "언어 전환 (한국어 ↔ English)"
     - **영문:** 페이지 **우측 상단** → **언어** 메뉴.
     - **URL:** 한국어는 사이트 루트, English는 **`/en/…`**.
-    - **GitHub README:** [README.ko.md](https://github.com/joygram/DeukPack/blob/main/README.ko.md) · [README.ko.md](https://github.com/joygram/DeukPack/blob/main/README.ko.md).
+    - **GitHub README:** [README.ko.md](https://github.com/joygram/DeukPack/blob/main/README.ko.md) · [README.md](https://github.com/joygram/DeukPack/blob/main/README.md).
+
+---
+
+## ⚡ 한눈에 보기 (What it looks like)
+
+**1. OpenAPI 스키마 임포트 (또는 .deuk IDL 작성)**
+```deuk
+// 기존에 쓰던 OpenAPI(Swagger)를 그대로 먹이거나, 깔끔한 IDL을 작성합니다:
+struct Hero {
+    1: int32 id;
+    2: string name;
+    3: float hp;
+}
+```
+
+**2. 서버 (JS/TS): 클래스 없는 순수 POJO 직렬화**
+```typescript
+// 무거운 클래스 래퍼 없이, 순수 JS 객체를 가볍게 즉시 바이트로 압축합니다.
+const payload = gameApi.Hero.toBinary({ id: 1, name: "Arthur" });
+network.send(payload);
+```
+
+**3. 클라이언트 (C# Unity): Zero-Alloc 읽기 & 오버라이드 쓰기**
+```csharp
+Hero cachedHero = new Hero(); // 최초 1회만 할당
+
+void OnNetworkMessage(byte[] inputData) {
+    // 1. 가비지(GC) 없는 디코딩 (입력 역직렬화, Unpack)
+    cachedHero.Unpack(inputData); 
+    Debug.Log($"Hero: {cachedHero.name}, HP: {cachedHero.hp}");
+
+    // 2. 할당 없는 직렬화 (출력 직렬화, Pack)
+    // [new] 할당 쓰레기 없이, 값만 변경하여 곧바로 전송합니다.
+    cachedHero.hp = 99f;
+    byte[] outputData = cachedHero.Pack();
+}
+```
 
 ---
 

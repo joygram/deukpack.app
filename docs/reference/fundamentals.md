@@ -34,7 +34,7 @@ The AST also carries **enum**, **typedef**, **const**, **service** (Thrift RPC c
 
 ## Programmatic use (Node library)
 
-- **Parse / AST:** use `DeukPackEngine` (or the same entry points) from code.
+- **Parse / AST:** use `DeukPackCodec` (or the same entry points) from code.
 - **Multi-language emit:** v1 recommends the **CLI** ([v1 scope](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_V1_RELEASE_SCOPE.md)).
 
 ---

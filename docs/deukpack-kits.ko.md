@@ -239,7 +239,7 @@ npm install deukpack
 **포함되는 것(예시)**  
 
 - `package.json` + 코드젠 npm script  
-- (선택) `DeukPackEngine` 파싱만 하는 TS 샘플  
+- (선택) `DeukPackCodec` 파싱만 하는 TS 샘플  
 - CI에서 `npx deukpack` 돌리는 예시  
 
 **필요 환경**  

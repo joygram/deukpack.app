@@ -36,6 +36,42 @@ hide:
 
 ---
 
+## ⚡ What it looks like (At a glance)
+
+**1. Import OpenAPI (or write `.deuk` IDL)**
+```deuk
+// Feed your existing OpenAPI (Swagger) to the CLI, OR write a clean IDL:
+struct Hero {
+    1: int32 id;
+    2: string name;
+    3: float hp;
+}
+```
+
+**2. Server (JS/TS): Direct POJO Serialization**
+```typescript
+// pack() → binary (default). pack(obj, 'json') → JSON string.
+const payload = gameApi.Hero.pack({ id: 1, name: "Arthur" });
+network.send(payload);
+```
+
+**3. Client (C# Unity): Zero-Alloc Read & Override Write**
+```csharp
+Hero cachedHero = new Hero(); // Allocated ONCE, never again
+
+void OnNetworkMessage(byte[] inputData) {
+    // Zero-Alloc Unpack — overwrites existing instance, no GC
+    cachedHero.Unpack(inputData);
+    Debug.Log($"Hero: {cachedHero.name}, HP: {cachedHero.hp}");
+
+    // Pack to binary (default) and send — no new allocations
+    cachedHero.hp = 99f;
+    byte[] outputData = cachedHero.Pack();
+}
+```
+
+---
+
 ## Product lineup
 
 | Product | One-line Definition | Intro Doc |

@@ -134,23 +134,47 @@ OpenAPI·CSV·PSV·JSON·Excel로 **스키마를 먹이거나 뱉는** 플래그
 
 ## Programmatic (library)
 
-Node에서 **파싱·AST**까지 쓰려면 `DeukPackEngine`(또는 동일 진입점)을 사용합니다. **다언어 코드 생성**은 v1에서 **CLI** 권장 ([v1 범위](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_V1_RELEASE_SCOPE.md)).
+Node에서 **파싱·AST**까지 쓰려면 `DeukPackCodec`(또는 동일 진입점)을 사용합니다. **다언어 코드 생성**은 v1에서 **CLI** 권장 ([v1 범위](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_V1_RELEASE_SCOPE.md)).
 
 ---
 
 ## Generated C# APIs
 
+### 직렬화 — 2-Method 표준 (v1.7.6+)
+
+| 메서드 | 시그니처 | 용도 |
+| :--- | :--- | :--- |
+| **Pack** | `byte[] Pack(DpFormat format = Binary, fieldIds?, overrides?)` | 바이너리/JSON 직렬화 및 필드 치환 |
+| **Unpack** | `void Unpack(byte[] data, DpFormat format = Binary)` | **현재 인스턴스**에 역직렬화 (Zero-Alloc) |
+| **Unpack** *(파사드)* | `T Unpack<T>(byte[] data, DpFormat format = Binary)` | **신규 인스턴스** 생성 |
+
+```csharp
+// 바이너리로 팩
+byte[] bin = hero.Pack();
+
+// JSON으로 팩
+var json = DeukPackCodec.Pack(hero, DpFormat.Json);
+
+// 신규 인스턴스로 언팩
+Hero h = DeukPackCodec.Unpack<Hero>(bin);
+
+// 기존 인스턴스에 언팩 — Zero-Alloc (GC 없음)
+hero.Unpack(bin);
+hero.Unpack(bin, DpFormat.Json);
+```
+
+> **Deprecated (그대로 동작):** `DeukPackCodec.UnpackInto(obj, data)` → `DeukPackCodec.Unpack(obj, data)`. `DeukPackCodec.Serialize(obj)` → `DeukPackCodec.Pack(obj)`. `DeukPackCodec.Deserialize<T>(data)` → `deukPack.Unpack<T>(data)`.
+
+### 기타 생성 항목
+
 | 항목 | 용도 |
-|------|------|
-| **GetSchema()** | 생성 타입에서 스키마(필드·타입·기본값 등) 복구. 메타·검증·Excel. |
-| **Write(oprot)** | 전체 필드 쓰기 (`Write(oprot, null, null)` 과 동일). |
-| **Write(oprot, fieldIds, overrides?)** | 선택 **`ICollection<int>? fieldIds`** — 나열된 필드만; 선택 **`Dictionary<int, object>? overrides`** — 필드 ID별 치환값. 안 쓰는 인자는 **`null`**. |
+|------|
+| **GetSchema()** | 생성 타입에서 스키마 복구. 메타·검증·Excel. |
 | **FieldId** | `public const int` — `StructName.FieldId.PropertyName`. |
 | **ProtocolRegistry** | 메시지 타입 ↔ msgId 등. |
 | **MetaTableRegistry** | 테이블·메타 타입 등록. |
-| **IDeukPackReader / IDeukPackWriter** | Binary/Compact/JSON 등 프로토콜별 읽기·쓰기. |
 
-**struct extends:** IDL `extends` — 다단 상속·필드 ID 충돌 검사. 튜토리얼: [통합 Write·필드 선택·extends](../tutorial/write-with-overrides.ko.md). 상세: [DEUKPACK_WRITE_WITH_OVERRIDES_API](https://github.com/joygram/DeukPack/blob/main/docs/internal/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
+**struct extends:** IDL `extends` — 상속·필드 ID 검사. 튜토리얼: [통합 Write·필드 선택·extends](../tutorial/write-with-overrides.ko.md).
 
 ---
 
@@ -214,25 +238,38 @@ Node에서 **파싱·AST**까지 쓰려면 `DeukPackEngine`(또는 동일 진입
 
 타깃 공통으로 **`Write`** 계열 한 가지:
 
-- **C#:** `Write(oprot, fieldIds, overrides)` — `fieldIds` 가 null 이면 전체 필드; `overrides` 가 null/비어 있으면 치환 없음.
-- **JavaScript:** struct 헬퍼의 `toJson(obj, fieldIds, overrides)`, `toBinary(obj, fieldIds, overrides)` (및 pack/런타임 동등 API).
-- **TypeScript:** 생성 헬퍼에서 동일 패턴.
+- **C#:** `Pack(format, fieldIds, overrides)` — `fieldIds` null 이면 전체 필드; `overrides` null/비어 있으면 치환 없음.
+- **JavaScript/TypeScript:** struct 헬퍼의 `pack(obj, format?, fieldIds, overrides)`.
 
-구버전 별도 API (**`WriteWithOverrides`**, **`WriteFields`**, **`applyOverrides`**, **`toJsonWithFields`** 등)는 **제거**됨; 안 쓰는 인자는 **`null`** 로 통일.
+구버전 별도 API (**`Write`**, **`WriteWithOverrides`** 등)는 **제거**되거나 내부 전용으로 숨김 처리되었습니다. 
 
-튜토리얼: [../tutorial/write-with-overrides.md](../tutorial/write-with-overrides.ko.md)
+튜토리얼: [../tutorial/write-with-overrides.ko.md](../tutorial/write-with-overrides.ko.md)
 
 ---
 
 ## JavaScript (--js) {: #javascript-js }
 
-생성 JS(예: `js/generated_deuk.js`) struct 헬퍼:
+### 직렬화 — 2-Method 표준 (v1.7.6+)
+
+| 메서드 | 시그니처 | 용도 |
+| :--- | :--- | :--- |
+| **pack** | `pack(obj, format?, fieldIds?, overrides?)` | 바이너리 또는 JSON 문자열로 직렬화 |
+| **unpack** | `unpack(buf, format?)` | **신규** 객체 생성 |
+| **unpack** *(zero-alloc)* | `unpack(obj, buf, format?)` | **기존** 객체에 덮어쓰기 |
+
+```js
+const bin  = Hero.pack(hero);               // → Uint8Array (바이너리)
+const json = Hero.pack(hero, 'json');        // → JSON 문자열
+const h1   = Hero.unpack(bin);              // ← 신규 인스턴스
+Hero.unpack(cached, bin);                   // ← 기존 인스턴스에 덮어쓰기 (Zero-Alloc)
+```
+
+> **Deprecated (그대로 동작):** `Hero.toBinary(obj)` → `Hero.pack(obj)`. `Hero.toJson(obj)` → `Hero.pack(obj, 'json')`. `Hero.fromBinary(buf)` → `Hero.unpack(buf)`. `Hero.fromJson(str)` → `Hero.unpack(str, 'json')`. `Hero.unpackInto(obj, buf)` → `Hero.unpack(obj, buf)`.
 
 | 항목 | 용도 |
 |------|------|
-| **toJson(obj, fieldIds, overrides)** | JSON 와이어; `fieldIds` null 이면 전체 필드. |
-| **toBinary(obj, fieldIds, overrides)** | 동일 인자의 바이너리/pack 경로. |
 | **FieldId** | `{ PropertyName: id, ... }` 객체. |
+| **getSchema()** | 런타임 스키마 조회. |
 
 ---
 

@@ -132,23 +132,47 @@ Flags are the `--import-*` and `--csv` / `--psv` / `--json` / `--excel` rows in 
 
 ## Programmatic (library)
 
-Use **DeukPackEngine** (or the same entry) in Node for **parse / AST**. For **multi-language emit**, v1 recommends the **CLI** ([v1 scope](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_V1_RELEASE_SCOPE.md)).
+Use **DeukPackCodec** (or the same entry) in Node for **parse / AST**. For **multi-language emit**, v1 recommends the **CLI** ([v1 scope](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_V1_RELEASE_SCOPE.md)).
 
 ---
 
 ## Generated C# APIs
 
+### Serialization — 2-Method Standard (v1.7.6+)
+
+| Method | Signature | Purpose |
+| :--- | :--- | :--- |
+| **Pack** | `byte[] Pack(DpFormat format = Binary, fieldIds?, overrides?)` | Serialize and optionally override fields |
+| **Unpack** | `void Unpack(byte[] data, DpFormat format = Binary)` | Deserialize into **this** instance (Zero-Alloc) |
+| **Unpack** *(facade)* | `T Unpack<T>(byte[] data, DpFormat format = Binary)` | Create a **new** instance |
+
+```csharp
+// Pack to binary (default)
+byte[] bin = hero.Pack();
+
+// Pack to JSON
+var json = DeukPackCodec.Pack(hero, DpFormat.Json);
+
+// Unpack into NEW instance
+Hero h = DeukPackCodec.Unpack<Hero>(bin);
+
+// Unpack into EXISTING instance — Zero-Alloc (no GC)
+hero.Unpack(bin);
+hero.Unpack(bin, DpFormat.Json);
+```
+
+> **Deprecated (still works):** `DeukPackCodec.UnpackInto(obj, data)` → use `DeukPackCodec.Unpack(obj, data)`. `DeukPackCodec.Serialize(obj)` → use `DeukPackCodec.Pack(obj)`. `DeukPackCodec.Deserialize<T>(data)` → use `deukPack.Unpack<T>(data)`.
+
+### Other generated items
+
 | Item | Purpose |
 |------|---------|
 | **GetSchema()** | Recover schema from generated types (meta, validation, Excel). |
-| **Write(oprot)** | Full struct write (same as `Write(oprot, null, null)`). |
-| **Write(oprot, fieldIds, overrides?)** | Optional **`ICollection<int>? fieldIds`** — only those fields; optional **`Dictionary<int, object>? overrides`** — per field ID replacement values. Pass **`null`** for unused parameters. |
 | **FieldId** | `public const int` — `StructName.FieldId.PropertyName`. |
 | **ProtocolRegistry** | Message type ↔ msgId mapping. |
 | **MetaTableRegistry** | Table/meta type registration. |
-| **IDeukPackReader / IDeukPackWriter** | Protocol-specific read/write. |
 
-**struct extends:** IDL `extends`. Tutorial: [Unified Write · field selection · extends](../tutorial/write-with-overrides.md). Deep dive: [DEUKPACK_WRITE_WITH_OVERRIDES_API](https://github.com/joygram/DeukPack/blob/main/docs/internal/DEUKPACK_WRITE_WITH_OVERRIDES_API.md).
+**struct extends:** IDL `extends`. Tutorial: [Unified Write · field selection · extends](../tutorial/write-with-overrides.md).
 
 ---
 
@@ -210,13 +234,12 @@ Use **DeukPackEngine** (or the same entry) in Node for **parse / AST**. For **mu
 
 ## Unified Write (field selection & overrides)
 
-One **`Write`**-style surface across targets:
+One **`Pack`**-style surface across targets:
 
-- **C#:** `Write(oprot, fieldIds, overrides)` — `fieldIds` null ⇒ all fields; `overrides` null/empty ⇒ no replacements.
-- **JavaScript:** `toJson(obj, fieldIds, overrides)`, `toBinary(obj, fieldIds, overrides)` (and pack/runtime equivalents) on struct helpers.
-- **TypeScript:** same pattern on generated helpers.
+- **C#:** `Pack(format, fieldIds, overrides)` — `fieldIds` null ⇒ all fields; `overrides` null/empty ⇒ no replacements.
+- **JavaScript/TypeScript:** `pack(obj, format?, fieldIds, overrides)` on struct helpers.
 
-Legacy separate methods (**`WriteWithOverrides`**, **`WriteFields`**, **`applyOverrides`**, **`toJsonWithFields`**, etc.) are **removed**; use **`null`** for unused parameters instead.
+Legacy separate methods (**`Write`**, **`WriteWithOverrides`**, **`toJsonWithFields`**, etc.) are **removed** or hidden. Use **`null`** for unused parameters instead.
 
 Tutorial: [../tutorial/write-with-overrides.md](../tutorial/write-with-overrides.md)
 
@@ -224,13 +247,30 @@ Tutorial: [../tutorial/write-with-overrides.md](../tutorial/write-with-overrides
 
 ## JavaScript (--js) {: #javascript-js }
 
-Helpers in generated JS (e.g. `js/generated_deuk.js`):
+### Serialization — 2-Method Standard (v1.7.6+)
+
+| Method | Signature | Purpose |
+| :--- | :--- | :--- |
+| **pack** | `pack(obj, format?, fieldIds?, overrides?)` | Serialize to binary or `'json'` string |
+| **unpack** | `unpack(buf, format?)` | Create **new** instance |
+| **unpack** *(zero-alloc)* | `unpack(obj, buf, format?)` | Overwrite **existing** object |
+
+```js
+const bin  = Hero.pack(hero);               // → Uint8Array  (binary)
+const json = Hero.pack(hero, 'json');        // → JSON string
+const h1   = Hero.unpack(bin);              // ← new instance
+Hero.unpack(cached, bin);                   // ← zero-alloc overwrite
+Hero.unpack(cached, jsonStr, 'json');        // ← overwrite from JSON
+```
+
+> **Deprecated (still works):** `Hero.toBinary(obj)` → `Hero.pack(obj)`. `Hero.toJson(obj)` → `Hero.pack(obj, 'json')`. `Hero.fromBinary(buf)` → `Hero.unpack(buf)`. `Hero.fromJson(str)` → `Hero.unpack(str, 'json')`. `Hero.unpackInto(obj, buf)` → `Hero.unpack(obj, buf)`.
+
+### Other helpers
 
 | Item | Purpose |
 |------|---------|
-| **toJson(obj, fieldIds, overrides)** | JSON wire; `fieldIds` null ⇒ all fields. |
-| **toBinary(obj, fieldIds, overrides)** | Binary/pack path with same parameters. |
 | **FieldId** | `{ PropertyName: id, ... }` |
+| **getSchema()** | Returns embedded schema for runtime introspection. |
 
 ---
 

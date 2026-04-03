@@ -239,7 +239,7 @@ Details: [DeukPackKits README](https://github.com/joygram/DeukPackKits/blob/main
 **Includes (examples)**  
 
 - `package.json` + codegen npm script  
-- (Optional) TS sample using `DeukPackEngine` parsing only  
+- (Optional) TS sample using `DeukPackCodec` parsing only  
 - Example of running `npx deukpack` in CI  
 
 **Requirements**  
