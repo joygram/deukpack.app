@@ -42,9 +42,9 @@ hide:
 ```deuk
 // Feed your existing OpenAPI (Swagger) to the CLI, OR write a clean IDL:
 struct Hero {
-    1: int32 id;
-    2: string name;
-    3: float hp;
+        > 1 id;
+        > 2 name;
+        > 3 hp;
 }
 ```
 

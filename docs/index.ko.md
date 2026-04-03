@@ -42,9 +42,9 @@ hide:
 ```deuk
 // 기존에 쓰던 OpenAPI(Swagger)를 그대로 먹이거나, 깔끔한 IDL을 작성합니다:
 struct Hero {
-    1: int32 id;
-    2: string name;
-    3: float hp;
+        > 1 id;
+        > 2 name;
+        > 3 hp;
 }
 ```
 

@@ -239,7 +239,7 @@ One **`Pack`**-style surface across targets:
 - **C#:** `Pack(format, fieldIds, overrides)` — `fieldIds` null ⇒ all fields; `overrides` null/empty ⇒ no replacements.
 - **JavaScript/TypeScript:** `pack(obj, format?, fieldIds, overrides)` on struct helpers.
 
-Legacy separate methods (**`Write`**, **`WriteWithOverrides`**, **`toJsonWithFields`**, etc.) are **removed** or hidden. Use **`null`** for unused parameters instead.
+Legacy separate methods (**`Write`**, **`Pack`**, **`toJsonWithFields`**, etc.) are **removed** or hidden. Use **`null`** for unused parameters instead.
 
 Tutorial: [../tutorial/write-with-overrides.md](../tutorial/write-with-overrides.md)
 

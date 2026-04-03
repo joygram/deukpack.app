@@ -40,14 +40,14 @@ Messages and DTOs are defined as **struct**. Each field requires a **field ID** 
 
 ```thrift
 struct DemoPoint {
-  1: i32 x
-  2: i32 y
+    > 1 x
+    > 2 y
 }
 
 struct DemoUser {
-  1: i32 id
-  2: string name
-  3: DemoPoint home    // nested struct
+    > 1 id
+    > 2 name
+    > 3 home    // nested struct
 }
 ```
 
@@ -67,9 +67,9 @@ enum Status {
 }
 
 struct Item {
-  1: i32 id
-  2: string name
-  3: Status status = Status.Unknown
+    > 1 id
+    > 2 name
+    > 3 status = Status.Unknown
 }
 ```
 
@@ -81,9 +81,9 @@ Enum values (numbers) are used as-is during serialization — avoid changing pre
 
 ```thrift
 struct Example {
-  1: list<i32> ids
-  2: list<string> tags
-  3: set<string> uniqueNames
+    > 1 ids
+    > 2 tags
+    > 3 uniqueNames
   4: map<i32, string> idToName
 }
 ```
@@ -103,7 +103,7 @@ Use **include** to import other IDL files. Specify **include paths** (`-I`) at c
 include "shared.thrift"
 
 struct Request {
-  1: i32 id
+    > 1 id
   2: shared.CommonHeader header
 }
 ```

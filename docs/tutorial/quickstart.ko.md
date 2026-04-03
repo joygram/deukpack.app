@@ -49,11 +49,11 @@ npx deukpack run
 namespace * deuk.tutorial
 
 struct HelloRequest {
-  1: string name
+    > 1 name
 }
 
 struct HelloResponse {
-  1: string message
+    > 1 message
 }
 ```
 

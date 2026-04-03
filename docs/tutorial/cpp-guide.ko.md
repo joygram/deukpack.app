@@ -67,7 +67,7 @@ user.home.y = 20;
 생성된 각 `struct`에 다음이 포함됩니다:
 
 - **`kFieldId_*`** — `static constexpr int` 필드 ID 상수. `StructName::kFieldId_PropertyName`으로 참조.
-- **생성된 pack/바이너리(또는 Thrift 호환) 쓰기 헬퍼** — C#/JS와 동일한 필드 ID 모델; 팬아웃·부분 전송 시 타입 옆 헬퍼 사용(별도 `apply_overrides` 단계 없음).
+- **생성된 pack/바이너리(또는 Thrift 호환) 쓰기 헬퍼** — C#/JS와 동일한 필드 ID 모델; 팬아웃·부분 전송 시 타입 옆 헬퍼 사용(별도 `Pack` 단계 없음).
 - **struct extends** — IDL에서 `extends`로 부모 필드를 자식에 자동 병합. 코드젠 시 플랫 구조로 생성.
 
 튜토리얼·비교표: [통합 Write](write-with-overrides.ko.md) · [API·타입 참조](../reference/api.ko.md).

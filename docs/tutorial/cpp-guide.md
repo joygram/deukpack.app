@@ -67,7 +67,7 @@ See the generated code and core C++ runtime documentation for the exact API.
 Each generated `struct` includes:
 
 - **`kFieldId_*`** — `static constexpr int` field ID constants. Use `StructName::kFieldId_PropertyName`.
-- **Emitted pack/binary (or Thrift interop) write helpers** — same field-ID model as C#/JS; use them next to your types for fan-out and partial sends (no separate `apply_overrides` step).
+- **Emitted pack/binary (or Thrift interop) write helpers** — same field-ID model as C#/JS; use them next to your types for fan-out and partial sends (no separate `Pack` step).
 - **struct extends** — use `extends` in IDL to auto-merge parent fields into child. Generated as a flat struct.
 
 Tutorial & comparison: [Unified Write tutorial](write-with-overrides.md) · [API reference](../reference/api.md).

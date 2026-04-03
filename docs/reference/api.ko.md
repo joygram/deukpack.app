@@ -241,7 +241,7 @@ hero.Unpack(bin, DpFormat.Json);
 - **C#:** `Pack(format, fieldIds, overrides)` — `fieldIds` null 이면 전체 필드; `overrides` null/비어 있으면 치환 없음.
 - **JavaScript/TypeScript:** struct 헬퍼의 `pack(obj, format?, fieldIds, overrides)`.
 
-구버전 별도 API (**`Write`**, **`WriteWithOverrides`** 등)는 **제거**되거나 내부 전용으로 숨김 처리되었습니다. 
+구버전 별도 API (**`Write`**, **`Pack`** 등)는 **제거**되거나 내부 전용으로 숨김 처리되었습니다. 
 
 튜토리얼: [../tutorial/write-with-overrides.ko.md](../tutorial/write-with-overrides.ko.md)
 

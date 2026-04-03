@@ -20,10 +20,10 @@ Thrift / DeukPack structs use **numeric field IDs**:
 
 ```thrift
 struct ChatMessage {
-  1: i32 msgId;
-  2: string body;
-  3: string displayNameForRecipient;  // override per user
-  4: bool isReadForRecipient;
+    > 1 msgId;
+    > 2 body;
+    > 3 displayNameForRecipient;  // override per user
+    > 4 isReadForRecipient;
 }
 ```
 
@@ -77,7 +77,7 @@ var bin = ChatMessage.pack(msg, undefined, null, {
 
 ## 4. C++
 
-Each struct gets **`kFieldId_*`** constants aligned with C#/JS. Use the **generated pack/binary (or Thrift interop) write path** next to your types; there is **no** separate `apply_overrides` step in current emit.
+Each struct gets **`kFieldId_*`** constants aligned with C#/JS. Use the **generated pack/binary (or Thrift interop) write path** next to your types; there is **no** separate `Pack` step in current emit.
 
 See [API reference](../reference/api.md).
 
@@ -124,13 +124,13 @@ Use `extends` in IDL to inherit parent fields. The code generator flattens paren
 
 ```thrift
 struct UserBase {
-  1: i32 id;
-  2: string displayName;
+    > 1 id;
+    > 2 displayName;
 }
 
 struct UserFull extends UserBase {
-  3: i32 level;
-  4: string avatarUrl;
+    > 3 level;
+    > 4 avatarUrl;
 }
 ```
 

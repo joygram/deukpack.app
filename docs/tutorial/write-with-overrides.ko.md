@@ -20,10 +20,10 @@ Thrift / 득팩 struct는 **숫자 필드 ID**를 씁니다.
 
 ```thrift
 struct ChatMessage {
-  1: i32 msgId;
-  2: string body;
-  3: string displayNameForRecipient;
-  4: bool isReadForRecipient;
+    > 1 msgId;
+    > 2 body;
+    > 3 displayNameForRecipient;
+    > 4 isReadForRecipient;
 }
 ```
 
@@ -85,7 +85,7 @@ var json = ChatMessage.toJson(msg, null, {
 
 ## 4. C++
 
-각 struct에 C#/JS와 맞는 **`kFieldId_*`** 상수가 있습니다. 타입 옆에 생성된 **pack/바이너리(또는 Thrift 호환) 쓰기 경로**를 쓰면 되며, 현재 생성물에는 별도 **`apply_overrides`** 단계가 없습니다.
+각 struct에 C#/JS와 맞는 **`kFieldId_*`** 상수가 있습니다. 타입 옆에 생성된 **pack/바이너리(또는 Thrift 호환) 쓰기 경로**를 쓰면 되며, 현재 생성물에는 별도 **`Pack`** 단계가 없습니다.
 
 [API·타입 참조](../reference/api.ko.md) 참고.
 
@@ -132,13 +132,13 @@ IDL에서 `extends`를 쓰면 부모 필드를 자식에 자동 병합한다. �
 
 ```thrift
 struct UserBase {
-  1: i32 id;
-  2: string displayName;
+    > 1 id;
+    > 2 displayName;
 }
 
 struct UserFull extends UserBase {
-  3: i32 level;
-  4: string avatarUrl;
+    > 3 level;
+    > 4 avatarUrl;
 }
 ```
 

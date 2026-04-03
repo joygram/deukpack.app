@@ -40,14 +40,14 @@ namespace cpp myapp.protocol
 
 ```thrift
 struct DemoPoint {
-  1: i32 x
-  2: i32 y
+    > 1 x
+    > 2 y
 }
 
 struct DemoUser {
-  1: i32 id
-  2: string name
-  3: DemoPoint home    // 중첩 구조체
+    > 1 id
+    > 2 name
+    > 3 home    // 중첩 구조체
 }
 ```
 
@@ -67,9 +67,9 @@ enum Status {
 }
 
 struct Item {
-  1: i32 id
-  2: string name
-  3: Status status = Status.Unknown
+    > 1 id
+    > 2 name
+    > 3 status = Status.Unknown
 }
 ```
 
@@ -81,9 +81,9 @@ enum 값(숫자)은 직렬화 시 그대로 쓰이므로, 기존에 쓰이던 �
 
 ```thrift
 struct Example {
-  1: list<i32> ids
-  2: list<string> tags
-  3: set<string> uniqueNames
+    > 1 ids
+    > 2 tags
+    > 3 uniqueNames
   4: map<i32, string> idToName
 }
 ```
@@ -103,7 +103,7 @@ struct Example {
 include "shared.thrift"
 
 struct Request {
-  1: i32 id
+    > 1 id
   2: shared.CommonHeader header
 }
 ```
