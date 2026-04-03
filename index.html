@@ -605,6 +605,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#-security--reliability-oom-defense--anti-ddos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ Security &amp; Reliability (OOM Defense / Anti-DDoS)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#supported-protocols--languages-v160" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2058,6 +2069,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#-security--reliability-oom-defense--anti-ddos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ Security &amp; Reliability (OOM Defense / Anti-DDoS)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#supported-protocols--languages-v160" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2308,6 +2330,14 @@
 <li><strong>Pipeline · Integration</strong>: Definition · metadata → code · schema · tables → Unity/server validation · loading. Same schema and protocol for server and real-time game integration.</li>
 </ul>
 <hr />
+<h2 id="-security--reliability-oom-defense--anti-ddos">🛡️ Security &amp; Reliability (OOM Defense / Anti-DDoS)<a class="headerlink" href="#-security--reliability-oom-defense--anti-ddos" title="Permanent link">&para;</a></h2>
+<p>As a fundamental infrastructure component that constantly parses external network byte payloads, DeukPack implements strict defense-in-depth mechanisms against <strong>network-layer parsing vulnerabilities (OOM, Buffer Flooding, Infinite Recursion)</strong>.</p>
+<ul>
+<li><strong>Universal OOM (Out-of-Memory) Defense (v1.7.0+)</strong>: For all supported engines (JS, C#, C++, Java, Elixir), DeukPack enforces absolute validation boundaries during streaming—<code>MAX_SAFE_LENGTH</code> (10MB) and <code>MAX_ELEMENT_COUNT</code> (1,000,000) limits. Even if malicious clients transmit artificially pumped list headers, packets are instantly discarded (Fail-Fast) before any memory allocation takes place, preventing process crashing.</li>
+<li><strong>Progressive Chunk Validation (JSON Flood Defense)</strong>: Completely replacing legacy <code>ReadToEnd()</code> methods, stream endpoints now implement length pre-evaluations, neutralizing both giant string bombs and multi-bracket JSON stack flooding vulnerabilities in Node.js and Java backends.</li>
+<li><strong>Continuous DDoS Fuzzer Suite</strong>: Integrated seamlessly into the CI pipeline, the <code>test-fuzz-oom.js</code> automation bombards all parsers with 2GB+ abnormal buffers and unbounded structural trees to officially certify the library's resilience.</li>
+</ul>
+<hr />
 <h2 id="supported-protocols--languages-v160">Supported Protocols &amp; Languages (v1.6.0)<a class="headerlink" href="#supported-protocols--languages-v160" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -2334,7 +2364,7 @@
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
-<td style="text-align: center;">🚧 (v1.4)</td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅ (v1.5)</td>
 <td style="text-align: center;">✅ (v1.6)</td>
@@ -2347,7 +2377,7 @@
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅ (v1.2.7)</td>
-<td style="text-align: center;">🚧 (v1.4)</td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">✅</td>
@@ -2360,7 +2390,7 @@
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">✅ (v1.5)</td>
 <td style="text-align: center;">🚧</td>
-<td style="text-align: center;">🚧 (v1.4)</td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">✅ (v1.4.2)</td>
@@ -2472,7 +2502,7 @@
 <td style="text-align: left;">Speed</td>
 <td style="text-align: center;">~ 45 ms</td>
 <td style="text-align: center;">~ 85 ms</td>
-<td style="text-align: center;"><strong>~ 28 ms</strong></td>
+<td style="text-align: center;">~ <strong>28 ms</strong></td>
 </tr>
 <tr>
 <td style="text-align: left;"></td>
@@ -2486,7 +2516,7 @@
 <td style="text-align: left;">Speed</td>
 <td style="text-align: center;">~ 14 ms</td>
 <td style="text-align: center;">~ 22 ms</td>
-<td style="text-align: center;"><strong>~ 12 ms</strong></td>
+<td style="text-align: center;">~ <strong>12 ms</strong></td>
 </tr>
 <tr>
 <td style="text-align: left;"></td>
@@ -2500,7 +2530,7 @@
 <td style="text-align: left;">Speed</td>
 <td style="text-align: center;">~ 25 ms</td>
 <td style="text-align: center;">~ 38 ms</td>
-<td style="text-align: center;"><strong>~ 35 ms</strong></td>
+<td style="text-align: center;">~ <strong>35 ms</strong></td>
 </tr>
 <tr>
 <td style="text-align: left;"></td>
@@ -2514,7 +2544,7 @@
 <td style="text-align: left;">Speed</td>
 <td style="text-align: center;">~ 54 ms</td>
 <td style="text-align: center;">~ 190 ms</td>
-<td style="text-align: center;"><strong>~ 158 ms</strong></td>
+<td style="text-align: center;">~ <strong>158 ms</strong></td>
 </tr>
 <tr>
 <td style="text-align: left;"></td>
@@ -2528,7 +2558,7 @@
 <td style="text-align: left;">Speed</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">-</td>
-<td style="text-align: center;"><strong>~ 31 ms</strong></td>
+<td style="text-align: center;">~ <strong>31 ms</strong></td>
 </tr>
 <tr>
 <td style="text-align: left;"></td>

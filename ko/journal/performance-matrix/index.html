@@ -2108,7 +2108,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>DeukPack (<code>pack</code>)</strong></td>
-<td style="text-align: left;"><strong>~ 28 ms</strong></td>
+<td style="text-align: left;">~ <strong>28 ms</strong></td>
 <td style="text-align: left;"><strong>0 MB (Zero)</strong></td>
 <td style="text-align: left;"><code>[StructLayout]</code> 기반 스택 메모리 순환 및 정적 람다 생성으로 <strong>완전한 Zero-Alloc 방어 달성</strong>.</td>
 </tr>
@@ -2141,7 +2141,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>DeukPack (<code>bin</code>)</strong></td>
-<td style="text-align: left;"><strong>~ 12 ms</strong></td>
+<td style="text-align: left;">~ <strong>12 ms</strong></td>
 <td style="text-align: left;"><strong>Manual Pooling</strong></td>
 <td style="text-align: left;">포인터 다이렉트 매핑 및 메모리 인접 배치로 시스템 한계 수준의 <strong>저지연(Low Latency) 달성</strong>.</td>
 </tr>
@@ -2174,7 +2174,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>DeukPack (<code>pack</code>)</strong></td>
-<td style="text-align: left;"><strong>~ 35 ms</strong></td>
+<td style="text-align: left;">~ <strong>35 ms</strong></td>
 <td style="text-align: left;"><strong>최소 증분 (+2.1MB)</strong></td>
 <td style="text-align: left;">JIT Inlining 최적화로 구동(Warm-up) 이후 불필요한 객체 생성을 최소화하여 Old Gen 영역 보호.</td>
 </tr>
@@ -2195,7 +2195,7 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>DeukPack (<code>pack</code>)</strong></td>
-<td style="text-align: left;"><strong>~ 31 ms</strong></td>
+<td style="text-align: left;">~ <strong>31 ms</strong></td>
 <td style="text-align: left;"><strong>0 MB (Native Match)</strong></td>
 <td style="text-align: left;">BEAM VM 고유의 <code>&lt;&lt;tag::integer, rest::binary&gt;&gt;</code> <strong>바이트 레벨 네이티브 패턴 매칭</strong>으로 가비지 할당 없이 페이로드를 즉시 디코딩.</td>
 </tr>
@@ -2234,7 +2234,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>DeukPack (<code>pack</code>)</strong></td>
-<td style="text-align: left;">157.69 ms</td>
+<td style="text-align: left;">~ <strong>158 ms</strong></td>
 <td style="text-align: left;"><strong>안정적 즉시 회수</strong></td>
 <td style="text-align: left;">기존 AST 대비 속도가 250% 상승했으며, JIT 전용 생성기(<code>_readPack</code>)를 통해 메모리 할당 오버헤드를 통제하여 프론트엔드 모바일 크래시를 방지.</td>
 </tr>

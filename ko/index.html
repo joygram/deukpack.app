@@ -633,6 +633,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#-보안성-및-인프라-신뢰성-security--oom-defense" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ 보안성 및 인프라 신뢰성 (Security &amp; OOM Defense)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#지원-프로토콜-및-언어-v160" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2075,6 +2086,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#-보안성-및-인프라-신뢰성-security--oom-defense" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ 보안성 및 인프라 신뢰성 (Security &amp; OOM Defense)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#지원-프로토콜-및-언어-v160" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2320,6 +2342,14 @@
 </ul>
 <p>→ 상세: <a href="ai-pipeline-integration/">에이전트가 할 수 없는 일 · AI 파이프라인 연동 정리</a></p>
 <hr />
+<h2 id="-보안성-및-인프라-신뢰성-security--oom-defense">🛡️ 보안성 및 인프라 신뢰성 (Security &amp; OOM Defense)<a class="headerlink" href="#-보안성-및-인프라-신뢰성-security--oom-defense" title="Permanent link">&para;</a></h2>
+<p>득팩은 외부 네트워크의 텍스트/바이트 페이로드를 직접 파싱하는 인프라 컴포넌트로서 <strong>네트워크 파싱 취약점(OOM, 버퍼 플러딩, 무한 루프)</strong>에 대한 근본적인 방어 메커니즘을 내장하고 있습니다. </p>
+<ul>
+<li><strong>유니버설 OOM(Out of Memory) 방어 (v1.7.0+)</strong>: JS, C#, C++, Java, Elixir 전 언어에 대해 스트림 처리 단계에서 <code>MAX_SAFE_LENGTH</code>(10MB) 및 <code>MAX_ELEMENT_COUNT</code>(100만 개) 임계치를 강제합니다. 악의적으로 부풀려진 List나 Map을 수신하더라도 힙에 메모리를 올리기 즉시 패킷을 폐기(Fail-Fast)하여 프로세스 크래시를 차단합니다.</li>
+<li><strong>다단계 점진적 길이 체크 (JSON Flood 방어)</strong>: 기존 <code>ReadToEnd()</code> 기반의 위험한 파싱을 제거하고, 스트림이 진행되는 즉시 길이를 사전에 예측해 검증하는 메커니즘으로 교체하여 거대 단일 문자열 공격이나 JSON 스택 폭탄을 무력화시킵니다.</li>
+<li><strong>DDoS Fuzzer CI 통과</strong>: CI/CD 파이프라인에서 2GB 이상의 비정상 덤프 데이터와 무한 뎁스 페이로드를 모든 언어 파서에 지속적으로 살포(<code>test-fuzz-oom.js</code>)하여, 파서가 오류를 스스로 이겨내는지 증명하는 보안 인증을 거쳤습니다.</li>
+</ul>
+<hr />
 <h2 id="지원-프로토콜-및-언어-v160">지원 프로토콜 및 언어 (v1.6.0)<a class="headerlink" href="#지원-프로토콜-및-언어-v160" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -2346,7 +2376,7 @@
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
-<td style="text-align: center;">🚧 (v1.4)</td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅ (v1.5)</td>
 <td style="text-align: center;">✅ (v1.6)</td>
@@ -2359,7 +2389,7 @@
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅ (v1.2.7)</td>
-<td style="text-align: center;">🚧 (v1.4)</td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">✅</td>
@@ -2372,7 +2402,7 @@
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">✅ (v1.5)</td>
 <td style="text-align: center;">🚧</td>
-<td style="text-align: center;">🚧 (v1.4)</td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">✅ (v1.4.2)</td>
@@ -2443,7 +2473,7 @@
 <td style="text-align: left;">속도</td>
 <td style="text-align: center;">~ 45 ms</td>
 <td style="text-align: center;">~ 85 ms</td>
-<td style="text-align: center;"><strong>~ 28 ms</strong></td>
+<td style="text-align: center;">~ <strong>28 ms</strong></td>
 </tr>
 <tr>
 <td style="text-align: left;"></td>
@@ -2457,7 +2487,7 @@
 <td style="text-align: left;">속도</td>
 <td style="text-align: center;">~ 14 ms</td>
 <td style="text-align: center;">~ 22 ms</td>
-<td style="text-align: center;"><strong>~ 12 ms</strong></td>
+<td style="text-align: center;">~ <strong>12 ms</strong></td>
 </tr>
 <tr>
 <td style="text-align: left;"></td>
@@ -2471,7 +2501,7 @@
 <td style="text-align: left;">속도</td>
 <td style="text-align: center;">~ 25 ms</td>
 <td style="text-align: center;">~ 38 ms</td>
-<td style="text-align: center;"><strong>~ 35 ms</strong></td>
+<td style="text-align: center;">~ <strong>35 ms</strong></td>
 </tr>
 <tr>
 <td style="text-align: left;"></td>
@@ -2485,7 +2515,7 @@
 <td style="text-align: left;">속도</td>
 <td style="text-align: center;">~ 54 ms</td>
 <td style="text-align: center;">~ 190 ms</td>
-<td style="text-align: center;"><strong>~ 158 ms</strong></td>
+<td style="text-align: center;">~ <strong>158 ms</strong></td>
 </tr>
 <tr>
 <td style="text-align: left;"></td>
@@ -2499,7 +2529,7 @@
 <td style="text-align: left;">속도</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">-</td>
-<td style="text-align: center;"><strong>~ 31 ms</strong></td>
+<td style="text-align: center;">~ <strong>31 ms</strong></td>
 </tr>
 <tr>
 <td style="text-align: left;"></td>
