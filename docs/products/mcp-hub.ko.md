@@ -1,13 +1,13 @@
 # DeukPackMcp: Universal AI Hub 🚧
 
 !!! warning "Coming Soon"
-    이 제품은 현재 **준비 중**인 차세대 기능입니다. 내부 클로즈 베타 테스트 중이며, 곧 공식 릴리스될 예정입니다.
+    이 제품은 현재 `준비 중`인 차세대 기능입니다. 내부 클로즈 베타 테스트 중이며, 곧 공식 릴리스될 예정입니다.
 
 ## 개요
 
-**DeukPackMcp**는 득팩의 모든 제품군과 외부 표준 명세(.proto, .deuk, OpenAPI 등)를 AI 에이전트가 즉시 실행할 수 있는 **'스킬(Skill)'**로 변환하여 집약하는 **범용 MCP(Model Context Protocol) 통합 허브**입니다.
+`DeukPackMcp`는 득팩의 모든 제품군과 외부 표준 명세(.proto, .deuk, OpenAPI 등)를 AI 에이전트가 즉시 실행할 수 있는 `스킬(Skill)`로 변환하여 집약하는 `범용 MCP(Model Context Protocol) 통합 허브`입니다.
 
-DeukPack Core 엔진이 개별 IDL로부터 전용 MCP 서버 코드를 생성하는 **'컴파일러(Core)'** 역할을 한다면, **DeukPackMcp**는 생성된 수많은 스킬들을 하나로 묶고 유니티 엔진, 데이터베이스, 외부 API와 실시간으로 연결하는 **'호스트(Hub)'** 역할을 수행합니다.
+DeukPack Core 엔진이 개별 IDL로부터 전용 MCP 서버 코드를 생성하는 `'컴파일러(Core)'** 역할을 한다면, **DeukPackMcp`는 생성된 수많은 스킬들을 하나로 묶고 유니티 엔진, 데이터베이스, 외부 API와 실시간으로 연결하는 **'호스트(Hub)'** 역할을 수행합니다.
 
 ### MCP 아키텍처 및 워크플로우
 

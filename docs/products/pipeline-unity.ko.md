@@ -1,6 +1,6 @@
 # 득팩 파이프라인·Unity (AI-Native Pipeline)
 
-**득팩 파이프라인**은 인터페이스 정의(IDL)부터 다언어 코드, 게임 메타 데이터, 그리고 AI 에이전트에 필요한 시맨틱 정보를 단일한 흐름으로 잇는 **AI-Native 고속 빌드 체인**입니다.
+`득팩 파이프라인`은 인터페이스 정의(IDL)부터 다언어 코드, 게임 메타 데이터, 그리고 AI 에이전트에 필요한 시맨틱 정보를 단일한 흐름으로 잇는 `AI-Native 고속 빌드 체인`입니다.
 
 <div class="dp-dynamic-notice-product" data-product="pipeline-unity"></div>
 

@@ -1,6 +1,6 @@
 # DeukPack: AI-Native 유니버설 스키마 멀티 허브 (Protobuf, Thrift, OpenAPI 통합)
 
-**득팩 코어 엔진**은 Protobuf, Thrift, OpenAPI 등 파편화된 인터페이스 규격을 하나로 통합하는 **고성능 유니버설 스키마 멀티 허브(Multi-hub)**이며, AI 지능형 컨텍스트(Knowledge) 추출에 최적화되어 있습니다.
+`득팩 코어 엔진`은 Protobuf, Thrift, OpenAPI 등 파편화된 인터페이스 규격을 하나로 통합하는 `고성능 유니버설 스키마 멀티 허브(Multi-hub)`이며, AI 지능형 컨텍스트(Knowledge) 추출에 최적화되어 있습니다.
 
 <div class="dp-dynamic-notice-product" data-product="core-engine"></div>
 
@@ -8,26 +8,26 @@
 
 ## 🚀 릴리스 로드맵 (Roadmap)
 
-득팩(DeukPack)은 언어·플랫폼 지원 확대 시마다 마이너 버전을 갱신하며, 현재 **v1.5.x 시리즈**를 통해 생태계를 확장 중입니다.
+득팩(DeukPack)은 언어·플랫폼 지원 확대 시마다 마이너 버전을 갱신하며, 현재 `v1.5.x 시리즈`를 통해 생태계를 확장 중입니다.
 
 | 버전 | 주요 목표 (Milestones) | 상태 |
 | :--- | :--- | :--- |
-| **v1.5.0** | **Java & Core Parity**: 상속 지원, Compact/TJSON 추가, 전수 보안 가드 및 **MCP 코어 분리** | **DONE** |
+| **v1.5.0** | **Java & Core Parity**: 상속 지원, Compact/TJSON 추가, 전수 보안 가드 및 **MCP 코어 분리` | `DONE** |
 | **v1.6.0** | **Data Parser Shift**: JS JIT Codegen / C# Zero-Alloc 파서 및 C++ DDL | **DONE** |
-| **v1.7.0** | **Elixir Engine Support**: 네이티브 Erlang BEAM 패턴 매칭 및 **유니버설 OOM 보안망 구축** | **Current** |
+| `v1.7.0** | **Elixir Engine Support**: 네이티브 Erlang BEAM 패턴 매칭 및 `유니버설 OOM 보안망 구축` | `Current** |
 | **v1.8.0** | Unreal Engine 5 C++ 네이티브 지원 및 Blueprint 연동 | **Teaser** |
 
 ---
 
 ## ⚡ 성능: 병목 없는 지능형 코어 (Zero-Bottleneck Foundation)
 
-득팩은 단순히 빠른 것을 넘어, AI 에이전트가 수만 줄의 IDL 지식을 실시간으로 다루어도 시스템에 부하를 주지 않는 **"지연 없는 지능형 코어"**를 지향합니다.
+득팩은 단순히 빠른 것을 넘어, AI 에이전트가 수만 줄의 IDL 지식을 실시간으로 다루어도 시스템에 부하를 주지 않는 `지연 없는 지능형 코어`를 지향합니다.
 
 | 작업 항목 | 기존 레거시 워크플로 | **DeukPack (v1.5.0)** | 핵심 이점 |
 | :--- | :---: | :---: | :--- |
-| **IDL 트리 파싱** | 초(s) 단위 (다단계 빌드) | **밀리초(ms) 단위** | **AI 실시간 인터랙션 최적화** |
-| **런타임 오버헤드** | 객체 할당 및 GC 발생 | **Zero-Allocation** | **고빈도 데이터 통신(HFT) 지원** |
-| **메모리 점유** | 무거운 프로세스 독립 실행 | **경량 AST 지식 캐싱** | **대규모 지식 추출 시 저부하** |
+| `IDL 트리 파싱` | 초(s) 단위 (다단계 빌드) | `밀리초(ms) 단위` | **AI 실시간 인터랙션 최적화** |
+| `런타임 오버헤드` | 객체 할당 및 GC 발생 | `Zero-Allocation** | `고빈도 데이터 통신(HFT) 지원** |
+| `메모리 점유` | 무거운 프로세스 독립 실행 | `경량 AST 지식 캐싱` | `대규모 지식 추출 시 저부하` |
 
 > [!TIP]
 > 위 수치는 대규모 프로젝트 환경(500+ IDL 파일)에서의 일반적인 관측치를 기반으로 하며, 사용자 환경 및 IDL 복잡도에 따라 차이가 있을 수 있습니다. 상세 벤치마크 방법론은 [성능 문서](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_BENCHMARKING.ko.md)를 참고하세요.
@@ -64,7 +64,7 @@
 > [!CAUTION]
 > **데이터베이스 연동 (⚠️) 상세 제약 사항:**
 > 1. **TS / JS**: JSON/Binary 직렬화 기반 저장 위주. 관계형 매핑은 제한적(Blob 중심).
-> 2. **C# (EF Core)**: `entity` 키워드를 통한 테이블 생성 지원. 단, **중첩 컬렉션(List/Map/Set)** 필드는 SQL 컬럼 자동 매핑 미지원 (Blob 저장 또는 수동 Converter 필요).
+> 2. `C# (EF Core)**: `entity` 키워드를 통한 테이블 생성 지원. 단, `중첩 컬렉션(List/Map/Set)** 필드는 SQL 컬럼 자동 매핑 미지원 (Blob 저장 또는 수동 Converter 필요).
 > 3. **C++**: DDL(SQL) 생성 위주. 런타임 ORM 연동은 지원되지 않음.
 > 4. **공통**: 스키마 구조 변경에 따른 DB Migration(변경 관리) 로직은 제공되지 않음.
 
@@ -85,7 +85,7 @@
 ### 1. Universal IDL Gateway & Interop
 다양한 인터페이스 정의 언어를 하나의 파이프라인에서 통합 관리하고, 진영 간 경계를 허뭅니다.
 - **다중 입력 지원**: `.deuk`(네이티브), `.thrift`(레거시), `.proto`(Protobuf), OpenAPI, JSON Schema, CSV.
-- **Cross-Protocol Interop**: Thrift로 정의된 데이터를 Protobuf 와이어로 전송하거나 그 반대로 변환하는 **무손실 라운드트립** 지원.
+- `Cross-Protocol Interop**: Thrift로 정의된 데이터를 Protobuf 와이어로 전송하거나 그 반대로 변환하는 `무손실 라운드트립** 지원.
 - **점진적 마이그레이션**: 기존 IDL을 유지하면서 득팩의 고도화된 기능(상속, 오버라이드)을 결합하여 현대적인 스택으로 자연스럽게 전환 가능합니다.
 
 ### 2. 고도화된 타임 시스템 (IDL Architecture)
@@ -167,7 +167,7 @@ npx deukpack ./idl/root.deuk ./gen --csharp --cpp --js -I ./idl
 
 - **메모리**: 전체를 메모리에 올릴 필요 없음 — SQLite·스트리밍·(선택) 제로카피로 대용량·저메모리 구성 가능. 버퍼 재사용·리플렉션 최소로 런타임 할당이 작습니다.
 - **성능**: 대량 IDL도 수십 배 빠른 파싱·코드 생성. 런타임 직렬화/역직렬화도 약 10배 빠른 수준을 목표로 합니다.
-- **편의성**: 한 번 정의·한 번 빌드로 코드·메타·DB·검증이 맞춰짐. 기존 .proto·OpenAPI·CSV·.thrift 를 **득팩으로 흡수**할 수 있습니다.
+- `편의성`: 한 번 정의·한 번 빌드로 코드·메타·DB·검증이 맞춰짐. 기존 .proto·OpenAPI·CSV·.thrift 를 `득팩으로 흡수`할 수 있습니다.
 - **확장성**: 여러 파일·네임스페이스, C#·C++·TS·JS 동시 생성. 스키마·코드·DB·Excel을 한 소스에서 확장.
 
 ---
@@ -183,9 +183,9 @@ npx deukpack ./idl/root.deuk ./gen --csharp --cpp --js -I ./idl
 ### 언어별 주요 특징
 
 *   **C# (.NET / Unity)**: 게임 클라이언트를 위한 **Zero-Allocation** 파서, 백엔드 연동을 위한 **EF Core** 지원(제약사항 참고), 그리고 IDL 기반 설정 관리를 위한 **MetaTable Registry**, **YAML 프로토콜**(v1.2.7) 기능을 제공합니다.
-*   **TypeScript / JSON**: AI 도구 호출을 위한 **MCP (Model Context Protocol)** 플러그인 대응 및 지능형 컨텍스트 추출, 순수 JS 객체(**POJO**) 기반의 유연한 매핑, 그리고 v1.5.0에서 분리된 **DeukPackMcp**를 통한 도구 실행 환경을 지원합니다.
-*   **C++**: **저지연(Low-latency)** 및 **임베디드** 환경에 최적화되어 있으며, v1.5.0에서 안정화된 **Binary/Compact** 및 **JSON** 프로토콜 호환성과 최소한의 메모리 점유율에 집중합니다.
-*   **Java**: 다양한 플랫폼 간의 상호운용성을 보장하며, v1.5.0에서 추가된 **상속(extends)** 지원과 **Compact/TJSON** 프로토콜을 통해 Thrift 생태계와의 완전한 패리티를 달성했습니다.
+*   `TypeScript / JSON**: AI 도구 호출을 위한 **MCP (Model Context Protocol)** 플러그인 대응 및 지능형 컨텍스트 추출, 순수 JS 객체(**POJO**) 기반의 유연한 매핑, 그리고 v1.5.0에서 분리된 **DeukPackMcp`를 통한 도구 실행 환경을 지원합니다.
+*   `C++**: `저지연(Low-latency)` 및 `임베디드` 환경에 최적화되어 있으며, v1.5.0에서 안정화된 `Binary/Compact** 및 **JSON** 프로토콜 호환성과 최소한의 메모리 점유율에 집중합니다.
+*   `Java**: 다양한 플랫폼 간의 상호운용성을 보장하며, v1.5.0에서 추가된 `상속(extends)** 지원과 **Compact/TJSON** 프로토콜을 통해 Thrift 생태계와의 완전한 패리티를 달성했습니다.
 
 ---
 

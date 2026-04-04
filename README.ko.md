@@ -23,7 +23,7 @@ pip install -r requirements.txt
 mkdocs serve
 ```
 
-브라우저에서 `http://127.0.0.1:8000` 접속.
+브라우저에서 `http://127.0.0.1> 8000` 접속.
 
 ### 배포
 

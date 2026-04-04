@@ -64,7 +64,7 @@ Current support status and plans for each target platform.
 > [!CAUTION]
 > **Database Integration (⚠️) 상세 제약 사항:**
 > 1. **TS / JS**: JSON/Binary 직렬화 기반 저장 위주. 관계형 매핑은 제한적(Blob 중심).
-> 2. **C# (EF Core)**: `entity` 키워드를 통한 테이블 생성 지원. 단, **중첩 컬렉션(List/Map/Set)** 필드는 SQL 컬럼 자동 매핑 미지원 (Blob 저장 또는 수동 Converter 필요).
+> 2. `C# (EF Core)**: `entity` 키워드를 통한 테이블 생성 지원. 단, `중첩 컬렉션(List/Map/Set)** 필드는 SQL 컬럼 자동 매핑 미지원 (Blob 저장 또는 수동 Converter 필요).
 > 3. **C++**: DDL(SQL) 생성 위주. 런타임 ORM 연동은 지원되지 않음.
 > 4. **공통**: 스키마 구조 변경에 따른 DB Migration(변경 관리) 로직은 제공되지 않음.
 

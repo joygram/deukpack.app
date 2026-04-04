@@ -1,6 +1,6 @@
 # C# 가이드
 
-득팩으로 생성한 **C# 코드**를 프로젝트에서 사용하는 방법입니다. .NET·Unity 공통으로 참고할 수 있습니다.
+득팩으로 생성한 `C# 코드`를 프로젝트에서 사용하는 방법입니다. .NET·Unity 공통으로 참고할 수 있습니다.
 
 ---
 
@@ -13,7 +13,7 @@ npx deukpack ./schema.deuk ./gen --csharp --protocol tbinary
 ```
 
 생성물은 보통 `gen/csharp/` (또는 지정한 출력 폴더) 아래에 IDL 소스당 `<stem>_deuk.cs` 형태로 나옵니다(수동 작성 `Player.cs` 등과 이름 충돌 완화). `MetaTableRegistry.g.cs` 등 공용 파일명은 기존과 같습니다.  
-**런타임**은 npm 패키지의 `dist/csharp` 또는 [DeukPack 코어 저장소](https://github.com/joygram/DeukPack)의 `DeukPack.Protocol` 프로젝트를 참조해야 합니다. 생성 코드만으로는 동작하지 않습니다.
+`런타임`은 npm 패키지의 `dist/csharp` 또는 [DeukPack 코어 저장소](https://github.com/joygram/DeukPack)의 `DeukPack.Protocol` 프로젝트를 참조해야 합니다. 생성 코드만으로는 동작하지 않습니다.
 
 ---
 
@@ -59,13 +59,13 @@ var reader = /* 해당 프로토콜 Reader 생성 */;
 var value = DemoUser.Read(reader);
 ```
 
-실제 클래스명·메서드는 생성된 코드와 런타임 버전에 따라 다릅니다. **동작하는 전체 예제**는 [코어 저장소 examples/consumer-csharp](https://github.com/joygram/DeukPack/tree/main/examples/consumer-csharp)를 참고하세요.
+실제 클래스명·메서드는 생성된 코드와 런타임 버전에 따라 다릅니다. `동작하는 전체 예제`는 [코어 저장소 examples/consumer-csharp](https://github.com/joygram/DeukPack/tree/main/examples/consumer-csharp)를 참고하세요.
 
 ---
 
 ## 4. GetSchema()
 
-생성된 타입에는 **GetSchema()** (또는 유사 API)가 있어, 필드·타입·기본값 등 **스키마 메타**를 런타임에 가져올 수 있습니다. Excel·검증·에디터 연동에 활용합니다.
+생성된 타입에는 `GetSchema()` (또는 유사 API)가 있어, 필드·타입·기본값 등 `스키마 메타`를 런타임에 가져올 수 있습니다. Excel·검증·에디터 연동에 활용합니다.
 
 ```csharp
 var schema = DemoUser.GetSchema();
@@ -76,9 +76,9 @@ var schema = DemoUser.GetSchema();
 
 ## 5. ProtocolRegistry·메시지 디스패치
 
-**ProtocolRegistry**는 메시지 타입 ↔ 식별자(msgId 등) 매핑을 제공합니다. 서버·클라이언트에서 패킷 타입에 따라 다른 핸들러를 호출할 때 사용합니다.
+`ProtocolRegistry`는 메시지 타입 ↔ 식별자(msgId 등) 매핑을 제공합니다. 서버·클라이언트에서 패킷 타입에 따라 다른 핸들러를 호출할 때 사용합니다.
 
-- 생성 코드에 등록된 타입과 ID 목록을 확인하고, 수신 바이트에서 msgId를 읽은 뒤 **ProtocolRegistry**로 해당 타입을 찾아 **Read** 호출하는 패턴을 사용합니다.
+- 생성 코드에 등록된 타입과 ID 목록을 확인하고, 수신 바이트에서 msgId를 읽은 뒤 `ProtocolRegistry`로 해당 타입을 찾아 **Read** 호출하는 패턴을 사용합니다.
 - 상세: [프로토콜](../products/protocol.ko.md) 문서와 코어 저장소 [docs](https://github.com/joygram/DeukPack/tree/main/docs) 참고.
 
 ---

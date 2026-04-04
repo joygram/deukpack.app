@@ -1,2 +1,2 @@
-!!! info "DeukPack core update — 1.8.1"
+!!! info "DeukPack core update — 1.9.0"
     **DeukPack core 1.8.1** — Resolved CI build failures caused by deprecated `sample.thrift` dependencies in the validation workflows, fully migrating smoke tests to the native `sample.deuk` specification. Additionally suppressed C# non-nullable Collection warnings and bypassed strict Elixir Dialyzer module checks (`Jason`) to guarantee a Zero-Warning Continuous Integration experience. [GitHub Releases](https://github.com/joygram/DeukPack/releases/latest) · [Release summary](https://deukpack.app/releases/)

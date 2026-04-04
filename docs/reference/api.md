@@ -2,7 +2,7 @@
 
 **CLI**, **IDL kinds**, and **C# / C++ / JavaScript** surfaces for the DeukPack core. Implementation details: [GitHub core](https://github.com/joygram/DeukPack) `src/` and `docs/`.
 
-**한국어:** Use the site **language** menu → **한국어**.
+`한국어:** Use the site **language** menu → `한국어**.
 
 ---
 

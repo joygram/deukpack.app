@@ -1,12 +1,12 @@
 # 설치 (Windows · Linux)
 
-**배포본만** 사용할 때는 **npm**으로 프로젝트에 넣고 CLI는 **`npx deukpack`** 으로 실행합니다. 소스 클론은 필요 없습니다.
+`배포본만` 사용할 때는 `npm`으로 프로젝트에 넣고 CLI는 **`npx deukpack`** 으로 실행합니다. 소스 클론은 필요 없습니다.
 
 ---
 
 ## 배포본 = npm 패키지
 
-득팩은 **npm**으로 배포됩니다. **프로젝트 루트**에서 **`npm install deukpack`** 후 **`npx deukpack …`** 로 실행하세요. **`npm deukpack`** 은 동작하지 않습니다. 바이너리는 `node_modules/.bin` 에 있습니다.
+득팩은 `npm`으로 배포됩니다. `프로젝트 루트`에서 **`npm install deukpack`** 후 **`npx deukpack …`** 로 실행하세요. **`npm deukpack`** 은 동작하지 않습니다. 바이너리는 `node_modules/.bin` 에 있습니다.
 
 **Node.js 18+** 권장(16+ 동작 가능).
 

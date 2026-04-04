@@ -2,7 +2,7 @@
 
 The same **string** names for `--protocol`, npm `serialize` / `deserialize`, and generated **C# / C++** code sit on top of **two families**. Use this page to see **which stack implements which wire**.
 
-**한국어:** Use the site **language** menu → **한국어** for the same page in Korean.
+`한국어:** Use the site **language** menu → `한국어** for the same page in Korean.
 
 ---
 

@@ -10,7 +10,7 @@ repo_url: https://github.com/deukpack/DeukPack
 extra:
   generator: false
   announce: >-
-    <strong>득팩 코어 1.6.0</strong> — JavaScript V8 JIT Codegen · C# 무할당(Zero-Alloc) 아키텍처 —
+    <strong>득팩 코어 1.9.0</strong> — Python Support · Industry BMT Standardization —
     <a href="https://github.com/joygram/DeukPack/releases/latest">GitHub Releases</a>
     · <a href="https://deukpack.app/releases/">릴리스 요약 (KO/EN)</a>
 
@@ -75,6 +75,7 @@ nav:
   - Journal:
     - "Episode 1. AI Agents & Semantic Identity": journal/ai-control-plane-design.md
     - "Episode 2. Asymmetric Architecture & Benchmark": journal/performance-matrix.md
+    - "Appendix 1. Flat Payload JWT Benchmark": journal/performance-matrix-flat.md
     - "Episode 3. Protocol Security & Large Payload": journal/security-oom-large-payload.md
   - License: license.md
 
@@ -170,7 +171,8 @@ plugins:
             Positioning: 포지셔닝
             Journal: 기술 연재 (Journal)
             "Episode 1. AI Agents & Semantic Identity": "1편. AI 에이전트와 데이터의 신분증"
-            "Episode 2. Asymmetric Architecture & Benchmark": "2편. 비대칭 아키텍처 성능 매트릭스"
+            "Episode 2. Asymmetric Architecture & Benchmark": "2편. 비대칭 아키텍처 성능 매트릭스 (복합 구조)"
+            "Appendix 1. Flat Payload JWT Benchmark": "부록 1. 평면 객체 / JWT 특화 지표"
             "Episode 3. Protocol Security & Large Payload": "3편. 프로토콜 보안 쉴드(OOM 방어) 및 대용량 통신 처리"
             License: 라이선스·비용
   - search

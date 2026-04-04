@@ -1,6 +1,6 @@
 # 튜토리얼
 
-득팩(DeukPack)을 **처음 써 보는 분**을 위한 단계별 가이드입니다. Thrift·Protobuf 사용 경험이 있다면 [IDL 가이드](idl-guide.ko.md)부터, 없으면 [빠른 시작](quickstart.ko.md)부터 진행하세요.
+득팩(DeukPack)을 `처음 써 보는 분`을 위한 단계별 가이드입니다. Thrift·Protobuf 사용 경험이 있다면 [IDL 가이드](idl-guide.ko.md)부터, 없으면 [빠른 시작](quickstart.ko.md)부터 진행하세요.
 
 **English**: Use the language switcher (top right).
 
@@ -22,7 +22,7 @@
 
 | 문서 | 대상 | 내용 |
 |------|------|------|
-| [**C# 가이드**](csharp-guide.ko.md) | .NET·Unity 개발자 | 생성 코드, 읽기/쓰기, 통합 **Write**, GetSchema·ProtocolRegistry |
+| [**C# 가이드`](csharp-guide.ko.md) | .NET·Unity 개발자 | 생성 코드, 읽기/쓰기, 통합 `Write**, GetSchema·ProtocolRegistry |
 | [**C++ 가이드**](cpp-guide.ko.md) | 네이티브·서버 개발자 | 생성 헤더/소스 연동, CMake, 직렬화 예제 |
 | *(추가 예정)* | Excel·Unity 파이프라인 | 메타 테이블·Excel 연동, Unity 로드 |
 | *(추가 예정)* | 기존 Thrift/Protobuf 도입 | 혼합 IDL, 점진적 전환 |

@@ -1,6 +1,6 @@
 # C++ 가이드
 
-득팩으로 생성한 **C++ 헤더·소스**를 프로젝트에서 사용하는 방법입니다. 서버·네이티브 툴에 적용할 때 참고하세요.
+득팩으로 생성한 `C++ 헤더·소스`를 프로젝트에서 사용하는 방법입니다. 서버·네이티브 툴에 적용할 때 참고하세요.
 
 ---
 
@@ -12,7 +12,7 @@ IDL에서 C++를 뽑을 때는 `--cpp` 를 지정합니다.
 npx deukpack ./schema.deuk ./gen --cpp --protocol tbinary
 ```
 
-생성물은 `gen/cpp/` (또는 지정한 출력 폴더) 아래에 IDL 소스당 `<stem>_deuk.h`, `<stem>_deuk.cpp` 가 생성됩니다(`_deuk` 접미사로 수동 작성 `Foo.h` 와 이름 충돌을 피함). **include만 있는** `.deuk`은 **umbrella** `<stem>_deuk.h`에 나열된 include에 대응하는 `*_deuk.h`만 앞으로 `#include`합니다(바깥 C++ `namespace`로 감싸지 않음). C++17을 전제로 합니다.
+생성물은 `gen/cpp/` (또는 지정한 출력 폴더) 아래에 IDL 소스당 `<stem>_deuk.h`, `<stem>_deuk.cpp` 가 생성됩니다(`_deuk` 접미사로 수동 작성 `Foo.h` 와 이름 충돌을 피함). **include만 있는` `.deuk`은 `umbrella** `<stem>_deuk.h`에 나열된 include에 대응하는 `*_deuk.h`만 앞으로 `#include`합니다(바깥 C++ `namespace`로 감싸지 않음). C++17을 전제로 합니다.
 
 ---
 
@@ -33,7 +33,7 @@ set(GEN_SOURCES
 add_executable(demo main.cpp ${GEN_SOURCES})
 ```
 
-실제 파일명·경로는 IDL 구조에 따라 다릅니다. **동작 예제**는 [코어 저장소 examples/consumer-cpp](https://github.com/joygram/DeukPack/tree/main/examples/consumer-cpp)를 참고하세요.
+실제 파일명·경로는 IDL 구조에 따라 다릅니다. `동작 예제`는 [코어 저장소 examples/consumer-cpp](https://github.com/joygram/DeukPack/tree/main/examples/consumer-cpp)를 참고하세요.
 
 ---
 

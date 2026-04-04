@@ -32,4 +32,4 @@ Use this section for **names, CLI flags, and generated APIs**. For **what the pr
 - **Wire & serialization topics:** [topics/serialization](https://kits.deukpack.app/en/topics/serialization/)
 - **Starter chronicle:** [*Ruins* title page](https://kits.deukpack.app/en/starter-course/)
 
-**한국어:** Use the site **language** menu and pick **한국어** for the same outline in Korean.
+`한국어:** Use the site **language** menu and pick `한국어** for the same outline in Korean.

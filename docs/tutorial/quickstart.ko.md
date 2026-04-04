@@ -1,6 +1,6 @@
 # 빠른 시작
 
-득팩 코어를 설치하고, IDL 하나로 **C#, C++, TypeScript, JavaScript 코드**까지 생성하는 최소 단계입니다(약 5분).
+득팩 코어를 설치하고, IDL 하나로 `C#, C++, TypeScript, JavaScript 코드`까지 생성하는 최소 단계입니다(약 5분).
 
 **English**: Use the language switcher (top right).
 
@@ -74,7 +74,7 @@ struct HelloResponse {
 
 - **C#·Unity**: [프로토콜](../products/protocol.ko.md), npm `dist/csharp` 또는 [득팩 키트](../deukpack-kits.ko.md).
 - **파이프라인**: [파이프라인 가이드](pipeline-guide.ko.md) — `defineScope: "all"`, `defineRoot`, `exclude`.
-- **직렬화**: 필드 선택·덮어쓰기는 통합 **`Write`** API — [튜토리얼: overrides·필드 선택·extends](write-with-overrides.ko.md).
+- **직렬화`: 필드 선택·덮어쓰기는 통합 ``Write`** API — [튜토리얼: overrides·필드 선택·extends](write-with-overrides.ko.md).
 - **Excel·Unity**: [Excel 애드인](../products/excel-addin.ko.md), [파이프라인·Unity](../products/pipeline-unity.ko.md).
 
 ---

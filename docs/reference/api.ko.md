@@ -1,8 +1,8 @@
 # API·타입 참조
 
-득팩 코어 **CLI**, **IDL 선언 종류별** 생성·런타임 요약, **C# / C++ / JavaScript** 생성 API입니다. 상세 구현은 [GitHub 코어](https://github.com/joygram/DeukPack) `src/`·`docs/`를 보세요.
+득팩 코어 **CLI**, **IDL 선언 종류별` 생성·런타임 요약, `C# / C++ / JavaScript** 생성 API입니다. 상세 구현은 [GitHub 코어](https://github.com/joygram/DeukPack) `src/`·`docs/`를 보세요.
 
-**English:** 사이트 상단 **언어** 메뉴에서 **English**.
+`English:** 사이트 상단 `언어` 메뉴에서 `English**.
 
 ---
 
@@ -51,7 +51,7 @@ npx deukpack bootstrap [옵션]       # init --workspace-only 와 동일
 | `init --non-interactive` | `_deuk_define` 에 `.deuk` 있으면 기본 파이프라인; bootstrap; VSIX 설치 시도. |
 | `init --workspace-only` | bootstrap (+ VSIX) 만. |
 | `bootstrap` | **`init --workspace-only`** 와 동일. |
-| 기본 **`installKind`** | **`package`**. **`--kind src`** 는 **`--engine-root`** 와 함께; **`--engine-root` 만**으로는 `src` 가 되지 않음. |
+| 기본 ``installKind`** | **`package`**. **`--kind src`** 는 **`--engine-root`** 와 함께; **`--engine-root` 만`으로는 `src` 가 되지 않음. |
 
 init 후 한 줄 안내: 업데이트 시 **`npx deukpack init`** 재실행; **`deukpack.pipeline.json`** / **`.deukpack/workspace.json`** 편집; 그다음 **`npx deukpack run`**.
 
@@ -74,7 +74,7 @@ init 후 한 줄 안내: 업데이트 시 **`npx deukpack init`** 재실행; **`
 | `--ts` | TypeScript 1차 산출 (앱은 tsc/번들로 이어짐) |
 | `--js` | JavaScript 직접 생성 (Node·도구용 경로) |
 | `--ef` | EF Core: `DbContext`·Fluent 등 엔티티/메타 정합 경로 활성 |
-| `--protocol <name>` | 와이어 힌트. **득팩 전용:** `pack`(기본값), `json`, `yaml` — **호환(Thrift):** **`tbinary`**, **`tcompact`**, **`tjson`**. 표·JS: [와이어 프로토콜 계열](wire-protocols.ko.md) · [interop vs native](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WIRE_INTEROP_VS_NATIVE.md) |
+| `--protocol <name>` | 와이어 힌트. `득팩 전용:** `pack`(기본값), `json`, `yaml` — `호환(Thrift):** **`tbinary`**, **`tcompact`**, **`tjson`**. 표·JS: [와이어 프로토콜 계열](wire-protocols.ko.md) · [interop vs native](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WIRE_INTEROP_VS_NATIVE.md) |
 | `--endianness little\|big` | 엔디안 |
 | `--wire-profile <name>` | 프로파일 이름 반복 또는 쉼표 구분. [와이어 프로파일](https://github.com/joygram/DeukPack/blob/main/docs/internal/DEUKPACK_WIRE_PROFILE_SUBSET.md) |
 | `--convert-to-deuk [subdir]` | 파싱된 `.thrift` 등에서 `.deuk` 추가 출력 (하위 폴더 기본 `deuk`) |
@@ -114,7 +114,7 @@ npx deukpack run
 
 ## Messages and wire
 
-- **`ProtocolRegistry`**, `--protocol`, `IDeukPackReader` / `IDeukPackWriter`, 통합 **Write** 요약은 [메시지·와이어](messages.ko.md)를 보세요. **호환 vs 전용 프로토콜 표**는 [와이어 프로토콜 계열](wire-protocols.ko.md).
+- ``ProtocolRegistry`**, `--protocol`, `IDeukPackReader` / `IDeukPackWriter`, 통합 **Write` 요약은 [메시지·와이어](messages.ko.md)를 보세요. `호환 vs 전용 프로토콜 표`는 [와이어 프로토콜 계열](wire-protocols.ko.md).
 
 ---
 
@@ -134,7 +134,7 @@ OpenAPI·CSV·PSV·JSON·Excel로 **스키마를 먹이거나 뱉는** 플래그
 
 ## Programmatic (library)
 
-Node에서 **파싱·AST**까지 쓰려면 `DeukPackCodec`(또는 동일 진입점)을 사용합니다. **다언어 코드 생성**은 v1에서 **CLI** 권장 ([v1 범위](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_V1_RELEASE_SCOPE.md)).
+Node에서 `파싱·AST`까지 쓰려면 `DeukPackCodec`(또는 동일 진입점)을 사용합니다. `다언어 코드 생성`은 v1에서 **CLI** 권장 ([v1 범위](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_V1_RELEASE_SCOPE.md)).
 
 ---
 
@@ -145,8 +145,8 @@ Node에서 **파싱·AST**까지 쓰려면 `DeukPackCodec`(또는 동일 진입�
 | 메서드 | 시그니처 | 용도 |
 | :--- | :--- | :--- |
 | **Pack** | `byte[] Pack(DpFormat format = Binary, fieldIds?, overrides?)` | 바이너리/JSON 직렬화 및 필드 치환 |
-| **Unpack** | `void Unpack(byte[] data, DpFormat format = Binary)` | **현재 인스턴스**에 역직렬화 (Zero-Alloc) |
-| **Unpack** *(파사드)* | `T Unpack<T>(byte[] data, DpFormat format = Binary)` | **신규 인스턴스** 생성 |
+| `Unpack` | `void Unpack(byte[] data, DpFormat format = Binary)` | `현재 인스턴스`에 역직렬화 (Zero-Alloc) |
+| `Unpack** *(파사드)* | `T Unpack<T>(byte[] data, DpFormat format = Binary)` | `신규 인스턴스** 생성 |
 
 ```csharp
 // 바이너리로 팩
@@ -185,8 +185,8 @@ hero.Unpack(bin, DpFormat.Json);
 | 항목 | 용도 |
 |------|------|
 | **kFieldId_\*** | `static constexpr int` — `StructName::kFieldId_PropertyName`. |
-| **Binary / pack 출력** | 생성 소스가 C#/JS와 동일한 **필드 ID** 모델을 따름; 스마트 포인터(`std::shared_ptr`)를 지원하여 얕은 복사본 수정 시 사이드 이펙트를 차단하는 분리 접근(detach) 메커니즘을 지원합니다. |
-| **Hero::Unpack(hero, bin)** | 🌟 **동적 컨테이너 재사용 (성능 극대화)**: `std::vector` 등 내부 컬렉션의 예약된 용량(Capacity)을 파괴하지 않고 재활용하여 비용이 큰 OS 레벨 힙 메모리 할당 락(Lock)을 방지합니다. |
+| `Binary / pack 출력` | 생성 소스가 C#/JS와 동일한 `필드 ID` 모델을 따름; 스마트 포인터(`std::shared_ptr`)를 지원하여 얕은 복사본 수정 시 사이드 이펙트를 차단하는 분리 접근(detach) 메커니즘을 지원합니다. |
+| `Hero::Unpack(hero, bin)** | 🌟 `동적 컨테이너 재사용 (성능 극대화)**: `std::vector` 등 내부 컬렉션의 예약된 용량(Capacity)을 파괴하지 않고 재활용하여 비용이 큰 OS 레벨 힙 메모리 할당 락(Lock)을 방지합니다. |
 | **Hero::Unpack(bin)** | ⚠️ **Factory 메서드**: 스택 메모리상에 객체를 복사 없이 RVO(반환값 최적화)로 던져줍니다. 빠르지만 내부의 벡터/앱 배열은 여전히 힙 할당을 일으키므로 핫패스 사용에 유의해야 합니다. |
 
 ---
@@ -196,9 +196,9 @@ hero.Unpack(bin, DpFormat.Json);
 | 항목 | 용도 |
 |------|------|
 | **Getters/Setters** | Java Bean 패턴 규격의 필드 접근자. |
-| **clone()** | 배열(List) 및 컬렉션을 아우르는 **안전한 깊은 복사(Deep Copy)** 기본 지원. 100만 회 이상의 Multi-pass 메모리 라우팅에서 GC 오버헤드 없이 원본 객체의 불변성을 입증합니다. |
+| `clone()** | 배열(List) 및 컬렉션을 아우르는 `안전한 깊은 복사(Deep Copy)** 기본 지원. 100만 회 이상의 Multi-pass 메모리 라우팅에서 GC 오버헤드 없이 원본 객체의 불변성을 입증합니다. |
 | **Binary / pack 출력** | C#과 1> 1 완벽 호환되는 프로토콜 클래스를 지니며, 엄격한 Struct 객체 생성을 통해 빈 구조체 접근을 네이티브하게 방어합니다. |
-| **Hero.unpack(hero, bin)** | 🌟 **네트워크 Hotpath용 (Zero-Allocation)**: 사전 할당된 객체를 오버라이딩하여 Netty 등의 초고성능 NIO 서버에서 동시성 GC 부하를 차단합니다. |
+| `Hero.unpack(hero, bin)** | 🌟 `네트워크 Hotpath용 (Zero-Allocation)**: 사전 할당된 객체를 오버라이딩하여 Netty 등의 초고성능 NIO 서버에서 동시성 GC 부하를 차단합니다. |
 | **Hero.unpack(bin)** | ⚠️ **Factory 메서드**: 새로운 인스턴스를 할당하여 반환합니다. IO가 폭주하는 환경에서는 가비지 처리를 늦추므로 사용을 지양하세요. |
 
 ---
@@ -208,10 +208,10 @@ hero.Unpack(bin, DpFormat.Json);
 | 항목 | 용도 |
 |------|------|
 | **defstruct** | 컴파일 타임에 필드 오프셋이 고정된 Elixir 고성능 불변 `Map` 생성(`%Struct{}`). |
-| **encode/decode** | BEAM VM의 네이티브 **Bitstring 바이너리 패턴 매칭**을 사용하여 JSON 파싱 없이 수백만 번의 이진 패킷을 초단위로 해석합니다. |
+| `encode/decode** | BEAM VM의 네이티브 **Bitstring 바이너리 패턴 매칭`을 사용하여 JSON 파싱 없이 수백만 번의 이진 패킷을 초단위로 해석합니다. |
 | **무결성 보안 (Security Guard)** | 최대 깊이 초과(`MAX_RECURSION_DEPTH`) 및 배열/문자열 초과 길이(`MAX_SAFE_LENGTH`)를 선제적으로 Block(OOM Raise)하는 방어 로직이 내장되어 있습니다. |
 | **unpack(bin)** | 🌟 **BEAM 최적화 표준 (Factory)**: Elixir는 순수 불변(Immutable) 객체이므로 매번 새로운 구조체를 반환하는 이 메서드가 가장 표준적이며 빠릅니다. |
-| **unpack(struct, bin)** | ⚠️ **깊은 병합 (Merge)**: 기존 객체의 일부 속성들을 덮어쓰기할 때 쓰이지만, BEAM 아키텍처 특성상 여전히 내부적으로는 새로운 메모리를 생성합니다. |
+| `unpack(struct, bin)** | ⚠️ `깊은 병합 (Merge)**: 기존 객체의 일부 속성들을 덮어쓰기할 때 쓰이지만, BEAM 아키텍처 특성상 여전히 내부적으로는 새로운 메모리를 생성합니다. |
 
 ---
 
@@ -249,7 +249,7 @@ hero.Unpack(bin, DpFormat.Json);
 - **C#:** `Pack(format, fieldIds, overrides)` — `fieldIds` null 이면 전체 필드; `overrides` null/비어 있으면 치환 없음.
 - **JavaScript/TypeScript:** struct 헬퍼의 `pack(obj, format?, fieldIds, overrides)`.
 
-구버전 별도 API (**`Write`**, **`Pack`** 등)는 **제거**되거나 내부 전용으로 숨김 처리되었습니다. 
+구버전 별도 API (``Write`**, **`Pack`` 등)는 `제거`되거나 내부 전용으로 숨김 처리되었습니다. 
 
 튜토리얼: [../tutorial/write-with-overrides.ko.md](../tutorial/write-with-overrides.ko.md)
 
@@ -262,8 +262,8 @@ hero.Unpack(bin, DpFormat.Json);
 | 메서드 | 시그니처 | 용도 |
 | :--- | :--- | :--- |
 | **pack** | `pack(obj, format?, fieldIds?, overrides?)` | 바이너리 또는 JSON 문자열로 직렬화 |
-| **unpack** | `unpack(buf, format?)` | **신규** 객체 생성 |
-| **unpack** *(zero-alloc)* | `unpack(obj, buf, format?)` | **기존** 객체에 덮어쓰기 |
+| `unpack** | `unpack(buf, format?)` | `신규** 객체 생성 |
+| `unpack** *(zero-alloc)* | `unpack(obj, buf, format?)` | `기존** 객체에 덮어쓰기 |
 
 ```js
 const bin  = Hero.pack(hero);               // → Uint8Array (바이너리)

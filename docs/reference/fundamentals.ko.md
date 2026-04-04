@@ -1,12 +1,12 @@
 # 기본 구성 (IDL·CLI·파싱)
 
-`.deuk`(및 가져온 `.proto`·`.thrift` 등)를 엔진이 어떻게 **구조화**하는지, **명령줄**에서 무엇을 줄 수 있는지 요약합니다.
+`.deuk`(및 가져온 `.proto`·`.thrift` 등)를 엔진이 어떻게 `구조화`하는지, `명령줄`에서 무엇을 줄 수 있는지 요약합니다.
 
 ---
 
 ## IDL 선언 종류 (`declarationKind`)
 
-파서는 struct 계열 선언을 네 가지로 태그합니다. **와이어 레이아웃**은 대부분 `record`와 동일하게 취급할 수 있고, **코드 생성·검증**에서 구분됩니다.
+파서는 struct 계열 선언을 네 가지로 태그합니다. `와이어 레이아웃`은 대부분 `record`와 동일하게 취급할 수 있고, `코드 생성·검증`에서 구분됩니다.
 
 | 키워드 | 의미 (요약) |
 |--------|----------------|
@@ -35,7 +35,7 @@
 ## 프로그램 방식 (Node 라이브러리)
 
 - **파싱·AST:** `DeukPackCodec` 등으로 동일 규칙을 코드에서 호출 가능.
-- **다언어 emit:** v1에서는 **CLI 사용**을 권장합니다 ([v1 범위](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_V1_RELEASE_SCOPE.md)).
+- `다언어 emit:** v1에서는 **CLI 사용`을 권장합니다 ([v1 범위](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_V1_RELEASE_SCOPE.md)).
 
 ---
 
@@ -50,11 +50,11 @@
 
 ## 타입·상속
 
-**확장 타입·Protobuf/Thrift 대조**는 [API·타입 참조 — Extended types](api.md#extended-types)에 표로 정리했습니다. **`extends`**(다단 상속)는 [튜토리얼: 통합 Write](../tutorial/write-with-overrides.ko.md)와 [메시지·와이어](messages.ko.md)에서 이어집니다.
+`확장 타입·Protobuf/Thrift 대조`는 [API·타입 참조 — Extended types](api.md#extended-types)에 표로 정리했습니다. **`extends`**(다단 상속)는 [튜토리얼: 통합 Write](../tutorial/write-with-overrides.ko.md)와 [메시지·와이어](messages.ko.md)에서 이어집니다.
 
 > [!IMPORTANT]
 > **동적 언어 vs 정적 언어 간 구조체 데이터 시맨틱 (Null 맵핑 특이점)**
-> - 크로스 언어 구성에서 동적 런타임 언어(**JavaScript**)가 중첩 구조체 데이터를 `null` 로 내려보낼 때, 메모리 맵핑을 엄격히 준수하는 네이티브 백엔드(**C#, Java**)는 이를 파싱하여 해당 언어의 **기본 구조체 인스턴스(Default Instantiation)** 로 치환하여 메모리에 할당합니다. (즉, 내부의 빈 필드들은 `""`나 `0`으로 일괄 초기화됨).
+> - 크로스 언어 구성에서 동적 런타임 언어(`JavaScript**)가 중첩 구조체 데이터를 `null` 로 내려보낼 때, 메모리 맵핑을 엄격히 준수하는 네이티브 백엔드(**C#, Java**)는 이를 파싱하여 해당 언어의 `기본 구조체 인스턴스(Default Instantiation)** 로 치환하여 메모리에 할당합니다. (즉, 내부의 빈 필드들은 `""`나 `0`으로 일괄 초기화됨).
 > - **인메모리 다중 순회(Multi-Pass):** 객체를 변형하여 수 많은 핸들러로 전달할 때는 반드시 C#/Java는 `.clone()` 이나 C++스마트포인터 Detach를, Elixir는 불변형 구조체 업데이트 레이아웃(`%{obj | ...}`)을 활용해 Caller 의 메모리를 오염시키지 않도록 권장합니다.
 
 ---

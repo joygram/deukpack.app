@@ -1,6 +1,6 @@
 # IDL 가이드
 
-득팩은 **.deuk**(네이티브)와 **.thrift**·**.proto** 를 입력으로 받습니다. 여기서는 메시지·타입을 정의하는 데 필요한 **IDL 문법**을 Thrift·Protobuf 수준으로 정리합니다.
+득팩은 `.deuk**(네이티브)와 **.thrift**·**.proto** 를 입력으로 받습니다. 여기서는 메시지·타입을 정의하는 데 필요한 **IDL 문법`을 Thrift·Protobuf 수준으로 정리합니다.
 
 ---
 
@@ -36,7 +36,7 @@ namespace cpp myapp.protocol
 
 ## 3. 구조체 (struct)
 
-메시지·DTO는 **struct** 로 정의합니다. 필드마다 **필드 ID**(숫자)를 부여해야 하며, 나중에 필드를 추가·삭제할 때 **스키마 진화**에서 이 ID가 사용됩니다.
+메시지·DTO는 `struct` 로 정의합니다. 필드마다 `필드 ID`(숫자)를 부여해야 하며, 나중에 필드를 추가·삭제할 때 `스키마 진화`에서 이 ID가 사용됩니다.
 
 ```thrift
 struct DemoPoint {

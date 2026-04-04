@@ -10,7 +10,7 @@
 |----|------|------|
 | **DeukPack 저장소** (GitHub) | 엔진·CLI·npm·CI, README 요약 | [joygram/DeukPack](https://github.com/joygram/DeukPack) |
 | **deukpack.app** (이 사이트) | 제품·튜토리얼·프로토콜·**API 레퍼런스**·키트 라인업 포털 | [deukpack.app](https://deukpack.app/) |
-| **kits.deukpack.app** | 복붙 실습·《시작의 폐허》·저니·주제 글 | [kits.deukpack.app](https://kits.deukpack.app/) — 상단 **언어** 메뉴로 한↔English (`/en/…`) |
+| `kits.deukpack.app** | 복붙 실습·《시작의 폐허》·저니·주제 글 | [kits.deukpack.app](https://kits.deukpack.app/) — 상단 `언어** 메뉴로 한↔English (`/en/…`) |
 
 ---
 
@@ -35,9 +35,9 @@
 
 | 문서 | 영문 | 한글 |
 |------|------|------|
-| **배포본 vs 소스본** | [이 사이트: 배포본 vs 소스본](tutorial/distribution-vs-source.ko.md) | 동일 페이지에서 **언어 전환** |
+| `배포본 vs 소스본` | [이 사이트: 배포본 vs 소스본](tutorial/distribution-vs-source.ko.md) | 동일 페이지에서 `언어 전환` |
 | **README** | [README.ko.md](https://github.com/joygram/DeukPack/blob/main/README.ko.md) | [README.ko.md](https://github.com/joygram/DeukPack/blob/main/README.ko.md) |
-| **빠른 시작 (언어별)** | [빠른 시작 (이 사이트)](tutorial/quickstart.ko.md) | 동일 페이지에서 **언어 전환** |
+| `빠른 시작 (언어별)** | [빠른 시작 (이 사이트)](tutorial/quickstart.ko.md) | 동일 페이지에서 `언어 전환** |
 | **전체 문서 트리** | [docs/README.ko.md](https://github.com/joygram/DeukPack/blob/main/docs/README.ko.md) | *(동일)* |
 
 ---

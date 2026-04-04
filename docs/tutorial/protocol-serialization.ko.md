@@ -1,6 +1,6 @@
 # 프로토콜·직렬화
 
-득팩은 와이어를 **두 계열**로 나눕니다. **호환(interop)** 과 **득팩 전용(deuk)** 을 먼저 고른 뒤, 그 안에서 `protocol` 문자열을 고릅니다. 표와 CLI 기본값은 [와이어 프로토콜 계열](../reference/wire-protocols.ko.md)을 보면 한눈에 정리됩니다.
+득팩은 와이어를 `두 계열`로 나눕니다. `호환(interop)** 과 `득팩 전용(deuk)** 을 먼저 고른 뒤, 그 안에서 `protocol` 문자열을 고릅니다. 표와 CLI 기본값은 [와이어 프로토콜 계열](../reference/wire-protocols.ko.md)을 보면 한눈에 정리됩니다.
 
 ---
 
@@ -22,18 +22,18 @@
 | **`tcompact`** | `--protocol tcompact` | Thrift Compact |
 | **`tjson`** | `--protocol tjson` | Thrift JSON (`DpJsonProtocol`) |
 
-**JS:** **`pack` / `json` / `yaml`** 은 추가 메타 없이 동작합니다. **`tbinary` / `tcompact` / `tjson`** 은 `SerializationOptions`에 **`interopRootStruct`**(+ 중첩용 **`interopStructDefs`**)가 필요하거나 **`serializeInteropStruct`** 를 씁니다. 서비스 코드는 여전히 **생성 C#·C++** 이 중심입니다.
+`JS:** **`pack` / `json` / `yaml`** 은 추가 메타 없이 동작합니다. **`tbinary` / `tcompact` / `tjson`** 은 `SerializationOptions`에 **`interopRootStruct`**(+ 중첩용 **`interopStructDefs`**)가 필요하거나 **`serializeInteropStruct`** 를 씁니다. 서비스 코드는 여전히 `생성 C#·C++** 이 중심입니다.
 
-한 IDL 출력에 **한 `--protocol` 힌트**를 주는 전제는 같습니다. 여러 와이어가 필요하면 출력 폴더를 나누거나 `--pipeline` 으로 잡을 여러 개를 두면 됩니다.
+한 IDL 출력에 `한 `--protocol` 힌트`를 주는 전제는 같습니다. 여러 와이어가 필요하면 출력 폴더를 나누거나 `--pipeline` 으로 잡을 여러 개를 두면 됩니다.
 
 ---
 
 ## 2. 직렬화 흐름 (개념)
 
-1. **쓰기**: 메모리 상의 구조체/객체 → **Writer**(또는 npm `serialize`) → 바이트 또는 텍스트.
-2. **읽기**: 바이트/텍스트 → **Reader**(또는 npm `deserialize`) → 구조체/객체.
+1. **쓰기`: 메모리 상의 구조체/객체 → `Writer**(또는 npm `serialize`) → 바이트 또는 텍스트.
+2. **읽기`: 바이트/텍스트 → `Reader**(또는 npm `deserialize`) → 구조체/객체.
 
-**같은 스키마·같은 `protocol`·같은 계열**이면 C#에서 쓴 바이트를 C++에서 읽는 식의 교차가 맞습니다. **계열이 다르면** 바이트 형식이 다릅니다.
+`같은 스키마·같은 `protocol`·같은 계열`이면 C#에서 쓴 바이트를 C++에서 읽는 식의 교차가 맞습니다. **계열이 다르면** 바이트 형식이 다릅니다.
 
 ---
 
@@ -73,7 +73,7 @@ const again = deserialize(bytes);
 
 ## 6. msgId·ProtocolRegistry (C#)
 
-메시지 종류별로 **msgId**를 붙여 디스패치할 때는 생성 코드의 **ProtocolRegistry**와 쌍을 이룹니다. 수신 버퍼에서 msgId를 읽은 뒤, Registry에서 해당 타입을 찾아 **Read**로 역직렬화하는 패턴을 사용합니다.  
+메시지 종류별로 `msgId`를 붙여 디스패치할 때는 생성 코드의 `ProtocolRegistry`와 쌍을 이룹니다. 수신 버퍼에서 msgId를 읽은 뒤, Registry에서 해당 타입을 찾아 `Read`로 역직렬화하는 패턴을 사용합니다.  
 자세한 사용법은 [C# 가이드](csharp-guide.ko.md)와 [프로토콜](../products/protocol.ko.md) 문서를 참고하세요.
 
 ---

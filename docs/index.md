@@ -5,16 +5,15 @@ hide:
 
 <div id="dp-dynamic-notice-landing"></div>
 
-
 <div class="dp-hero">
   <div class="dp-hero-visual">
     <img src="/assets/deukpack-brand-concept-01.png" alt="DeukPack brand concept - a dog carrying data packs" loading="eager" decoding="async" />
   </div>
   <div class="dp-hero-copy">
     <p class="dp-eyebrow">DeukPack — A robust contract between AI Agents and Unity</p>
-    <h1>Infinite server flexibility<br>High client performance</h1>
+    <h1>Server flexibility<br>Stable client performance</h1>
     <p class="dp-tagline">Dynamic JS/AI Flexibility × High-Performance In-place Reuse Performance</p>
-    <p class="dp-lead"><strong>A hybrid schema engine breaking the limits of AI agent automation.</strong><br><br>In an era where AI holds data sovereignty, DeukPack consolidates fragmented IDLs into a single 'semantic spine'. In Node.js servers, slice and dice JSON objects freely. DeukPack uses schemas (.deuk) as filters to pack only the necessary fields into the leanest, most powerful binary.<br><br>On the Unity client, this binary is instantly reassembled via <strong>In-place Unpack</strong>, significantly reducing garbage (GC) by reusing instances and containers. An efficient asymmetric compromise of flexibility and performance—this is where the DeukPack saga begins.</p>
+    <p class="dp-lead"><strong>A hybrid schema engine for AI agent automation.</strong><br><br>In an era where AI holds data sovereignty, DeukPack consolidates fragmented IDLs into a single 'semantic spine'. In Node.js servers, slice and dice JSON objects freely. DeukPack uses schemas (.deuk) as filters to pack only the necessary fields into a compact binary.<br><br>On the Unity client, this binary is instantly reassembled via <strong>In-place Unpack</strong>, significantly reducing garbage (GC) by reusing instances and containers. An efficient asymmetric compromise of flexibility and performance—this is the core architecture of DeukPack.</p>
     <div class="dp-pills">
       <span class="dp-pill">Zero-Alloc C# Parser</span>
       <span class="dp-pill">Dynamic JS/TS Masking</span>
@@ -114,27 +113,27 @@ Source, issues, and contributions: [GitHub repository](https://github.com/joygra
 
 ## 🚀 How is it different from existing tech? (Key Features)
 
-These are the **three irreplaceable weapons of DeukPack** compared to Protobuf, FlatBuffers, and JSON.
+These are the **three main features of DeukPack** compared to Protobuf, FlatBuffers, and JSON.
 
 1. **Zero-Copy Override without Allocation**
-   - **Legacy limits:** Protobuf or Thrift forces you to allocate (`new`) a completely separate DTO class every time you want to mask or override specific fields for different users.
-   - **DeukPack advantage:** With just ONE generated C# object, a single `Write(oprot, overrides)` function emits 100 different payload variations without generating any garbage (GC).
+   - **Legacy limits:** Protobuf or Thrift requires allocating (`new`) a separate DTO class every time you want to mask or override specific fields for different users.
+   - **DeukPack advantage:** With just ONE generated C# object, a single `Write(oprot, overrides)` function generates variable payloads without GC (GC).
 2. **Direct POJO Processing without Classes**
    - **Legacy limits:** Even in JS environments, they force heavy class wrappers like `new Message()` or complex offset Builder patterns like FlatBuffers.
-   - **DeukPack advantage:** Simple JavaScript objects (`{ id: 1 }`) thrown by AI are immediately packed into byte arrays. **Infinitely flexible in the AI environment, reliably strict on the client.**
+   - **DeukPack advantage:** Simple JavaScript objects (`{ id: 1 }`) thrown by AI are immediately packed into byte arrays. **Flexible in the JS environment, statically typed on the client.**
 3. **'AI Semantic Spine' beyond a simple spec sheet**
-   - **Legacy limits:** Traditional IDLs are merely 1-dimensional byte conversion shells for communication.
+   - **Legacy limits:** Traditional IDLs are basic byte conversion mappings for communication.
    - **DeukPack advantage:** The `.deuk` file natively supports `extends` (multi-level inheritance) and `tablelink` (DB/Meta table references). It acts as the most condensed **Knowledge Graph (RAG context)** that allows AI (LLMs) to grasp the ERD relationship of an entire project at a glance.
 
 ---
 
 ## 🛡️ Security & Reliability (OOM Defense / Anti-DDoS)
 
-As a fundamental infrastructure component that constantly parses external network byte payloads, DeukPack implements strict defense-in-depth mechanisms against **network-layer parsing vulnerabilities (OOM, Buffer Flooding, Infinite Recursion)**.
+As a fundamental infrastructure component that constantly parses external network byte payloads, DeukPack implements defense mechanisms against **network-layer parsing vulnerabilities (OOM, Buffer Flooding, Infinite Recursion)**.
 
-- **Universal OOM (Out-of-Memory) Defense (v1.7.0+)**: For all supported engines (JS, C#, C++, Java, Elixir), DeukPack enforces validation boundaries during streaming—`MAX_SAFE_LENGTH` (10MB) and `MAX_ELEMENT_COUNT` (1,000,000) limits. Even if malicious clients transmit artificially pumped list headers, packets are instantly discarded (Fail-Fast) before any memory allocation takes place, preventing process crashing.
+- **Universal OOM (Out-of-Memory) Defense (v1.7.0+)**: For all supported engines (JS, C#, C++, Java, Elixir), DeukPack enforces validation boundaries during streaming—`MAX_SAFE_LENGTH` (10MB) and `MAX_ELEMENT_COUNT` (1,000,000) limits. Even if malicious clients transmit artificially pumped list headers, packets are discarded (Fail-Fast) before any memory allocation takes place, preventing process crashing.
 - **Progressive Chunk Validation (JSON Flood Defense)**: Completely replacing legacy `ReadToEnd()` methods, stream endpoints now implement length pre-evaluations, neutralizing both giant string bombs and multi-bracket JSON stack flooding vulnerabilities in Node.js and Java backends.
-- **Continuous DDoS Fuzzer Suite**: Integrated seamlessly into the CI pipeline, the `test-fuzz-oom.js` automation bombards all parsers with 2GB+ abnormal buffers and unbounded structural trees to officially certify the library's resilience.
+- **Continuous DDoS Fuzzer Suite**: Integrated seamlessly into the CI pipeline, the `test-fuzz-oom.js` automation injects parsers with 2GB+ abnormal buffers and unbounded structural trees to verify resilience.
 
 ---
 
@@ -148,6 +147,7 @@ As a fundamental infrastructure component that constantly parses external networ
 | **Java** | ✅ | ✅ | ✅ (v1.5) | ✅ (v1.5) | ✅ | 🚧 | - | - | - | 🚧 |
 | **Elixir (BEAM)** | ✅ (v1.7) | - | - | - | - | - | - | - | - | ✅ (BEAM) |
 | **Excel (Add-in)** | ✅ | - | - | - | - | - | - | - | - | - |
+| **Python** | ✅ (Pure/Rust) | 🚧 | - | - | ✅ | - | 🚧 | - | - | ✅ (v1.9) |
 
 - ✅: Full Support / Production Ready
 - ⚠️: Preview / Partial Support
@@ -156,28 +156,12 @@ As a fundamental infrastructure component that constantly parses external networ
 
 ---
 
-## 🔥 Performance Goals (v1.8.0 Benchmark)
+## ⚡ Performance & Benchmarks
 
-DeukPack is engineered for **scalability** and **low-latency**. Average **60–100% memory allocation reduction** vs industry formats, JS parsing speed improved by **250%**.
+> **Notice: Benchmark Data Under Revision**
+> We have identified an inconsistency between the highly-optimized protocol implementations and the aggregated result table. The performance metrics matrix and cross-language benchmarking details are currently being revised and will be republished once the evaluation is complete.
 
-| Environment | Metric | Industry Tag-based | Industry RPC-based | **DeukPack** |
-| :--- | :--- | :---: | :---: | :---: |
-| **C# / Unity** | Speed | ~ 45 ms | ~ 85 ms | ~ **28 ms** |
-| | Memory | +4.5 MB | +12.0 MB | **0 MB (with Pooling*)** |
-| **C++ (Native)** | Speed | ~ 14 ms | ~ 22 ms | ~ **12 ms** |
-| | Memory | Heap Alloc | Heap Alloc | **Manual Pool** |
-| **Java (Backend)** | Speed | ~ 25 ms | ~ 38 ms | ~ **35 ms** |
-| | Memory | Continuous | Large Objects | **+2.1 MB (Min)** |
-| **JavaScript (V8)** | Speed | ~ 54 ms | ~ 190 ms | ~ **158 ms** |
-| | Memory | +4.2 MB | -1.9 MB | **Immediate Reclaim** |
-| **Elixir (BEAM)** | Speed | - | - | ~ **31 ms** |
-| | Memory | - | - | **0 MB (Native Match)** |
-
-!!! tip "Test Environment"
-    Based on 10,000 Rows Payload decoding stress test. Results may vary by environment.
-    *C# 0 MB: Based on reuse of top-level and collection container instances. (Nested struct elements within lists may still trigger allocations unless an object pool is used.)
-
-👉 **[View the Full Benchmark Matrix](journal/performance-matrix.md)**
+To ensure objective performance testing, we have adopted industry-standard benchmarks such as `BenchmarkDotNet`, `mitata`, and `pytest-benchmark`. Achieving **60-100% reduction in memory allocation** and **2.5x to 5x faster parsing speeds** compared to legacy industry formats. If you find any errors or have suggestions regarding the benchmark scenarios, please let us know.
 
 ---
 

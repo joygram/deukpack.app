@@ -1,8 +1,8 @@
 # 와이어 프로토콜 계열 (호환 vs 득팩 전용)
 
-CLI `--protocol`, npm 패키지 `serialize` / `deserialize`, 생성 **C#·C++** 코드가 쓰는 **문자열 이름은 같아 보여도**, 실제로는 **두 계열**로 나뉩니다. 여기를 기준으로 맞추면 **스택별로 어떤 구현이 있는지** 헷갈리지 않습니다.
+CLI `--protocol`, npm 패키지 `serialize` / `deserialize`, 생성 `C#·C++** 코드가 쓰는 `문자열 이름은 같아 보여도`, 실제로는 `두 계열`로 나뉩니다. 여기를 기준으로 맞추면 `스택별로 어떤 구현이 있는지** 헷갈리지 않습니다.
 
-**English:** 사이트 상단 **언어** 메뉴에서 **English**를 선택하면 동일 목차의 영문 페이지로 이동합니다.
+`English:** 사이트 상단 `언어` 메뉴에서 **English`를 선택하면 동일 목차의 영문 페이지로 이동합니다.
 
 ---
 
@@ -10,8 +10,8 @@ CLI `--protocol`, npm 패키지 `serialize` / `deserialize`, 생성 **C#·C++** 
 
 | 값 | 의미 |
 |----|------|
-| **`interop`** | Thrift 등 **외부와 바이트·의미를 맞출 때** 쓰는 호환 계열 |
-| **`deuk`** | **득팩 전용** 와이어 (npm의 동적 JS 직렬화가 지원하는 범위) |
+| ``interop`** | Thrift 등 `외부와 바이트·의미를 맞출 때** 쓰는 호환 계열 |
+| ``deuk`** | `득팩 전용** 와이어 (npm의 동적 JS 직렬화가 지원하는 범위) |
 
 `protocol` 문자열과 계열이 **서로 맞아야** 합니다. 런타임·헬퍼에서 `wireFamily`를 넣거나, 타입으로 고정하려면 코어의 `WireProtocolOption`·`deukWire()` / `interopWire()` 패턴을 쓰면 됩니다. (상세: [호환 vs 네이티브 와이어](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_WIRE_INTEROP_VS_NATIVE.md))
 
@@ -21,26 +21,26 @@ CLI `--protocol`, npm 패키지 `serialize` / `deserialize`, 생성 **C#·C++** 
 
 ### 호환 계열 (`interop`) — Thrift
 
-**허용 문자열만:** **`tbinary`**, **`tcompact`**, **`tjson`**. 예전 `binary` / `compact` / `thrift_json` 등은 CLI·타입에서 **받지 않습니다**.
+`허용 문자열만:** **`tbinary`**, **`tcompact`**, **`tjson`**. 예전 `binary` / `compact` / `thrift_json` 등은 CLI·타입에서 `받지 않습니다**.
 
 | `protocol` | 설명 | **JS** `WireSerializer` | **Native (C# / C++ / Java)** | **Elixir** |
 |------------|------|---------------------------|-------------------------|------------|
-| **`tbinary`** | Thrift Binary | **`interopRootStruct`** 전달 시 **구현** | `DpBinaryProtocol` | Native BEAM Pattern Matching |
+| ``tbinary`** | Thrift Binary | **`interopRootStruct`** 전달 시 `구현** | `DpBinaryProtocol` | Native BEAM Pattern Matching |
 | **`tcompact`** | Thrift Compact | 동일 | `DpCompactProtocol` | N/A |
 | **`tjson`** | Thrift JSON wrapper | 동일 | C# 및 각종 Native 런타임 | N/A |
 
-루트 struct 스키마 없이 호환 프로토콜만 지정하면 **필드 id를 알 수 없어** 명시적 오류가 납니다. 파싱·스키마에서 채운 옵션으로 `WireSerializer` 또는 `serializeInteropStruct` / `deserializeInteropStruct` 를 쓰면 됩니다. 앱 규모에서는 **생성 C#·C++** 이 여전히 중심입니다.
+루트 struct 스키마 없이 호환 프로토콜만 지정하면 `필드 id를 알 수 없어` 명시적 오류가 납니다. 파싱·스키마에서 채운 옵션으로 `WireSerializer` 또는 `serializeInteropStruct` / `deserializeInteropStruct` 를 쓰면 됩니다. 앱 규모에서는 `생성 C#·C++` 이 여전히 중심입니다.
 
 ### Protobuf 바이트 와이어 (**예정**)
 
-Google Protobuf 스타일 **바이트** 인코딩(`protv2` / `protv3` 프로파일)은 **로드맵상 예정**이며 현재 미포함입니다. 당분간은 Thrift 호환(`tbinary` 등) 또는 득팩 전용 와이어를 쓰면 됩니다. **`protv2` / `protv3`** 는 문서에서 **필드 규칙** 표기용으로만 쓸 수 있습니다.
+Google Protobuf 스타일 `바이트` 인코딩(`protv2` / `protv3` 프로파일)은 `로드맵상 예정`이며 현재 미포함입니다. 당분간은 Thrift 호환(`tbinary` 등) 또는 득팩 전용 와이어를 쓰면 됩니다. ``protv2` / `protv3`** 는 문서에서 `필드 규칙** 표기용으로만 쓸 수 있습니다.
 
 ### 득팩 전용 계열 (`deuk`)
 
 | `protocol` | 설명 | **JS** `WireSerializer` | **Native (C# / C++ / Java)** | **Elixir** |
 |------------|------|---------------------------|-------------------------|------------|
-| `pack` | 태그 기반 바이너리(득팩 네이티브) | **구현됨** | 생성 Reader/Writer와 조합 | **구현됨** |
-| `json` | 값만 UTF-8 JSON | **구현됨** | 동일 계열 | **Passthrough** |
+| `pack` | 태그 기반 바이너리(득팩 네이티브) | `구현됨` | 생성 Reader/Writer와 조합 | `구현됨` |
+| `json` | 값만 UTF-8 JSON | **구현됨` | 동일 계열 | `Passthrough** |
 | `yaml` | 값만 UTF-8 YAML | **구현됨** | 동일 계열 | N/A |
 
 **CLI 기본 `--protocol`:** **`pack`**. 호환은 **`tbinary` / `tcompact` / `tjson`** 만.
@@ -69,7 +69,7 @@ JS에서 Thrift 호환 바이트가 필요하면 **`interopRootStruct`**(및 필
 | `pack`, `json`, `yaml` | `deuk` | 득팩 네이티브 |
 | **`tbinary`**, **`tcompact`**, **`tjson`** | `interop` | Thrift 호환 |
 
-한 번에 **한 값**을 코드젠 힌트로 넣습니다. 여러 와이어가 필요하면 출력 폴더를 나누거나 `--pipeline`으로 잡을 여러 개를 둡니다.
+한 번에 `한 값`을 코드젠 힌트로 넣습니다. 여러 와이어가 필요하면 출력 폴더를 나누거나 `--pipeline`으로 잡을 여러 개를 둡니다.
 
 ### 🛡️ 핵심 보안 한계 규약 (모든 와이어 프로토콜 공통 적용)
 
@@ -81,8 +81,8 @@ JS에서 Thrift 호환 바이트가 필요하면 **`interopRootStruct`**(및 필
 
 ## 5. `json` 이름이 겹칠 때 (헷갈림 방지)
 
-- **득팩 전용 `json` / `yaml`:** 와이어로 쓰는 **값만** JSON·YAML ([DEUKPACK_DEUK_JSON_YAML](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_DEUK_JSON_YAML.md) — 설정·OpenAPI 라운드트립용 `.deuk.json` 등과 구분).
-- **`tjson`:** **Thrift JSON** 호환 계열 — `json`(deuk)과 **다릅니다**.
+- `득팩 전용 `json` / `yaml`:** 와이어로 쓰는 `값만** JSON·YAML ([DEUKPACK_DEUK_JSON_YAML](https://github.com/joygram/DeukPack/blob/main/docs/DEUKPACK_DEUK_JSON_YAML.md) — 설정·OpenAPI 라운드트립용 `.deuk.json` 등과 구분).
+- ``tjson`:** **Thrift JSON** 호환 계열 — `json`(deuk)과 `다릅니다**.
 
 ---
 

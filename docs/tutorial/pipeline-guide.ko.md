@@ -1,6 +1,6 @@
 # 파이프라인 만들기
 
-**`deukpack.pipeline.json`**(기본 파일명; `init`의 `-o`로 다른 경로 가능)으로 여러 IDL·여러 출력을 **한 번에** 실행합니다.
+``deukpack.pipeline.json`**(기본 파일명; `init`의 `-o`로 다른 경로 가능)으로 여러 IDL·여러 출력을 `한 번에** 실행합니다.
 
 ---
 
@@ -71,14 +71,14 @@ npm run build
 
 - **`defineScope": "all"`** — **`defineRoot` 아래 모든 `*.deuk`** 를 모아 **`exclude`**(전역+잡 병합) 적용 후 빌드.
 - **`outputDir`** 를 **`defineRoot`** 와 같게 두면 **`_deuk_define/csharp`** 등 하위에 생성.
-- **`outputLangSubdirs`** — 잡별로 `csharp`/`cpp`/`ts`/`js` **한 단계 폴더명**만 바꿀 때(구 `typescript`/`javascript` 등).
+- ``outputLangSubdirs`` — 잡별로 `csharp`/`cpp`/`ts`/`js` `한 단계 폴더명`만 바꿀 때(구 `typescript`/`javascript` 등).
 - **`--ts` / `--js`** 및 파이프라인은 산출이 **`ts/`**, **`js/`** (구 `typescript/`·`javascript/` 아님).
 
 샘플: [pipeline.sample-defineScope-all.json](https://github.com/joygram/DeukPack/blob/main/examples/pipeline.sample-defineScope-all.json) · 엔트리 방식: [pipeline.sample.json](https://github.com/joygram/DeukPack/blob/main/examples/pipeline.sample.json).
 
 ### 1.3 실행(소스 빌드 후)
 
-**DeukPack 저장소 루트**에서:
+`DeukPack 저장소 루트`에서:
 
 ```bash
 node scripts/build_deukpack.js --pipeline <설정_파일_경로>
@@ -96,7 +96,7 @@ npm install deukpack
 
 ### 2.2 설정 위치
 
-**프로젝트 루트**의 **`deukpack.pipeline.json`** 을 두면 **`npx deukpack run`** 이 그대로 사용합니다. 다른 경로는 `npx deukpack --pipeline ./경로/설정.json`.
+`프로젝트 루트`의 **`deukpack.pipeline.json`** 을 두면 **`npx deukpack run`** 이 그대로 사용합니다. 다른 경로는 `npx deukpack --pipeline ./경로/설정.json`.
 
 ### 2.3 실행
 
