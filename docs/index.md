@@ -140,7 +140,7 @@ As a fundamental infrastructure component that constantly parses external networ
 
 ## Supported Protocols & Languages (v1.9.0)
 
-| Language / Platform | Pack (.dpk) | TBinary | TCompact | TJSON | JSON (Wire) | YAML / CSV | Protobuf | OpenAPI | MCP | Zero-Alloc / JIT |
+| Language / Platform | Pack (.dpk) | TBinary | TCompact | TJSON | JSON (Wire) | YAML / CSV | Protobuf | OpenAPI | MCP | In-place / JIT |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **TypeScript / JS** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ (v1.5) | ✅ (v1.6) |
 | **C# (.NET / Unity)** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ (v1.2.7) | ✅ | ✅ | - | ✅ |

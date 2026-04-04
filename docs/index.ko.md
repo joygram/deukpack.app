@@ -149,7 +149,7 @@ Protobuf, FlatBuffers, JSON과 비교되는 **득팩(DeukPack)만의 대체 불�
 
 ## 지원 프로토콜 및 언어 (v1.9.0)
 
-| 언어 / 플랫폼 | Pack (.dpk) | TBinary | TCompact | TJSON | JSON (Wire) | YAML / CSV | Protobuf | OpenAPI | MCP | Zero-Alloc / JIT |
+| 언어 / 플랫폼 | Pack (.dpk) | TBinary | TCompact | TJSON | JSON (Wire) | YAML / CSV | Protobuf | OpenAPI | MCP | In-place / JIT |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **TypeScript / JS** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ (v1.5) | ✅ (v1.6) |
 | **C# (.NET / Unity)** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ (v1.2.7) | ✅ | ✅ | - | ✅ |
