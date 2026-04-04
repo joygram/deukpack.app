@@ -7,7 +7,7 @@
 
     **2026-03-28** — 1.2.6 — schema strings, C# codegen, C++ CI, verify
 
-    - **Schema**: DeukPack **`type`** strings; **JSON wire** keys (`i32`, `tf`, …) unchanged.
+    - **Schema**: DeukPack **`type`** strings; **JSON wire** keys (`int32`, `tf`, …) unchanged.
     - **C#**: **`DpSchemaType`** **`Int16`/`Int32`/`Int64`**, codegen property defaults.
     - **CI**: C++ **`ctest`** on Ubuntu and Windows.
     - **Tooling**: **`npm run verify`**.

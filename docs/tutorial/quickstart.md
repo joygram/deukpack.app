@@ -46,7 +46,7 @@ This reads `deukpack.pipeline.json` and generates code for all configured langua
 Create a `.deuk` file (e.g., `schema.deuk`):
 
 ```thrift
-namespace * deuk.tutorial
+namespace deuk.tutorial
 
 struct HelloRequest {
     > 1 name

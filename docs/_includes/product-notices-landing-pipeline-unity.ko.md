@@ -21,7 +21,7 @@
 
     **2026-03-28** — 1.2.6 — 스키마 표준·C# 코드젠·C++ CI·verify
 
-    - **스키마**: `struct`/`enum`/`int32` 등 득팩 표준; JSON 와이어 `{i32}` 등 키는 그대로.
+    - **스키마**: `struct`/`enum`/`int32` 등 득팩 표준; JSON 와이어 `{int32}` 등 키는 그대로.
     - **C#**: `DpSchemaType` `Int16`/`Int32`/`Int64`, 생성 타입 기본 초기화.
     - **CI**: Ubuntu·Windows에서 C++ `ctest`.
     - **도구**: `npm run verify`.

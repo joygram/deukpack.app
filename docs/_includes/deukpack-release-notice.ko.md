@@ -1,2 +1,2 @@
-!!! info "득팩 코어 업데이트 — 1.7.6"
-    **득팩 코어 1.6.0** — JavaScript(Node.js/Web) 환경에 사전 컴파일 기반 정적 **V8 JIT Codegen**을 도입하여 동역 파싱 대비 속도를 250% 높이고 힙 할당을 즉시 회수합니다. 또한 C#(Unity) 파이프라인을 `[StructLayout]` 기반의 **완전 무할당(Zero-Alloc) 구조**로 격상시켜 백만 회 로딩에도 0바이트의 가비지를 보장합니다. 퍼포먼스가 중요한 모든 레이어에 업계 최상위권의 속도와 메모리 안정성을 제공합니다. [GitHub Releases](https://github.com/joygram/DeukPack/releases/latest) · [릴리스 요약](https://deukpack.app/releases/)
+!!! info "득팩 코어 업데이트 — 1.8.1"
+    **득팩 코어 1.8.1** — 이전 릴리스(1.8.0) 파이프라인에서 탐지된 `sample.thrift` 종속성 누락 이슈를 완벽히 해결하고 순정 `sample.deuk` 규격으로 전환했습니다. C# 제네레이터의 Non-nullable 경고와 Elixir Dialyzer 파싱 모듈 참조 경고를 사전 차단(Bypass)하여 완벽한 Zero-Warning CI/CD 빌드를 보장합니다. [GitHub Releases](https://github.com/joygram/DeukPack/releases/latest) · [릴리스 요약](https://deukpack.app/releases/)

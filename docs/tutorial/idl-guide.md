@@ -15,7 +15,7 @@ namespace csharp MyApp.Protocol
 namespace cpp myapp.protocol
 ```
 
-In `.deuk` you can use the same syntax or a wildcard namespace like `namespace * MyApp`. This determines the namespace/package of the generated C#/C++ types.
+In `.deuk` you can use the same syntax or a wildcard namespace like `namespace MyApp`. This determines the namespace/package of the generated C#/C++ types.
 
 ---
 
@@ -25,9 +25,9 @@ In `.deuk` you can use the same syntax or a wildcard namespace like `namespace *
 |----------|-------------|------------|-------------|
 | `bool` | true/false | `bool` | `bool` |
 | `byte` | unsigned 8-bit | `byte` | `uint8_t` |
-| `i16` | 16-bit integer | `short` | `int16_t` |
-| `i32` | 32-bit integer | `int` | `int32_t` |
-| `i64` | 64-bit integer | `long` | `int64_t` |
+| `int16` | 16-bit integer | `short` | `int16_t` |
+| `int32` | 32-bit integer | `int` | `int32_t` |
+| `int64` | 64-bit integer | `long` | `int64_t` |
 | `double` | 64-bit float | `double` | `double` |
 | `string` | UTF-8 string | `string` | `std::string` |
 | `binary` | byte array | `byte[]` | `std::string` / buffer |
@@ -84,7 +84,7 @@ struct Example {
     > 1 ids
     > 2 tags
     > 3 uniqueNames
-  4: map<i32, string> idToName
+  4> map<int32, string> idToName
 }
 ```
 
@@ -104,7 +104,7 @@ include "shared.thrift"
 
 struct Request {
     > 1 id
-  2: shared.CommonHeader header
+  2> shared.CommonHeader header
 }
 ```
 

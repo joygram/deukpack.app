@@ -46,7 +46,7 @@ npx deukpack run
 `.deuk` 파일을 만듭니다 (예: `schema.deuk`):
 
 ```thrift
-namespace * deuk.tutorial
+namespace deuk.tutorial
 
 struct HelloRequest {
     > 1 name

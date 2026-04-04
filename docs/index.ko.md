@@ -11,10 +11,10 @@ hide:
     <img src="/assets/deukpack-brand-concept-01.png" alt="DeukPack 대표 브랜드 시안 - 데이터 팩을 메고 달리는 강아지 컨셉" loading="eager" decoding="async" />
   </div>
   <div class="dp-hero-copy">
-    <p class="dp-eyebrow">DeukPack — AI 에이전트와 Unity를 잇는 가장 완벽한 약속</p>
-    <h1>서버의 무한한 유연성<br>클라이언트의 극한 성능</h1>
-    <p class="dp-tagline">Dynamic JS/AI 유연성 × Zero-Allocation C# 성능</p>
-    <p class="dp-lead"><strong>AI 에이전트 자동화의 한계를 돌파하는 하이브리드 스키마 엔진.</strong><br><br>AI가 데이터 주권을 쥐는 시대, 득팩은 파편화된 IDL을 하나의 '시맨틱 척추(Spine)'로 통합합니다. Node.js 서버에서는 JSON 객체를 자유롭게 자르고 붙이십시오. 득팩이 스키마(.deuk)를 필터 삼아 필요한 필드만 가장 얇고 강력한 바이너리로 압축합니다.<br><br>Unity 클라이언트에서는 단 1바이트의 쓰레기(가비지)도 남기지 않는 <strong>Zero-Allocation C#</strong>으로 즉시 조립됩니다. 유연함과 성능의 완벽한 비대칭 타협, 그것이 득팩 대서사시의 시작입니다.</p>
+    <p class="dp-eyebrow">DeukPack — AI 에이전트와 Unity를 잇는 견고한 약속</p>
+    <h1>서버의 무한한 유연성<br>클라이언트의 높은 성능</h1>
+    <p class="dp-tagline">Dynamic JS/AI 유연성 × High-Performance In-place Reuse 성능</p>
+    <p class="dp-lead"><strong>AI 에이전트 자동화의 한계를 돌파하는 하이브리드 스키마 엔진.</strong><br><br>AI가 데이터 주권을 쥐는 시대, 득팩은 파편화된 IDL을 하나의 '시맨틱 척추(Spine)'로 통합합니다. Node.js 서버에서는 JSON 객체를 자유롭게 자르고 붙이십시오. 득팩이 스키마(.deuk)를 필터 삼아 필요한 필드만 가장 얇고 강력한 바이너리로 압축합니다.<br><br>Unity 클라이언트에서는 인스턴스 및 컨테이너 재사용을 통해 가비지(GC) 발생을 최소화하는 <strong>In-place Unpack</strong>으로 즉시 조립됩니다. 유연함과 성능의 효율적인 비대칭 타협, 그것이 득팩 대서사시의 시작입니다.</p>
     <div class="dp-pills">
       <span class="dp-pill">Zero-Alloc C# 파서</span>
       <span class="dp-pill">Dynamic JS/TS 마스킹</span>
@@ -36,36 +36,44 @@ hide:
 
 ---
 
+!!! tip "📢 [v1.9.0 업데이트] Python 공식 엔진 지원 및 산업 표준 BMT 지표 갱신"
+    득팩 생태계에 **Python (3.6+) 공식 바이너리 엔진**이 새로이 추가되었습니다. 이와 더불어, 엔터프라이즈 환경에서의 객관적인 신뢰성 확보를 위해 과거의 자체 측정 방식을 폐기하고, 전 언어에 걸친 벤치마크 환경을 **TTA BMT 수준의 산업 표준 프레임워크**(`BenchmarkDotNet`, `mitata`, `pytest-benchmark` 등)로 개편했습니다. 
+    
+    실제 서비스와 동일한 복합 객체 환경에서 재검증된 보다 투명하고 엄격한 최신 지표는 [성능 매트릭스 백서](journal/performance-matrix.md)에서 확인하실 수 있습니다.
+
 ## ⚡ 한눈에 보기 (What it looks like)
 
 **1. OpenAPI 스키마 임포트 (또는 .deuk IDL 작성)**
 ```deuk
 // 기존에 쓰던 OpenAPI(Swagger)를 그대로 먹이거나, 깔끔한 IDL을 작성합니다:
+namespace Dto
+
 struct Hero {
-        > 1 id;
-        > 2 name;
-        > 3 hp;
+    1> int32 id
+    2> string name
+    3> float hp
 }
 ```
 
 **2. 서버 (JS/TS): 클래스 없는 순수 POJO 직렬화**
 ```typescript
-// 무거운 클래스 래퍼 없이, 순수 JS 객체를 가볍게 즉시 바이트로 압축합니다.
-const payload = gameApi.Hero.toBinary({ id: 1, name: "Arthur" });
+// No heavy class wrappers — compress pure JS objects into bytes instantly.
+const payload = Dto.Hero.pack({ id: 1, name: "Arthur" });
 network.send(payload);
 ```
 
-**3. 클라이언트 (C# Unity): Zero-Alloc 읽기 & 오버라이드 쓰기**
+**3. 클라이언트 (C# Unity): In-place 읽기 & 오버라이드 쓰기**
 ```csharp
-Hero cachedHero = new Hero(); // 최초 1회만 할당
+Dto.Hero cachedHero = new Dto.Hero(); // 최초 1회만 할당
 
 void OnNetworkMessage(byte[] inputData) {
-    // 1. 가비지(GC) 없는 디코딩 (입력 역직렬화, Unpack)
+    // 1. 가비지(GC) 최소화 디코딩 (입력 역직렬화, Unpack)
+    // 최상위 객체 및 내부 List 인스턴스를 재사용하여 GC 압력을 획기적으로 낮춥니다.
     cachedHero.Unpack(inputData); 
     Debug.Log($"Hero: {cachedHero.name}, HP: {cachedHero.hp}");
 
     // 2. 할당 없는 직렬화 (출력 직렬화, Pack)
-    // [new] 할당 쓰레기 없이, 값만 변경하여 곧바로 전송합니다.
+    // [new] 할당 쓰기 없이, 값만 변경하여 곧바로 전송합니다.
     cachedHero.hp = 99f;
     byte[] outputData = cachedHero.Pack();
 }
@@ -98,64 +106,10 @@ Protobuf, FlatBuffers, JSON과 비교되는 **득팩(DeukPack)만의 대체 불�
    - **득팩의 차별점:** 생성된 C# 객체 단 한 개만 가지고, `Write(oprot, overrides)` 함수 하나로 100가지의 변형 본을 가비지(GC) 없이 찍어냅니다.
 2. **클래스 없는 순수 JSON(POJO) 직접 처리**
    - **기존 한계:** JS 환경에서도 `new Message()` 처럼 무거운 클래스 래퍼를 강제하거나, FlatBuffers처럼 복잡한 오프셋 빌더(Builder) 패턴을 써야 합니다.
-   - **득팩의 차별점:** AI가 던지는 단순한 자바스크립트 객체(`{ id: 1 }`)를 곧바로 바이트 배열로 찍어 누릅니다. **AI 환경에서는 무한히 유연하면서도, 클라이언트에서는 예외 없이 엄격한 바이트로 꽂힙니다.**
+   - **득팩의 차별점:** AI가 던지는 단순한 자바스크립트 객체(`{ id: 1 }`)를 곧바로 바이트 배열로 찍어 누릅니다. **AI 환경에서는 무한히 유연 있으면서도, 클라이언트에서는 예외 없이 엄격한 바이트로 꽂힙니다.**
 3. **단순 명세서를 뛰어넘은 'AI 시맨틱 척추'**
    - **기존 한계:** 기존 IDL 규약들은 그저 통신을 위한 1차원적 바이트 변환 껍데기일 뿐입니다.
    - **득팩의 차별점:** `.deuk` 파일에는 `extends`(다단 상속)와 `tablelink`(DB/메타 테이블 구조 참조)가 내장되어 있어, AI(LLM)가 프로젝트 전체의 ERD 관계성을 한눈에 파악할 수 있는 가장 압축된 **지식 그래프(RAG 컨텍스트)**로 작동합니다.
-
----
-
-## 왜 DeukPack인가
-
-<div class="dp-value-grid">
-  <div class="dp-card">
-    <h3>정의를 한 번에</h3>
-    <p>한 번 정의한 스키마로 코드·직렬화·메타·검증이 맞춰지고, 기존 .proto·OpenAPI·CSV 등을 그대로 끌어와 <strong>득팩 파이프라인 안에서</strong> 점진적으로 통합할 수 있습니다.</p>
-  </div>
-  <div class="dp-card">
-    <h3>런타임·서버·실시간 게임 연동</h3>
-    <p>Binary, Compact, JSON 직렬화와 <code>msgId</code>, <code>ProtocolRegistry</code> 기반 메시지 처리. 서버 연동·실시간 게임에서 동일 타입·스키마로 패킷·메타를 주고받을 수 있습니다.</p>
-  </div>
-  <div class="dp-card">
-    <h3>메타 작업을 더 빠르게</h3>
-    <p>스키마 기반 메타 편집·검증부터 Unity·서버 로드 파이프라인까지 이어지는 실제 작업 흐름 중심 구성입니다.</p>
-  </div>
-  <div class="dp-card">
-    <h3>테이블 · 네이티브 메시지</h3>
-    <p>스키마 기반 <code>MetaTableRegistry</code>로 메타 검증·로드. <code>msgId</code>·<code>ProtocolRegistry</code> IDL 자동 생성.</p>
-  </div>
-  <div class="dp-card">
-    <h3>상속 · 선택 · 교체</h3>
-    <p><code>extends</code>로 필드 병합, <code>Write</code> 하나로 필드 선택·오버라이드. Clone 없이 수신자별 직렬화.</p>
-  </div>
-  <div class="dp-card">
-    <h3>풍부한 타입</h3>
-    <p><strong>tablelink</strong>·datetime·decimal 등 DB 모델까지 한 타입 시스템. <a href="tutorial/write-with-overrides/">튜토리얼 →</a></p>
-  </div>
-  <div class="dp-card dp-card--highlight dp-card--mcp">
-    <h3>DeukPackMcp: Universal AI Hub 🚧</h3>
-    <p><strong>.proto, .deuk, OpenAPI</strong> 및 득팩의 <strong>모든 제품군</strong>(Core, Excel, Nav 등)을 AI 에이전트의 실시간 도구로 즉시 통합합니다. 당신의 모든 자산을 AI의 '스킬'로 바꾸는 차세대 게이트웨이.</p>
-    <p><strong>🚧 현재 준비 중:</strong> 유니티 엔진 제어부터 기업용 슬랙/깃허브 설계도 통합까지 한 번에 브리징.</p>
-    <p><a href="products/mcp-hub.ko.md">AI MCP 허브 실전 구축 가이드 →</a></p>
-  </div>
-  <div class="dp-card dp-card--highlight dp-card--ai">
-    <h3>비대칭 아키텍처의 승리</h3>
-    <p>에이전트와 서버가 수십 개의 필드를 <strong>동적(Dynamic)</strong>으로 엮어 빈 캔버스를 채우고, 그 결과물은 <strong>Zero-Allocation C#</strong>이라는 가장 강력한 바이트로 압축되어 Unity에 가비지(GC) 없이 전달됩니다. <strong>유연함과 성능의 완벽한 비대칭 타협</strong>입니다.</p>
-    <ul style="font-size: 0.9em; margin-top: 10px; opacity: 0.9;">
-      <li><strong>할당 없는 오버라이드:</strong> <code>Write(oprot, overrides)</code> 단 하나로 클론(Clone) 방식의 메모리 쓰레기를 완벽하게 제거.</li>
-      <li><strong>순수 JSON 호환:</strong> JS/TS 파이프라인에서 무거운 래퍼 클래스 없이 POJO를 유연하게 직접 조립.</li>
-      <li><strong>AI 지식 그래프:</strong> <code>tablelink</code> 등 단순 프로토콜을 넘어 전체 프로젝트 ERD 컨텍스트를 품은 <code>.deuk</code> IDL.</li>
-    </ul>
-    <p><a href="ai-pipeline-integration.ko.md">AI 가이드레일 실전 전략 →</a> &nbsp; | &nbsp; <a href="positioning.ko.md#대체-불가능한-아키텍처-why-deukpack">타사 직렬화 대체 불가 비교 →</a></p>
-  </div>
-</div>
-
-- **IDL·정의**: **.deuk** 네이티브; Protobuf·레거시 .thrift 파싱. OpenAPI·JSON Schema·CSV·DB 임포트로 한 빌드에 혼합. **struct extends**: 공통 필드를 부모에 한 번 정의, 자식은 고유 필드만 추가 (다단 상속·필드 ID 충돌 검사).
-- **프로토콜·직렬화**: Binary, Compact, JSON. 제로카피(선택). `msgId`·`ProtocolRegistry` **네이티브 메시지 핸들링** — 메시지 ID·디스패치가 IDL 선언만으로 자동 생성.
-- **코드 생성**: C#, C++, TypeScript, JavaScript. SQLite DDL·접근 코드. 모든 struct에 **FieldId 상수** 자동 생성 (매직 넘버 제거, 컴파일 타임 안전).
-- **선택·교체·프로젝션**: **`Write(oprot, fieldIds, overrides?)`** (동일 인스턴스로 수신자별 값 교체·필드 서브셋 직렬화), **Wire Profile** (빌드 타임에 프로파일별 서브셋 타입 생성). 조합해 팬아웃·부분 전송·DTO 분리를 해결.
-- **테이블·메타**: 스키마 기반 메타 편집·검증·비교(Excel 애드인). 단일 키·복합키. `MetaTableRegistry`로 런타임 테이블 로드·검증.
-- **파이프라인·연동**: 정의·메타 → 코드·스키마·테이블 → Unity·서버 검증·로드. 서버 연동·실시간 게임 연동에서 동일 스키마·프로토콜 사용.
 
 ---
 
@@ -193,7 +147,7 @@ Protobuf, FlatBuffers, JSON과 비교되는 **득팩(DeukPack)만의 대체 불�
 
 ---
 
-## 지원 프로토콜 및 언어 (v1.6.0)
+## 지원 프로토콜 및 언어 (v1.9.0)
 
 | 언어 / 플랫폼 | Pack (.dpk) | TBinary | TCompact | TJSON | JSON (Wire) | YAML / CSV | Protobuf | OpenAPI | MCP | Zero-Alloc / JIT |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -211,14 +165,14 @@ Protobuf, FlatBuffers, JSON과 비교되는 **득팩(DeukPack)만의 대체 불�
 
 ---
 
-## 🔥 성능 지향점 (v1.6.0 벤치마크)
+## 🔥 성능 지향점 (v1.8.0 벤치마크)
 
-득팩은 **극한의 확장성**과 **저지연 엔지니어링**을 목표로 설계되었습니다. 타사 상용 포맷 대비 평균 **메모리 할당 60–100% 절감**, JS 파싱 속도 **250% 향상**.
+득팩은 **역동적인 확장성**과 **저지연 엔지니어링**을 목표로 설계되었습니다. 타사 상용 포맷 대비 평균 **메모리 할당 60–100% 절감**, JS 파싱 속도 **250% 향상**.
 
 | 언어 환경 | 지표 | 타사 Tag-based | 타사 RPC-based | **DeukPack** |
 | :--- | :--- | :---: | :---: | :---: |
 | **C# / Unity** | 속도 | ~ 45 ms | ~ 85 ms | ~ **28 ms** |
-| | 메모리 | +4.5 MB | +12.0 MB | **0 MB (Zero)** |
+| | 메모리 | +4.5 MB | +12.0 MB | **0 MB (Pool 적용 시*)** |
 | **C++ (Native)** | 속도 | ~ 14 ms | ~ 22 ms | ~ **12 ms** |
 | | 메모리 | Heap Alloc | Heap Alloc | **Manual Pool** |
 | **Java (Backend)** | 속도 | ~ 25 ms | ~ 38 ms | ~ **35 ms** |
@@ -230,6 +184,7 @@ Protobuf, FlatBuffers, JSON과 비교되는 **득팩(DeukPack)만의 대체 불�
 
 !!! tip "테스트 환경"
     10,000 Rows Payload 디코딩 스트레스 테스트 기준. 사용자 환경에 따라 차이가 있을 수 있습니다.
+    *C# 0 MB: 최상위 인스턴스 및 컬렉션 컨테이너 인스턴스 재사용 기준. (리스트 내 중첩 구조체 원소는 Object Pool 미사용 시 개별 할당 발생 가능)
 
 👉 **[전체 프로토콜별 상세 비교표 보기](journal/performance-matrix.ko.md)**
 

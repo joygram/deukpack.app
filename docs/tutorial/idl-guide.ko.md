@@ -15,7 +15,7 @@ namespace csharp MyApp.Protocol
 namespace cpp myapp.protocol
 ```
 
-`.deuk` 에서는 동일 문법 또는 `namespace * MyApp` 처럼 공통 네임스페이스를 쓸 수 있습니다. 생성되는 C#/C++ 타입의 네임스페이스/패키지가 여기서 정해집니다.
+`.deuk` 에서는 동일 문법 또는 `namespace MyApp` 처럼 공통 네임스페이스를 쓸 수 있습니다. 생성되는 C#/C++ 타입의 네임스페이스/패키지가 여기서 정해집니다.
 
 ---
 
@@ -25,9 +25,9 @@ namespace cpp myapp.protocol
 |----------|------|---------|----------|
 | `bool` | 참/거짓 | `bool` | `bool` |
 | `byte` | 8비트 부호 없음 | `byte` | `uint8_t` |
-| `i16` | 16비트 정수 | `short` | `int16_t` |
-| `i32` | 32비트 정수 | `int` | `int32_t` |
-| `i64` | 64비트 정수 | `long` | `int64_t` |
+| `int16` | 16비트 정수 | `short` | `int16_t` |
+| `int32` | 32비트 정수 | `int` | `int32_t` |
+| `int64` | 64비트 정수 | `long` | `int64_t` |
 | `double` | 64비트 부동소수 | `double` | `double` |
 | `string` | UTF-8 문자열 | `string` | `std::string` |
 | `binary` | 바이트 배열 | `byte[]` | `std::string` / 버퍼 |
@@ -84,7 +84,7 @@ struct Example {
     > 1 ids
     > 2 tags
     > 3 uniqueNames
-  4: map<i32, string> idToName
+  4> map<int32, string> idToName
 }
 ```
 
@@ -104,7 +104,7 @@ include "shared.thrift"
 
 struct Request {
     > 1 id
-  2: shared.CommonHeader header
+  2> shared.CommonHeader header
 }
 ```
 
