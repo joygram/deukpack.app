@@ -48,7 +48,6 @@
   letter-spacing: -0.045em;
   text-wrap: balance;
   word-break: keep-all;
-  overflow-wrap: anywhere;
   color: #f5f8ff;
 }
 [data-md-color-scheme="default"] .dp-hero-copy h1 {
