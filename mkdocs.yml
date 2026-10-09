@@ -3,6 +3,7 @@
 site_name: DeukPack
 site_description: DeukPack connects schema design, code generation, serialization, metadata, and delivery pipelines across teams and systems.
 site_url: https://deukpack.app/
+copyright: Copyright &copy; 2026 득팩. All rights reserved.
 
 extra:
   generator: false
@@ -107,6 +108,7 @@ theme:
     - content.code.copy
 extra_css:
   - stylesheets/extra-v3.css
+  - stylesheets/brand-v1.css
 
 extra_javascript:
   - javascripts/dynamic-release-notice-v2.js

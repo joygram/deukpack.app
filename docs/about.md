@@ -18,4 +18,4 @@ We start with the schemas and workflows teams already have, so they can adopt th
 
 ## Adoption
 
-See [License · Pricing](license.md) for free core terms and information on other products. An official contact channel will be listed there when available.
+See [License · Pricing](license.md) for free core terms and information on other products. For adoption and collaboration inquiries, contact [contact-us@deukpack.app](mailto:contact-us@deukpack.app).

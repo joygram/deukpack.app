@@ -22,4 +22,4 @@ Terms and pricing for the DeukPack product family.
 
 DeukPack core is completely open-source (**Apache-2.0**). You can ship production code on it without any license fees.
 
-Review the [product family](products/index.md) and [quick start](tutorial/quickstart.md) to evaluate your use case. An official contact channel for products requiring separate agreements and technical inquiries will be listed here when available.
+Review the [product family](products/index.md) and [quick start](tutorial/quickstart.md) to evaluate your use case. For products requiring separate agreements and technical inquiries, contact [contact-us@deukpack.app](mailto:contact-us@deukpack.app).

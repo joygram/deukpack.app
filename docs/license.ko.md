@@ -22,4 +22,4 @@
 
 득팩(DeukPack) 코어는 **Apache-2.0** 라이선스로 누구나 무료로 상업적 이용이 가능합니다. 
 
-먼저 [제품군 개요](products/index.ko.md)와 [빠른 시작](tutorial/quickstart.ko.md)에서 적용 범위를 확인해 주세요. 별도 계약이 필요한 제품과 기술 자문을 위한 공식 문의 채널은 준비되는 대로 이 페이지에 안내하겠습니다.
+먼저 [제품군 개요](products/index.ko.md)와 [빠른 시작](tutorial/quickstart.ko.md)에서 적용 범위를 확인해 주세요. 별도 계약이 필요한 제품 및 기술 자문은 [contact-us@deukpack.app](mailto:contact-us@deukpack.app)으로 문의해 주세요.

@@ -25,7 +25,7 @@
   
   // Remember language choice when switcher is clicked
   document.addEventListener('DOMContentLoaded', function() {
-    var langLinks = document.querySelectorAll('.md-select__link[hreflang]');
+    var langLinks = document.querySelectorAll('.md-select__link[hreflang], .landing-language[hreflang]');
     langLinks.forEach(function(link) {
       link.addEventListener('click', function() {
         localStorage.setItem('dp-lang-chosen', '1');
@@ -33,4 +33,19 @@
     });
   });
   </script>
+{% endblock %}
+
+{% block footer %}
+  {% set home_prefix = '/ko/' if config.theme.language == 'ko' else '/' %}
+  <footer class="dp-site-footer">
+    <div class="dp-footer-top">
+      <strong>득팩 <span lang="en">DeukPack</span></strong>
+      <nav class="dp-footer-links" aria-label="Footer">
+        <a href="{{ home_prefix }}about/">{{ '팀 소개' if config.theme.language == 'ko' else 'Our team' }}</a>
+        <a href="{{ home_prefix }}license/">{{ '라이선스' if config.theme.language == 'ko' else 'License' }}</a>
+        <a href="mailto:contact-us@deukpack.app">Contact us</a>
+      </nav>
+    </div>
+    <div class="dp-copyright">{{ config.copyright }}</div>
+  </footer>
 {% endblock %}

@@ -1,75 +1,35 @@
 ---
+template: home.html
 hide:
   - toc
+  - navigation
 ---
-
-<div class="dp-home">
-  <div class="dp-hero">
-    <div class="dp-hero-copy">
-      <p class="dp-eyebrow">DeukPack · 데이터 설계부터 서비스 적용까지</p>
-      <h1>데이터 정의로 시스템을 연결합니다</h1>
-      <p class="dp-lead">DeukPack은 스키마, 코드 생성, 직렬화, 메타 데이터를 하나의 흐름으로 연결합니다. 서버·클라이언트·기획팀이 같은 데이터 정의로 일할 수 있도록 돕습니다.</p>
-      <div class="dp-actions">
-        <a href="products/" class="md-button md-button--primary">제품 살펴보기</a>
-        <a href="tutorial/quickstart/" class="md-button">코어 시작하기</a>
-      </div>
-    </div>
-    <div class="dp-hero-visual">
-      <img src="/assets/deukpack-brand-concept-01.png" alt="DeukPack 브랜드 이미지" loading="eager" decoding="async" />
-    </div>
+<div class="landing-hero">
+  <header class="landing-nav">
+    <a class="landing-brand" href="./" aria-label="DeukPack Home"><span class="landing-mark" aria-hidden="true">d.</span>DeukPack</a>
+    <nav aria-label="Main"><a href="#products">제품</a><a href="documentation-index/">기술 문서</a><a href="#team">팀 소개</a></nav>
+    <div class="landing-nav-actions"><a class="landing-language" href="/" hreflang="en">EN</a><a class="landing-button small" href="#contact">Contact us</a></div>
+  </header>
+  <div class="landing-intro">
+    <p class="landing-kicker">BUILD WITH ONE DEFINITION</p>
+    <h1>데이터 정의 하나로,<br class="hero-break"> 연결되는 모든 시스템.</h1>
+    <p class="landing-lead">스키마부터 코드, 런타임, 기획 데이터까지.<br> 득팩은 팀의 데이터 작업을 하나의 흐름으로 연결합니다.</p>
+    <div class="landing-actions"><a class="landing-button" href="tutorial/quickstart/">코어 시작하기 <span aria-hidden="true">↗</span></a><a class="landing-text-link" href="#products">제품 살펴보기 <span aria-hidden="true">→</span></a></div>
   </div>
-
-  <section class="dp-section" aria-labelledby="dp-value-title">
-    <p class="dp-section-label">WHY DEUKPACK</p>
-    <h2 id="dp-value-title">데이터 계약을 한곳에서 관리하세요</h2>
-    <p class="dp-section-intro">서로 다른 도구와 언어를 쓰는 팀도 같은 스키마를 기준으로 개발할 수 있습니다.</p>
-    <div class="dp-value-grid">
-      <div class="dp-card"><h3>기존 정의 활용</h3><p>.deuk뿐 아니라 기존 IDL과 OpenAPI 등 여러 정의를 통합하는 경로를 제공합니다.</p></div>
-      <div class="dp-card"><h3>다양한 실행 환경 연결</h3><p>서버와 Unity 클라이언트에 필요한 코드와 직렬화 규약을 같은 정의에서 생성합니다.</p></div>
-      <div class="dp-card"><h3>기획 데이터까지 확장</h3><p>테이블, 메타 데이터, 스프레드시트 작업을 개발 파이프라인과 연결합니다.</p></div>
-    </div>
-  </section>
-
-  <section class="dp-section" aria-labelledby="dp-products-title">
-    <p class="dp-section-label">PRODUCTS</p>
-    <h2 id="dp-products-title">필요한 범위부터 시작하세요</h2>
-    <div class="dp-value-grid">
-      <a class="dp-card dp-card-link" href="products/core-engine/"><h3>코어 · 엔진</h3><p>스키마와 코드 생성의 출발점. 무료 코어부터 적용할 수 있습니다.</p><span>자세히 보기 →</span></a>
-      <a class="dp-card dp-card-link" href="products/protocol/"><h3>프로토콜</h3><p>서버와 클라이언트가 공유하는 직렬화와 메시지 처리 규약입니다.</p><span>자세히 보기 →</span></a>
-      <a class="dp-card dp-card-link" href="products/pipeline-unity/"><h3>파이프라인 · Unity</h3><p>생성한 코드와 데이터를 프로젝트 빌드 및 Unity 작업 흐름에 연결합니다.</p><span>자세히 보기 →</span></a>
-    </div>
-    <p><a href="products/">전체 제품군 보기 →</a></p>
-  </section>
-
-  <section class="dp-section dp-section-muted" aria-labelledby="dp-use-title">
-    <p class="dp-section-label">USE CASES</p>
-    <h2 id="dp-use-title">이런 팀에 적합합니다</h2>
-    <div class="dp-value-grid">
-      <div class="dp-card"><h3>게임 · 실시간 서비스</h3><p>Unity와 서버가 같은 메시지 및 데이터 정의를 사용할 때.</p></div>
-      <div class="dp-card"><h3>여러 언어를 쓰는 개발팀</h3><p>기존 스키마를 살리면서 다언어 코드를 일관되게 생성할 때.</p></div>
-      <div class="dp-card"><h3>기획 · 개발 협업팀</h3><p>스프레드시트의 메타 데이터를 코드 및 검증 과정과 연결할 때.</p></div>
-    </div>
-  </section>
-
-  <section class="dp-section" aria-labelledby="dp-team-title">
-    <p class="dp-section-label">OUR TEAM</p>
-    <div class="dp-team-panel">
-      <div>
-        <h2 id="dp-team-title">DeukPack을 만드는 팀</h2>
-        <p>우리는 서로 다른 시스템 사이에서 반복되는 데이터 정의와 연동 문제를 해결하는 스타트업 팀입니다. 개발자가 스키마와 도구를 연결하는 데 쓰는 시간을 줄이고, 제품 자체에 더 집중할 수 있도록 DeukPack을 만들고 있습니다.</p>
+  <figure class="landing-visual" aria-label="하나의 스키마에서 시작되는 개발 흐름">
+    <div class="visual-bar"><span class="visual-dots" aria-hidden="true">● ● ●</span><span>DeukPack / Data flow</span><span class="visual-badge">SCHEMA → SYSTEMS</span></div>
+    <div class="visual-content"><h2>한 번 정의하고, 함께 사용하세요.</h2>
+      <div class="visual-flow">
+        <div class="flow-node"><span class="node-label">01 / 데이터 정의</span><div class="schema-icon" aria-hidden="true">&#123; &#125;</div><h3>Schema</h3><p>팀이 공유하는 스키마</p><div class="format-tags"><span>.deuk</span><span>.proto</span><span>OpenAPI</span></div></div>
+        <span class="flow-arrow" aria-hidden="true">→</span>
+        <div class="flow-node flow-core"><span class="node-label">02 / 연결의 중심</span><div class="core-symbol" aria-hidden="true">d.</div><h3>DeukPack</h3><p>코드 생성 · 직렬화 · 검증</p></div>
+        <span class="flow-arrow" aria-hidden="true">→</span>
+        <div class="flow-outputs"><span class="node-label">03 / 프로젝트에 적용</span><div><strong>Code &amp; Runtime</strong><p>서버와 클라이언트</p></div><div><strong>Metadata</strong><p>테이블과 스프레드시트</p></div></div>
       </div>
-      <a href="about/" class="md-button">팀 이야기 보기</a>
-    </div>
-  </section>
-
-  <section class="dp-section dp-home-cta" aria-labelledby="dp-next-title">
-    <p class="dp-section-label">GET STARTED</p>
-    <h2 id="dp-next-title">제품을 살펴보고 직접 시작해 보세요</h2>
-    <p>기술 문서에서 설치 방법과 활용 범위를 확인할 수 있습니다. 도입 조건은 라이선스 안내에 정리했습니다.</p>
-    <div class="dp-actions">
-      <a href="tutorial/quickstart/" class="md-button md-button--primary">빠른 시작</a>
-      <a href="license/" class="md-button">라이선스 · 비용</a>
-      <a href="documentation-index/" class="md-button">기술 문서</a>
-    </div>
-  </section>
+    </div><figcaption>DeukPack의 데이터 흐름을 설명하는 개념도입니다.</figcaption>
+  </figure>
 </div>
+<section class="landing-section"><p class="landing-kicker">WHY DEUKPACK</p><h2>정의는 한곳에.<br>팀의 작업은 더 가까이.</h2><p class="landing-description">서로 다른 언어와 도구를 쓰더라도 같은 데이터 규약을 공유할 수 있도록 설계했습니다.</p><div class="landing-grid"><article class="landing-value"><span>01</span><h3>기존 정의에서 시작</h3><p>기존 IDL과 OpenAPI를 활용해, 필요한 범위부터 도입할 수 있습니다.</p></article><article class="landing-value"><span>02</span><h3>코드와 데이터를 함께</h3><p>서버와 클라이언트에 필요한 코드와 직렬화 규약을 같은 정의에서 생성합니다.</p></article><article class="landing-value"><span>03</span><h3>기획과 개발을 연결</h3><p>스프레드시트의 메타 데이터를 코드 생성과 검증 과정으로 이어갑니다.</p></article></div></section>
+<section class="landing-section products-section" id="products"><p class="landing-kicker">PRODUCTS</p><h2>필요한 도구부터,<br>자연스럽게 확장하세요.</h2><div class="landing-grid"><a class="landing-product" href="products/core-engine/"><span>CORE ENGINE</span><h3>코어 · 엔진</h3><p>스키마와 코드 생성의 출발점. 무료 코어부터 시작하세요.</p><b>자세히 보기 <span aria-hidden="true">↗</span></b></a><a class="landing-product" href="products/protocol/"><span>PROTOCOL</span><h3>프로토콜</h3><p>서버와 클라이언트가 공유하는 직렬화와 메시지 규약.</p><b>자세히 보기 <span aria-hidden="true">↗</span></b></a><a class="landing-product" href="products/pipeline-unity/"><span>PIPELINE</span><h3>파이프라인 · Unity</h3><p>생성한 코드와 데이터를 프로젝트 빌드에 연결하는 흐름.</p><b>자세히 보기 <span aria-hidden="true">↗</span></b></a></div></section>
+<section class="landing-section landing-team" id="team"><div><p class="landing-kicker">OUR TEAM / 득팩</p><h2>개발에 집중할 수 있도록.<br>우리는 득팩입니다.</h2></div><div><p>우리는 시스템 사이에서 반복되는 데이터 정의와 연동 문제를 해결하는 스타트업 팀입니다. 도구를 연결하는 시간을 줄이고, 더 나은 제품을 만드는 데 집중할 수 있도록 돕습니다.</p><a class="landing-text-link" href="about/">득팩 팀 알아보기 ↗</a></div></section>
+<section class="landing-contact" id="contact"><p class="landing-kicker">CONTACT US</p><h2>함께 연결할 다음 프로젝트가 있나요?</h2><p>제품 도입, 기술 협업, 파트너십에 대해 이야기해 주세요.</p><a href="mailto:contact-us@deukpack.app">contact-us@deukpack.app <span aria-hidden="true">↗</span></a></section>
