@@ -30,22 +30,25 @@
   margin-top: 0.4rem;
 }
 .dp-hero {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
   align-items: center;
-  gap: 2rem;
+  gap: clamp(1.4rem, 3vw, 2.5rem);
   padding: 2.2rem 0 3rem;
 }
 .dp-hero-copy {
-  flex: 1 1 58%;
   min-width: 0;
 }
 .dp-hero-copy h1 {
   margin: 0 0 0.8rem;
   border-bottom: 0;
   padding-bottom: 0;
-  font-size: clamp(2.1rem, 4vw, 3.45rem);
-  line-height: 1.18;
+  font-size: clamp(2rem, 2.8vw, 2.75rem);
+  line-height: 1.22;
   letter-spacing: -0.045em;
+  text-wrap: balance;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
   color: #f5f8ff;
 }
 [data-md-color-scheme="default"] .dp-hero-copy h1 {
@@ -94,10 +97,16 @@
   font-weight: 600;
 }
 .dp-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 0;
+}
+.dp-home .dp-actions .md-button,
+.dp-home .dp-team-panel .md-button {
   margin: 0;
 }
 .dp-hero-visual {
-  flex: 1 1 42%;
   min-width: 0;
 }
 .dp-hero-visual img {
@@ -216,32 +225,70 @@
 .dp-card--ai {
   grid-row: span 3;
 }
-/* 탭·로고: 폭과 무관하게 항상 표시 */
-.md-tabs {
-  display: block !important;
-}
-.md-header__button.md-logo {
-  display: inline-block !important;
-}
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1100px) {
   .dp-hero {
-    flex-direction: column;
-    align-items: stretch;
-    padding-top: 1rem;
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+    padding: 1.5rem 0 2rem;
   }
   .dp-value-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .dp-hero-copy h1 {
-    font-size: 2rem;
+    font-size: clamp(2rem, 4vw, 2.7rem);
   }
   .dp-hero-visual img {
-    min-height: 220px;
+    max-height: 360px;
   }
   .dp-team-panel {
     flex-direction: column;
     align-items: flex-start;
     padding: 1.3rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .md-banner {
+    display: none;
+  }
+  .dp-home .dp-section {
+    padding: 1.7rem 0;
+  }
+  .dp-hero {
+    gap: 1.25rem;
+    padding: 0.7rem 0 1.8rem;
+  }
+  .dp-hero-copy h1 {
+    font-size: clamp(1.9rem, 8vw, 2.45rem);
+    line-height: 1.25;
+  }
+  .dp-lead {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+  .dp-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.03em;
+  }
+  .dp-value-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  .dp-hero-visual img {
+    max-height: none;
+    border-radius: 0.8rem;
+  }
+  .dp-home .dp-actions .md-button {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  .dp-team-panel {
+    gap: 1.2rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .dp-home .dp-actions .md-button,
+  .dp-home .dp-team-panel .md-button {
+    width: 100%;
   }
 }
 

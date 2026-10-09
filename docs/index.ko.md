@@ -7,12 +7,11 @@ hide:
   <div class="dp-hero">
     <div class="dp-hero-copy">
       <p class="dp-eyebrow">DeukPack · 데이터 설계부터 서비스 적용까지</p>
-      <h1>하나의 데이터 정의로<br>팀과 시스템을 연결합니다</h1>
-      <p class="dp-lead">DeukPack은 스키마 정의, 코드 생성, 직렬화, 메타 데이터와 배포 파이프라인을 연결하는 개발 도구 제품군입니다. 서버와 클라이언트, 기획 데이터가 같은 규약을 공유하도록 돕습니다.</p>
+      <h1>데이터 정의로 시스템을 연결합니다</h1>
+      <p class="dp-lead">DeukPack은 스키마, 코드 생성, 직렬화, 메타 데이터를 하나의 흐름으로 연결합니다. 서버·클라이언트·기획팀이 같은 데이터 정의로 일할 수 있도록 돕습니다.</p>
       <div class="dp-actions">
         <a href="products/" class="md-button md-button--primary">제품 살펴보기</a>
         <a href="tutorial/quickstart/" class="md-button">코어 시작하기</a>
-        <a href="about/" class="md-button">DeukPack 소개</a>
       </div>
     </div>
     <div class="dp-hero-visual">

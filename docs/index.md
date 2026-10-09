@@ -7,12 +7,11 @@ hide:
   <div class="dp-hero">
     <div class="dp-hero-copy">
       <p class="dp-eyebrow">DeukPack · From data design to delivery</p>
-      <h1>One data definition.<br>Connected teams and systems.</h1>
-      <p class="dp-lead">DeukPack is a family of developer tools that connects schema design, code generation, serialization, metadata, and delivery pipelines. It helps servers, clients, and planning data work from the same contract.</p>
+      <h1>Define once. Connect every system.</h1>
+      <p class="dp-lead">DeukPack brings schemas, code generation, serialization, and metadata into one workflow. It helps server, client, and planning teams work from the same data definition.</p>
       <div class="dp-actions">
         <a href="products/" class="md-button md-button--primary">Explore products</a>
         <a href="tutorial/quickstart/" class="md-button">Get started</a>
-        <a href="about/" class="md-button">About DeukPack</a>
       </div>
     </div>
     <div class="dp-hero-visual">
