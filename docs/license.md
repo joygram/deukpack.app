@@ -14,17 +14,12 @@ Terms and pricing for the DeukPack product family.
 ## Pricing
 
 - Depending on the **product lineup**, pricing may be **subscription-based** or **one-time purchase**.
-- For **per-feature / per-product** pricing details, refer to official announcements or contact us.
+- Confirmed **per-feature / per-product** prices will be available when officially published.
 
 ---
 
-## ☕ Support & Contact
+## Adoption
 
 DeukPack core is completely open-source (**Apache-2.0**). You can ship production code on it without any license fees.
 
-If DeukPack is saving your team weeks of development, or if you're planning to adopt it for a production environment and need architectural advice on safely integrating it, feel free to reach out.
-
-- 📩 **Contact / Technical Inquiries**: joygram@gmail.com
-- ☕ **Support the Project**: [Sponsor via Ko-fi](https://ko-fi.com/joygram) (or PayPal: `joygram@gmail.com`)
-
-Even if you aren't in a position to support financially, **starring the repo** or sharing it with your team helps immensely.
+Review the [product family](products/index.md) and [quick start](tutorial/quickstart.md) to evaluate your use case. An official contact channel for products requiring separate agreements and technical inquiries will be listed here when available.

@@ -1,18 +1,13 @@
 # deukpack.app — Product info, docs, API reference (official site)
 
 site_name: DeukPack
-site_description: DeukPack — Free, ready-to-use core library. Brand concept. Core · engine, protocol, pipeline · Unity, extensions. Excel protocol add-in distributed separately.
+site_description: DeukPack connects schema design, code generation, serialization, metadata, and delivery pipelines across teams and systems.
 site_url: https://deukpack.app/
-
-repo_name: deukpack/DeukPack
-repo_url: https://github.com/deukpack/DeukPack
 
 extra:
   generator: false
   announce: >-
-    <strong>득팩 코어 1.9.0</strong> — Python Support · Industry BMT Standardization —
-    <a href="https://github.com/joygram/DeukPack/releases/latest">GitHub Releases</a>
-    · <a href="https://deukpack.app/releases/">릴리스 요약 (KO/EN)</a>
+    <strong>DeukPack core 1.9.0</strong> · Python support / Python 지원
 
 markdown_extensions:
   - admonition
@@ -35,9 +30,6 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Documentation: documentation-index.md
-  - Releases · news: releases.md
-  - Kits lineup: deukpack-kits.md
   - Products:
     - Products overview: products/index.md
     - AI / agent pipeline: ai-pipeline-integration.md
@@ -47,37 +39,42 @@ nav:
     - Excel add-in: products/excel-addin.md
     - Pipeline · Unity: products/pipeline-unity.md
     - DeukNavigation: products/navigation.md
-    - DeukPackMcp (Universal Hub): products/mcp-hub.md
     - DeukPackMcp (Universal AI Hub) 🚧: products/mcp-hub.md
     - Extension: products/extension.md
     - Architecture: architecture.md
-  - Reference:
-    - Overview: reference/index.md
-    - Fundamentals: reference/fundamentals.md
-    - Tables: reference/tables.md
-    - Messages & wire: reference/messages.md
-    - Wire protocol families: reference/wire-protocols.md
-    - Database & entities: reference/database.md
-    - API reference: reference/api.md
-  - Tutorial:
-    - Overview: tutorial/index.md
-    - Distribution vs source: tutorial/distribution-vs-source.md
-    - Install (Windows · Linux): tutorial/install-os.md
-    - Quick start: tutorial/quickstart.md
-    - IDL guide: tutorial/idl-guide.md
-    - Protocol & serialization: tutorial/protocol-serialization.md
-    - C# guide: tutorial/csharp-guide.md
-    - C++ guide: tutorial/cpp-guide.md
-    - Elixir guide: tutorial/elixir-guide.md
-    - Pipeline guide: tutorial/pipeline-guide.md
-    - Unified Write · field selection · extends: tutorial/write-with-overrides.md
-  - Positioning: positioning.md
-  - Journal:
-    - "Episode 1. AI Agents & Semantic Identity": journal/ai-control-plane-design.md
-    - "Episode 2. Asymmetric Architecture & Benchmark": journal/performance-matrix.md
-    - "Appendix 1. Flat Payload JWT Benchmark": journal/performance-matrix-flat.md
-    - "Episode 3. Protocol Security & Large Payload": journal/security-oom-large-payload.md
-  - License: license.md
+  - Use cases: positioning.md
+  - Documentation:
+    - Documentation overview: documentation-index.md
+    - Tutorial:
+      - Overview: tutorial/index.md
+      - Distribution vs source: tutorial/distribution-vs-source.md
+      - Install (Windows · Linux): tutorial/install-os.md
+      - Quick start: tutorial/quickstart.md
+      - IDL guide: tutorial/idl-guide.md
+      - Protocol & serialization: tutorial/protocol-serialization.md
+      - C# guide: tutorial/csharp-guide.md
+      - C++ guide: tutorial/cpp-guide.md
+      - Elixir guide: tutorial/elixir-guide.md
+      - Pipeline guide: tutorial/pipeline-guide.md
+      - Unified Write · field selection · extends: tutorial/write-with-overrides.md
+    - Reference:
+      - Overview: reference/index.md
+      - Fundamentals: reference/fundamentals.md
+      - Tables: reference/tables.md
+      - Messages & wire: reference/messages.md
+      - Wire protocol families: reference/wire-protocols.md
+      - Database & entities: reference/database.md
+      - API reference: reference/api.md
+    - Kits lineup: deukpack-kits.md
+    - Journal:
+      - "Episode 1. AI Agents & Semantic Identity": journal/ai-control-plane-design.md
+      - "Episode 2. Asymmetric Architecture & Benchmark": journal/performance-matrix.md
+      - "Appendix 1. Flat Payload JWT Benchmark": journal/performance-matrix-flat.md
+      - "Episode 3. Protocol Security & Large Payload": journal/security-oom-large-payload.md
+  - Releases · news: releases.md
+  - About DeukPack:
+    - About: about.md
+    - License: license.md
 
 theme:
   name: material
@@ -108,9 +105,6 @@ theme:
     - navigation.top
     - content.tabs.link
     - content.code.copy
-  icon:
-    repo: fontawesome/brands/github
-
 extra_css:
   - stylesheets/extra-v2.css
 
@@ -133,7 +127,11 @@ plugins:
           build: true
           nav_translations:
             Documentation: 문서 안내
+            Documentation overview: 문서 개요
             Home: 홈
+            Use cases: 활용 분야
+            About DeukPack: DeukPack 소개
+            About: 소개
             Releases · news: 릴리스·뉴스
             Kits lineup: 득팩 키트 라인업
             Products: 제품

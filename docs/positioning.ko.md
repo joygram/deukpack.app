@@ -3,7 +3,7 @@
 ![docs/positioning Cover](/assets/positioning-cover.png){: style="display: block; margin: 0 auto 2rem auto; max-width: 500px;"}
 
 
-득팩(DeukPack)의 `제품 포지션`과 `타깃`을 요약합니다. 이 사이트(deukpack.app)는 `브랜드 컨셉` 목적으로 제품을 소개하며, `무료·바로 적용 가능한 코어 라이브러리`를 npm·GitHub에서 제공합니다.
+득팩(DeukPack)의 제품 포지션과 활용 대상을 요약합니다. 무료 코어 라이브러리는 [빠른 시작](tutorial/quickstart.ko.md)에서 설치하고 사용해 볼 수 있습니다.
 
 ---
 

@@ -9,15 +9,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Determine language by checking html lang attribute
     const isKo = document.documentElement.lang === "ko";
     
-    // 1. Announce Banner
-    const bannerPlaceholder = document.getElementById("dp-dynamic-banner-placeholder");
-    if (bannerPlaceholder) {
-      const announceText = isKo ? data.announce_ko : data.announce_en;
-      if (announceText) {
-        bannerPlaceholder.innerHTML = announceText;
-      }
-    }
-    
     const simpleMdToHtml = (text) => {
       if (!text) return '';
       let html = text;
